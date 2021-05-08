@@ -1,0 +1,90 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --serif: Georgia, "Times New Roman", Times, Serif;
+    --red: #cf142b;
+    --blue: #00247d;
+}
+
+body {
+    color:  var(--white);
+    background-color: var(--blue);
+    font-family: var(--serif);
+    font-size: 16px;
+}
+
+header {
+    font-size: 2rem;
+}
+a, a:visited, a:focus, a:active, a:hover {
+    color: var(--white);
+}
+
+header, footer, main, #nav {
+    padding: 0.5rem;
+    border: 0;
+    border-radius:  0.5rem;
+}
+
+.white-regions {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.white-regions a, .white-regions a:visited {
+    color: var(--blue);
+}
+
+.white-regions a:focus, .white-regions a:hover, .white-regions a:active {
+    color: var(--red);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--blue);
+}
+
+/*Responsive*/
+
+@media (max-width: 1023px) {
+    header, footer, #wrapper, #nav, main {
+        width: 100%;
+    }
+    header, footer, #nav, main {
+        margin:  0.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header, footer, #wrapper, #nav, main {
+        margin: 0;
+    }
+    header, footer, #wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #wrapper {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    #nav {
+        flex:  1;
+        padding-right: 0;
+    }
+    main {
+        flex: 4;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+    header {
+border-radius: 0.5rem 0.5rem 0 0.5rem;
+    }
+}
+
+/*universal classes*/
+
+.text-center {
+    text-align: center;
+}
+.smaller-text {
+    font-size: smaller;
+}
