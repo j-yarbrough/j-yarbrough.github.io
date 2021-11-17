@@ -1,0 +1,79 @@
+//begin nav show/hide on mobile
+
+var elShowHide = document.querySelector('#nav-btn'); //variable for collapser button
+elShowHide.addEventListener('click',showHideNav); //event listener for above
+
+function showHideNav() {
+    var navLinks = document.querySelector('#nav-links');
+    switch (this.getAttribute('aria-expanded')) {
+        case 'false': this.setAttribute('aria-expanded','true');
+        this.textContent = 'Hide Navigation';
+        break;
+        case 'true': this.setAttribute('aria-expanded','false');
+        this.textContent = 'Show Navigation';
+        break;
+    };
+    navLinks.classList.toggle('expanded-links');
+} //end function
+
+//end show/hide nav on mobile
+
+//begin toc
+
+var toc = document.querySelector('#toc'); //variable for TOC
+
+//fires script to build TOC if called for on page, otherwise ignores.
+
+switch (toc) {
+    case null: break;
+    case undefined: break;
+    default: toc.innerHTML = tocBuilder();
+    break;
+};
+
+//function that builds TOC from h2s on page.
+
+function tocBuilder() {
+    var builderOutput = '';
+    var h2 = document.querySelectorAll('main h2:not(#toc-header)');
+    for (var i = 0; i < h2.length; i++) {
+        var headingText = h2[i].textContent;
+        var headingIdentifier = 'hid' + i;
+        h2[i].setAttribute('id',headingIdentifier);
+        h2[i].setAttribute('tabindex','-1');
+        builderOutput += '<li><a href="#' + headingIdentifier + '">' + headingText + '</a></li>';
+    };
+    return builderOutput;
+} //end function
+//end toc
+
+//begin accordion
+
+var elAccordionButtons = document.querySelectorAll('.accordion-button');
+
+//event listener
+
+if (elAccordionButtons.length > 0) {
+    for(var i = 0; i < elAccordionButtons.length; i++) {
+elAccordionButtons[i].addEventListener('click',triggerAccordion);
+    };
+}
+
+//function
+
+function triggerAccordion() {
+    var panel = this.parentElement.nextElementSibling;
+    var header = this.parentElement;
+    switch (this.getAttribute('aria-expanded')) {
+        case 'true': this.setAttribute('aria-expanded',false);
+        panel.removeAttribute('data-show');
+        header.removeAttribute('data-show');
+        break;
+        case 'false': this.setAttribute('aria-expanded',true);
+        header.setAttribute('data-show','show');
+        panel.setAttribute('data-show','show');
+        break;
+    };
+} //end function
+
+//end accordion

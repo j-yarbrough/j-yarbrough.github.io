@@ -1,0 +1,250 @@
+/*CSS variables*/
+:root {
+--serif: Georgia, "Times New Roman", Times, Serif;
+--black: #333333;
+--white: #ffffff;
+--blue:#00247d;
+--red: #cf142b;
+}
+
+body {
+    background-color: var(--blue);
+        color: var(--white);
+    font-family: var(--serif);
+    font-size: 16px;
+}
+header, footer, .text-center {
+    text-align: center;
+}
+header {
+    font-size: 2rem;
+}
+
+/*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
+#skip-links {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-align: center;
+}
+#skip-links:focus-within {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+a, a:active, a:focus, a:hover, a:visited {
+    color: var(--white);
+}
+
+/*nav styling*/
+
+#nav {
+    padding: 0.5rem 0;
+}
+#nav-links {
+    list-style-type: none;
+}
+#nav-links li[aria-current] {
+    color: var(--blue);
+    background: var(--white);
+    font-weight: bold;
+}
+
+/*for areas with white backgrounds*/
+.white-background {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.white-background a, .white-background a:visited {
+    color: var(--blue);
+}
+.white-background a:active, .white-background a:hover, .white-background a:focus {
+    color: var(--red);
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--blue);
+}
+
+/*hides nav collapse button for all but mobile*/
+#nav-btn {
+    display: none;
+    font-family: var(--serif);
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    border-radius: 0.5rem;
+}
+#nav-btn[aria-expanded=true] {
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+/*Table Styling*/
+table {
+    margin: 1rem auto;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid var(--blue);
+}
+th {
+color: var(--white);
+background-color: var(--blue);;
+}
+tfoot {
+    font-weight: bold;
+}
+
+/*Form styling*/
+button {
+    font-family: var(--serif);
+    font-size: 1.0rem;
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+button[disabled] {
+    border: var(--red);
+    color: var(--red);
+}
+select, textarea, input {
+    font-family: var(--serif);
+    border: 1px solid var(--blue);
+    font-size: 1rem;
+}
+textarea {
+    display: block;
+    width: 100%;
+    height: 7rem;
+}
+
+/*Accordion styling*/
+
+.accordion.header {
+    margin-left: 0.5rem;
+}
+.accordion-header[data-show=show] {
+    margin-bottom: 0;
+}
+.accordion-button {
+    border: 1px solid var(--blue);
+    margin: 0;
+    color: var(--blue);
+    background-color:  var(--white);
+    padding:  0 0.5rem;
+    border-radius: 0.5rem;
+}
+.accordion-button[aria-expanded=true] {
+    margin: 0;
+    color: var(--white);
+background-color: var(--blue);
+border-radius: 0.5rem 0.5rem 0 0;
+}
+.accordion-panel {
+    display: none;
+}
+.accordion-panel[data-show=show] {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid var(--blue);
+    border-radius: 0.5rem;
+}
+
+/*media queries for responsive*/
+/* small*/
+@media (max-width: 767px) {
+    #wrapper, header, footer, nav, main {
+        width: 100%;
+    }
+    #nav-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #nav-links {
+        display: none;
+    }
+    #nav-links .expanded-links {
+        display: block;
+    }
+    #nav-links li {
+        padding: 0 0.5rem;
+    }
+nav li[aria-current] {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+label {
+    display: block;
+}
+}
+/*medium*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #wrapper, header, footer, nav, main {
+        width: 100%;
+    }
+#nav-links li {
+    display: inline-block;
+    padding: 0 .25rem;
+}
+#nav-links li[aria-current] {
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+}
+/*large*/
+@media (min-width: 1025px) {
+    #wrapper, header, footer {
+        width: 100%;
+        margin: 0 1rem;
+    }
+    header {
+        border-radius:  0.5rem 0.5rem 0 0.5rem;
+        margin-top: 1rem;
+    }
+#wrapper {
+    display: flex;
+    padding: 0;
+}
+#nav, main {
+    margin: 0;
+    border: 0;
+}
+#nav {
+flex: 1;
+}
+nav li {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+main {
+flex: 4;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+}
+/*end large*/
+/*end responsive*/
+
+/*universal classes*/
+.smaller {
+    font-size: smaller;
+}
+.text-right {
+    text-align: right;
+}
+.ebox-border-left {
+    padding-left: 1rem;
+    border-left: 1px dotted var(--blue);
+}
