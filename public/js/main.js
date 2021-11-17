@@ -8,12 +8,13 @@ function showHideNav() {
     switch (this.getAttribute('aria-expanded')) {
         case 'false': this.setAttribute('aria-expanded','true');
         this.textContent = 'Hide Navigation';
+        navLinks.setAttribute('data-show','show');
         break;
         case 'true': this.setAttribute('aria-expanded','false');
         this.textContent = 'Show Navigation';
+        navLinks.removeAttribute('data-show');
         break;
     };
-    navLinks.classList.toggle('expanded-links');
 } //end function
 
 //end show/hide nav on mobile

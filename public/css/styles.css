@@ -174,7 +174,7 @@ border-radius: 0.5rem 0.5rem 0 0;
     #nav-links {
         display: none;
     }
-    .expanded-links {
+    #nav-links[data-show=show] {
         display: block;
     }
     #nav-links li {
