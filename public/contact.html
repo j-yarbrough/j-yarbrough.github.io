@@ -28,8 +28,12 @@
             <main id="main" tabindex="-1" class="white-background">
 <h1>Contact Justin</h1>
 <p>If you would like to contact Justin, just fill out the form on this page.</p>
-<p>All fields marked with an asterisk (*) are required and any submitted information will only be used to respond unless otherwise discussed.</p>
-<form name="contact-form" id="contact-form" method="post" action="https://secure.riosalado.edu/cis-course-resources/postscript.aspx">
+<p>Notes:</p>
+<ul>
+    <li>Any data submitted through this form will be emailed to Justin. Data submitted will not be used outside of these contacts without your permission.</li>
+    <li><span id="submit-note">After submitting the form, you may be prompted to complete RECAPTCHA verification. The RECAPTCHA offers an audio challenge option.</span></li>
+</ul>
+<form name="contact" id="contact-form" method="post" action="https://formspree.io/f/mnqleljw">
     <fieldset>
         <legend>Your Information</legend>
         <div>
@@ -38,7 +42,7 @@
         </div>
         <div>
             <label for="email-address">Email*</label>
-            <input type="email" id="email-address" name="email-address" required>"
+            <input type="email" id="email-address" name="_replyto" required>"
         </div>
     </fieldset>
     <fieldset>
@@ -46,7 +50,8 @@
         <label for="message">Enter your message here:</label>
         <textarea name="message" id="message"></textarea>
     </fieldset>
-    <button type="submit">Submit</button>
+    <input type="hidden" name="_subject" value="yarbrough.info contact form submission">
+    <button type="submit" aria-describedby="submit-note">Submit</button>
 </form>
             </main>
         </div>
