@@ -21,17 +21,13 @@ function showHideNav() {
 
 //begin toc
 
-var toc = document.querySelector('#toc'); //variable for TOC
+var toc = document.querySelectorAll('#toc'); //variable for TOC
 
 //fires script to build TOC if called for on page, otherwise ignores.
 
-switch (toc) {
-    case null: break;
-    case undefined: break;
-    default: toc.innerHTML = tocBuilder();
-    break;
+if (toc.length > 0) {
+    toc[0].innerHTML = tocBuilder();
 };
-
 //function that builds TOC from h2s on page.
 
 function tocBuilder() {
