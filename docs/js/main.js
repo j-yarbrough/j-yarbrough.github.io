@@ -74,3 +74,12 @@ function triggerAccordion() {
 } //end function
 
 //end accordion
+
+//recaptcha required
+
+window.onload = function() { 
+    var el = document.getElementById('g-recaptcha-response'); 
+    if (el) { 
+      el.setAttribute('required', 'required'); 
+    } 
+  }
