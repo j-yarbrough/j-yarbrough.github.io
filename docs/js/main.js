@@ -77,7 +77,7 @@ function triggerAccordion() {
 
 //recaptcha required
 
-var contactForm = document.formscontact;
+var contactForm = document.forms.contact;
 
 //event listener
 
