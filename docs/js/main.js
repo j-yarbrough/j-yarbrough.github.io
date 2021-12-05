@@ -77,11 +77,20 @@ function triggerAccordion() {
 
 //recaptcha required
 
-window.onload = function() { 
-    var el = document.getElementById('g-recaptcha-response'); 
-    if (el) { 
-      el.setAttribute('required', 'required'); 
-      el.setAttribute('tabindex','-1');
-      el.setAttribute('aria-hidden','true');
-    } 
-  }
+var contactForm = document.formscontact;
+
+//event listener
+
+contactForm.addEventListener('submit',checkIsRobot);
+
+//function
+
+function checkIsRobot() {
+    var isNotRobot = document.getElementById('g-recaptcha-response');
+    switch(isNotRobot.value == '') {
+        case false: break;
+        case true: event.preventDefault();
+        alert('Please verify you are not a robot.');
+        break;
+    }
+} //end function

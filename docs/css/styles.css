@@ -256,12 +256,3 @@ flex: 4;
     padding-left: 1rem;
     border-left: 1px dotted var(--blue);
 }
-
-/*For CAPTCHA*/
-#g-recaptcha-response {
-    display: block !important;
-    position: absolute;
-    margin: -50px 0 0 0 !important;
-    z-index: -999999;
-    opacity: 0;
-    }
