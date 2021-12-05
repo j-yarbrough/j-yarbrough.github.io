@@ -77,20 +77,18 @@ function triggerAccordion() {
 
 //recaptcha required
 
-var contactForm = document.forms.contact;
-
-//event listener
-
-contactForm.addEventListener('submit',checkIsRobot);
-
-//function
-
-function checkIsRobot() {
-    var isNotRobot = document.getElementById('g-recaptcha-response');
-    switch(isNotRobot.value == '') {
-        case false: break;
-        case true: event.preventDefault();
-        alert('Please verify you are not a robot.');
-        break;
-    }
-} //end function
+document.getElementById("contact-form").addEventListener("submit",function(evt)
+  {
+  
+  var response = grecaptcha.getResponse();
+  if(response.length == 0) 
+  { 
+    //reCaptcha not verified
+    alert("please verify you are humann!"); 
+    evt.preventDefault();
+    return false;
+  }
+  //captcha verified
+  //do the rest of your validations here
+  
+})
