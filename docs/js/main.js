@@ -86,6 +86,7 @@ document.getElementById("contact-form").addEventListener("submit",function(evt)
     //reCaptcha not verified
     alert("please verify you are humann!"); 
     evt.preventDefault();
+    document.getElementById('recaptcha-block').focus();
     return false;
   }
   //captcha verified
