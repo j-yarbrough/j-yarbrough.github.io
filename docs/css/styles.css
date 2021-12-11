@@ -21,7 +21,7 @@ header {
 }
 
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
-#skip-links {
+.sr-only, #skip-links {
     position: absolute;
     left:  -10000px;
     top: auto;
@@ -261,4 +261,7 @@ flex: 4;
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+.no-bullets {
+    list-style-type: none;
 }

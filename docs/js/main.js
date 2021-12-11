@@ -74,22 +74,3 @@ function triggerAccordion() {
 } //end function
 
 //end accordion
-
-//recaptcha required
-
-document.getElementById("contact-form").addEventListener("submit",function(evt)
-  {
-  
-  var response = grecaptcha.getResponse();
-  if(response.length == 0) 
-  { 
-    //reCaptcha not verified
-    alert("please verify you are humann!"); 
-    evt.preventDefault();
-    document.getElementById('recaptcha-block').focus();
-    return false;
-  }
-  //captcha verified
-  //do the rest of your validations here
-  
-})
