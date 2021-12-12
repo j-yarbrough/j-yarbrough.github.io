@@ -10,9 +10,7 @@ document.getElementById("contact-form").addEventListener("submit",function(evt)
   var nameField = document.getElementById('submitter-name');
   var emailAddressField = document.getElementById('email-address');
   var errorBlock = document.getElementById('error-block');
-  var errorLive = document.getElementById('error-live');
-  var ariaAlert = document.getElementById('aria-live')
-  ariaAlert.textContent = '';
+  var errorIntro = document.getElementById('error-intro');
   switch (response.length == 0) {
       case true: canSubmit = false;
       errorCount++;
@@ -46,19 +44,19 @@ break;
       case false: evt.preventDefault();
       errorBlock.hidden = false;
       errorBlock.focus();
-      errorLive.textContent = errorTextGenerate(errorCount) + ':';
-      ariaAlert.textContent = errorTextGenerate(errorCount);
+      errorIntro.textContent = errorIntroTextGenerator(errorCount);
       return false;
       break;
   }
 })
-
-function errorTextGenerate(howManyErrors) {
-    var errorMsg = ''
+function errorIntroTextGenerator(howManyErrors) {
+    var textOutput = '';
+    var magicWord = '';
     if (howManyErrors == 1) {
-        errorMsg = 'There was an error submitting the form';
+magicWord = 'error';
     } else if (howManyErrors > 1) {
-        errorMsg = 'There were ' + howManyErrors + ' errors submitting the form';
+        magicWord = 'errors';
     };
-    return errorMsg;
+    textOutput = 'Please address the below ' + magicWord + ' and try submitting the form again.';
+    return textOutput;
 }

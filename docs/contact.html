@@ -29,6 +29,15 @@
             <main id="main" tabindex="-1" class="white-background">
 <h1>Contact Justin</h1>
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
+<section aria-label="Form Errors" id="error-block" tabindex="-1" hidden class="ebox-border-left">
+    <h2>There was a problem trying to submit the form</h2>
+    <p id="error-intro"></p>
+    <ul class="no-bullets">
+        <li hidden id="name-error">Please enter your name.</li>
+        <li hidden id="email-error">Please enter a valid email address.</li>
+        <li hidden id="robot-error">Please verify you are not a robot.</li>
+    </ul>
+</section>
 <form name="contact" id="contact-form" method="post" action="https://formspree.io/f/mnqleljw" novalidate>
     <fieldset>
         <legend>Your Information</legend>
@@ -49,15 +58,6 @@
     <input type="hidden" name="_subject" value="yarbrough.info contact form submission">
     <div id="recaptcha-block" class="g-recaptcha" data-sitekey="6LdQV30dAAAAALLSYwQ2gJ7IzNdInvk9nzJPWVyT" tabindex="-1"></div>
     <button type="submit">Submit</button>
-    <section aria-label="Form Errors" id="error-block" tabindex="-1" hidden class="ebox-border-left">
-        <p id="error-live"></p>
-        <ul class="no-bullets">
-            <li hidden id="name-error">Please <a href="#submitter-name">enter your name.</a></li>
-            <li hidden id="email-error">Please <a href="#email-address">enter a valid email address.</a></li>
-            <li hidden id="robot-error">Please <a href="#recaptcha-block">verify you're not a robot.</a></li>
-        </ul>
-        <p>Please address these issues and try submitting the form again.</p>
-    </section>
 </form>
             </main>
         </div>
@@ -66,6 +66,5 @@
         </footer>
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
-    <p id="aria-live" class="sr-only" aria-live="assertive>"></p>
 </body> 
 </html>
