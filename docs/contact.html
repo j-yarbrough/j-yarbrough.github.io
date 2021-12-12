@@ -38,7 +38,7 @@
         </div>
         <div>
             <label for="email-address">Email*</label>
-            <input type="text" mode="email" id="email-address" name="_replyto" aria-required="true">
+            <input type="text" id="email-address" name="_replyto" aria-required="true" inputmode="email">
         </div>
     </fieldset>
     <fieldset>
@@ -48,6 +48,7 @@
     </fieldset>
     <input type="hidden" name="_subject" value="yarbrough.info contact form submission">
     <div id="recaptcha-block" class="g-recaptcha" data-sitekey="6LdQV30dAAAAALLSYwQ2gJ7IzNdInvk9nzJPWVyT" tabindex="-1"></div>
+    <button type="submit">Submit</button>
     <section aria-label="Form Errors" id="error-block" tabindex="-1" hidden class="ebox-border-left">
         <p id="error-live"></p>
         <ul class="no-bullets">
@@ -57,7 +58,6 @@
         </ul>
         <p>Please address these issues and try submitting the form again.</p>
     </section>
-    <button type="submit">Submit</button>
 </form>
             </main>
         </div>
