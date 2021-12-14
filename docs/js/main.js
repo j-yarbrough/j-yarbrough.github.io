@@ -31,7 +31,7 @@ if (toc.length > 0) {
 //function that builds TOC from h2s on page.
 
 function tocBuilder() {
-    var builderOutput = '';
+    var builderOutput = '<h2 id="toc-header">On this Page</h2><ul>';
     var h2 = document.querySelectorAll('main h2:not(#toc-header)');
     for (var i = 0; i < h2.length; i++) {
         var headingText = h2[i].textContent;
@@ -40,6 +40,8 @@ function tocBuilder() {
         h2[i].setAttribute('tabindex','-1');
         builderOutput += '<li><a href="#' + headingIdentifier + '">' + headingText + '</a></li>';
     };
+    builderOutput += '</ul>';
+    document.getElementById('toc').setAttribute('aria-labelledby','toc-header');
     return builderOutput;
 } //end function
 //end toc
