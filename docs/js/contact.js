@@ -11,6 +11,8 @@ document.getElementById("contact-form").addEventListener("submit",function(evt)
   var emailAddressField = document.getElementById('email-address');
   var errorBlock = document.getElementById('error-block');
   var errorIntro = document.getElementById('error-intro');
+  var subjectEntered = document.getElementById('subject');
+  var subjectToSend = document.getElementById('subject-send');
   switch (response.length == 0) {
       case true: canSubmit = false;
       errorCount++;
@@ -40,7 +42,8 @@ break;
       break;
   }
   switch (canSubmit) {
-      case true: break;    
+      case true: subjectToSend.value = '[yarbrough.info] ' + subjectEntered.value;
+      break;
       case false: evt.preventDefault();
       errorBlock.hidden = false;
       errorBlock.focus();

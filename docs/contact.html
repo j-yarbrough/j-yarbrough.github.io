@@ -43,20 +43,24 @@
         <legend>Your Information</legend>
         <div>
             <label for="submitter-name">Name*</label>
-            <input type="text" name="submitter-name" id="submitter-name" aria-required="true">
+            <input type="text" name="submitter-name" id="submitter-name" aria-required="true" autocomplete="name">
         </div>
         <div>
             <label for="email-address">Email*</label>
-            <input type="text" id="email-address" name="_replyto" aria-required="true" inputmode="email">
+            <input type="text" id="email-address" name="_replyto" aria-required="true" inputmode="email" autocomplete="email">
         </div>
     </fieldset>
     <fieldset>
         <legend>Your Message</legend>
+        <div>
+            <label for="subject">Subject: </label>
+            <input type="text id="subject" name="subject">
+        </div>
         <label for="message">Enter your message here:</label>
         <textarea name="message" id="message"></textarea>
     </fieldset>
-    <input type="hidden" name="_subject" value="yarbrough.info contact form submission">
-    <div id="recaptcha-block" class="g-recaptcha" data-sitekey="6LdQV30dAAAAALLSYwQ2gJ7IzNdInvk9nzJPWVyT" tabindex="-1"></div>
+    <input type="hidden" name="_subject" value="" id="subject-send">
+    <div id="recaptcha-block" class="g-recaptcha" data-sitekey="6LdQV30dAAAAALLSYwQ2gJ7IzNdInvk9nzJPWVyT"></div>
     <button type="submit">Submit</button>
 </form>
             </main>
