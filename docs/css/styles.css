@@ -28,9 +28,8 @@ header {
     width: 1px;
     height: 1px;
     overflow: hidden;
-    text-align: center;
 }
-#skip-links:focus-within {
+#skip-links:focus {
     position: relative;
     width: auto;
     height: auto;
@@ -38,6 +37,9 @@ header {
 
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--white);
+}
+a:focus {
+    outline: 2px dotted var(--white);
 }
 
 /*nav styling*/
@@ -49,7 +51,7 @@ a, a:active, a:focus, a:hover, a:visited {
     list-style-type: none;
 }
 #nav-links li[aria-current] {
-    color: var(--blue);
+    color: var(--black);
     background: var(--white);
     font-weight: bold;
 }
@@ -61,10 +63,13 @@ a, a:active, a:focus, a:hover, a:visited {
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
-.white-background a, .white-background a:visited {
+.white-background a, .white-background a:visited, .white-background a:hover{
     color: var(--blue);
 }
-.white-background a:active, .white-background a:hover, .white-background a:focus {
+.white-background a:focus{
+    outline: 2px dotted var(--blue);
+}
+.white-background a:active {
     color: var(--red);
 }
 h1, h2, h3, h4, h5, h6 {
@@ -95,29 +100,10 @@ th, td {
 }
 th {
 color: var(--white);
-background-color: var(--blue);;
+background-color: var(--blue);
 }
 
 /*Form styling*/
-button {
-    font-family: var(--serif);
-    font-size: 1.0rem;
-    color: var(--blue);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
-    padding: 0 0.5rem;
-    border-radius: 0.5rem;
-}
-.form.error {
-    margin-top: 0;
-    color: var(--red);
-    font-weight: bold;
-}
-select, textarea, input {
-    font-family: var(--serif);
-    border: 1px solid var(--blue);
-    font-size: 1rem;
-}
 textarea {
     display: block;
     width: 100%;
@@ -140,11 +126,14 @@ textarea {
     padding:  0 0.5rem;
     border-radius: 0.5rem;
 }
+.accordion-button:focus, .accordion-button:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
 .accordion-button[aria-expanded=true] {
     margin: 0;
-    color: var(--white);
-background-color: var(--blue);
 border-radius: 0.5rem 0.5rem 0 0;
+border-bottom: 0;
 }
 .accordion-panel {
     display: none;
@@ -177,10 +166,10 @@ border-radius: 0.5rem 0.5rem 0 0;
     }
     #nav-links li {
         padding: 0 0.5rem;
+        border-radius: 0.5rem;
     }
-nav li[aria-current] {
+#nav-links li {
     padding: 0.5rem;
-    border-radius: 0.5rem;
 }
 label {
     display: block;
@@ -204,10 +193,12 @@ label {
 #nav-links li {
     padding: 0.25rem 0 .5rem;
     border: 1px solid var(--white);
-}
+    border-bottom: 0;
+    margin-bottom: 0;
 }
 main {
     margin-top: 0;
+}
 }
 /*large*/
 @media (min-width: 1025px) {
@@ -231,7 +222,7 @@ main {
 #nav {
 flex: 1;
 }
-nav li {
+#nav li {
     padding: 0.5rem 0 0.5rem 0.5rem;
     border-radius: 0.5rem 0 0 0.5rem;
 }
@@ -240,11 +231,7 @@ flex: 4;
     margin: 0;
     padding: 1rem;
     border-radius: 0 0 0.5rem 0.5rem;
-}
-.two-columns {
-    column-count: 2;
-}
-}
+}}
 /*end large*/
 /*end responsive*/
 
