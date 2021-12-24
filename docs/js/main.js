@@ -31,18 +31,30 @@ if (toc.length > 0) {
 //function that builds TOC from h2s on page.
 
 function tocBuilder() {
-    var builderOutput = '<h2 id="toc-header">On this Page</h2><ul>';
-    var h2 = document.querySelectorAll('main h2:not(#toc-header)');
-    for (var i = 0; i < h2.length; i++) {
-        var headingText = h2[i].textContent;
-        var headingIdentifier = 'hid' + i;
-        h2[i].setAttribute('id',headingIdentifier);
-        h2[i].setAttribute('tabindex','-1');
-        builderOutput += '<li><a href="#' + headingIdentifier + '">' + headingText + '</a></li>';
+    var outputStart = '<h2 id="toc-header">On this Page</h2><ul>';
+    var builderOutput = '';
+    var finalOutput = ''
+    var headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
+    var headingIndex = { //index object
+        text : [],
+        levelValue: [],
+        idValue: [],
+        domLocation: []
     };
-    builderOutput += '</ul>';
+    for (var i = 0; i <headingsToIndex.length; i++) { //builds index object
+headingIndex.text[i] = headingsToIndex[i].textContent;
+headingIndex.idValue[i] = 'hdg' + i;
+headingIndex.level = headingsToIndex[i].tagName.substr(1,1);
+headingIndex.domLocation[i] = headingsToIndex[i];
+    }
+    for (var i = 0; i < headingsToIndex.length; i++) { //builds list, adds id and tabindex values
+        headingsToIndex[i].setAttribute('tabindex','-1');
+        headingIndex.domLocation[i].setAttribute('id',headingIndex.idValue[i]);
+        builderOutput += '<li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</li>';
+    }
     document.getElementById('toc').setAttribute('aria-labelledby','toc-header');
-    return builderOutput;
+    finalOutput = outputStart + builderOutput + '</ul>';
+    return finalOutput;
 } //end function
 //end toc
 

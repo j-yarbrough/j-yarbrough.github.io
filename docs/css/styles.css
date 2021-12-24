@@ -39,7 +39,7 @@ a, a:active, a:focus, a:hover, a:visited {
     color: var(--white);
 }
 a:focus {
-    outline: 2px dotted var(--white);
+    outline: 1px dotted var(--white);
 }
 
 /*nav styling*/
@@ -67,7 +67,8 @@ a:focus {
     color: var(--blue);
 }
 .white-background a:focus{
-    outline: 2px dotted var(--blue);
+    outline: 1px dotted var(--blue);
+    color: var(--blue);
 }
 .white-background a:active {
     color: var(--red);
