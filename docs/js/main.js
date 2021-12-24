@@ -39,19 +39,27 @@ function tocBuilder() {
         text : [],
         levelValue: [],
         idValue: [],
-        domLocation: []
     };
+    for (var i = 0; i < headingsToIndex.length; i++) { //checks headings for tabindex and id values, adds them if they don't exist
+switch (headingsToIndex[i].hasAttribute('id')) {
+    case true: break;
+    case false: headingsToIndex[i].setAttribute('id','hdg' + i);
+    break;
+};
+switch (headingsToIndex[i].hasAttribute('tabindex')) {
+    case true: break;
+    case false: headingsToIndex[i].setAttribute('tabindex','-1');
+    break;
+};
+    }; //end loop
     for (var i = 0; i <headingsToIndex.length; i++) { //builds index object
 headingIndex.text[i] = headingsToIndex[i].textContent;
-headingIndex.idValue[i] = 'hdg' + i;
-headingIndex.level = headingsToIndex[i].tagName.substr(1,1);
-headingIndex.domLocation[i] = headingsToIndex[i];
-    }
+headingIndex.idValue[i] = headingsToIndex[i].getAttribute('id');
+headingIndex.level = parseInt(headingsToIndex[i].tagName);
+    }; //end loop
     for (var i = 0; i < headingsToIndex.length; i++) { //builds list, adds id and tabindex values
-        headingsToIndex[i].setAttribute('tabindex','-1');
-        headingIndex.domLocation[i].setAttribute('id',headingIndex.idValue[i]);
         builderOutput += '<li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</li>';
-    }
+    }; //end loop
     document.getElementById('toc').setAttribute('aria-labelledby','toc-header');
     finalOutput = outputStart + builderOutput + '</ul>';
     return finalOutput;
