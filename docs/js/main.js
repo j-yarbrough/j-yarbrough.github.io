@@ -33,11 +33,11 @@ if (toc.length > 0) {
 function tocBuilder() {
     var outputStart = '<h2 id="toc-header">On this Page</h2><ul>';
     var builderOutput = '';
-    var finalOutput = ''
-    var headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
+    var finalOutput = '';
+    var headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3');
     var headingIndex = { //index object
         text : [],
-        levelValue: [],
+        headingTag: [],
         idValue: [],
     };
     for (var i = 0; i < headingsToIndex.length; i++) { //checks headings for tabindex and id values, adds them if they don't exist
@@ -55,13 +55,27 @@ switch (headingsToIndex[i].hasAttribute('tabindex')) {
     for (var i = 0; i <headingsToIndex.length; i++) { //builds index object
 headingIndex.text[i] = headingsToIndex[i].textContent;
 headingIndex.idValue[i] = headingsToIndex[i].getAttribute('id');
-headingIndex.level = parseInt(headingsToIndex[i].tagName);
+headingIndex.headingTag[i] = headingsToIndex[i].tagName.substr(1,1);
     }; //end loop
-    for (var i = 0; i < headingsToIndex.length; i++) { //builds list, adds id and tabindex values
-        builderOutput += '<li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</li>';
-    }; //end loop
+    builderOutput += '<li><a href="' + headingIndex.idValue[0] + '">' + headingIndex.text[0] + '</a>';
+    for (var i = 1; i < headingsToIndex.length; i++) {
+switch (headingIndex.headingTag[i] - headingIndex.headingTag[i - 1]) {
+    case 0: builderOutput += '</li><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+    case 1: builderOutput += '<ul><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+    case -1: builderOutput += '</li></ul></li><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+} //end switch
+    } //end loop
+switch (headingIndex.headingTag[i]) {
+    case 2: builderOutput += '</li></ul>';
+    break;
+    case 3: builderOutput += '</li></ul></li></ul>';
+    break;
+} //end switch
     document.getElementById('toc').setAttribute('aria-labelledby','toc-header');
-    finalOutput = outputStart + builderOutput + '</ul>';
+    finalOutput = outputStart + builderOutput;
     return finalOutput;
 } //end function
 //end toc
