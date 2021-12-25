@@ -55,7 +55,7 @@ function tocBuilder() {
     for (var i = 0; i < headingsToIndex.length; i++) { //checks headings for tabindex and id values, adds them if they don't exist
 switch (headingsToIndex[i].hasAttribute('id')) {
     case true: break;
-    case false: headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.split(' ').join('-') + i);
+    case false: headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.replace(/[^A-Za-z0-9]/g,'') + '-' + i);
     break;
 };
 switch (headingsToIndex[i].hasAttribute('tabindex')) {
