@@ -31,19 +31,31 @@ if (toc.length > 0) {
 //function that builds TOC from h2s on page.
 
 function tocBuilder() {
-    var outputStart = '<h2 id="toc-header">On this Page</h2><ul>';
-    var builderOutput = '';
-    var finalOutput = '';
-    var headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3');
+    var builderOutput = '<h2 id="toc-header">On this Page</h2><ul>';
+    var headingsToIndex;
+    var tocContainer = document.querySelector('#toc');
     var headingIndex = { //index object
         text : [],
         headingTag: [],
         idValue: [],
     };
+    switch(tocContainer.getAttribute('data-depth')) {
+        case 2: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
+        break;
+        case 3: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3');
+        break;
+        case 4: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3, main h4');
+        break;
+        case 5: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3, main h4, main h5');
+        break;
+        case 6: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3, main h4, main h5, main h6');
+        break;
+        default: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
+    } //end switch
     for (var i = 0; i < headingsToIndex.length; i++) { //checks headings for tabindex and id values, adds them if they don't exist
 switch (headingsToIndex[i].hasAttribute('id')) {
     case true: break;
-    case false: headingsToIndex[i].setAttribute('id','hdg' + i);
+    case false: headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.split(' ').join('-') + i);
     break;
 };
 switch (headingsToIndex[i].hasAttribute('tabindex')) {
@@ -57,14 +69,20 @@ headingIndex.text[i] = headingsToIndex[i].textContent;
 headingIndex.idValue[i] = headingsToIndex[i].getAttribute('id');
 headingIndex.headingTag[i] = headingsToIndex[i].tagName.substr(1,1);
     }; //end loop
-    builderOutput += '<li><a href="' + headingIndex.idValue[0] + '">' + headingIndex.text[0] + '</a>';
+    builderOutput += '<li><a href="#' + headingIndex.idValue[0] + '">' + headingIndex.text[0] + '</a>';
     for (var i = 1; i < headingsToIndex.length; i++) {
 switch (headingIndex.headingTag[i] - headingIndex.headingTag[i - 1]) {
-    case 0: builderOutput += '</li><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    case 0: builderOutput += '</li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
     break;
-    case 1: builderOutput += '<ul><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    case 1: builderOutput += '<ul><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
     break;
-    case -1: builderOutput += '</li></ul></li><li><a href="' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    case -1: builderOutput += '</li></ul></li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+    case -2: builderOutput += '</li></ul></li></ul></li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+    case -3: builderOutput += '</li></ul></li></ul></li></ul></li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
+    break;
+    case -4: builderOutput += '</li></ul></li></ul></li></ul></li></ul></li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
     break;
 } //end switch
     } //end loop
@@ -73,10 +91,14 @@ switch (headingIndex.headingTag[i]) {
     break;
     case 3: builderOutput += '</li></ul></li></ul>';
     break;
+    case 4: builderOutput += '</li></ul></li></ul></li></ul>';
+    break;
+    case 5: builderOutput += '</li></ul></li></ul></li></ul></li></ul>';
+    break;
+    case 6: builderOutput += '</li></ul></li></ul></li></ul></li></ul></li></ul>';
 } //end switch
-    document.getElementById('toc').setAttribute('aria-labelledby','toc-header');
-    finalOutput = outputStart + builderOutput;
-    return finalOutput;
+    tocContainer.setAttribute('aria-labelledby','toc-header');
+    return builderOutput;
 } //end function
 //end toc
 
