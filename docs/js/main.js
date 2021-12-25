@@ -26,11 +26,11 @@ var toc = document.querySelectorAll('#toc'); //variable for TOC
 //fires script to build TOC if called for on page, otherwise ignores.
 
 if (toc.length > 0) {
-    toc[0].innerHTML = tocBuilder();
+    toc[0].innerHTML = tocBuilder(toc[0].getAttribute('data-depth'));
 };
 //function that builds TOC from h2s on page.
 
-function tocBuilder() {
+function tocBuilder(depth) {
     var builderOutput = '<h2 id="toc-header">On this Page</h2><ul>';
     var headingsToIndex;
     var tocContainer = document.querySelector('#toc');
@@ -39,7 +39,7 @@ function tocBuilder() {
         headingTag: [],
         idValue: [],
     };
-    switch(tocContainer.getAttribute('data-depth')) {
+    switch(depth) { //determines depth of headings for TOC, set by data-depth attribute on toc element
         case 2: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
         break;
         case 3: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3');
@@ -51,27 +51,28 @@ function tocBuilder() {
         case 6: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3, main h4, main h5, main h6');
         break;
         default: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
-    } //end switch
-    for (var i = 0; i < headingsToIndex.length; i++) { //checks headings for tabindex and id values, adds them if they don't exist
-switch (headingsToIndex[i].hasAttribute('id')) {
-    case true: break;
-    case false: headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.replace(/[^A-Za-z0-9]/g,'') + '-' + i);
-    break;
-};
-switch (headingsToIndex[i].hasAttribute('tabindex')) {
-    case true: break;
-    case false: headingsToIndex[i].setAttribute('tabindex','-1');
-    break;
-};
-    }; //end loop
+    }
+    for (var i = 0; i < headingsToIndex.length; i++) { //checks if headings have id and tabindex, creates if they don't
+        if (headingsToIndex[i].hasAttribute('tabindex') == false) {
+            headingsToIndex[i].setAttribute('tabindex','-1');
+        }
+        if (headingsToIndex[i].hasAttribute('id') == false) {
+            headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.replace(/[^A-Z0-9]/ig,'') + i);
+        }
+    } //end loop
     for (var i = 0; i <headingsToIndex.length; i++) { //builds index object
 headingIndex.text[i] = headingsToIndex[i].textContent;
 headingIndex.idValue[i] = headingsToIndex[i].getAttribute('id');
 headingIndex.headingTag[i] = headingsToIndex[i].tagName.substr(1,1);
     }; //end loop
-    builderOutput += '<li><a href="#' + headingIndex.idValue[0] + '">' + headingIndex.text[0] + '</a>';
-    for (var i = 1; i < headingsToIndex.length; i++) {
-switch (headingIndex.headingTag[i] - headingIndex.headingTag[i - 1]) {
+    switch (headingIndex.headingTag[0] == 2) { //checks level of first heading, creates item if it's 2
+        case true: builderOutput += '<li><a href="#' + headingIndex.idValue[0] + '">' + headingIndex.text[0] + '</a>';
+        break;
+        case false: return; //cancels if first heading is not correct level
+        break;
+    }
+    for (var i = 1; i < headingsToIndex.length; i++) { //creates all other list items
+switch (headingIndex.headingTag[i] - headingIndex.headingTag[i - 1]) { //determines list level relative to previous item, handles html appropriately
     case 0: builderOutput += '</li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
     break;
     case 1: builderOutput += '<ul><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
@@ -84,9 +85,10 @@ switch (headingIndex.headingTag[i] - headingIndex.headingTag[i - 1]) {
     break;
     case -4: builderOutput += '</li></ul></li></ul></li></ul></li></ul></li><li><a href="#' + headingIndex.idValue[i] + '">' + headingIndex.text[i] + '</a>';
     break;
+    default: return; //cancels function if levels go deeper by more than 1
 } //end switch
     } //end loop
-switch (headingIndex.headingTag[i]) {
+switch (headingIndex.headingTag[i]) { //closes out the list or lists based on level of last heading
     case 2: builderOutput += '</li></ul>';
     break;
     case 3: builderOutput += '</li></ul></li></ul>';
