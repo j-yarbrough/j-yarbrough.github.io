@@ -247,7 +247,7 @@ flex: 4;
 /*end responsive*/
 
 /*universal classes*/
-.smaller {
+.smaller, #copyright {
     font-size: smaller;
 }
 .text-right {
