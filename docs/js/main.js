@@ -140,16 +140,3 @@ function triggerAccordion() {
 } //end function
 
 //end accordion
-
-//begin copyright
-
-var copyrightHolder = document.querySelectorAll('#copyright');
-if (copyrightHolder.length > 0) {
-    copyrightHolder[0].innerHTML = generateCopyright();
-}
-function generateCopyright() {
-    var todayYear = new Date().getFullYear();
-    var copyOutput = '&copy; 2021-' + todayYear + ' Justin L. Yarbrough';
-    return copyOutput;
-
-}

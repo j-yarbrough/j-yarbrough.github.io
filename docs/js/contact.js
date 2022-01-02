@@ -11,17 +11,16 @@ document.getElementById("contact-form").addEventListener("submit",function(evt)
   var emailAddressField = document.getElementById('email-address');
   var errorBlock = document.getElementById('error-block');
   var errorIntro = document.getElementById('error-intro');
+  var messageLive = document.getElementById('message-live');
   switch (response.length == 0) {
-      case true: canSubmit = false;
-      errorCount++;
+      case true: errorCount++;
 robotError.hidden = false;
 break;
 case false: robotError.hidden = true;
 break;
   }
   switch (nameField.value.length == 0) {
-      case true: canSubmit = false;
-      errorCount++;
+      case true: errorCount++;
       nameError.hidden = false;
       nameField.setAttribute('aria-describedby','name-error');
       break;
@@ -30,8 +29,7 @@ break;
       break;
   }
   switch (emailAddressField.value.includes('@')) {
-      case false: canSubmit = false;
-      errorCount++;
+      case false: errorCount++;
       emailError.hidden = false;
       emailAddressField.setAttribute('aria-describedby','email-error');
       break;
@@ -39,12 +37,16 @@ break;
       emailAddressField.removeAttribute('aria-describedby');
       break;
   }
+  if (errorCount > 0) {
+      canSubmit = false;
+  }
   switch (canSubmit) {
       case true: break;
       case false: evt.preventDefault();
       errorBlock.hidden = false;
-      errorBlock.focus();
       errorIntro.textContent = errorIntroTextGenerator(errorCount);
+      messageLive.textContent = errorLiveRegion(errorCount);
+      errorBlock.focus();
       return false;
       break;
   }
@@ -58,5 +60,18 @@ magicWord = 'error';
         magicWord = 'errors';
     };
     textOutput = 'Please address the below ' + magicWord + ' and try submitting the form again.';
+    return textOutput;
+}
+function errorLiveRegion (howManyErrors) {
+    var textOutput = '';
+    var isPlural = ''
+    if (howManyErrors == 1) {
+textOutput = 'There was an error trying to submit the form.'
+isPlural = 'error';
+    } else if (howManyErrors > 1) {
+        textOutput = 'There were errors trying to submit the form.';
+        isPlural = 'errors';
+    }
+    textOutput += ' Please arrow down to review the ' + isPlural + ' and try submitting the form again.';
     return textOutput;
 }
