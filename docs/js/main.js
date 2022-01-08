@@ -58,7 +58,7 @@ function tocBuilder(depth,headerText, listType) {
         case 6: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header), main h3, main h4, main h5, main h6');
         break;
         default: headingsToIndex = document.querySelectorAll('main h2:not(#toc-header)');
-    }
+    } //end switch
     for (var i = 0; i < headingsToIndex.length; i++) { //checks if headings have id and tabindex, creates if they don't
         if (headingsToIndex[i].hasAttribute('tabindex') == false) {
             headingsToIndex[i].setAttribute('tabindex','-1');
