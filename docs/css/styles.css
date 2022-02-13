@@ -265,3 +265,7 @@ flex: 4;
 .no-bullets {
     list-style-type: none;
 }
+.form-error {
+    margin-top: 0;
+    padding-top: 0;
+}

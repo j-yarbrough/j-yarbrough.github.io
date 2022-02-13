@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Justin Yarbrough">
     <title>Contact - Justin Yarbrough</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
@@ -28,25 +27,18 @@
             <main id="main" tabindex="-1" class="white-background">
 <h1>Contact Justin</h1>
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
-<section aria-label="Form Errors" id="error-block" tabindex="-1" hidden class="ebox-border-left">
-    <h2>There was a problem trying to submit the form</h2>
-    <p id="error-intro"></p>
-    <ul class="no-bullets">
-        <li hidden id="name-error">Please enter your name.</li>
-        <li hidden id="email-error">Please enter a valid email address.</li>
-        <li hidden id="robot-error">Please verify you are not a robot.</li>
-    </ul>
-</section>
 <form name="contact" id="contact-form" method="post" action="https://formspree.io/f/mnqleljw" novalidate>
     <fieldset>
         <legend>Your Information</legend>
         <div>
             <label for="submitter-name">Name*</label>
             <input type="text" name="submitter-name" id="submitter-name" aria-required="true" autocomplete="name">
+            <div class="form-error" id="name-error" hidden>Error: Please enter a name.</div>
         </div>
         <div>
             <label for="email-address">Email*</label>
             <input type="text" id="email-address" name="_replyto" aria-required="true" inputmode="email" autocomplete="email">
+            <div class="form-error" id="email-error" hidden>Error: Please enter an email address.</div>
         </div>
     </fieldset>
     <fieldset>
@@ -55,7 +47,6 @@
         <textarea name="message" id="message"></textarea>
     </fieldset>
     <input type="hidden" name="_subject" value="yarbrough.info Contact Form Submission">
-    <div id="recaptcha-block" class="g-recaptcha" data-sitekey="6LdQV30dAAAAALLSYwQ2gJ7IzNdInvk9nzJPWVyT"></div>
     <button type="submit">Submit</button>
 </form>
             </main>
