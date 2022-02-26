@@ -118,7 +118,13 @@ input:focus, textarea:focus {
 }
 button[type=submit]:focus {
 outline: 0.1rem dotted var(--blue);
-outline-offset: 0.1rem;;
+outline-offset: 0.1rem;
+}
+input + .form-error {
+    display: none;
+}
+input[aria-invalid] + .form-error {
+    display: block;
 }
 
 /*Accordion styling*/
@@ -264,8 +270,4 @@ flex: 4;
 }
 .no-bullets {
     list-style-type: none;
-}
-.form-error {
-    margin-top: 0;
-    padding-top: 0;
 }

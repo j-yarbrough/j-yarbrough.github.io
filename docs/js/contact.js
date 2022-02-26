@@ -1,6 +1,5 @@
 var contactForm = document.getElementById('contact-form');
-var canSubmit;
-var firstError;
+var firstErrorField;
 
 contactForm.addEventListener('submit',validateForm);
 
@@ -9,40 +8,44 @@ function validateForm() {
     var nameError = document.querySelector('#name-error');
     var emailField = document.querySelector('#email-address');
     var emailError = document.querySelector('#email-error');
-    canSubmit = true;
+    var fieldsWithErrors = 0;
+    firstErrorField = undefined;
     switch (nameField.value.length > 0) {
-case true: fieldIsValid(nameField,nameError);
+case true: fieldIsValid(nameField);
 break;
 case false: fieldIsInvalid(nameField,nameError);
+fieldsWithErrors++;
 break;
     } //end switch
     switch (emailField.value.includes('@')) {
-case true: fieldIsValid(emailField,emailError);
+case true: fieldIsValid(emailField);
 break;
 case false: fieldIsInvalid(emailField,emailError);
+fieldsWithErrors++;
 break;
     } //end switch
-    switch (canSubmit) {
-        case true: break;
-        case false: event.preventDefault();
-        firstError.focus();
-        break;
-    } //end switch
-    return;
+    if (fieldsWithErrors == 0) {
+        return;
+    } else if (fieldsWithErrors > 0) {
+        event.preventDefault();
+        firstErrorField.focus();
+        return;
+    } //end if
 }//end function
 
-function fieldIsValid(fieldVar, errorVar) {
-    fieldVar.removeAttribute('aria-describedby');
-    fieldVar.removeAttribute('aria-invalid');
-    errorVar.setAttribute('hidden','hidden');
-} //end function
+function fieldIsValid(fieldVar) {
+    if (fieldVar.hasAttribute('aria-invalid')) {
+        fieldVar.removeAttribute('aria-describedby');
+        fieldVar.removeAttribute('aria-invalid');
+} //end if
+    } //end function
 
 function fieldIsInvalid(fieldVar, errorVar) {
-    if (canSubmit == true) {
-canSubmit = false;
-firstError = fieldVar;
+    if (fieldVar.hasAttribute('aria-invalid') == false) {
+        fieldVar.setAttribute('aria-describedby',errorVar.getAttribute('id'));
+        fieldVar.setAttribute('aria-invalid','true');
     } //end if
-    errorVar.removeAttribute('hidden');
-    fieldVar.setAttribute('aria-describedby',errorVar.getAttribute('id'));
-    fieldVar.setAttribute('aria-invalid','true');
+    if (firstErrorField == undefined) {
+        firstErrorField = fieldVar;
+}
 } //end function
