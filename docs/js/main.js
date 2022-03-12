@@ -4,15 +4,12 @@ var elShowHide = document.querySelector('#nav-btn'); //variable for collapser bu
 elShowHide.addEventListener('click',showHideNav); //event listener for above
 
 function showHideNav() {
-    var navLinks = document.querySelector('#nav-links');
     switch (this.getAttribute('aria-expanded')) {
         case 'false': this.setAttribute('aria-expanded','true');
         this.textContent = 'Hide Navigation';
-        navLinks.setAttribute('data-show','show');
         break;
         case 'true': this.setAttribute('aria-expanded','false');
         this.textContent = 'Show Navigation';
-        navLinks.removeAttribute('data-show');
         break;
     };
 } //end function
@@ -125,16 +122,13 @@ elAccordionButtons[i].addEventListener('click',triggerAccordion);
 //function
 
 function triggerAccordion() {
-    var panel = this.parentElement.nextElementSibling;
     var header = this.parentElement;
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
-        panel.removeAttribute('data-show');
         header.removeAttribute('data-show');
         break;
         case 'false': this.setAttribute('aria-expanded',true);
         header.setAttribute('data-show','show');
-        panel.setAttribute('data-show','show');
         break;
     };
 } //end function

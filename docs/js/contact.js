@@ -48,4 +48,4 @@ function fieldIsInvalid(fieldVar, errorVar) {
     if (firstErrorField == undefined) {
         firstErrorField = fieldVar;
 }
-} //end function
+} //end functiton
