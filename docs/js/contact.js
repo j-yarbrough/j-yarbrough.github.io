@@ -8,6 +8,8 @@ function validateForm() {
     var nameError = document.querySelector('#name-error');
     var emailField = document.querySelector('#email-address');
     var emailError = document.querySelector('#email-error');
+    var subjectField = document.querySelector('#subject');
+    var subjectError = document.querySelector('#subject-error');
     var fieldsWithErrors = 0;
     firstErrorField = undefined;
     switch (nameField.value.length > 0) {
@@ -24,7 +26,15 @@ case false: fieldIsInvalid(emailField,emailError);
 fieldsWithErrors++;
 break;
     } //end switch
+    switch (subjectField.value.length > 0) {
+        case true: fieldIsValid(subjectField);
+        break;
+        case false: fieldIsInvalid(subjectField,subjectError);
+        fieldsWithErrors++;
+        break;
+            } //end switch        
     if (fieldsWithErrors == 0) {
+        subjectField.value = '[Contact] ' + subjectField.value;
         return;
     } else if (fieldsWithErrors > 0) {
         event.preventDefault();
@@ -48,4 +58,4 @@ function fieldIsInvalid(fieldVar, errorVar) {
     if (firstErrorField == undefined) {
         firstErrorField = fieldVar;
 }
-} //end functiton
+} //end function

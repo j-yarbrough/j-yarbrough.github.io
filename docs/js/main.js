@@ -123,12 +123,15 @@ elAccordionButtons[i].addEventListener('click',triggerAccordion);
 
 function triggerAccordion() {
     var header = this.parentElement;
+    var indicator = this.firstElementChild;
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
         header.removeAttribute('data-show');
+        indicator.textContent = '+ ';
         break;
         case 'false': this.setAttribute('aria-expanded',true);
         header.setAttribute('data-show','show');
+        indicator.textContent = '- ';
         break;
     };
 } //end function
