@@ -127,11 +127,11 @@ function triggerAccordion() {
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
         header.removeAttribute('data-show');
-        indicator.textContent = '+ ';
+        indicator.innerHTML = '&plus;';
         break;
         case 'false': this.setAttribute('aria-expanded',true);
         header.setAttribute('data-show','show');
-        indicator.textContent = '- ';
+        indicator.innerHTML = '&minus;';
         break;
     };
 } //end function
