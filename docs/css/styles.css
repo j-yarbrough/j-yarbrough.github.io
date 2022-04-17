@@ -1,10 +1,11 @@
 /*CSS variables*/
 :root {
 --serif: Georgia, "Times New Roman", Times, Serif;
---black: #333333;
+--black: #222222;
 --white: #ffffff;
 --blue:#00247d;
 --red: #cf142b;
+--disabled-gray: #898989;
 }
 
 body {
@@ -112,9 +113,15 @@ textarea {
     width: 100%;
     height: 7rem;
 }
+button[type=submit] {
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 0.5rem;
+}
 button[type=submit]:focus {
-outline: 0.1rem dotted var(--blue);
-outline-offset: 0.1rem;
+color: var(--white);
+background-color: var(--blue);
 }
 input + .form-error {
     display: none;
@@ -138,6 +145,7 @@ input[aria-invalid] + .form-error {
     background-color:  var(--white);
     padding:  0 0.5rem;
     border-radius: 0.5rem;
+    font-family: var(--serif);
 }
 .accordion-button:focus, .accordion-button:hover {
     color: var(--white);
@@ -160,6 +168,24 @@ border-bottom: 0;
     border-radius: 0.5rem;
 }
 
+#accordion-control-wrapper button {
+    font-family: var(--serif);
+    border: 1px solid var(--blue);
+    color: var(--blu);
+    background-color: var(--white);
+    border-radius: 0.5rem;
+}
+
+#accordion-control-wrapper button:focus {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#accordion-control-wrapper button[disabled] {
+    color: var(--black);
+    border: var(--black);
+    background-color: var(--disabled-gray);
+}
 /*media queries for responsive*/
 /* small*/
 @media (max-width: 767px) {
@@ -255,7 +281,7 @@ flex: 4;
 .text-right {
     text-align: right;
 }
-#toc, .ebox-border-left {
+#accordion-control-wrapper, #toc, .ebox-border-left {
     padding-left: 1rem;
     border-left: 1px dotted var(--blue);
 }

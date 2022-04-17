@@ -110,6 +110,9 @@ switch (headingIndex.headingTag[i]) { //closes out the list or lists based on le
 //begin accordion
 
 var elAccordionButtons = document.querySelectorAll('.accordion-button');
+var bulkAccordionsControlWrapper = document.querySelectorAll('#accordion-control-wrapper');
+var expandAllAccordions = document.querySelector('#expand-all-accordions');
+var collapseAllAccordions = document.querySelector('#collapse-all-accordions');
 
 //event listener
 
@@ -118,12 +121,17 @@ if (elAccordionButtons.length > 0) {
 elAccordionButtons[i].addEventListener('click',triggerAccordion);
     };
 }
+if (bulkAccordionsControlWrapper.length > 0) {
+    expandAllAccordions.addEventListener('click',expandAll);
+    collapseAllAccordions.addEventListener('click',collapseAll);
+}
 
-//function
+//functions
 
 function triggerAccordion() {
     var header = this.parentElement;
     var indicator = this.firstElementChild;
+    var expandedCount;
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
         header.removeAttribute('data-show');
@@ -134,6 +142,40 @@ function triggerAccordion() {
         indicator.innerHTML = '&minus;';
         break;
     };
+    expandedCount = document.querySelectorAll('.accordion-button[aria-expanded="true"]').length;
+    if (elAccordionButtons.length == expandedCount) {
+        expandAllAccordions.setAttribute('disabled','disabled');
+        collapseAllAccordions.removeAttribute('disabled');
+    } else if (expandedCount == 0) {
+        collapseAllAccordions.setAttribute('disabled','disabled');
+expandAllAccordions.removeAttribute('disabled');
+    } else {
+        collapseAllAccordions.removeAttribute('disabled');
+        expandAllAccordions.removeAttribute('disabled');
+    };
 } //end function
+
+function expandAll() {
+for (var i = 0; i < elAccordionButtons.length; i++) {
+    elAccordionButtons[i].setAttribute('aria-expanded','true');
+    elAccordionButtons[i].firstElementChild.innerHTML = '&minus;';
+    elAccordionButtons[i].parentElement.setAttribute('data-show','show');
+};
+expandAllAccordions.setAttribute('disabled','disabled');
+collapseAllAccordions.removeAttribute('disabled');
+collapseAllAccordions.focus();
+}
+
+function collapseAll() {
+    for (var i = 0; i < elAccordionButtons.length; i++) {
+        elAccordionButtons[i].setAttribute('aria-expanded','false');
+        elAccordionButtons[i].firstElementChild.innerHTML = '&plus;';
+        elAccordionButtons[i].parentElement.removeAttribute('data-show');
+    };
+    expandAllAccordions.removeAttribute('disabled');
+    collapseAllAccordions.setAttribute('disabled','disabled');
+    expandAllAccordions.focus();
+    }
+    
 
 //end accordion
