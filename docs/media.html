@@ -8,12 +8,15 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
-        <a id="skip-links" href="#main">Skip to Main Content</a>
+    <div id="skip-links">
+        <a href="#main">Skip to Main Content</a>
+        <a href="#footer-nav">Skip to Footer</a>
+    </div>
     <header class="white-background">
         <p>Justin Yarbrough</p>
     </header>
         <div id="wrapper">
-            <nav id="nav">
+            <nav id="nav" aria-label="Main">
                 <!--Below Button only collapses nav for mobile-->
                 <button id="nav-btn" aria-expanded="false">Show Navigation</button>
 <ul id="nav-links">
@@ -21,13 +24,12 @@
     <li><a href="writing.html">Writing</a></li>
     <li aria-current="page">Other Media</li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="accessibility.html">Accessibility</a></li>
 </ul>
             </nav>
             <main id="main" tabindex="-1" class="white-background">
 <h1>Other Media</h1>
 <p>Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out his <a href="writing.html">writing page</a>.</p>
-<p>If you would like Justin to appear on a podcast or other media, please <a href="contact.html">contact him</a>.</p>
+<p>If you would like Justin to appear on a podcast or other media, you can <a href="contact.html">contact him</a>.</p>
 <div role="group" id="accordion-control-wrapper" aria-labelledby="accordion-container-label">
     <p id="accordion-container-label">Controls for all accordions</p>
     <button id="expand-all-accordions">Show All</button>
@@ -69,6 +71,13 @@
             </main>
         </div>
         <footer>
+            <nav id="footer-nav" tabindex="-1" aria-label="Footer">
+<a href="index.html">Home</a> 
+<a href="writing.html">Writing</a> 
+<a href="media.html" aria-current="page">Other Media</a> 
+<a href="contact.html">Contact</a> 
+<a href="accessibility.html">Accessibility</a> 
+            </nav>
 <p id="copyright">&copy; 2021-2022 Justin L. Yarbrough</p>
         </footer>
     <script src="js/main.js"></script>

@@ -8,12 +8,15 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 <body>
-        <a id="skip-links" href="#main">Skip to Main Content</a>
+    <div id="skip-links">
+        <a href="#main">Skip to Main Content</a>
+        <a href="#footer-nav">Skip to Footer</a>
+    </div>
     <header class="white-background">
         <p>Justin Yarbrough</p>
     </header>
         <div id="wrapper">
-            <nav id="nav">
+            <nav id="nav" aria-label="Main">
                 <!--Below Button only collapses nav for mobile-->
                 <button id="nav-btn" aria-expanded="false">Show Navigation</button>
 <ul id="nav-links">
@@ -21,13 +24,12 @@
     <li aria-current="page">Writing</li>
     <li><a href="media.html">Other Media</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="accessibility.html">Accessibility</a></li>
 </ul>
             </nav>
             <main id="main" tabindex="-1" class="white-background">
 <h1>Writing</h1>
 <p>Below you will find a sample of articles Justin has written. To see other media Justin has appeared in, check out the <a href="media.html">other media page</a>.</p>
-<p>If you would like Justin to appear on your podcast or other media, please <a href="contact.html">contact him</a>.</p>
+<p>If you would like to commission Justin to write something for you, you can <a href="contact.html">contact him</a>.</p>
 <div role="group" id="accordion-control-wrapper" aria-labelledby="accordion-container-label">
     <p id="accordion-container-label">Controls for all accordions</p>
     <button id="expand-all-accordions">Show All</button>
@@ -63,6 +65,13 @@
             </main>
         </div>
         <footer>
+            <nav id="footer-nav" tabindex="-1" aria-label="Footer">
+<a href="index.html">Home</a> 
+<a href="writing.html" aria-current="page">Writing</a> 
+<a href="media.html">Other Media</a> 
+<a href="contact.html">Contact</a> 
+<a href="accessibility.html">Accessibility</a> 
+            </nav>
 <p id="copyright">&copy; 2021-2022 Justin L. Yarbrough</p>
         </footer>
     <script src="js/main.js"></script>

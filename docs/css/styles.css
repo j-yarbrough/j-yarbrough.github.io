@@ -44,6 +44,15 @@ a:focus {
     outline-offset: 2px;
 }
 
+/*footer nav styling*/
+footer nav {
+    font-size: smaller;
+}
+footer nav a[aria-current] {
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /*nav styling*/
 
 #nav {
