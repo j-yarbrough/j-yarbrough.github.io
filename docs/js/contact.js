@@ -1,3 +1,5 @@
+//script for contact form validation
+
 var contactForm = document.getElementById('contact-form');
 var firstErrorField;
 
