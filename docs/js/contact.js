@@ -35,14 +35,13 @@ break;
         fieldsWithErrors++;
         break;
             } //end switch        
-    if (fieldsWithErrors == 0) {
-        subjectField.value = '[Contact] ' + subjectField.value;
-        return;
-    } else if (fieldsWithErrors > 0) {
-        event.preventDefault();
-        firstErrorField.focus();
-        return;
-    } //end if
+                switch (fieldsWithErrors) {
+                    case 0: subjectField.value = '[Contact]' + subjectField.value;
+                    break;
+                    default: event.preventDefault();
+                    firstErrorField.focus();
+                }// end switch
+                return;
 }//end function
 
 function fieldIsValid(fieldVar) {
