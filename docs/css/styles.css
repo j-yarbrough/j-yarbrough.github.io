@@ -21,6 +21,22 @@ header {
     font-size: 2rem;
 }
 
+ol {
+    list-style-type: decimal;
+}
+ol ol {
+    list-style-type: upper-alpha;
+}
+ol ol ol {
+    list-style-type: upper-roman;
+}
+ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links {
     position: absolute;
@@ -103,19 +119,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--white);
 }
 
-/*Table Styling*/
-table {
-    margin: 16px auto;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid var(--blue);
-}
-th {
-color: var(--white);
-background-color: var(--blue);
-}
-
 /*Form styling*/
 textarea {
     display: block;
@@ -178,25 +181,6 @@ border-bottom: 0;
     border-radius: 8px;
 }
 
-#accordion-control-wrapper button {
-    font-family: var(--serif);
-    border: 1px solid var(--blue);
-    color: var(--blu);
-    background-color: var(--white);
-    border-radius: 8px;
-    padding: 0 8px;
-}
-
-#accordion-control-wrapper button:focus {
-    color: var(--white);
-    background-color: var(--blue);
-}
-
-#accordion-control-wrapper button[disabled] {
-    color: var(--black);
-    border: var(--black);
-    background-color: var(--disabled-gray);
-}
 /*media queries for responsive*/
 /* small*/
 @media (max-width: 47.94rem) {
