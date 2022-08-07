@@ -1,0 +1,16 @@
+//Components
+//
+// Included below is the base HTML code for interactive components
+// Just copy and paste the code into the document
+
+// Accordion
+// Configurable: Heading level, text content of button
+
+<h2 class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;</span>Button Text Goes Here</button></h2>
+<div class="accordion-panel">
+
+</div>
+
+// Table of Contents
+
+<nav id="toc"></nav>
