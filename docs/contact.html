@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="skip-links">
-        <a href="#main">Skip to Main Content</a>
+        <a href="#main-hdg">Skip to Main Content</a>
         <a href="#footer-nav">Skip to Footer</a>
     </div>
     <header class="white-background">
@@ -26,12 +26,10 @@
     <li aria-current="page">Contact</li>
 </ul>
             </nav>
-            <main id="main" tabindex="-1" class="white-background">
-<h1>Contact Justin</h1>
+            <main class="white-background">
+<h1 id="main-hdg" tabindex="-1">Contact Justin</h1>
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
 <form name="contact" id="contact-form" method="post" action="https://formspree.io/f/mnqleljw" novalidate>
-    <fieldset>
-        <legend>Your Information</legend>
         <div>
             <label for="submitter-name">Name<span aria-hidden="true">*</span></label>
             <input type="text" name="submitter-name" id="submitter-name" aria-required="true" autocomplete="name">
@@ -42,9 +40,6 @@
             <input type="text" id="email-address" name="_replyto" aria-required="true" inputmode="email" autocomplete="email">
             <p class="form-error" id="email-error">Error: Please enter an email address.</p>
         </div>
-    </fieldset>
-    <fieldset>
-        <legend>Your Message</legend>
         <div>
             <label for="subject">Subject<span aria-hidden="true">*</span></label>
 <input type="text" name="_subject" id="subject" aria-required="true">
@@ -52,7 +47,6 @@
         </div>
         <label for="message">Enter your message here:</label>
         <textarea name="message" id="message"></textarea>
-    </fieldset>
     <p id="recaptcha-note">After submitting this form, you may be taken to a RECAPTCHA that will be required for your message to be sent.</p>
     <button type="submit" aria-describedby="recaptcha-note">Submit</button>
 </form>
