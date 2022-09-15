@@ -7,10 +7,10 @@
 // Configurable: Heading level, text content of button
 
 <h2 class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
-Button Text Goes Here
+<!--Button Text Goes Here-->
 </button></h2>
 <div class="accordion-panel">
-Panel content goes here
+<!--Panel Content Goes Here-->
 </div>
 
 // Table of Contents
