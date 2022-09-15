@@ -104,6 +104,10 @@ footer nav a[aria-current] {
 h1, h2, h3, h4, h5, h6 {
     color: var(--blue);
 }
+h1:focus {
+    outline: 2px dotted var(--blue);
+    outline-offset: 2px;
+}
 
 /*hides nav collapse button for all but mobile*/
 #nav-btn {
