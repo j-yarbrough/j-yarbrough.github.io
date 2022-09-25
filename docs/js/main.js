@@ -2,8 +2,8 @@
 // Will load scripts only for components that are being used on pages.
 // This script will check for certain selectors and append script tags to the end of the body element.
 
-var pageURL = window.location.href;
-var rootCheckerOutput = 'js/';
+var rootScriptTag = document.querySelector('#root-script');
+var rootCheckerOutput;
 
 // Array for checks to be done
 // Format for each check is [selector, filename]
@@ -16,11 +16,14 @@ var indexOfChecks = [
     ['#contact-form','contact']
     ]; //end index
 
-// checks URL to see if it's a root or approved subfolder
+//checks if page is in root or subfolder
 
-if (pageURL.includes('alt-text')) {
-    rootCheckerOutput = '../js/';
-};
+switch (rootScriptTag.getAttribute('data-sub')) {
+    case 'true': rootCheckerOutput = '../js/';
+    break;
+    case 'false': rootCheckerOutput = 'js/';
+    break;
+}
 
 // Loop that does checks, runs function if check is true
 
