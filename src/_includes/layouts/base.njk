@@ -12,7 +12,8 @@ permalink: "/{{ page.fileSlug }}.html"
 </head>
 <body>
     <div id="skip-links">
-        <a href="#main-hdg">Skip to Main Content</a>
+        <a href="#main-hdg">Skip to Main Content</a> 
+        <a href="#footer-nav">Skip to Footer Links</a>
     </div>
     <header class="white-background">
         <p>Justin Yarbrough</p>
@@ -24,9 +25,11 @@ permalink: "/{{ page.fileSlug }}.html"
 {% set navPages = collections.all | eleventyNavigation %}
 <ul id="nav-links" role="list">
 {%- for entry in navPages %}
+{% if (loop.index <= 4) %}
   <li{% if entry.url == page.url %} aria-current="page"{% endif %}>
     {% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
   </li>
+  {% endif %}
 {%- endfor %}
 </ul>
             </nav>
@@ -36,6 +39,12 @@ permalink: "/{{ page.fileSlug }}.html"
             </main>
         </div>
         <footer>
+<nav id="footer-nav" tabindex="-1" aria-label="footer">
+{%- for entry in navPages %}
+{% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
+{% if (loop.index <= navPages | length - 1) %} | {% endif %}
+{%- endfor %}
+</nav>        
 <p id="copyright">&copy; 2021-2022 Justin L. Yarbrough<br>
 Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
         </footer>
