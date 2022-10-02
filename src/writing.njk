@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Justin Yarbrough">
-    <title>Writing - Justin Yarbrough</title>
-<link rel="stylesheet" href="css/styles.css" type="text/css">
-</head>
-<body>
-    <div id="skip-links">
-        <a href="#main-hdg">Skip to Main Content</a>
-        <a href="#footer-nav">Skip to Footer</a>
-    </div>
-    <header class="white-background">
-        <p>Justin Yarbrough</p>
-    </header>
-        <div id="wrapper">
-            <nav id="nav" aria-label="Main">
-                <!--Below Button only collapses nav for mobile-->
-                <button id="nav-btn" aria-expanded="false">Show Navigation</button>
-<ul id="nav-links" role="list">
-    <li><a href="index.html">Home</a></li>
-    <li aria-current="page">Writing</li>
-    <li><a href="media.html">Other Media</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-            </nav>
-            <main class="white-background">
-<h1 id="main-hdg" tabindex="-1">Writing</h1>
+---
+title: Writing
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Writing
+  order: 2
+---
 <p>Below you will find a sample of articles Justin has written. To see other media Justin has appeared in, check out the <a href="media.html">other media page</a>.</p>
 <p>If you would like to commission Justin to write something for you, you can <a href="contact.html">contact him</a>.</p>
 <h2 class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
@@ -88,18 +65,3 @@ Trip report for flights between Phoenix and Houston on United's 737 MAX 8 equipp
     </ul>
 </div>
 <p class="smaller">Please note that Justin has no control over the accessibility of any links to third-party sites.</p>
-            </main>
-        </div>
-        <footer>
-            <nav id="footer-nav" tabindex="-1" aria-label="Footer">
-<a href="index.html">Home</a> 
-<a href="writing.html" aria-current="page">Writing</a> 
-<a href="media.html">Other Media</a> 
-<a href="contact.html">Contact</a> 
-<a href="accessibility.html">Accessibility</a> 
-            </nav>
-<p id="copyright">&copy; 2021-2022 Justin L. Yarbrough</p>
-        </footer>
-<script id="root-script" data-sub="false" src="js/main.js"></script>
-</body> 
-</html>

@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Justin Yarbrough">
-    <title>Other Media - Justin Yarbrough</title>
-<link rel="stylesheet" href="css/styles.css" type="text/css">
-</head>
-<body>
-    <div id="skip-links">
-        <a href="#main-hdg">Skip to Main Content</a>
-        <a href="#footer-nav">Skip to Footer</a>
-    </div>
-    <header class="white-background">
-        <p>Justin Yarbrough</p>
-    </header>
-        <div id="wrapper">
-            <nav id="nav" aria-label="Main">
-                <!--Below Button only collapses nav for mobile-->
-                <button id="nav-btn" aria-expanded="false">Show Navigation</button>
-<ul id="nav-links" role="list">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="writing.html">Writing</a></li>
-    <li aria-current="page">Other Media</li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
-            </nav>
-            <main class="white-background">
-<h1 id="main-hdg" tabindex="-1">Other Media</h1>
+---
+title: Other Media
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Other Media
+  order: 3
+---
 <p>Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out his <a href="writing.html">writing page</a>.</p>
 <p>If you would like Justin to appear on a podcast or other media, you can <a href="contact.html">contact him</a>.</p>
 <h2 class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
@@ -125,18 +102,3 @@ If you’re blind, how do you tweet? </a><br>Presentation along with Steven Morr
 </ul>
 </div>
 <p class="smaller">Please note that Justin has no control over the accessibility of any links to third-party sites.</p>
-            </main>
-        </div>
-        <footer>
-            <nav id="footer-nav" tabindex="-1" aria-label="Footer">
-<a href="index.html">Home</a> 
-<a href="writing.html">Writing</a> 
-<a href="media.html" aria-current="page">Other Media</a> 
-<a href="contact.html">Contact</a> 
-<a href="accessibility.html">Accessibility</a> 
-            </nav>
-<p id="copyright">&copy; 2021-2022 Justin L. Yarbrough</p>
-        </footer>
-<script id="root-script" data-sub="false" src="js/main.js"></script>
-</body> 
-</html>

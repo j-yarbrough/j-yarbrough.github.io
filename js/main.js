@@ -2,8 +2,6 @@
 // Will load scripts only for components that are being used on pages.
 // This script will check for certain selectors and append script tags to the end of the body element.
 
-var rootScriptTag = document.querySelector('#root-script');
-var rootCheckerOutput;
 
 // Array for checks to be done
 // Format for each check is [selector, filename]
@@ -15,15 +13,6 @@ var indexOfChecks = [
     ['.accordion-button','accordion'],
     ['#contact-form','contact']
     ]; //end index
-
-//checks if page is in root or subfolder
-
-switch (rootScriptTag.getAttribute('data-sub')) {
-    case 'true': rootCheckerOutput = '../js/';
-    break;
-    case 'false': rootCheckerOutput = 'js/';
-    break;
-}
 
 // Loop that does checks, runs function if check is true
 
@@ -37,6 +26,6 @@ for (var i = 0; i < indexOfChecks.length; i++) {
 
 function createScriptElements (scriptFileName) {
     var elementBeingCreated = document.createElement('script');
-    elementBeingCreated.setAttribute('src',rootCheckerOutput + scriptFileName + '.js');
+    elementBeingCreated.setAttribute('src','/js/' + scriptFileName + '.js');
 document.body.appendChild(elementBeingCreated);
 }
