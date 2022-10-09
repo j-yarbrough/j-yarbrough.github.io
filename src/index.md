@@ -21,5 +21,3 @@ You can connect with Justin on the following social media channels:
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
 - [Twitter](https://www.twitter.com/fatelvis04)
-</ul>
-          

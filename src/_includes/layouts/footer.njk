@@ -1,0 +1,10 @@
+<footer>
+<nav id="footer-nav" tabindex="-1" aria-label="footer">
+{%- for entry in navPages %}
+{% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
+{% if (loop.index <= navPages | length - 1) %} | {% endif %}
+{%- endfor %}
+</nav>        
+<p id="copyright">&copy; 2021-2022 Justin L. Yarbrough<br>
+Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
+</footer>
