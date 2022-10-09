@@ -5,8 +5,10 @@ eleventyNavigation:
   key: Other Media
   order: 3
 ---
-<p>Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out his <a href="/writing">writing page</a>.</p>
-<p>If you would like Justin to appear on a podcast or other media, you can <a href="/contact">contact him</a>.</p>
+Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out his <a href="/writing">writing page</a>.
+
+If you would like Justin to appear on a podcast or other media, you can <a href="/contact">contact him</a>.
+
 <h2 class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
 Media Quoting Justin
 </button></h2>
@@ -101,4 +103,4 @@ If you’re blind, how do you tweet? </a><br>Presentation along with Steven Morr
 </li>
 </ul>
 </div>
-<p class="smaller">Please note that Justin has no control over the accessibility of any links to third-party sites.</p>
+Please note that Justin has no control over the accessibility of any links to third-party sites

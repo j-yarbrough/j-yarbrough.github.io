@@ -5,7 +5,8 @@ eleventyNavigation:
   key: Contact
   order: 4
 ---
-<p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
+to contact Justin, simply fill out this form. All fields marked with an asterisk are required.
+
 <form name="contact" id="contact-form" method="post" action="https://formspree.io/f/mnqleljw" novalidate>
         <div>
             <label for="submitter-name">Name<span aria-hidden="true">*</span></label>
@@ -25,4 +26,4 @@ eleventyNavigation:
         <label for="message">Enter your message here:</label>
         <textarea name="message" id="message"></textarea>
     <button type="submit">Submit</button>
-</form>
+    </form>

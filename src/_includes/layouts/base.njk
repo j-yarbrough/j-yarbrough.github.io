@@ -10,11 +10,8 @@
 <body>
 {% include "layouts/skip-links.njk" %}
 {% include "layouts/header.njk" %}
-        <div id="wrapper">
-{% include "layouts/nav-main.njk" %}
-{% include "layouts/main.njk" %}
-        </div>
-{% include "layouts/footer.njk" %}        
-<script src="{{ relative_prefix }}/js/main.js"></script>
+{% include "layouts/main-section-wrapper.njk" %}
+{% include "layouts/footer.njk" %}
+<script src="/js/main.js"></script>
 </body> 
 </html>

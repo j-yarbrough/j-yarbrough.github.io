@@ -1,0 +1,7 @@
+<nav id="footer-nav" tabindex="-1" aria-label="footer">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+{% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
+{% if (loop.index <= navPages | length - 1) %} | {% endif %}
+{%- endfor %}
+</nav>        

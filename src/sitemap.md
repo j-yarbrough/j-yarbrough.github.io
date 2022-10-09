@@ -5,4 +5,4 @@ eleventyNavigation:
   key: Site Map
   order: 6
 ---
-{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+{% include "components/sitemap.njk" %}
