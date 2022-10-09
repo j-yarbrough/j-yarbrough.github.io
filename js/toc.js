@@ -5,18 +5,19 @@ var headingsToIndex = document.querySelectorAll('h2');
 
 //adds id attributes and tabindex to h2's
 
-addIdAndTabIndex() ;
+buildingTheTOC() ;
 
-function addIdAndTabIndex() {
+function buildingTheTOC() {    
     for (var i = 0; i < headingsToIndex.length; i++) {
      headingsToIndex[i].setAttribute('tabindex','-1');
      headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.replace(/[^A-Za-z0-9]+/g,'') + i);
     } //end loop
+    createTocHeader();
+    listBuilder();
 } //end function
 
 //adds header to top and aria-labelledby
 
-createTocHeader();
 
 function createTocHeader() {
     var tocHeader = document.createElement('h2');
@@ -28,9 +29,8 @@ function createTocHeader() {
 
 //builds list
 
-listBuilder();
 function listBuilder() {
-    var listElement = document.createElement('ol');
+    var listElement = document.createElement('ul');
     listElement.setAttribute('id','toc-list');
     toc.appendChild(listElement);
     for (var i = 0; i < headingsToIndex.length; i++) {

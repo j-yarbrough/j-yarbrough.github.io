@@ -15,26 +15,31 @@ Simply put, alt text provides a text-based alternative to graphics on the web. S
 ## Writing Alt Text
 
 Writing good alt text can be a challenge. In my day job as an accessibility specialist for an online college, I describe writing alt text as an art rather than a science. While there are a few guiding principles based off accessibility best practices, there's also a lot of wiggle room. The following tips are based off a combination of best practices and my own personal taste:
+
 - Be concise. Screen readers take time to read things. How long depends on that person's screen reader settings. An experienced screen reader user like myself may have theirs set to talk really fast, whereas a novice user is likely to have theirs set at a more conversational pace.
 - Don't describe every detail. Remember back in elementary school when you'd be asked to read something and determine what the main idea of the passage was? Do something similar with your images and describe what you'd like someone to take from it.
 - Avoid redundancies. If something's in the body of your post, it probably doesn't need to be in the alt text. Additionally, remember how screen readers work. Since they will identify an item as a graphic when they encounter it, you don't need to say so in the alt text. It's fine to say something like "Picture shows" if you're describing an image in nearby text content, but it's just repetitive when it's in the alt text itself.
 
-Writing good alt text can be a challenge and may seem hard at first. Like anything else, though, it gets easier with practice. Over time you'll figure out what works best for you.
+Writing good alt text can be a challenge and may seem hard at first. Like anything else, though, it gets easier with practice. Over time you will figure out what works best for you.
+
 ## How do I add alt text on social media?
 
-The help sites for the various social media platforms do a much better job of explaining how to add alt text to their posts than I can, so I'm just going to link to their respective help pages below:
+The different social media platforms all have help articles describing how to add alt text to images. You can find those articles here:
 
 - [Facebook](https://www.facebook.com/help/214124458607871)
 - [Instagram](https://help.instagram.com/503708446705527)
 - [LinkedIn](https://www.linkedin.com/help/linkedin/answer/109799/adding-alternative-text-to-images-for-accessibility?lang=en)
-- [Twitter](https://help.twitter.com/en/using-twitter/picture-descriptions)
+- Twitter:
+    - [How to add alt text on Twitter](https://help.twitter.com/en/using-twitter/picture-descriptions)
+    - [Enabling Twitter's alt text reminder](https://help.twitter.com/en/using-twitter/set-image-description-reminder) which will prompt you to add alt text if you try to send a tweet without it.
 
-If you use a third-party app to access social media, it likely has the ability to add alt text to your posts as well. Check the documentation for your app of choice or do a quick Google search and you should be able to find instructions.
+Many third party social media apps also support adding alt text to images. You should be able to find instructions by doing a quick Google search. If your preferred app does not support adding alt text, then maybe it's time for a change.
 
 ## Examples
-Below you'll find a few examples of alt text from tweets. I'm embedding the tweets. Below them, you'll find the alt text for the images written out.
+Below you will find a few examples of alt text from tweets. I'm embedding the tweets. Below them, you'll find the alt text for the images written out.
                 
-                **Note for screen reader users:** You won't hear the written out versions of the alt text below tweets. I've intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
+                **Note for screen reader users:** You will not hear the written out versions of the alt text below tweets. I have intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
+
 <!--Examples start here-->
                 <div class="ebox-border-left">
                     <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Mom isn’t even mad I stole this. Mostly. <a href="https://t.co/Ahzkwa2EC6">pic.twitter.com/Ahzkwa2EC6</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1191864360135643137?ref_src=twsrc%5Etfw">November 5, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
@@ -58,7 +63,5 @@ Below you'll find a few examples of alt text from tweets. I'm embedding the twee
 
 - [Alt Text article from WebAIM](https://webaim.org/techniques/alttext/)  
 Article from WebAIM discussing the basics of alt text in a wider context.
-- [How to set image description reminder | Twitter Help](https://help.twitter.com/en/using-twitter/set-image-description-reminder)  
-Help article from Twitter describing how to enable a feature that reminds you to add alt text when you try to send a tweet without it.
 - [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
 A podcast in which I discuss the importance of using alt text on social media during public health and other emergencies as well as other accessibility-related topics.
