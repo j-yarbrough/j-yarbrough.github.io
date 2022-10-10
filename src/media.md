@@ -6,7 +6,7 @@ eleventyNavigation:
   key: Other Media
   order: 3
 ---
-Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out his <a href="/writing">writing page</a>.
+Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out the [writing](/writing) page.
 
 If you would like Justin to appear on a podcast or other media, you can [contact him](/contact)].
 
@@ -16,8 +16,8 @@ This is a non-exhaustive collection of media quoting Justin. Media featuring Jus
 
 ### InAccessible
 
-    - [It's All About the Money (and Healthcare)](https://heararizona.org/aging-and-inaccessible/episode-5-its-all-about-money-and-healthcare)  
-        This podcast examines the difficulties that people with disabilities have finding work. Recorded during the early stages of the COVID-19 pandemic, there is an emphasis on the transition to remote work. Justin discussed his experiences working remotely since the beginning of the pandemic and how the transition to remote work could open up more opportunities for people with disabilities.
+- [It's All About the Money \(and Healthcare)](https://heararizona.org/aging-and-inaccessible/episode-5-its-all-about-money-and-healthcare)  
+This podcast examines the difficulties that people with disabilities have finding work. Recorded during the early stages of the COVID-19 pandemic, there is an emphasis on the transition to remote work. Justin discussed his experiences working remotely since the beginning of the pandemic and how the transition to remote work could open up more opportunities for people with disabilities.
 
 ### Inclusive Communication
 
@@ -26,7 +26,7 @@ This is a non-exhaustive collection of media quoting Justin. Media featuring Jus
 
 ### Runway Girl Network
 
-- ]US airlines seek to honor disability rights while enforcing mask use](https://runwaygirlnetwork.com/2020/06/us-airlines-seek-to-honor-disability-rights-while-enforcing-mask-use/)  
+- [US airlines seek to honor disability rights while enforcing mask use](https://runwaygirlnetwork.com/2020/06/us-airlines-seek-to-honor-disability-rights-while-enforcing-mask-use/)  
 Article examining how airlines were trying to accommodate passengers with disabilities that were unable to wear masks early in the pandemic after airlines had started to require masks be worn on planes. While Justin's disability does not prevent him from wearing a mask, he was concerned how the policies would affect passengers who were unable to wear them.
     
 {% endaccordion %}
@@ -61,9 +61,9 @@ Justin discusses the new US Department of Transportation regulations surrounding
 
 {% accordion "2", "Profiles" %}
 
-    ### The Athletic
+### The Athletic
     
-    - [How one Diamondbacks fan refused to let going blind dim his love for baseball ](https://theathletic.com/1233230/2019/09/26/how-one-diamondbacks-fan-refused-to-let-going-blind-dim-his-love-for-baseball/)  
+- [How one Diamondbacks fan refused to let going blind dim his love for baseball ](https://theathletic.com/1233230/2019/09/26/how-one-diamondbacks-fan-refused-to-let-going-blind-dim-his-love-for-baseball/)  
 Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about Justin's blindness journey and his love for baseball. A subscription is required to read the full article.
     
     {% endaccordion %}
