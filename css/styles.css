@@ -61,13 +61,16 @@ a:focus {
 }
 
 /*footer nav styling*/
-footer nav {
+footer {
     font-size: smaller;
 }
-footer nav a[aria-current] {
+#footer-nav div span[aria-current="page"] {
     font-weight: bold;
-    text-decoration: none;
 }
+#footer-nav div span span[aria-hidden="true"] {
+    font-weight: normal;
+}
+
 
 /*nav styling*/
 
@@ -272,13 +275,13 @@ flex: 4;
 /*end responsive*/
 
 /*universal classes*/
-.smaller, #copyright {
+.smaller {
     font-size: smaller;
 }
 .text-right {
     text-align: right;
 }
-#accordion-control-wrapper, #toc, .ebox-border-left {
+blockquote, #toc, .ebox-border-left {
     padding-left: 16px;
     border-left: 1px dotted var(--blue);
 }
