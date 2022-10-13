@@ -63,11 +63,17 @@ a:focus {
 /*footer nav styling*/
 footer {
     font-size: smaller;
-}
-#footer-nav div span[aria-current="page"] {
+    }
+    #footer-nav-list {
+        list-style-type: none;
+    }
+    .footer-nav-list-item {
+        display: inline;
+    }
+    .footer-nav-list-item[aria-current="page"] {
     font-weight: bold;
 }
-#footer-nav div span span[aria-hidden="true"] {
+.footer-nav-list-item-separator {
     font-weight: normal;
 }
 
