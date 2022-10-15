@@ -21,7 +21,6 @@ ${content}
     return {
 
         dir: {
-            output: "docs",
             input: "src",
         }
     }
