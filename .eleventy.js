@@ -22,6 +22,7 @@ ${content}
 
         dir: {
             input: "src",
+            output: "docs"
         }
     }
 });
