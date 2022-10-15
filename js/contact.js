@@ -7,9 +7,9 @@ contactForm.addEventListener('submit',validateForm);
 
 function validateForm() {
     var nameField = document.querySelector('#submitter-name');
-    var nameError = document.querySelector('#name-error');
+    var nameError = document.querySelector('#submitter-name-error');
     var emailField = document.querySelector('#email-address');
-    var emailError = document.querySelector('#email-error');
+    var emailError = document.querySelector('#email-address-error');
     var subjectField = document.querySelector('#subject');
     var subjectError = document.querySelector('#subject-error');
     var fieldsWithErrors = 0;
