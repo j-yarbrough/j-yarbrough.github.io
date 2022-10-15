@@ -8,7 +8,7 @@ order: 2
 ---
 Below you will find a sample of articles Justin has written. To see other media Justin has appeared in, check out the [other media](/media) page.
 
-If you would like to have Justin write something for you, you can [contact him](/contact).
+If you would like to have Justin write something for you, you can [contact him.](/contact)
 
 {% accordion "2", "Nature" %}
 
