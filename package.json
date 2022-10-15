@@ -1,7 +1,6 @@
 {
   "name": "j-yarbrough.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": ".eleventy.js",
   "dependencies": {
     "abbrev": "^1.1.1",
@@ -276,5 +275,9 @@
   "bugs": {
     "url": "https://github.com/j-yarbrough/j-yarbrough.github.io/issues"
   },
-  "homepage": "https://github.com/j-yarbrough/j-yarbrough.github.io#readme"
+  "homepage": "https://github.com/j-yarbrough/j-yarbrough.github.io#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
