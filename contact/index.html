@@ -49,23 +49,25 @@
 <h1 id="main-hdg" tabindex="-1">Contact</h1>
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
-<div>
+<div id="submitter-name-input-container">
                         <label for="submitter-name">Name<span aria-hidden="true">*</span></label>
-                        <input type="text" name="submitter-name" id="submitter-name" aria-required="true" autocomplete="name">
-                        <p class="form-error" id="submitter-name-error">Error: Please enter your name.</p>
+                        <input type="text" name="submitter-name" id="submitter-name" autocomplete="name" aria-required="true">
+                        <p class="form-error" id="submitter-name-error"><strong>Error:</strong> Please enter your name.</p>
                         </div>
-<div>
+<div id="email-address-input-container">
                         <label for="email-address">Email Address<span aria-hidden="true">*</span></label>
-                        <input type="text" name="_replyto" id="email-address" aria-required="true" autocomplete="email">
-                        <p class="form-error" id="email-address-error">Error: Please enter a valid email address.</p>
+                        <input type="text" name="_replyto" id="email-address" autocomplete="email" inputmode="email" aria-required="true">
+                        <p class="form-error" id="email-address-error"><strong>Error:</strong> Please enter a valid email address.</p>
                         </div>
-<div>
+<div id="subject-input-container">
                         <label for="subject">Subject<span aria-hidden="true">*</span></label>
                         <input type="text" name="_subject" id="subject" aria-required="true">
-                        <p class="form-error" id="subject-error">Error: Please enter a subject for your message.</p>
+                        <p class="form-error" id="subject-error"><strong>Error:</strong> Please enter a subject for your message.</p>
                         </div>
-<p><label for="message">Enter your message here:</label></p>
-<textarea name="message" id="message"></textarea>
+<div id="message-textarea-container">
+                        <label for="message">Your message to Justin</label>
+                        <textarea name="message" id="message"></textarea>
+                        </div>
 <p><button  id="submit-btn" type="submit">Submit</button></p>
 </form>
             </main>
