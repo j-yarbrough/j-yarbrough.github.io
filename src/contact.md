@@ -10,14 +10,13 @@ to contact Justin, simply fill out this form. All fields marked with an asterisk
 
 {% formcontainer "contact-form", "contact", "post", "https://formspree.io/f/mnqleljw" %}
 
-{% textInputRequired "submitter-name", "submitter-name", "Name", "Please enter your name.", "name" %}
+{% textInput "submitter-name", "submitter-name", "Name", "Please enter your name.", "name", "" %}
 
-{% textInputRequired "email-address", "_replyto", "Email Address", "Please enter a valid email address.", "email" %}
+{% textInput "email-address", "_replyto", "Email Address", "Please enter a valid email address.", "email", "email" %}
 
-{% textInputRequired "subject", "_subject", "Subject", "Please enter a subject for your message.", "" %}
+{% textInput "subject", "_subject", "Subject", "Please enter a subject for your message.", "", "" %}
 
-<label for="message">Enter your message here:</label>
-<textarea name="message" id="message"></textarea>
+{% textarea "message", "message", "Your message to Justin" %}
 
 {% button "submit", "submit-btn", "Submit" %}
 

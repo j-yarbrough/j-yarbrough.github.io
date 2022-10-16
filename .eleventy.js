@@ -24,16 +24,36 @@ ${content}
             eleventyConfig.addShortcode("button", function(type, id, label) {
                 return `<button  id="${id}" type="${type}">${label}</button>`
                     });            
-                    eleventyConfig.addShortcode("textInputRequired", function(id, name, label, error, autocomplete) {
+                    eleventyConfig.addShortcode("textarea", function(id, name, label) {
+                        if (name == '') {
+                            name = id;
+                        };
+                        return `<div id="${id}-textarea-container">
+                        <label for="${id}">${label}</label>
+                        <textarea name="${name}" id="${id}"></textarea>
+                        </div>`
+                            });            
+                    eleventyConfig.addShortcode("textInput", function(id, name, label, error, autocomplete, inputmode) {
+                        var ariarequired = '';
+                        var labelstar = '';
                         if (autocomplete != '') {
                             autocomplete = ' autocomplete="' + autocomplete + '"';
-                        } else {
-                            autocomplete = '';
-                        }
-                        return `<div>
-                        <label for="${id}">${label}<span aria-hidden="true">*</span></label>
-                        <input type="text" name="${name}" id="${id}" aria-required="true"${autocomplete}>
-                        <p class="form-error" id="${id}-error">Error: ${error}</p>
+                        };
+                        if (inputmode != '') {
+                            inputmode = ' inputmode="' + inputmode + '"';
+                        };
+                        if (error != '') {
+                            ariarequired = ' aria-required="true"';
+                            labelstar = '<span aria-hidden="true">*</span>';
+                            error = '<p class="form-error" id="' + id + '-error"><strong>Error:</strong> ' + error + '</p>';
+                        };
+                        if (name == '') {
+                            name = id;
+                        };
+                        return `<div id="${id}-input-container">
+                        <label for="${id}">${label}${labelstar}</label>
+                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariarequired}>
+                        ${error}
                         </div>`
                             });                    
     return {        
