@@ -1,7 +1,6 @@
 // script that collapses navigation on mobile view.
 
-var elShowHide = document.querySelector('#nav-btn'); //variable for collapser button
-elShowHide.addEventListener('click',showHideNav); //event listener for above
+document.querySelector('#nav-btn').addEventListener('click',showHideNav); //event listener for above
 
 function showHideNav() {
     switch (this.getAttribute('aria-expanded')) {
