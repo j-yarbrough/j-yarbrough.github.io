@@ -1,8 +1,10 @@
 //script for contact form validation
 
-var contactForm = document.getElementById('contact-form');
+//event listener
 
-contactForm.addEventListener('submit',validateForm);
+document.getElementById('contact-form').addEventListener('submit',validateForm);
+
+//function to validate form
 
 function validateForm() {
     var fieldsToValidate = document.querySelectorAll('input[aria-required]');
@@ -36,10 +38,14 @@ break;
     } //end switch
 } //end function
 
+// function to handle if field is valid
+
 function fieldIsValid(field) {
     field.removeAttribute('aria-invalid');
     field.removeAttribute('aria-describedby');
 }
+
+// function to handle if form is invalid.
 
 function fieldIsInvalid (field) {
     field.setAttribute('aria-invalid','true');
