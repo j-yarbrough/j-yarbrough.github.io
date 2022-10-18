@@ -1,23 +1,30 @@
-# Component Short codes
+#Readme
+## Purpose
+
+This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
+
+All changes are pushed to the main branch. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
+
+## Component Short codes
 
 This site is designed to use short codes as much as possible to componentize items. These are described below.
 
-## Accordion
+### Accordion
 
 Paired short code is "accordion".
 
-### Arguments
+#### Arguments
 - content: Section hidden by default. In between opening and closing code.
 - level: Heading level for accordion. Simply enter a number.
 - Label: Label for the accordion button.
 
-## Form Container
+### Form Container
 
 Serves as form tags.
 
 paired short code is "formcontainer"
 
-###Arguments
+#### Arguments
 
 - content: Form contents, basically the form.
 - id: ID value for the form container
@@ -25,13 +32,13 @@ paired short code is "formcontainer"
 - method: form container's method attribute value.
 - action: form container's action attribute value.
 
-## Text Input
+### Text Input
 
 Standard single-line text input, can be customized with required, an error message, autocomplete, and inputmode attributes.
 
 Standard short code is "textInput"
 
-### Arguments
+#### Arguments
 
 - id: input's id attribute.
     - If required, same value will be used, with "-error" appended, for error message
@@ -44,25 +51,25 @@ Standard short code is "textInput"
 - autocomplete: autocomplete attribute value, attribute will be left off if empty.
 - inputmode: Input's inputmode attribute value, attribute will be left off if empty.
 
-## Button
+### Button
 
 Standard button, type can be set.
 
 Regular short code is "button"
 
-### Arguments
+#### Arguments
 
 - type: Button's type id attribute value.
 - id: button's id attribute value.
 - label: Button's inner HTML.
 
-## Textarea
+### Textarea
 
 Multi-line text input.
 
 Standard shortcode is "textarea"
 
-### Arguments
+#### Arguments
 
 - id: textarea's id attribute.
     - Container div will have same id with "-textarea-container" appended.
