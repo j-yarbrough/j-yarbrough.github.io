@@ -16,16 +16,12 @@ if (fieldsToValidate[i].hasAttribute('inputmode')) {
         case true: fieldIsValid(fieldsToValidate[i]);
         break;
         case false: fieldIsInvalid(fieldsToValidate[i]);
-        if (cansubmit === true) {cansubmit = false;};
-        if (firstErrorField === null) {firstErrorField = fieldsToValidate[i];};
     } //end switch
 } else{
 switch (fieldsToValidate[i].value.length != 0) {
 case true: fieldIsValid(fieldsToValidate[i]);
 break;
 case false: fieldIsInvalid(fieldsToValidate[i]);
-if (cansubmit === true) {cansubmit = false;};
-if (firstErrorField === null) {firstErrorField = fieldsToValidate[i];};
 break;
 } //end switch
 } //end if/else
@@ -35,19 +31,28 @@ case true: break;
 case false: event.preventDefault();
 firstErrorField.focus();
 break;
-    } //end switch
+    } //end handling for if form is all valid or no.
+    function fieldIsValid (field) {
+        if (field.hasAttribute('aria-invalid')) {
+            field.removeAttribute('aria-invalid');
+            field.removeAttribute('aria-describedby');
+        } //end if
+    } //end sub-fn
+    function fieldIsInvalid(field) {
+if (field.hasAttribute('aria-invalid') == false) {
+    field.setAttribute('aria-invalid','true');
+    field.setAttribute('aria-describedby', field.getAttribute('id') + '-error');
+    if (cansubmit) {
+        cansubmit = false;
+        firstErrorField = field;
+    } //end if first
+} //end if
+    } //end sub-fn
 } //end function
 
-// function to handle if field is valid
 
 function fieldIsValid(field) {
     field.removeAttribute('aria-invalid');
     field.removeAttribute('aria-describedby');
 }
 
-// function to handle if form is invalid.
-
-function fieldIsInvalid (field) {
-    field.setAttribute('aria-invalid','true');
-    field.setAttribute('aria-describedby',field.getAttribute('id') + '-error');
-}
