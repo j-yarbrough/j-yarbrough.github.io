@@ -49,10 +49,3 @@ if (field.hasAttribute('aria-invalid') == false) {
 } //end if
     } //end sub-fn
 } //end function
-
-
-function fieldIsValid(field) {
-    field.removeAttribute('aria-invalid');
-    field.removeAttribute('aria-describedby');
-}
-
