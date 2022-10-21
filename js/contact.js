@@ -26,12 +26,10 @@ break;
 } //end switch
 } //end if/else
 } //end loop
-    switch (cansubmit) {
-case true: break;
-case false: event.preventDefault();
-firstErrorField.focus();
-break;
-    } //end handling for if form is all valid or no.
+    if (cansubmit == false) {
+        event.preventDefault();
+        firstErrorField.focus();
+    } //end if
     function fieldIsValid (field) {
         if (field.hasAttribute('aria-invalid')) {
             field.removeAttribute('aria-invalid');
@@ -39,13 +37,13 @@ break;
         } //end if
     } //end sub-fn
     function fieldIsInvalid(field) {
-if (field.hasAttribute('aria-invalid') == false) {
-    field.setAttribute('aria-invalid','true');
-    field.setAttribute('aria-describedby', field.getAttribute('id') + '-error');
-    if (cansubmit) {
-        cansubmit = false;
-        firstErrorField = field;
-    } //end if first
-} //end if
+        if (field.hasAttribute('aria-invalid') == false) {
+            field.setAttribute('aria-invalid','true');
+            field.setAttribute('aria-describedby', field.getAttribute('id') + '-error');
+        } //end if
+        if (cansubmit) {
+            cansubmit = false;
+            firstErrorField = field;
+        } //end if
     } //end sub-fn
 } //end function
