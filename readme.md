@@ -65,7 +65,7 @@ Regular short code is "button"
 
 ### Textarea
 
-Multi-line text input.
+Multi-line text input. Can be customized with name attribute and required.
 
 Standard shortcode is "textarea"
 
@@ -76,3 +76,6 @@ Standard shortcode is "textarea"
 - name: textarea's name attribute.
     - If empty, inherits id value.
 - label: Programmatic and visual label.
+- error: Error message to be displayed if input is empty.
+    - if value is empty, field is not required.
+    - Will add aesterisk, aria-required attribute if there is a non-empty value.

@@ -10,6 +10,7 @@ function validateForm() {
     var fieldsToValidate = document.querySelectorAll('input[type="text"][aria-required], textarea[aria-required="true"]');
     var cansubmit = true;
     var firstErrorField = null;
+    var subjectField = document.querySelector('#subject');
 for (var i = 0; i < fieldsToValidate.length; i++) { //loop through required fields
 if (fieldsToValidate[i].hasAttribute('inputmode') && (fieldsToValidate[i].getAttribute('inputmode') == 'email') && (fieldsToValidate[i].tagName == 'INPUT')) {
     switch (fieldsToValidate[i].value.includes('@')) {
@@ -29,7 +30,9 @@ break;
     if (cansubmit == false) {
         event.preventDefault();
         firstErrorField.focus();
-    } //end if
+    } else {
+        subjectField.value = '[yarbrough.info contact] ' + subjectField.value;
+    } //end if can submit.
     function fieldIsValid (field) {
         if (field.hasAttribute('aria-invalid')) {
             field.removeAttribute('aria-invalid');
@@ -44,6 +47,6 @@ break;
         if (cansubmit) {
             cansubmit = false;
             firstErrorField = field;
-        } //end if
+        }  //end if
     } //end sub-fn
 } //end function
