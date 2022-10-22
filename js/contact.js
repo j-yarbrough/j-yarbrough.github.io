@@ -7,24 +7,24 @@ document.getElementById('contact-form').addEventListener('submit',validateForm);
 //function to validate form
 
 function validateForm() {
-    var fieldsToValidate = document.querySelectorAll('input[aria-required]');
+    var fieldsToValidate = document.querySelectorAll('input[type="text"][aria-required], textarea[aria-required="true"]');
     var cansubmit = true;
     var firstErrorField = null;
 for (var i = 0; i < fieldsToValidate.length; i++) { //loop through required fields
-if (fieldsToValidate[i].hasAttribute('inputmode')) {
+if (fieldsToValidate[i].hasAttribute('inputmode') && (fieldsToValidate[i].getAttribute('inputmode') == 'email') && (fieldsToValidate[i].tagName == 'INPUT')) {
     switch (fieldsToValidate[i].value.includes('@')) {
         case true: fieldIsValid(fieldsToValidate[i]);
         break;
         case false: fieldIsInvalid(fieldsToValidate[i]);
     } //end switch
-} else{
-switch (fieldsToValidate[i].value.length != 0) {
+} else if (((fieldsToValidate[i].tagName == 'INPUT') && (fieldsToValidate[i].getAttribute('type') == 'text')) || (fieldsToValidate[i].tagName = 'TEXTAREA')) {
+switch (fieldsToValidate[i].value != '') {
 case true: fieldIsValid(fieldsToValidate[i]);
 break;
 case false: fieldIsInvalid(fieldsToValidate[i]);
 break;
 } //end switch
-} //end if/else
+} //end if statements for input type
 } //end loop
     if (cansubmit == false) {
         event.preventDefault();

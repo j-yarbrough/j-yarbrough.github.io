@@ -34,13 +34,21 @@ ${content}
                 }; //sets type to button if not specified as submit or reset.
                 return `<button  id="${id}"${type}>${label}</button>`
                     });            
-                    eleventyConfig.addShortcode("textarea", function(id, name, label) {
+                    eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
+                        var labelStar = '';
+                        var ariaRequired = '';
+                        if (error != '') {
+                            labelStar = '<span aria-hidden="true">*</span>';
+                            ariaRequired = ' aria-required="true"';
+                            error = '<p class="form-error" id="' + id + '-error"><strong>Error:</strong> ' + error + '</p>';
+                        }
                         if (name == '') {
                             name = id;
                         }; //sets name to same value as id if left blank.
                         return `<div id="${id}-textarea-container">
-                        <label for="${id}">${label}</label>
-                        <textarea name="${name}" id="${id}"></textarea>
+                        <label for="${id}">${label}${labelStar}</label>
+                        <textarea name="${name}" id="${id}"${ariaRequired}></textarea>
+                        ${error}
                         </div>`
                             });            
                     eleventyConfig.addShortcode("textInput", function(id, name, label, error, autocomplete, inputmode) {
