@@ -77,7 +77,6 @@ footer {
     font-weight: normal;
 }
 
-
 /*nav styling*/
 
 #nav {
@@ -149,10 +148,10 @@ button[type=submit]:focus {
 color: var(--white);
 background-color: var(--blue);
 }
-input + .form-error {
+input + .form-error, textarea + .form-error {
     display: none;
 }
-input[aria-invalid] + .form-error {
+input[aria-invalid] + .form-error, textarea[aria-invalid] + .form-error {
     display: block;
 }
 
