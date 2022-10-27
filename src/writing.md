@@ -10,6 +10,13 @@ Below you will find a sample of articles Justin has written. To see other media 
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 
+{% accordion "2", "Deque Systems" %}
+
+- [My experiences with inaccessible job applications & how to fix them](https://www.deque.com/blog/my-experiences-with-inaccessible-job-applications-how-to-fix-them/)  
+Blog post examining some of the issues that Justin has had applying for jobs online and some ways for employers to prevent accessibility issues with their own online hiring portals.
+
+{% endaccordion %}
+
 {% accordion "2", "Nature" %}
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
