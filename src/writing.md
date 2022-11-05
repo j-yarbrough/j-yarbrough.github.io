@@ -51,7 +51,7 @@ Trip report for flights between Phoenix and Houston on United's 737 MAX 8 equipp
 
 {% accordion "2", "Self-Published" %}
 
-  - [Alt Text and Social Media](/alt-text)  
+  - [Alt Text and Social Media](/writing/alt-text-and-social-media)  
   Introduction to using alt text on different social media platforms.
 
 {% endaccordion %}

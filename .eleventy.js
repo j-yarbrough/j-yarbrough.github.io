@@ -35,13 +35,9 @@ ${content}
                 return `<button  id="${id}"${type}>${label}</button>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
-                        var labelStar = '';
-                        var ariaRequired = '';
-                        if (error != '') {
-                            labelStar = '<span aria-hidden="true">*</span>';
-                            ariaRequired = ' aria-required="true"';
-                            error = '<p class="form-error" id="' + id + '-error"><strong>Error:</strong> ' + error + '</p>';
-                        }
+                        var labelStar = formLabelStar(error);
+                        var ariaRequired = isAriaRequired(error);
+                        error = fullErrorMessage(error, id);
                         if (name == '') {
                             name = id;
                         }; //sets name to same value as id if left blank.
@@ -52,25 +48,21 @@ ${content}
                         </div>`
                             });            
                     eleventyConfig.addShortcode("textInput", function(id, name, label, error, autocomplete, inputmode) {
-                        var ariarequired = '';
-                        var labelstar = '';
+                        var labelStar = formLabelStar(error);
+                        var ariaRequired = isAriaRequired(error);
+                        error = fullErrorMessage(error, id);
                         if (autocomplete != '') {
                             autocomplete = ' autocomplete="' + autocomplete + '"';
                         }; //leaves off autocomplete attribute if value is empty
                         if (inputmode != '') {
                             inputmode = ' inputmode="' + inputmode + '"';
                         }; //leaves off inputmode attribute if value is empty.
-                        if (error != '') {
-                            ariarequired = ' aria-required="true"';
-                            labelstar = '<span aria-hidden="true">*</span>';
-                            error = '<p class="form-error" id="' + id + '-error"><strong>Error:</strong> ' + error + '</p>';
-                        }; //handles making field required if error value is not empty.
                         if (name == '') {
                             name = id;
                         }; //makes name attribute same as id if name value is left empty.
                         return `<div id="${id}-input-container">
-                        <label for="${id}">${label}${labelstar}</label>
-                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariarequired}>
+                        <label for="${id}">${label}${labelStar}</label>
+                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}>
                         ${error}
                         </div>`
                             });                    
@@ -80,3 +72,25 @@ ${content}
         }
     }
 });
+
+function formLabelStar (errorString) {
+    if (errorString == '') {
+        return '';
+    } else {
+        return '<span aria-hidden="true">*</span>';
+    }
+}
+function isAriaRequired (errorString) {
+    if (errorString == '') {
+        return '';''
+    } else {
+        return ' aria-required="true"';
+    }
+}
+function fullErrorMessage (errorString, idValue) {
+    if (errorString == '') {
+        return '';
+    } else {
+        return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong> ' + errorString + '</p>';
+    }
+}

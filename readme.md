@@ -1,9 +1,19 @@
 #Readme
+
 ## Purpose
 
 This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
 
 All changes are pushed to the main branch. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
+
+## Redirects
+
+To set up a redirect:
+
+1. Create a new .md file
+2. in the front matter, set the following:
+    - title: The URL you wish to redirect to
+    - layout: layouts/redirect.njk
 
 ## Component Short codes
 

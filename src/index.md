@@ -3,7 +3,7 @@ title: Home
 layout: layouts/base.njk
 eleventyNavigation:
   key: Home
-  order: 0
+
 ---
 Welcome to Justin Yarbrough’s personal website.
 
