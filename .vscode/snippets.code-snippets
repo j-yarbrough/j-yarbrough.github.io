@@ -6,7 +6,7 @@
 	}
 	"base front matter": {
 		"prefix": ["base front matter"],
-		"body": ["---","title: ${0:Page Title}","layout: layouts/base.njk","templateEngineOverride: njk,md","eleventyNavigation:","  key: ${2:Key}","---","${0"]
+		"body": ["---","title: ${0:Page Title}","layout: layouts/base.njk","templateEngineOverride: njk,md","eleventyNavigation:","  key: ${2:Key}","---","${0"}]
 		"description":"Inserts front matter for a page using the base template."
 	}
 }

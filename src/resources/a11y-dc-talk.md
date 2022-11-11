@@ -32,14 +32,16 @@ Below is a list of resources relating to alt text on various social media platfo
 ### Justin Yarbrough
 
 - [Justin's LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
+- [Justin's Mastodon](https://disabled.social/@jyarbrough)
 - [Justin's Twitter](https://twitter.com/fatelvis04)
 - [Justin's Website](/index.html)
 
 ### Christopher Jackson
 
+- [Christopher's Mastodon](https://mastodon.social/@seis_matters)
 - [Christopher's Twitter](https://twitter.com/seis_matters)
 
 ## Other Links
 
-- [International Association for Geoscience and Diversity](https://theiagd.org/)
+typo fix- [International Association for Geoscience and Diversity](https://theiagd.org/)
 - [Equator Project](https://equatorresearchgroup.wordpress.com/)
