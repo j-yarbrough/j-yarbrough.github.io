@@ -6,6 +6,8 @@ eleventyNavigation:
   key: Writing
 order: 2
 ---
+# Writing
+
 Below you will find a sample of articles Justin has written. To see other media Justin has appeared in, check out the [other media](/media) page.
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)

@@ -5,7 +5,7 @@ eleventyNavigation:
   key: Home
 
 ---
-Welcome to Justin Yarbrough’s personal website.
+# Welcome to Justin Yarbrough’s personal website
 
 ## About Justin
 
@@ -21,4 +21,4 @@ You can connect with Justin on the following social media channels:
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
 - <a rel="me" href="https://disabled.social/@jyarbrough">Mastodon</a>
-- [Twitter](https://www.twitter.com/fatelvis04)
+- [Twitter](https://www.twitter.com/fatelvis04)t

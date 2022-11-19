@@ -6,6 +6,8 @@ eleventyNavigation:
   key: Other Media
   order: 3
 ---
+# Other Media
+
 Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out the [writing](/writing) page.
 
 If you would like Justin to appear on a podcast or other media, you can [contact him.](/contact)

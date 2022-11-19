@@ -6,6 +6,8 @@ eleventyNavigation:
   key: Contact
   order: 4
 ---
+# Contact Justin
+
 to contact Justin, simply fill out this form. All fields marked with an asterisk are required.
 
 {% formcontainer "contact-form", "contact", "post", "https://formspree.io/f/mnqleljw" %}
