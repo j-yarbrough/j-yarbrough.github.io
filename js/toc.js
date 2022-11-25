@@ -3,14 +3,11 @@
 var toc = document.querySelector('#toc');
 var headingsToIndex = document.querySelectorAll('h2');
 
-//adds tabindex to h2's
+//builds TOC
 
 buildingTheTOC() ;
 
 function buildingTheTOC() {    
-    for (var i = 0; i < headingsToIndex.length; i++) {
-     headingsToIndex[i].setAttribute('tabindex','-1');
-    } //end loop
     createTocHeader();
     listBuilder();
 } //end function
