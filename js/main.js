@@ -9,7 +9,6 @@
 
 var indexOfChecks = [
     ['#nav-btn','nav-collapse'],
-    ['#toc','toc'],
     ['.accordion-button','accordion'],
     ['#contact-form','contact']
     ]; //end index
