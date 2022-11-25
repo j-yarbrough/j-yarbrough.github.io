@@ -11,7 +11,10 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginTOC = require('eleventy-plugin-toc');
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
-    eleventyConfig.addPlugin(pluginTOC);
+    eleventyConfig.addPlugin(pluginTOC, {
+        wrapper: 'div',
+        ul: true
+      })
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPassthroughCopy("js");
