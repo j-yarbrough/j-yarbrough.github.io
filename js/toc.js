@@ -10,7 +10,6 @@ buildingTheTOC() ;
 function buildingTheTOC() {    
     for (var i = 0; i < headingsToIndex.length; i++) {
      headingsToIndex[i].setAttribute('tabindex','-1');
-     headingsToIndex[i].setAttribute('id',headingsToIndex[i].textContent.replace(/[^A-Za-z0-9]+/g,'') + i);
     } //end loop
     createTocHeader();
     listBuilder();
