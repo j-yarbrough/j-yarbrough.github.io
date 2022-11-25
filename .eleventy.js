@@ -21,13 +21,14 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
+        var accordionId = convertToId(label);
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
             value = '2';
-        } //sets level to 2 if not set with an appropriate value
-        return `<h${level}  class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
-        ${label}
+        }
+        return `<h${level} class="accordion-header" id="${accordionId}"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
-<section aria-label="${label}" class="accordion-panel">
+<section aria-labelledby="${accordionId}-label" class="accordion-panel" id="${accordionId}-panel">
 ${content}
 </section>`
     });
@@ -103,4 +104,9 @@ function fullErrorMessage (errorString, idValue) {
     } else {
         return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong> ' + errorString + '</p>';
     }
+}
+function convertToId(labelText) {
+    labelText = labelText.toLowerCase();
+    labelText = labelText.replaceAll(' ','-');
+    return labelText;
 }
