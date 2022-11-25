@@ -25,7 +25,7 @@ module.exports = (function(eleventyConfig) {
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
             value = '2';
         }
-        return `<h${level} class="accordion-header" id="${accordionId}"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        return `<h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
         <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
 <section aria-labelledby="${accordionId}-label" class="accordion-panel" id="${accordionId}-panel">
