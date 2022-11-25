@@ -16,11 +16,11 @@ function triggerAccordion() {
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
         accordionHeader.removeAttribute('data-show');
-        accordionIndicator.innerHTML = '&plus;&nbsp;';
+        accordionIndicator.innerHTML = '&plus;';
         break;
         case 'false': this.setAttribute('aria-expanded',true);
         accordionHeader.setAttribute('data-show','show');
-        accordionIndicator.innerHTML = '&minus;&nbsp;';
+        accordionIndicator.innerHTML = '&minus;';
         break;
     };
 } //end function
