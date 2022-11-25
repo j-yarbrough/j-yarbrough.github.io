@@ -3,7 +3,7 @@
 var toc = document.querySelector('#toc');
 var headingsToIndex = document.querySelectorAll('h2');
 
-//adds id attributes and tabindex to h2's
+//adds tabindex to h2's
 
 buildingTheTOC() ;
 
