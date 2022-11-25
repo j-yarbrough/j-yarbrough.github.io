@@ -1,14 +1,12 @@
-
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
-
+const markdownItAnchor = require("markdown-it-anchor");
 const markdownItOptions = {
   html: true,
   breaks: true,
   linkify: true
 }
-
-const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+const markdownLib = markdownIt({ html: true }).use(markdownItAnchor,markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = (function(eleventyConfig) {
