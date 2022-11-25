@@ -1,18 +1,17 @@
 ---
 title: Alt Text and Social Media
-layout: layouts/base.njk
+layout: layouts/hasTOC.njk
+templateEngineOverride: njk,md
 eleventyNavigation:
   key: Alt Text and Social Media
   parent: Writing
 
 ---
-# Alt Text and Social Media
+## Introduction
 
 Social media has a great ability to connect us. Without it, I would have never found all the wonderful people in the blindness community on Twitter that have had such a positive impact on my life. Heck, you probably found this post on some social media platform.
 
 The problem for blind people is that social media can seem pretty photo-intensive, leaving blind people to feel like they're missing out. In the last few years, though, major social media platforms like Twitter, Facebook, and Instagram have been introducing features allowing people to add alt text to pictures, allowing people sharing content to provide a more inclusive experience.
-
-{% include "components/toc.njk" %}
 
 ## What is Alt Text?
 
