@@ -7,8 +7,6 @@ eleventyNavigation:
   parent: Writing
 
 ---
-## Introduction
-
 Social media has a great ability to connect us. Without it, I would have never found all the wonderful people in the blindness community on Twitter that have had such a positive impact on my life. Heck, you probably found this post on some social media platform.
 
 The problem for blind people is that social media can seem pretty photo-intensive, leaving blind people to feel like they're missing out. In the last few years, though, major social media platforms like Twitter, Facebook, and Instagram have been introducing features allowing people to add alt text to pictures, allowing people sharing content to provide a more inclusive experience.
@@ -19,7 +17,7 @@ Simply put, alt text provides a text-based alternative to graphics on the web. S
 
 ## Writing Alt Text
 
-Writing good alt text can be a challenge. In my day job as an accessibility specialist for an online college, I describe writing alt text as an art rather than a science. While there are a few guiding principles based off accessibility best practices, there's also a lot of wiggle room. The following tips are based off a combination of best practices and my own personal taste:
+Writing good alt text can be a challenge. In my day job as an accessibility consultant, I describe writing alt text as an art rather than a science. While there are a few guiding principles based off accessibility best practices, there's also a lot of wiggle room. The following tips are based off a combination of best practices and my own personal taste:
 
 - Be concise. Screen readers take time to read things. How long depends on that person's screen reader settings. An experienced screen reader user like myself may have theirs set to talk really fast, whereas a novice user is likely to have theirs set at a more conversational pace.
 - Don't describe every detail. Remember back in elementary school when you'd be asked to read something and determine what the main idea of the passage was? Do something similar with your images and describe what you'd like someone to take from it.
@@ -41,28 +39,27 @@ The different social media platforms all have help articles describing how to ad
 Many third party social media apps also support adding alt text to images. You should be able to find instructions by doing a quick Google search. If your preferred app does not support adding alt text, then maybe it's time for a change.
 
 ## Examples
-Below you will find a few examples of alt text from tweets. I'm embedding the tweets. Below them, you'll find the alt text for the images written out.
-                
-                **Note for screen reader users:** You will not hear the written out versions of the alt text below tweets. I have intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
 
-<!--Examples start here-->
-                <div class="ebox-border-left">
-                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Mom isn’t even mad I stole this. Mostly. <a href="https://t.co/Ahzkwa2EC6">pic.twitter.com/Ahzkwa2EC6</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1191864360135643137?ref_src=twsrc%5Etfw">November 5, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                    <p aria-hidden="true"><strong>Alt text:</strong> Quinn is on the floor with a half eaten zucchini. Looks guilty.</p>
-                </div>
-                <div class="ebox-border-left">
-                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Everybody always says my brother <a href="https://twitter.com/GuidingJustin?ref_src=twsrc%5Etfw">@GuidingJustin</a> is suuuch a good boy , here is, obviously trying to kill me! <a href="https://t.co/lZdgMJXiAj">pic.twitter.com/lZdgMJXiAj</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1178691633199509507?ref_src=twsrc%5Etfw">September 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    <p aria-hidden="true"><strong>Alt text:</strong> Black lab PJ roughhousing with yellow lab mix Quinn</p>
-                </div>
-                <div class="ebox-border-left">
-                    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have it so hard at my human&#39;s work. <a href="https://t.co/kiakwV1UUk">pic.twitter.com/kiakwV1UUk</a></p>&mdash; P.J. 🦮 (@GuidingJustin) <a href="https://twitter.com/GuidingJustin/status/1146132784009711616?ref_src=twsrc%5Etfw">July 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                    <p aria-hidden="true"><strong>Alt text:</strong> A black lab laying on a dog bed under an office desk.</p>
-                </div>
-<!--End Examples-->
+Below you will find a few examples of alt text from tweets. I'm embedding the tweets. Below them, you'll find the alt text for the images written out.
+
+**Note for screen reader users:** You will not hear the written out versions of the alt text below tweets. I have intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
+
+<div class="ebox-border-left">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Mom isn’t even mad I stole this. Mostly. <a href="https://t.co/Ahzkwa2EC6">pic.twitter.com/Ahzkwa2EC6</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1191864360135643137?ref_src=twsrc%5Etfw">November 5, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p aria-hidden="true"><strong>Alt text:</strong> Quinn is on the floor with a half eaten zucchini. Looks guilty.</p>
+</div>
+<div class="ebox-border-left">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Everybody always says my brother <a href="https://twitter.com/GuidingJustin?ref_src=twsrc%5Etfw">@GuidingJustin</a> is suuuch a good boy , here is, obviously trying to kill me! <a href="https://t.co/lZdgMJXiAj">pic.twitter.com/lZdgMJXiAj</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1178691633199509507?ref_src=twsrc%5Etfw">September 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p aria-hidden="true"><strong>Alt text:</strong> Black lab PJ roughhousing with yellow lab mix Quinn</p>
+</div>
+<div class="ebox-border-left">
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have it so hard at my human&#39;s work. <a href="https://t.co/kiakwV1UUk">pic.twitter.com/kiakwV1UUk</a></p>&mdash; P.J. 🦮 (@GuidingJustin) <a href="https://twitter.com/GuidingJustin/status/1146132784009711616?ref_src=twsrc%5Etfw">July 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p aria-hidden="true"><strong>Alt text:</strong> A black lab laying on a dog bed under an office desk.</p>
+</div>
 
 ## Conclusion
-                
-                With the advent of alt text support on major social media platforms, it's easier than ever to be more inclusive on those platforms. With just a little extra effort, it's possible to ensure blind people aren't left wondering what's in a picture.
+
+With the advent of alt text support on major social media platforms, it's easier than ever to be more inclusive on those platforms. With just a little extra effort, it's possible to ensure blind people aren't left wondering what's in a picture.
 
 ## More Resources
 
