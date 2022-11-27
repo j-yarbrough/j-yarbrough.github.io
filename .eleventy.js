@@ -29,12 +29,13 @@ module.exports = (function(eleventyConfig) {
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
             value = '2';
         }
-        return `<h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        return `<div id="${accordionId}-acc-wrapper">
+        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
         <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
 <div class="accordion-panel" id="${accordionId}-panel">
 ${content}
-</div>`
+</div></div>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
