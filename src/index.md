@@ -17,8 +17,6 @@ In his spare time, Justin enjoys sports, travel, and listening to audiobooks. He
 
 ## Connect with Justin
 
-You can connect with Justin on the following social media channels:
-
-- [LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
-- [Mastodon](https://disabled.social/@jyarbrough){rel="me"}
-- [Twitter](https://www.twitter.com/fatelvis04)
+- [{% fa-icon "fa-brands fa-linkedin", "" %} LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
+- [{% fa-icon "fa-brands fa-mastodon", "" %}Mastodon](https://disabled.social/@jyarbrough){rel="me"}
+- [{% fa-icon "fa-brands fa-twitter", "" %} Twitter](https://www.twitter.com/fatelvis04)
