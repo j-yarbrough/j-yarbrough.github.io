@@ -40,14 +40,6 @@ ${content}
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
-            eleventyConfig.addShortcode("fa-icon", function(iconClass, alt) {
-                switch (alt) {
-                    case '': alt = 'aria-hidden="true"';
-                    break;
-                    default: alt = 'aria-label="' + alt + '" role="img"';
-                }; //applies aria-hidden if no alt specified
-                return `<span class="a11y-wrapper-fa" ${alt}><i class="${iconClass}"></i></span>`
-                    });            
             eleventyConfig.addShortcode("button", function(type, id, label) {
                 switch (type) {
                     case 'submit': type = ' type="submit"';
