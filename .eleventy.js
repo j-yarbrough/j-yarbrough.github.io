@@ -21,9 +21,11 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addWatchTarget('css');
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
+    eleventyConfig.addWatchTarget('images');
     eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
         var accordionId = convertToId(label);
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {

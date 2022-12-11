@@ -14,8 +14,8 @@
 {% include "layouts/nav-main.njk" %}
             <main class="white-background" id="main" tabindex="-1">
             <h1 id="main-header">{{ title }}</h1>
-            <nav id="toc-wrapper" aria-labelledby="contents-label">
-{% accordion "2", "Contents" %}
+            <nav id="toc-wrapper" aria-labelledby="on-this-page-label">
+{% accordion "2", "On This Page" %}
 {{ content | toc | safe }}
 {% endaccordion %}
 </nav>
