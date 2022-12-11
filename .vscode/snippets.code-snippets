@@ -9,4 +9,9 @@
 		"body": ["---","title: ${0:Page Title}","layout: layouts/base.njk","templateEngineOverride: njk,md","eleventyNavigation:","  key: ${2:Key}","---","${0"}]
 		"description":"Inserts front matter for a page using the base template."
 	}
+	"Table of Contents front matter": {
+		"prefix": ["table of contents front matter"],
+		"body": ["---","title: ${0:Page Title}","layout: layouts/hasTOC.njk","templateEngineOverride: njk,md","eleventyNavigation:","  key: ${2:Key}","---","${0"}]
+		"description":"Inserts front matter for a page using a table of contents."
+	}
 }

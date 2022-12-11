@@ -17,10 +17,9 @@ body {
 header, footer, .text-center {
     text-align: center;
 }
-header {
-    font-size: 2rem;
+header p {
+    color: var(--blue);
 }
-
 ol {
     list-style-type: decimal;
 }
@@ -47,9 +46,10 @@ ol ol ol ol ol {
     overflow: hidden;
 }
 #skip-links:focus-within {
-    position: relative;
+    position: static;
     width: auto;
     height: auto;
+    left: auto;
 }
 
 a, a:active, a:focus, a:hover, a:visited {
@@ -192,7 +192,20 @@ border-bottom: 0;
     border: 1px solid var(--blue);
     border-radius: 8px;
 }
-
+.mugshot-container {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+.mugshot-container img {
+    width: 256px;
+    height: 256px;
+}
 /*media queries for responsive*/
 /* small*/
 @media (max-width: 47.94rem) {
@@ -217,31 +230,31 @@ border-bottom: 0;
 label {
     display: block;
 }
+.mugshot-container {
+    float: none;
+    margin: auto;
+}
 }
 /*medium*/
 @media (min-width: 47.941rem) and (max-width: 64rem) {
     #wrapper, header, footer, #nav, main {
         width: 100%;
     }
-    #nav {
-        margin-bottom: 0;
-        padding-bottom: 0;
+    #nav-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
-    #nav-links {
-        display: flex;
-        margin-left: 8px;
-        margin-right: 8px;
-        margin-bottom: 0;
-}
-#nav-links li {
-    padding: 4px 8px;
-    border: 1px solid var(--white);
-    border-bottom: 0;
-    margin-bottom: 0;
-}
-main {
-    margin-top: 0;
-}
+    #nav-btn[aria-expanded=false] +     #nav-links {
+        display: none;
+    }
+    #nav-btn[aria-expanded=true] + #nav-links {
+        display: block;
+    }
+    #nav-links li {
+        padding: 0 8px;
+        border-radius: 8px;
+    }
 }
 /*large*/
 @media (min-width: 64.001rem) {
@@ -275,7 +288,16 @@ flex: 4;
     margin: 0;
     padding: 16px;
     border-radius: 0 0 8px 8px;
-}}
+}
+#toc-wrapper {
+    float: right;
+    width: fit-content;
+    max-width: 30%;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    font-size: smaller;
+}
+}
 /*end large*/
 /*end responsive*/
 
@@ -286,7 +308,7 @@ flex: 4;
 .text-right {
     text-align: right;
 }
-blockquote, #toc, .ebox-border-left {
+blockquote, .ebox-border-left {
     padding-left: 16px;
     border-left: 1px dotted var(--blue);
 }

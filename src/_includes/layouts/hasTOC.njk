@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Justin Yarbrough">
+    <title>{{ title }} - Justin Yarbrough</title>
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+{% include "layouts/skip-links.njk" %}
+{% include "layouts/header.njk" %}
+<div id="wrapper">
+{% include "layouts/nav-main.njk" %}
+            <main class="white-background" id="main" tabindex="-1">
+            <h1 id="main-header">{{ title }}</h1>
+            <nav id="toc-wrapper" aria-labelledby="on-this-page-label">
+{% accordion "2", "On This Page" %}
+{{ content | toc | safe }}
+{% endaccordion %}
+</nav>
+
+{{ content | safe }}
+
+            </main>
+</div>
+{% include "layouts/footer.njk" %}
+<script src="/js/main.js"></script>
+</body> 
+</html>

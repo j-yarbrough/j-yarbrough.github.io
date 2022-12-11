@@ -1,37 +1,43 @@
-
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
-
+const markdownItAnchor = require("markdown-it-anchor");
 const markdownItOptions = {
   html: true,
   breaks: true,
   linkify: true
 }
-
-const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs)
+const markdownLib = markdownIt({ html: true }).use(markdownItAnchor).use(markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
+const pluginTOC = require('eleventy-plugin-toc');
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(pluginTOC, {
+        wrapper: 'div',
+        ul: true
+      })
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addWatchTarget('css');
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
+    eleventyConfig.addWatchTarget('images');
     eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
+        var accordionId = convertToId(label);
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
             value = '2';
-        } //sets level to 2 if not set with an appropriate value
-        return `<h${level}  class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&plus;&nbsp;</span>
-        ${label}
+        }
+        return `<div id="${accordionId}-acc-wrapper">
+        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
-<section aria-label="${label}" class="accordion-panel">
+<div class="accordion-panel" id="${accordionId}-panel">
 ${content}
-</section>`
+</div></div>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
@@ -105,4 +111,9 @@ function fullErrorMessage (errorString, idValue) {
     } else {
         return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong> ' + errorString + '</p>';
     }
+}
+function convertToId(labelText) {
+    labelText = labelText.toLowerCase();
+    labelText = labelText.replaceAll(' ','-');
+    return labelText;
 }

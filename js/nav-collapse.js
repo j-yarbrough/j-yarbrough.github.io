@@ -3,12 +3,13 @@
 document.querySelector('#nav-btn').addEventListener('click',showHideNav); //event listener for above
 
 function showHideNav() {
+    var navBtnIndicator = this.firstElementChild;
     switch (this.getAttribute('aria-expanded')) {
         case 'false': this.setAttribute('aria-expanded','true');
-        this.textContent = 'Hide Navigation';
+        navBtnIndicator.innerHTML = '&minus;';
         break;
         case 'true': this.setAttribute('aria-expanded','false');
-        this.textContent = 'Show Navigation';
+        navBtnIndicator.innerHTML = '&plus;';
         break;
     };
 } //end function
