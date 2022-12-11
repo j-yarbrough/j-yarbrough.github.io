@@ -46,9 +46,8 @@ ${content}
                     break;
                     default: alt = 'aria-label="' + alt + '" role="img"';
                 }; //applies aria-hidden if no alt specified
-                return `<span class="a11y-wrapper-fa" ${alt}><i class=${iconClass}></i></span>`
+                return `<span class="a11y-wrapper-fa" ${alt}><i class="${iconClass}"></i></span>`
                     });            
-
             eleventyConfig.addShortcode("button", function(type, id, label) {
                 switch (type) {
                     case 'submit': type = ' type="submit"';
