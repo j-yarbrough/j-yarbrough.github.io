@@ -1,13 +1,11 @@
-            <nav id="nav" aria-label="Primary">
-                <button id="nav-btn" aria-expanded="false"><span aria-hidden="true">&plus;</span>Navigation</button>
+<nav id="nav" aria-label="Primary">
+<button id="nav-btn" aria-expanded="false"><span aria-hidden="true">&plus;</span>Navigation</button>
 {% set navPages = collections.all | eleventyNavigation %}
 <ul id="nav-links" role="list">
 {%- for entry in navPages %}
-{% if (loop.index <= 4) %}
-  <li{% if entry.url == page.url %} aria-current="page"{% endif %}>
-    {% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
-  </li>
-  {% endif %}
+<li{% if entry.url == page.url %} aria-current="page"{% endif %}>
+{% if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}{{ entry.title }}{% if entry.url != page.url %}</a>{% endif %}
+</li>
 {%- endfor %}
 </ul>
-            </nav>
+</nav>
