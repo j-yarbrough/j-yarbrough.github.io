@@ -44,6 +44,12 @@ ${content}
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
+            eleventyConfig.addPairedShortcode("ebox", function(content, passAttributes, passClass) {
+                if (passClass != '') {passclass = ' ' + passClass;};
+                if (passAttributes != '') {passAttributes = ' ' + passAttributes;};
+                    return `<div class="ebox-border-left">${content}</div>`
+                        });    
+            
             eleventyConfig.addShortcode("button", function(type, id, label) {
                 switch (type) {
                     case 'submit': type = ' type="submit"';

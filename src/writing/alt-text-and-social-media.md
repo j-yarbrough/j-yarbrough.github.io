@@ -45,18 +45,28 @@ Below you will find a few examples of alt text from tweets. I'm embedding the tw
 
 **Note for screen reader users:** You will not hear the written out versions of the alt text below tweets. I have intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
 
-<div class="ebox-border-left">
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Mom isn’t even mad I stole this. Mostly. <a href="https://t.co/Ahzkwa2EC6">pic.twitter.com/Ahzkwa2EC6</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1191864360135643137?ref_src=twsrc%5Etfw">November 5, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-<p aria-hidden="true"><strong>Alt text:</strong> Quinn is on the floor with a half eaten zucchini. Looks guilty.</p>
-</div>
-<div class="ebox-border-left">
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Everybody always says my brother <a href="https://twitter.com/GuidingJustin?ref_src=twsrc%5Etfw">@GuidingJustin</a> is suuuch a good boy , here is, obviously trying to kill me! <a href="https://t.co/lZdgMJXiAj">pic.twitter.com/lZdgMJXiAj</a></p>&mdash; Quinn 🐕 (@quinntx2az) <a href="https://twitter.com/quinntx2az/status/1178691633199509507?ref_src=twsrc%5Etfw">September 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p aria-hidden="true"><strong>Alt text:</strong> Black lab PJ roughhousing with yellow lab mix Quinn</p>
-</div>
-<div class="ebox-border-left">
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I have it so hard at my human&#39;s work. <a href="https://t.co/kiakwV1UUk">pic.twitter.com/kiakwV1UUk</a></p>&mdash; P.J. 🦮 (@GuidingJustin) <a href="https://twitter.com/GuidingJustin/status/1146132784009711616?ref_src=twsrc%5Etfw">July 2, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-<p aria-hidden="true"><strong>Alt text:</strong> A black lab laying on a dog bed under an office desk.</p>
-</div>
+{% ebox "","" %}
+
+https://twitter.com/quinntx2az/status/1191864360135643137
+
+**Alt text:** Quinn is on the floor with a half eaten zucchini. Looks guilty.{aria-hidden="true"}
+{% endebox %}
+
+{% ebox "","" %}
+
+https://twitter.com/quinntx2az/status/1178691633199509507
+
+**Alt text:** Black lab PJ roughhousing with yellow lab mix Quinn{aria-hidden="true"}
+
+{% endebox %}
+
+{% ebox "","" %}
+
+https://twitter.com/GuidingJustin/status/1146132784009711616
+
+**Alt text:** A black lab laying on a dog bed under an office desk.{aria-hidden="true"}
+
+{% endebox %}
 
 ## Conclusion
 
