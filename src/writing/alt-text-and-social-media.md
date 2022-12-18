@@ -32,6 +32,7 @@ The different social media platforms all have help articles describing how to ad
 - [Facebook](https://www.facebook.com/help/214124458607871)
 - [Instagram](https://help.instagram.com/503708446705527)
 - [LinkedIn](https://www.linkedin.com/help/linkedin/answer/109799/adding-alternative-text-to-images-for-accessibility?lang=en)
+- [Mastodon](https://edtechfactotum.com/adding-alt-text-and-more-to-images-in-mastodon/) Please note that this is not an official help article.
 - Twitter:
     - [How to add alt text on Twitter](https://help.twitter.com/en/using-twitter/picture-descriptions)
     - [Enabling Twitter's alt text reminder](https://help.twitter.com/en/using-twitter/set-image-description-reminder) which will prompt you to add alt text if you try to send a tweet without it.

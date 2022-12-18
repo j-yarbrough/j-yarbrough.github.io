@@ -6,7 +6,7 @@ const markdownItOptions = {
   breaks: true,
   linkify: true
 }
-const markdownLib = markdownIt({ html: true }).use(markdownItAnchor,markdownItAttrs);
+const markdownLib = markdownIt({ html: true }).use(markdownItAnchor).use(markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginTOC = require('eleventy-plugin-toc');
 module.exports = (function(eleventyConfig) {
@@ -21,20 +21,23 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addWatchTarget('css');
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
+    eleventyConfig.addWatchTarget('images');
     eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
         var accordionId = convertToId(label);
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
             value = '2';
         }
-        return `<h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        return `<div id="${accordionId}-acc-wrapper">
+        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
         <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
 <div class="accordion-panel" id="${accordionId}-panel">
 ${content}
-</div>`
+</div></div>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
