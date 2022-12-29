@@ -46,24 +46,24 @@ Contact
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
 <div id="submitter-name-input-container">
-                        <label for="submitter-name">Name<span aria-hidden="true">*</span></label>
+                        <label for="submitter-name"><span id="submitter-name-label">Name</span><span aria-hidden="true">*</span></label>
                         <input type="text" name="submitter-name" id="submitter-name" autocomplete="name" aria-required="true">
-                        <p class="form-error" id="submitter-name-error"><strong>Error:</strong> Please enter your name.</p>
+                        <p class="form-error" id="submitter-name-error"><strong>Error:</strong>&nbsp;<span id="submitter-name-error-text">Please enter your name.</span></p>
                         </div>
 <div id="email-address-input-container">
-                        <label for="email-address">Email Address<span aria-hidden="true">*</span></label>
+                        <label for="email-address"><span id="email-address-label">Email Address</span><span aria-hidden="true">*</span></label>
                         <input type="text" name="email" id="email-address" autocomplete="email" inputmode="email" aria-required="true">
-                        <p class="form-error" id="email-address-error"><strong>Error:</strong> Please enter a valid email address.</p>
+                        <p class="form-error" id="email-address-error"><strong>Error:</strong>&nbsp;<span id="email-address-error-text">Please enter a valid email address.</span></p>
                         </div>
 <div id="subject-input-container">
-                        <label for="subject">Subject<span aria-hidden="true">*</span></label>
+                        <label for="subject"><span id="subject-label">Subject</span><span aria-hidden="true">*</span></label>
                         <input type="text" name="subject" id="subject" aria-required="true">
-                        <p class="form-error" id="subject-error"><strong>Error:</strong> Please enter a subject for your message.</p>
+                        <p class="form-error" id="subject-error"><strong>Error:</strong>&nbsp;<span id="subject-error-text">Please enter a subject for your message.</span></p>
                         </div>
 <div id="message-textarea-container">
-                        <label for="message">Your message to Justin<span aria-hidden="true">*</span></label>
+                        <label for="message"><span id="message-label">Your message to Justin</span><span aria-hidden="true">*</span></label>
                         <textarea name="message" id="message" aria-required="true"></textarea>
-                        <p class="form-error" id="message-error"><strong>Error:</strong> Please enter a message.</p>
+                        <p class="form-error" id="message-error"><strong>Error:</strong>&nbsp;<span id="message-error-text">Please enter a message.</span></p>
                         </div>
 <p><button  id="submit-btn" type="submit">Submit</button></p>
 </form>
@@ -110,6 +110,7 @@ Connect with Justin:
 <p>&copy; 2021-2022 Justin L. Yarbrough</p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
+<div id="aria-live-region" aria-live="polite"></div>
 <script src="/js/main.js"></script>
 </body> 
 </html>
