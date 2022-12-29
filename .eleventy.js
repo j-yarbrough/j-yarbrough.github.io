@@ -62,7 +62,7 @@ ${content}
                             name = id;
                         }; //sets name to same value as id if left blank.
                         return `<div id="${id}-textarea-container">
-                        <label for="${id}">${label}${labelStar}</label>
+                        <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
                         <textarea name="${name}" id="${id}"${ariaRequired}></textarea>
                         ${error}
                         </div>`
@@ -81,7 +81,7 @@ ${content}
                             name = id;
                         }; //makes name attribute same as id if name value is left empty.
                         return `<div id="${id}-input-container">
-                        <label for="${id}">${label}${labelStar}</label>
+                        <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
                         <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}>
                         ${error}
                         </div>`
@@ -111,7 +111,7 @@ function fullErrorMessage (errorString, idValue) {
     if (errorString == '') {
         return '';
     } else {
-        return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong> ' + errorString + '</p>';
+        return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong>&nbsp;<span id="' + idValue + '-error-text">' + errorString + '</span></p>';
     }
 }
 function convertToId(labelText) {
