@@ -82,6 +82,7 @@ function fieldClearValidate() {
 function submitForm() {
     var canSubmit = true;
     var firstErrorField = undefined;
+    var subjectField = document.querySelector('#subject')
     for (var i = 0; i < fieldsToValidate.length; i++) {
         switch (validateField(fieldsToValidate[i])) {
             case true: if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
@@ -101,7 +102,10 @@ function submitForm() {
         }
     }
     switch (canSubmit) {
-        case true: break;
+        case true: if ((subjectField != null) && (subjectField != undefined)) {
+            subjectField.value = '[contact] ' + subjectField.value;
+        }
+        break;
         case false: event.preventDefault();
         firstErrorField.focus();
     }
