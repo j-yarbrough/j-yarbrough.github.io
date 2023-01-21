@@ -1,7 +1,7 @@
 {
   "name": "j-yarbrough.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)",
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/j-yarbrough/j-yarbrough.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.0-beta.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "markdown-it-anchor": "^8.6.5"
   },
