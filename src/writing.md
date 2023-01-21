@@ -15,7 +15,7 @@ If you would like to have Justin write something for you, you can [contact him.]
 {% accordion "2", "Deque Systems" %}
 
 - [My experiences with inaccessible job applications & how to fix them](https://www.deque.com/blog/my-experiences-with-inaccessible-job-applications-how-to-fix-them/)  
-Blog post examining some of the issues that Justin has had applying for jobs online and some ways for employers to prevent accessibility issues with their own online hiring portals.
+Blog post examining some of the issues that Justin has had applying for jobs online and some ways employers can prevent accessibility issues with their online hiring portals.
 
 {% endaccordion %}
 
