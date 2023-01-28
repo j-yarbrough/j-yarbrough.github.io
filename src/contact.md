@@ -16,8 +16,6 @@ to contact Justin, simply fill out this form. All fields marked with an asterisk
 
 {% textInput "email-address", "email", "Email Address", "Please enter a valid email address.", "email", "email" %}
 
-{% textInput "subject", "subject", "Subject", "Please enter a subject for your message.", "", "" %}
-
 {% textarea "message", "message", "Your message to Justin","Please enter a message." %}
 
 {% button "submit", "submit-btn", "Submit" %}
