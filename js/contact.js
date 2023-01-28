@@ -102,10 +102,7 @@ function submitForm() {
         }
     }
     switch (canSubmit) {
-        case true: if ((subjectField != null) && (subjectField != undefined)) {
-            subjectField.value = '[contact] ' + subjectField.value;
-        }
-        break;
+        case true: break;
         case false: event.preventDefault();
         firstErrorField.focus();
     }
