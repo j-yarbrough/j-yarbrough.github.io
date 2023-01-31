@@ -39,6 +39,8 @@ Article examining how airlines were trying to accommodate passengers with disabi
 
 - [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
 Justin discusses the importance of using alt text and thinking outside of our own use case.
+- [Justin Yarbrough talks about form validation and screen readers](https://a11yrules.com/podcast/justin-yarbrough-talks-about-form-validation-and-screen-readers/)  
+Justin talks about the importance of providing clear and concise error messages within form validation and the best form validation patterns for screen reader users.
 
 ### Next Trip Podcast
 
