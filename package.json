@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
-  "name": "yarbrough.info",
-  "version": "1.0.0",
-  "description": "This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)",
-=======
-  "name": "Justin Yarbrough's personal website and portfolio",
+  "name": "yarbrough.info and portfolio",
   "version": "1.0.0",
   "description": "Personal website and portfolio for Justin Yarbrough, an accessibility consultant, writer, and speaker.",
->>>>>>> 82742e0 (update package file)
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"
