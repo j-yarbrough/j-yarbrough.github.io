@@ -1,7 +1,7 @@
 {
-  "name": "j-yarbrough.github.io",
+  "name": "yarbrough.info",
   "version": "1.0.0",
-  "description": "This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)",
+  "description": "Personal website and portfolio for Justin Yarbrough, an accessibility consultant, writer, and speaker.",
   "main": ".eleventy.js",
   "directories": {
     "doc": "docs"
@@ -16,7 +16,7 @@
     "url": "git+https://github.com/j-yarbrough/j-yarbrough.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Justin L. Yarbrough",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/j-yarbrough/j-yarbrough.github.io/issues"
