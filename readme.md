@@ -4,9 +4,7 @@
 
 This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
 
-GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
-
-Issues are created for all changes and a branch is created from the issue. When dev is complete, changes are either merged into main immediately using a pull request or are scheduled using PR Scheduler.
+All changes are pushed to the main branch. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
 
 ## Redirects
 
@@ -91,13 +89,3 @@ Standard shortcode is "textarea"
 - error: Error message to be displayed if input is empty.
     - if value is empty, field is not required.
     - Will add aesterisk, aria-required attribute if there is a non-empty value.
-
-    ### Countdown
-
-Short code is "countdown"
-
-This creates a span showing the days, hours, minutes, and seconds until a given event. This is refreshed automatically using JS. Context for setting the time to count down to is explained below.
-
-    #### Arguments
-
-    * Time: Provided in the format "Mar 16, 2023 15:00:00 GMT -5"
