@@ -49,6 +49,7 @@ ${content}
                 if (passAttributes != '') {passAttributes = ' ' + passAttributes;};
                     return `<div class="ebox-border-left">${content}</div>`
                         });    
+            
             eleventyConfig.addShortcode("button", function(type, id, label) {
                 switch (type) {
                     case 'submit': type = ' type="submit"';
@@ -59,6 +60,19 @@ ${content}
                 }; //sets type to button if not specified as submit or reset.
                 return `<button  id="${id}"${type}>${label}</button>`
                     });            
+                    eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
+                        var labelStar = formLabelStar(error);
+                        var ariaRequired = isAriaRequired(error);
+                        error = fullErrorMessage(error, id);
+                        if (name == '') {
+                            name = id;
+                        }; //sets name to same value as id if left blank.
+                        return `<div id="${id}-textarea-container">
+                        <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
+                        <textarea name="${name}" id="${id}"${ariaRequired}></textarea>
+                        ${error}
+                        </div>`
+                            });            
                     eleventyConfig.addShortcode("textInput", function(id, name, label, error, autocomplete, inputmode) {
                         var labelStar = formLabelStar(error);
                         var ariaRequired = isAriaRequired(error);
@@ -78,22 +92,6 @@ ${content}
                         ${error}
                         </div>`
                             });                    
-                    eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
-                        var labelStar = formLabelStar(error);
-                        var ariaRequired = isAriaRequired(error);
-                        error = fullErrorMessage(error, id);
-                        if (name == '') {
-                            name = id;
-                        }; //sets name to same value as id if left blank.
-                        return `<div id="${id}-textarea-container">
-                        <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
-                        <textarea name="${name}" id="${id}"${ariaRequired}></textarea>
-                        ${error}
-                        </div>`
-                            });            
-                    eleventyConfig.addShortcode("countdown", function(countdownTime) {
-                        return `<span class="countdown-container" data-time=">${countdownTime}"></span>`
-                            });                                                
     return {        
             dir: {
             input: "src"
