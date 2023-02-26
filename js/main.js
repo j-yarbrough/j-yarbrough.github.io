@@ -2,7 +2,6 @@
 // Will load scripts only for components that are being used on pages.
 // This script will check for certain selectors and append script tags to the end of the body element.
 
-
 // Array for checks to be done
 // Format for each check is [selector, filename]
 // Note: Filename should not contain file extension
@@ -10,7 +9,8 @@
 var indexOfChecks = [
     ['#nav-btn','nav-collapse'],
     ['.accordion-button','accordion'],
-    ['#contact-form','contact']
+    ['#contact-form','contact'],
+    ['.countdown-container','countdown']
     ]; //end index
 
 // Loop that does checks, runs function if check is true
