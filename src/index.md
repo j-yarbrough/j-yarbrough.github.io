@@ -13,6 +13,10 @@ eleventyNavigation:
 
 Justin will be a panelist for [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/) during [Axe-Con](https://www.deque.com/axe-con/), a free, virtual two-day digital accessibility conference held on March 15th and 16th. The panel will be on Thursday, March 16 at 3 PM CDT. You can [learn more about the conference](https://www.deque.com/axe-con/about/) and [register for free](https://www.deque.com/axe-con/register/).
 
+### Countdown to Justin's Panel
+
+{% countdown "Mar 16, 2023 15:00:00 GMT -5" %}
+
 {% endebox %}
 
 ## About Justin
