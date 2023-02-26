@@ -15,7 +15,7 @@ Justin will be a panelist for [Working from Within: Having a Disability and Work
 
 ### Countdown to Justin's Panel
 
-{% countdown "Mar 16, 2023 21:00:00" %}
+{% countdown "Mar 16, 2023 15:00:00 GMT -5" %}
 
 {% endebox %}
 
