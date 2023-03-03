@@ -73,9 +73,16 @@ ${content}
                         ${error}
                         </div>`
                             });            
-                    eleventyConfig.addShortcode("textInput", function(id, name, label, error, autocomplete, inputmode) {
+                    eleventyConfig.addShortcode("textInput", function(id, name, label, error, helperText, autocomplete, inputmode) {
                         var labelStar = formLabelStar(error);
                         var ariaRequired = isAriaRequired(error);
+                        var ariaDescribedby;
+                        if (helperText.length != 0) {
+                            helperText = '<p id="' + id + '-helper-text">' + helperText + '</p>';
+                            ariaDescribedby = ' aria-describedby="' + id + '-helper-text"';
+                        } else {
+                            ariaLabelledby = '';
+                        }
                         error = fullErrorMessage(error, id);
                         if (autocomplete != '') {
                             autocomplete = ' autocomplete="' + autocomplete + '"';
@@ -88,8 +95,9 @@ ${content}
                         }; //makes name attribute same as id if name value is left empty.
                         return `<div id="${id}-input-container">
                         <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
-                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}>
+                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}${ariaDescribedby}>
                         ${error}
+                        ${helperText}
                         </div>`
                             });                    
     return {        

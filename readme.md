@@ -59,6 +59,7 @@ Standard short code is "textInput"
 - error: Text of error message if not valid.
     - If left empty, field will not be required.
 - autocomplete: autocomplete attribute value, attribute will be left off if empty.
+- Helper Text: Helper text that will appear below field and be programmatically associated with aria-describedby. Will be left off if this is blank.
 - inputmode: Input's inputmode attribute value, attribute will be left off if empty.
 
 ### Button
