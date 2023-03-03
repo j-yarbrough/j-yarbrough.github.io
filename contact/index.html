@@ -47,13 +47,14 @@ Contact
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
 <div id="submitter-name-input-container">
                         <label for="submitter-name"><span id="submitter-name-label">Name</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="submitter-name" id="submitter-name" autocomplete="name" aria-required="true">
+                        <input type="text" name="submitter-name" id="submitter-name" autocomplete="name" aria-required="true"undefined>
                         <p class="form-error" id="submitter-name-error"><strong>Error:</strong>&nbsp;<span id="submitter-name-error-text">Please enter your name.</span></p>
-                        </div>
+<p></div></p>
 <div id="email-address-input-container">
                         <label for="email-address"><span id="email-address-label">Email Address</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="email" id="email-address" autocomplete="email" inputmode="email" aria-required="true">
+                        <input type="text" name="email" id="email-address" autocomplete="email" inputmode="email" aria-required="true" aria-describedby="email-address-helper-text">
                         <p class="form-error" id="email-address-error"><strong>Error:</strong>&nbsp;<span id="email-address-error-text">Please enter a valid email address.</span></p>
+                        <p id="email-address-helper-text">Justin will only use your email address to respond to your message.</p>
                         </div>
 <div id="message-textarea-container">
                         <label for="message"><span id="message-label">Your message to Justin</span><span aria-hidden="true">*</span></label>
