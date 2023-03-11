@@ -79,6 +79,11 @@ Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about
 - [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8)  
 A panel discussion moderated by Carie Fisher discussing digital inclusion with co-panelists Liz Davis and Nic Steenhout.
 
+### Deque Systems
+
+- [Meet Justin, Steve and Trudy at axe-con 2023!](https://www.youtube.com/watch?v=XL1HN-3JF0I)  
+Promotional video recorded for our Axe-Con panel on working in accessibility as a person with a disability.
+
 ### Rio Salado College
 
 - [Living with Blindness: Interview with Justin Yarbrough](https://www.youtube.com/watch?v=sfHOJfJHav0)  
