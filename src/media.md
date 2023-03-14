@@ -56,6 +56,11 @@ Justin discusses the new US Department of Transportation regulations surrounding
 - [&num;10 Mountain Goating in Dublin](https://www.buzzsprout.com/1520842/7625287-10-mountain-goating-in-dublin?t=0)  
     Justin and his wife Jen talk about their travels, including the challenges associated with traveling as a blind person.
 
+### That Real Blind Tech Show
+
+- [Episode 115 - Axe-Con 2023 Is Here, Get To Know Deque Systems Justin Yarbrough](https://thatrealblindtechshow.libsyn.com/episode-115-axe-con-2023-is-here-get-to-know-deque-systems-justin-yarbrough)  
+Justin speaks with Brian and Ed about his panel for Axe-Con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics.
+
 ### Working Blind
 
 - [Episode 6 - Justin Yarbrough, Digital Accessibility Specialist](https://catchthesewords.com/working-blind-episode-6-justin-yarbrough-digital-accessibility-specialist/)  
