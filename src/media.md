@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 # Other Media
 
-Below you will find a listing of videos and other media in which Justin has appeared. Listings of articles Justin has written and podcasts Justin has appeared on can be found on the [writing](/writing) and [other media](/media) pages.
+Below you will find a listing of videos and other media in which Justin has appeared. Listings of articles Justin has written and podcasts Justin has appeared on can be found on the [writing](/writing) and [podcasts](/podcasts) pages.
 
 If you would like Justin to  appear on your media project you can [contact him.](/contact)
 
