@@ -4,7 +4,7 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Contact
-  order: 4
+  order: 5
 ---
 # Contact Justin
 

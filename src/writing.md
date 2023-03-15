@@ -8,7 +8,7 @@ order: 2
 ---
 # Writing
 
-Below you will find a sample of articles Justin has written. To see other media Justin has appeared in, check out the [other media](/media) page.
+Below you will find a listing of articles Justin has written. To see podcasts and other media Justin has appeared in, check out the [podcasts](/podcasts) and [other media](/media) pages.
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 

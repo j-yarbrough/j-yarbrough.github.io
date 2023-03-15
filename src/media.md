@@ -4,13 +4,13 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Other Media
-  order: 3
+  order: 4
 ---
 # Other Media
 
-Below you will find a sample of videos, podcasts, and other media in which Justin has appeared. To see articles Justin has written, be sure to check out the [writing](/writing) page.
+Below you will find a listing of videos and other media in which Justin has appeared. Listings of articles Justin has written and podcasts Justin has appeared on can be found on the [writing](/writing) and [other media](/media) pages.
 
-If you would like Justin to appear on a podcast or other media, you can [contact him.](/contact)
+If you would like Justin to  appear on your media project you can [contact him.](/contact)
 
 {% accordion "2", "Media Quoting Justin" %}
 
@@ -31,41 +31,6 @@ This podcast examines the difficulties that people with disabilities have findin
 - [US airlines seek to honor disability rights while enforcing mask use](https://runwaygirlnetwork.com/2020/06/us-airlines-seek-to-honor-disability-rights-while-enforcing-mask-use/)  
 Article examining how airlines were trying to accommodate passengers with disabilities that were unable to wear masks early in the pandemic after airlines had started to require masks be worn on planes. While Justin's disability does not prevent him from wearing a mask, he was concerned how the policies would affect passengers who were unable to wear them.
     
-{% endaccordion %}
-
-{% accordion "2", "Podcasts" %}
-
-### &num;A11y Rules Soundbites
-
-- [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
-Justin discusses the importance of using alt text and thinking outside of our own use case.
-- [Justin Yarbrough talks about form validation and screen readers](https://a11yrules.com/podcast/justin-yarbrough-talks-about-form-validation-and-screen-readers/)  
-Justin talks about the importance of providing clear and concise error messages within form validation and the best form validation patterns for screen reader users.
-
-### Next Trip Podcast
-
-- [Boarding Pass 013: Airline Accessibility](https://podcasts.apple.com/us/podcast/boarding-pass-013-airline-accessibility/id1490032141?i=1000466483434)  
-Justin discusses the accessible seat-back entertainment system United is starting to roll out on aircraft and the US Department of Transportation's proposed changes to regulations surrounding flying with a service animal.
-- [Boarding Pass 029: Where did my Dog Drop a Nugget?](https://podcasts.apple.com/us/podcast/boarding-pass-029-where-did-my-dog-drop-a-nugget/id1490032141?i=1000478092482)  
-Justin discusses his Runway Girl article about flying as a blind passenger during the early days of the pandemic.
-- [Boarding Pass 059: Dogs on a Plane](https://podcasts.apple.com/us/podcast/boarding-pass-059-dogs-on-a-plane/id1490032141?i=1000505025762)  
-Justin discusses the new US Department of Transportation regulations surrounding flying with a service animal on the eve of their going into effect.
-
-### Non-rev Lounge
-
-- [&num;10 Mountain Goating in Dublin](https://www.buzzsprout.com/1520842/7625287-10-mountain-goating-in-dublin?t=0)  
-    Justin and his wife Jen talk about their travels, including the challenges associated with traveling as a blind person.
-
-### That Real Blind Tech Show
-
-- [Episode 115 - Axe-Con 2023 Is Here, Get To Know Deque Systems Justin Yarbrough](https://thatrealblindtechshow.libsyn.com/episode-115-axe-con-2023-is-here-get-to-know-deque-systems-justin-yarbrough)  
-Justin speaks with Brian and Ed about his panel for Axe-Con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics.
-
-### Working Blind
-
-- [Episode 6 - Justin Yarbrough, Digital Accessibility Specialist](https://catchthesewords.com/working-blind-episode-6-justin-yarbrough-digital-accessibility-specialist/)  
-    Justin discusses his work in digital accessibility at a community college.
-
 {% endaccordion %}
 
 {% accordion "2", "Profiles" %}
