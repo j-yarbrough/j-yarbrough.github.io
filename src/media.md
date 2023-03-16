@@ -49,6 +49,11 @@ Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about
 - [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8)  
 A panel discussion moderated by Carie Fisher discussing digital inclusion with co-panelists Liz Davis and Nic Steenhout.
 
+### Axe-Con
+
+- [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/)  
+Justin and fellow digital accessibility professionals Trudy Harrington Karl and Steve Lowe, all of whom have a disability, discuss how their personal experiences with disability, inclusion, and accessibility guide and inform their professional lives. Registration is required to view the recording, but is free. Justin, Steve, and Trudy also [recorded a promotional video](https://www.youtube.com/watch?v=XL1HN-3JF0I) ahead of the panel.
+
 ### Rio Salado College
 
 - [Living with Blindness: Interview with Justin Yarbrough](https://www.youtube.com/watch?v=sfHOJfJHav0)  
