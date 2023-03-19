@@ -1,13 +1,11 @@
 ---
-title: Contact
+title: Contact Justin
 layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Contact
   order: 5
 ---
-# Contact Justin
-
 to contact Justin, simply fill out this form. All fields marked with an asterisk are required.
 
 {% formcontainer "contact-form", "contact", "post", "https://formspree.io/f/mnqleljw" %}

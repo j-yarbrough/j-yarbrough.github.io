@@ -1,12 +1,10 @@
 ---
-title: Home
+title: Welcome to Justin Yarbrough’s personal website
 layout: layouts/base.njk
 eleventyNavigation:
   key: Home
-
+  order: 0
 ---
-# Welcome to Justin Yarbrough’s personal website
-
 ## About Justin
 
 {% include "snippets/mugshot.njk" %}
