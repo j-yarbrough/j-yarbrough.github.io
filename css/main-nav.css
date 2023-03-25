@@ -1,0 +1,26 @@
+#nav {
+    padding: 8px 0;
+}
+#nav-links {
+    list-style-type: none;
+}
+#nav-links li[aria-current] {
+    color: var(--black);
+    background: var(--white);
+    font-weight: bold;
+}
+
+/*hides nav collapse button for all but mobile*/
+
+#nav-btn {
+    display: none;
+    font-family: var(--serif);
+    color: var(--white);
+    background-color: var(--blue);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+}
+#nav-btn[aria-expanded=true] {
+    color: var(--blue);
+    background-color: var(--white);
+}
