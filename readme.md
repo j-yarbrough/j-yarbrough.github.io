@@ -4,7 +4,7 @@
 
 This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
 
-All changes are pushed to the main branch. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
+Changes are created in their own branches and merget into main via a PR. Items that are to-do will be logged as issues. Work on those will be on branches created from the issues and are automatically closed when the PR is merged. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
 
 ## Redirects
 
@@ -73,6 +73,7 @@ Regular short code is "button"
 - type: Button's type id attribute value.
 - id: button's id attribute value.
 - label: Button's inner HTML.
+- Helper Text: Any helper text with the button. Left out if this argument is empty. Will display helper text below button and programmatically associate it with aria-describedby.
 
 ### Textarea
 

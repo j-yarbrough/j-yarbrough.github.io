@@ -50,7 +50,14 @@ ${content}
                     return `<div class="ebox-border-left">${content}</div>`
                         });    
             
-            eleventyConfig.addShortcode("button", function(type, id, label) {
+            eleventyConfig.addShortcode("button", function(type, id, label, helperText) {
+                var ariaDescribedby;
+                if (helperText != '') {
+                    helperText = '<p id="' + id + '-helper-text">' + helperText + '</p>';
+                    ariaDescribedby = ' aria-describedby="' + id + '-helper-text"';
+                } else {
+                    ariaDescribedby = '';
+                }
                 switch (type) {
                     case 'submit': type = ' type="submit"';
                     break;
@@ -58,7 +65,8 @@ ${content}
                     break;
                     default: type = ' type="button"';
                 }; //sets type to button if not specified as submit or reset.
-                return `<button  id="${id}"${type}>${label}</button>`
+                return `<div id="${id}-button-container">
+                <button id="${id}"${type}${ariaDescribedby}>${label}</button>${helperText}</div>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);
