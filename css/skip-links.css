@@ -1,0 +1,15 @@
+/*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
+.sr-only, #skip-links, #aria-live-region {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+#skip-links:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    left: auto;
+}
