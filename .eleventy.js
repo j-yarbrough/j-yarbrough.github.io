@@ -70,8 +70,7 @@ ${content}
                         return `<div id="${id}-textarea-container">
                         <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
                         <textarea name="${name}" id="${id}"${ariaRequired}></textarea>
-                        ${error}
-                        </div>`
+                        ${error}</div>`
                             });            
                     eleventyConfig.addShortcode("textInput", function(id, name, label, error, helperText, autocomplete, inputmode) {
                         var labelStar = formLabelStar(error);
@@ -81,7 +80,7 @@ ${content}
                             helperText = '<p id="' + id + '-helper-text">' + helperText + '</p>';
                             ariaDescribedby = ' aria-describedby="' + id + '-helper-text"';
                         } else {
-                            ariaLabelledby = '';
+                            ariaDescribedby = '';
                         }
                         error = fullErrorMessage(error, id);
                         if (autocomplete != '') {
@@ -96,9 +95,7 @@ ${content}
                         return `<div id="${id}-input-container">
                         <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
                         <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}${ariaDescribedby}>
-                        ${error}
-                        ${helperText}
-                        </div>`
+                        ${error}${helperText}</div>`
                             });                    
     return {        
             dir: {
