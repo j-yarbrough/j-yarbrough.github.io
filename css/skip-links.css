@@ -7,7 +7,7 @@
     height: 1px;
     overflow: hidden;
 }
-#skip-links:focus-within {
+#skip-links:focus-visible-within {
     position: static;
     width: auto;
     height: auto;

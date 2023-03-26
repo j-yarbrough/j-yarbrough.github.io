@@ -16,6 +16,6 @@ to contact Justin, simply fill out this form. All fields marked with an asterisk
 
 {% textarea "message", "message", "Your message to Justin","Please enter a message." %}
 
-{% button "submit", "submit-btn", "Submit", "You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam." %}
+{% button "submit", "submit-form", "Submit", "You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam." %}
 
 {% endformcontainer %}
