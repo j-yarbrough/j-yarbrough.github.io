@@ -1,5 +1,6 @@
 ---
-title: Contact Justin
+title: Contact
+H1: Contact Justin
 layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:

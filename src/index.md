@@ -1,5 +1,6 @@
 ---
-title: Welcome to Justin Yarbrough’s personal website
+title: Home
+H1: Welcome to Justin Yarbrough’s personal website
 layout: layouts/base.njk
 eleventyNavigation:
   key: Home
