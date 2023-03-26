@@ -66,7 +66,7 @@ ${content}
                     default: type = ' type="button"';
                 }; //sets type to button if not specified as submit or reset.
                 return `<div id="${id}-button-container">
-                <button id="${id}"${type}${ariaDescribedby}>${label}</button>${helperText}</div>`
+                <button class="sc-button" id="${id}"${type}${ariaDescribedby}>${label}</button>${helperText}</div>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);

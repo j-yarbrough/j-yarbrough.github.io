@@ -7,7 +7,7 @@
 .white-background a, .white-background a:visited, .white-background a:hover{
     color: var(--blue);
 }
-.white-background a:focus{
+.white-background a:focus-visible{
     outline: 2px dotted var(--blue);
     color: var(--blue);
 }

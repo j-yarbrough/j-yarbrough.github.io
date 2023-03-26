@@ -13,9 +13,8 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-.accordion-button:focus, .accordion-button:hover {
-    color: var(--white);
-    background-color: var(--blue);
+.accordion-button:focus-visible {
+    outline: 2px dotted var(--blue);
 }
 .accordion-button[aria-expanded=true] {
     margin: 0;
