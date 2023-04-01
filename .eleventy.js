@@ -105,6 +105,7 @@ ${content}
                         <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}${ariaDescribedby}>
                         ${error}${helperText}</div>`
                             });                    
+                            eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
     return {        
             dir: {
             input: "src"
