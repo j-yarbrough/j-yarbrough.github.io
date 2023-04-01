@@ -53,8 +53,8 @@ ${content}
             eleventyConfig.addShortcode("button", function(type, id, label, helperText) {
                 var ariaDescribedby;
                 if (helperText != '') {
-                    helperText = '<p id="' + id + '-helper-text">' + helperText + '</p>';
-                    ariaDescribedby = ' aria-describedby="' + id + '-helper-text"';
+                    helperText = `<p id="${id}-helper-text">${helperText}</p>`;
+                    ariaDescribedby = ` aria-describedby="${id}-helper-text"`;
                 } else {
                     ariaDescribedby = '';
                 }
@@ -85,17 +85,17 @@ ${content}
                         var ariaRequired = isAriaRequired(error);
                         var ariaDescribedby;
                         if (helperText.length != 0) {
-                            helperText = '<p id="' + id + '-helper-text">' + helperText + '</p>';
-                            ariaDescribedby = ' aria-describedby="' + id + '-helper-text"';
+                            helperText = `<p id="${id}-helper-text">${helperText}</p>`;
+                            ariaDescribedby = ` aria-describedby="${id}-helper-text"`;
                         } else {
                             ariaDescribedby = '';
                         }
                         error = fullErrorMessage(error, id);
                         if (autocomplete != '') {
-                            autocomplete = ' autocomplete="' + autocomplete + '"';
+                            autocomplete = ` autocomplete="${autocomplete}"`;
                         }; //leaves off autocomplete attribute if value is empty
                         if (inputmode != '') {
-                            inputmode = ' inputmode="' + inputmode + '"';
+                            inputmode = ` inputmode="${inputmode}"`;
                         }; //leaves off inputmode attribute if value is empty.
                         if (name == '') {
                             name = id;
