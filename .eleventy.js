@@ -50,17 +50,24 @@ ${content}
                     return `<div class="ebox-border-left${passClass}"${passAttributes}>${content}</div>`
                         });    
             
-            eleventyConfig.addShortcode("button", function(type, id, label, helperText) {
+            eleventyConfig.addShortcode("button", function(label, id, type, helperText) {
                 var ariaDescribedby;
+                var buttonString = '';
                 if (helperText != '') {
                     helperText = `<p id="${id}-helper-text">${helperText}</p>`;
                     ariaDescribedby = ` aria-describedby="${id}-helper-text"`;
                 } else {
                     ariaDescribedby = '';
                 }
+                for (var i = 0; i < label.length; i++) {
+if (i == 0) {
+    buttonString += `<button class="sc-button" id=${id}-${i}" type="${type[i]}"${ariaDescribedby}>${label[i]}</button>`
+} else {
+    buttonString += `<button class="sc-button" id=${id}-${i}" type="${type[i]}">${label[i]}</button>`
+}
+                }
                 if ((type != 'button') && (type != 'submit') && (type != 'reset')) {type = 'button';};
-                return `<div id="${id}-button-container">
-                <button class="sc-button" id="${id}" type="${type}"${ariaDescribedby}>${label}</button>${helperText}</div>`
+                return `<div id="${id}-button-container">${buttonString}${helperText}</div>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);

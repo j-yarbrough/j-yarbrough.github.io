@@ -8,6 +8,7 @@ var fieldsToValidate = document.querySelectorAll('input[aria-required], textarea
 //event listeners
 
 formContainer.addEventListener('submit',submitForm);
+formContainer.addEventListener('reset',resetForm);
 
 for (var i = 0; i < fieldsToValidate.length; i++) {
     fieldsToValidate[i].addEventListener('change',fieldValidateOnBlur);
@@ -122,4 +123,16 @@ whichInput.removeEventListener('input',fieldClearValidate);
         whichInput.addEventListener('input',fieldClearValidate);
         whichInput.removeEventListener('change',fieldValidateOnBlur);
     }
+}
+
+function resetForm() {
+    for (var i = 0; i <fieldsToValidate.length; i++) {
+        if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
+            fieldsToValidate[i].removeAttribute('aria-invalid');
+            fieldsToValidate[i].removeAttribute('aria-labelledby');
+toggleEventListeners(fieldsToValidate[i], true);
+        }
+    }
+    fieldsToValidate[0].focus();
+    ariaLiveHandler('All fields cleared');
 }
