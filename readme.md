@@ -15,6 +15,15 @@ To set up a redirect:
     - title: The URL you wish to redirect to
     - layout: layouts/redirect.njk
 
+## Template variations
+
+There are template variations that can be automatically used based on front matter set in the documents. The front value variables are as follows:
+
+- H1: Allows for the H1 of pa page to be separate from the title of the page.
+    - If H1 is in front matter, it will be used as the H1 text.
+    - If no H1, then the title will be used.
+- IncludeTOC: true will insert a TOC into the template.
+
 ## Component Short codes
 
 This site is designed to use short codes as much as possible to componentize items. These are described below.
