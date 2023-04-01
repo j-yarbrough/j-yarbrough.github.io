@@ -45,9 +45,9 @@ ${content}
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
             eleventyConfig.addPairedShortcode("ebox", function(content, passAttributes, passClass) {
-                if (passClass != '') {passclass = ' ' + passClass;};
-                if (passAttributes != '') {passAttributes = ' ' + passAttributes;};
-                    return `<div class="ebox-border-left">${content}</div>`
+                if (passClass != '') {passclass = ` ${passClass}`;};
+                if (passAttributes != '') {passAttributes = ` ${passAttributes}`;};
+                    return `<div class="ebox-border-left${passClass}"${passAttributes}>${content}</div>`
                         });    
             
             eleventyConfig.addShortcode("button", function(type, id, label, helperText) {
@@ -58,15 +58,9 @@ ${content}
                 } else {
                     ariaDescribedby = '';
                 }
-                switch (type) {
-                    case 'submit': type = ' type="submit"';
-                    break;
-                    case "reset": type = ' type="reset"';
-                    break;
-                    default: type = ' type="button"';
-                }; //sets type to button if not specified as submit or reset.
+                if ((type != 'button') && (type != 'submit') && (type != 'reset')) {type = 'button';};
                 return `<div id="${id}-button-container">
-                <button class="sc-button" id="${id}"${type}${ariaDescribedby}>${label}</button>${helperText}</div>`
+                <button class="sc-button" id="${id}" type="${type}"${ariaDescribedby}>${label}</button>${helperText}</div>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);
