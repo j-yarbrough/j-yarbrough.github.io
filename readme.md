@@ -79,10 +79,13 @@ Regular short code is "button"
 
 #### Arguments
 
-- type: Button's type id attribute value.
-- id: button's id attribute value.
+- type: Button's type attribute.
+    - If not set to submit or reset will default to button.
+    - Must be entered as an array.
+- id: button stack's id attribute value.
 - label: Button's inner HTML.
-- Helper Text: Any helper text with the button. Left out if this argument is empty. Will display helper text below button and programmatically associate it with aria-describedby.
+    - Must be entered in array format.
+- Helper Text: Any helper text with the button. Left out if this argument is empty. Will display helper text below button stack and programmatically associate it to the first button with aria-describedby.
 
 ### Textarea
 
