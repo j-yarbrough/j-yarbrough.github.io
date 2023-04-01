@@ -10,8 +10,7 @@ var fieldsToValidate = document.querySelectorAll('input[aria-required], textarea
 formContainer.addEventListener('submit',submitForm);
 
 for (var i = 0; i < fieldsToValidate.length; i++) {
-    fieldsToValidate[i].addEventListener('blur',fieldValidateOnBlur);
-    fieldsToValidate[i].addEventListener('input',fieldClearValidate);
+    fieldsToValidate[i].addEventListener('change',fieldValidateOnBlur);
 }
 
 //functions
@@ -51,7 +50,7 @@ function fieldValidateOnBlur () {
     var errorTextId = fieldId + '-error-text';
     var labelText = document.querySelector('#' + labelId).textContent;
     var errorText = document.querySelector('#' + errorTextId).textContent;
-    var announcementReads = 'Error with ' + labelText + ' field which reads ' + errorText;
+    var announcementReads = `Error with ${labelText} field which reads ${errorText}`;
     if (this.hasAttribute('aria-invalid')) {
         return;
     } else {
@@ -59,6 +58,7 @@ function fieldValidateOnBlur () {
             case true: break;
             case false: this.setAttribute('aria-invalid','true');
             setAriaLabel(this);
+            toggleEventListeners(this, false);
             ariaLiveHandler(announcementReads);
             break;
         }
@@ -66,6 +66,9 @@ function fieldValidateOnBlur () {
 }
 
 function fieldClearValidate() {
+    var idOfThis = this.getAttribute('id');
+    var labelText = document.querySelector(`#${idOfThis}-label`).textContent;
+    var announcementReads = `Error removed from {labelText} field.`;
     if ((this.hasAttribute('aria-invalid')) == false) {
         return;
     } else {
@@ -73,7 +76,8 @@ function fieldClearValidate() {
             case false: break;
             case true: this.removeAttribute('aria-invalid');
             this.removeAttribute('aria-labelledby');
-            ariaLiveHandler('Error removed.');
+            toggleEventListeners(this, true);
+            ariaLiveHandler(announcementReads);
             break;
         }
     }
@@ -82,17 +86,19 @@ function fieldClearValidate() {
 function submitForm() {
     var canSubmit = true;
     var firstErrorField = undefined;
-    var subjectField = document.querySelector('#subject')
+
     for (var i = 0; i < fieldsToValidate.length; i++) {
         switch (validateField(fieldsToValidate[i])) {
             case true: if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
                 fieldsToValidate[i].removeAttribute('aria-invalid');
                 fieldsToValidate[i].removeAttribute('aria-labelledby');
+                toggleEventListeners(fieldsToValidate[i], true);
             }
             break;
             case false: if (fieldsToValidate[i].hasAttribute('aria-invalid') == false) {
                 fieldsToValidate[i].setAttribute('aria-invalid','true');
                 setAriaLabel(fieldsToValidate[i]);
+                toggleEventListeners(fieldsToValidate[i], false);
             }
             if (canSubmit) {
                 canSubmit = false;
@@ -105,5 +111,15 @@ function submitForm() {
         case true: break;
         case false: event.preventDefault();
         firstErrorField.focus();
+    }
+}
+
+function toggleEventListeners(whichInput, isItValid) {
+    if (isItValid == true) {
+        whichInput.addEventListener('change',fieldValidateOnBlur);
+whichInput.removeEventListener('input',fieldClearValidate);
+    } else if (isItValid == false) {
+        whichInput.addEventListener('input',fieldClearValidate);
+        whichInput.removeEventListener('change',fieldValidateOnBlur);
     }
 }
