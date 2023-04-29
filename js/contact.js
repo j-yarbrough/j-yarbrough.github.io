@@ -11,7 +11,7 @@ formContainer.addEventListener('submit',submitForm);
 formContainer.addEventListener('reset',resetForm);
 
 for (var i = 0; i < fieldsToValidate.length; i++) {
-    fieldsToValidate[i].addEventListener('change',fieldValidateOnBlur);
+fieldsToValidate[i].addEventListener('blur',fieldValidateOnBlur);
 }
 
 //functions
@@ -69,7 +69,7 @@ function fieldValidateOnBlur () {
 function fieldClearValidate() {
     var idOfThis = this.getAttribute('id');
     var labelText = document.querySelector(`#${idOfThis}-label`).textContent;
-    var announcementReads = `Error removed from {labelText} field.`;
+    var announcementReads = `Error removed from ${labelText} field.`;
     if ((this.hasAttribute('aria-invalid')) == false) {
         return;
     } else {
@@ -117,11 +117,11 @@ function submitForm() {
 
 function toggleEventListeners(whichInput, isItValid) {
     if (isItValid == true) {
-        whichInput.addEventListener('change',fieldValidateOnBlur);
+        whichInput.addEventListener('blur',fieldValidateOnBlur);
 whichInput.removeEventListener('input',fieldClearValidate);
     } else if (isItValid == false) {
         whichInput.addEventListener('input',fieldClearValidate);
-        whichInput.removeEventListener('change',fieldValidateOnBlur);
+        whichInput.removeEventListener('blur',fieldValidateOnBlur);
     }
 }
 
