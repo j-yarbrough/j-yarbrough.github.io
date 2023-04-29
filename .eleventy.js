@@ -132,7 +132,7 @@ function fullErrorMessage (errorString, idValue) {
     if (errorString == '') {
         return '';
     } else {
-        return '<p class="form-error" id="' + idValue + '-error"><strong>Error:</strong>&nbsp;<span id="' + idValue + '-error-text">' + errorString + '</span></p>';
+        return `<p class="form-error" id="${idValue}-error"><strong>Error:</strong>&nbsp;<span id="${idValue}-error-text">${errorString}</span></p>`;
     }
 }
 function convertToId(labelText) {
