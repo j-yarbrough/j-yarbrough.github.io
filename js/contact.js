@@ -133,6 +133,5 @@ function resetForm() {
 toggleEventListeners(fieldsToValidate[i], true);
         }
     }
-    fieldsToValidate[0].focus();
     ariaLiveHandler('All fields cleared');
 }
