@@ -10,7 +10,7 @@ Below you will find a listing of podcasts in which Justin has appeared. Listings
 
 If you would like Justin to appear on your podcast you can [contact him.](/contact)
 
-{% accordion "2", "&num;A11y Rules Soundbites" %}
+{% accordion "2", "A11y Rules Soundbites" %}
 
 - [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
 Justin discusses the importance of using alt text and thinking outside of our own use case.
@@ -40,7 +40,7 @@ Justin discusses the new US Department of Transportation regulations surrounding
 {% accordion "2", "That Real Blind Tech Show" %}
 
 - [Episode 115 - Axe-Con 2023 Is Here, Get To Know Deque Systems Justin Yarbrough](https://thatrealblindtechshow.libsyn.com/episode-115-axe-con-2023-is-here-get-to-know-deque-systems-justin-yarbrough)  
-Justin speaks with Brian and Ed about his panel for Axe-Con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics.
+Justin speaks with Brian and Ed about his panel for axe-con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics.
 
 {% endaccordion %}
 
