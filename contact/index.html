@@ -18,7 +18,7 @@
     </header>
 <div id="wrapper">
 <nav id="nav" aria-label="Primary">
-<button id="nav-btn" aria-expanded="false"><span aria-hidden="true">&plus;</span>Navigation</button>
+<button id="nav-btn" aria-expanded="false"><span aria-hidden="true">&rarr;</span>Navigation</button>
 
 <ul id="nav-links" role="list">
 <li>
@@ -60,9 +60,20 @@ Contact
 </ul>
 </nav>
 <main class="white-background" id="main">
+
+<nav id="breadcrumbs" aria-label="breadcrumbs">
+You are here:
+<a href="/index.html">Home</a> &rarr; 
+
+
+
+<a href="/contact/" aria-current="page">Contact</a>
+</nav>
+
 <h1 id="main-heading" tabindex="-1">
 Contact Justin
 </h1>
+
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
 <div id="submitter-name-input-container">
