@@ -6,10 +6,10 @@ function showHideNav() {
     var navBtnIndicator = this.firstElementChild;
     switch (this.getAttribute('aria-expanded')) {
         case 'false': this.setAttribute('aria-expanded','true');
-        navBtnIndicator.innerHTML = '&minus;';
+        navBtnIndicator.innerHTML = '&darr;';
         break;
         case 'true': this.setAttribute('aria-expanded','false');
-        navBtnIndicator.innerHTML = '&plus;';
+        navBtnIndicator.innerHTML = '&rarr;';
         break;
     };
 } //end function

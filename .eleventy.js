@@ -34,7 +34,7 @@ module.exports = (function(eleventyConfig) {
             value = '2';
         }
         return `<div id="${accordionId}-acc-wrapper">
-        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel"><span class="accordion-indicator" aria-hidden="true">&plus;</span>
+        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel"><span class="accordion-indicator" aria-hidden="true">&rarr;</span>
         <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
 <div class="accordion-panel" id="${accordionId}-panel">

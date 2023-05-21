@@ -5,10 +5,9 @@
 <div id="wrapper">
 {% include "layouts/nav-main.njk" %}
 <main class="white-background" id="main">
+{% include "layouts/breadcrumbs.njk" %}
 {% include "layouts/h1.njk" %}
-{%- if (IncludeTOC == true) %}
 {% include "layouts/toc.njk" %}
-{% endif %}
 {{ content | safe }}
             </main>
 </div>
