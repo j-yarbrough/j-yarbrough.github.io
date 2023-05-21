@@ -23,6 +23,7 @@ There are template variations that can be automatically used based on front matt
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title will be used.
 - IncludeTOC: true will insert a TOC into the template.
+- includeBreadcrumbs: false will exclude breadcrumbs from the page.
 
 ## Component Short codes
 
