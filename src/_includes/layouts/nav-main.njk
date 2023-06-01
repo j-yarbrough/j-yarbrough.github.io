@@ -1,7 +1,7 @@
 <nav id="nav" aria-label="Primary">
 <button id="nav-btn" aria-expanded="false"><span aria-hidden="true">&rarr;</span>Navigation</button>
 {% set navPages = collections.all | eleventyNavigation %}
-<ul id="nav-links" role="list">
+<ul id="nav-links" role="list" aria-label="Primary Navigation Links">
 {%- for entry in navPages %}
 {%- if (loop.index <= 5) %}
 <li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
