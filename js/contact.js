@@ -10,10 +10,6 @@ var fieldsToValidate = document.querySelectorAll('input[aria-required], textarea
 formContainer.addEventListener('submit',submitForm);
 formContainer.addEventListener('reset',resetForm);
 
-for (var i = 0; i < fieldsToValidate.length; i++) {
-fieldsToValidate[i].addEventListener('blur',fieldValidateOnBlur);
-}
-
 //functions
 
 //function to perform validation
@@ -45,83 +41,39 @@ function setAriaLabel(fieldToSet) {
     fieldToSet.setAttribute('aria-labelledby',fieldIdValue + '-label ' + fieldIdValue + '-error');
 }
 
-function fieldValidateOnBlur () {
-    var fieldId = this.getAttribute('id');
-    var labelId = fieldId + '-label';
-    var errorTextId = fieldId + '-error-text';
-    var labelText = document.querySelector('#' + labelId).textContent;
-    var errorText = document.querySelector('#' + errorTextId).textContent;
-    var announcementReads = `Error with ${labelText} field which reads ${errorText}`;
-    if (this.hasAttribute('aria-invalid')) {
-        return;
-    } else {
-        switch (validateField(this)) {
-            case true: break;
-            case false: this.setAttribute('aria-invalid','true');
-            setAriaLabel(this);
-            toggleEventListeners(this, false);
-            ariaLiveHandler(announcementReads);
-            break;
-        }
-    }
-}
-
-function fieldClearValidate() {
-    var idOfThis = this.getAttribute('id');
-    var labelText = document.querySelector(`#${idOfThis}-label`).textContent;
-    var announcementReads = `Error removed from ${labelText} field.`;
-    if ((this.hasAttribute('aria-invalid')) == false) {
-        return;
-    } else {
-        switch (validateField(this)) {
-            case false: break;
-            case true: this.removeAttribute('aria-invalid');
-            this.removeAttribute('aria-labelledby');
-            toggleEventListeners(this, true);
-            ariaLiveHandler(announcementReads);
-            break;
-        }
-    }
-}
-
 function submitForm() {
-    var canSubmit = true;
     var firstErrorField = undefined;
-
+    var errorCount = 0;
+    var errorCountString;
     for (var i = 0; i < fieldsToValidate.length; i++) {
         switch (validateField(fieldsToValidate[i])) {
             case true: if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
                 fieldsToValidate[i].removeAttribute('aria-invalid');
                 fieldsToValidate[i].removeAttribute('aria-labelledby');
-                toggleEventListeners(fieldsToValidate[i], true);
             }
             break;
             case false: if (fieldsToValidate[i].hasAttribute('aria-invalid') == false) {
                 fieldsToValidate[i].setAttribute('aria-invalid','true');
                 setAriaLabel(fieldsToValidate[i]);
-                toggleEventListeners(fieldsToValidate[i], false);
             }
-            if (canSubmit) {
-                canSubmit = false;
+            if (errorCount == 0) {
                 firstErrorField = fieldsToValidate[i];
             }
+            errorCount++
             break;
         }
     }
-    switch (canSubmit) {
+    switch (errorCount == 0) {
         case true: break;
         case false: event.preventDefault();
+        switch (errorCount == 1) {
+            case true: errorCountString = 'error';
+            break;
+            case false: errorCountString = `${errorCount} errors`;
+            break;
+        }
         firstErrorField.focus();
-    }
-}
-
-function toggleEventListeners(whichInput, isItValid) {
-    if (isItValid == true) {
-        whichInput.addEventListener('blur',fieldValidateOnBlur);
-whichInput.removeEventListener('input',fieldClearValidate);
-    } else if (isItValid == false) {
-        whichInput.addEventListener('input',fieldClearValidate);
-        whichInput.removeEventListener('blur',fieldValidateOnBlur);
+        ariaLiveHandler(`Please fix the ${errorCountString} with this form and try submitting again.`);
     }
 }
 
@@ -130,7 +82,6 @@ function resetForm() {
         if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
             fieldsToValidate[i].removeAttribute('aria-invalid');
             fieldsToValidate[i].removeAttribute('aria-labelledby');
-toggleEventListeners(fieldsToValidate[i], true);
         }
     }
     ariaLiveHandler('All fields cleared');
