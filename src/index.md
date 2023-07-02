@@ -15,7 +15,7 @@ Justin Yarbrough, [CPACC](https://www.accessibilityassociation.org/s/certified-p
 
 Previously, Justin worked as an accessibility specialist for [Rio Salado College](https://www.riosalado.edu/), a Phoenix-area community college, where he worked to ensure the accessibility of the college’s online course content and served as president of Ability Maricopa, the affinity resource group for employees with disabilities and allies within Rio Salado College and the rest of the [Maricopa County Community College District](https://www.maricopa.edu/).
 
-Justin has authored articles on accessibility, blindness, and service animal-related issues for multiple publications. He has also appeared as a guest on podcasts, given presentations, participated in panel discussions, and been interviewed on these topics. A sampling of his podcast, writing, and other media appearances can be found on the [podcasts](/podcasts), [writing](/writing), and [other media](/media) pages on this site. If you would like Justin to write for you or appear on your podcast or other media, you can [contact him](/contact).
+Justin has authored articles on accessibility, blindness, and service animal-related issues for multiple publications. He has also appeared as a guest on podcasts, given presentations, participated in panel discussions, and been interviewed on these topics. A sampling of his writing, podcasts, and other media appearances can be found on the [writing](/writing), [podcasts](/podcasts), and [other media](/media) pages on this site. If you would like Justin to write for you or appear on your podcast or other media, you can [contact him](/contact).
 
 In his spare time, Justin enjoys sports, travel, and listening to audiobooks. He lives with his wife, two cats, and dog.
 
@@ -23,4 +23,3 @@ In his spare time, Justin enjoys sports, travel, and listening to audiobooks. He
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough-639770234/)
 - [Mastodon](https://disabled.social/@jyarbrough){rel="me"}
-- [Twitter](https://www.twitter.com/fatelvis04)
