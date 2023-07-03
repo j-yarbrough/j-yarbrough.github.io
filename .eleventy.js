@@ -85,11 +85,14 @@ if (i == 0) {
                         var labelStar = formLabelStar(error);
                         var ariaRequired = isAriaRequired(error);
                         var ariaDescribedby;
+                        var dataHelperText;
                         if (helperText.length != 0) {
                             helperText = `<p id="${id}-helper-text">${helperText}</p>`;
                             ariaDescribedby = ` aria-describedby="${id}-helper-text"`;
+                            dataHelperText = `' data-helper-text="true"`;
                         } else {
                             ariaDescribedby = '';
+                            dataHelperText = '';
                         }
                         error = fullErrorMessage(error, id);
                         if (autocomplete != '') {
@@ -103,7 +106,7 @@ if (i == 0) {
                         }; //makes name attribute same as id if name value is left empty.
                         return `<div id="${id}-input-container">
                         <label for="${id}"><span id="${id}-label">${label}</span>${labelStar}</label>
-                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}${ariaDescribedby}>
+                        <input type="text" name="${name}" id="${id}"${autocomplete}${inputmode}${ariaRequired}${ariaDescribedby}${dataHelperText}>
                         ${error}${helperText}</div>`
                             });                    
                             eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

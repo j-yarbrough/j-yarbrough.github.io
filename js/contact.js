@@ -27,6 +27,7 @@ function validateField (fieldToValidate) {
             case false: isValid = false; break;
         }
     }
+    applyValidationState(fieldToValidate, isValid);
     return isValid;
 }
 
@@ -36,27 +37,14 @@ function ariaLiveHandler (messageToAnnounce) {
     setTimeout(ariaRegion.textContent = messageToAnnounce, 200);
 }
 
-function setAriaLabel(fieldToSet) {
-    var fieldIdValue = fieldToSet.getAttribute('id');
-    fieldToSet.setAttribute('aria-labelledby',fieldIdValue + '-label ' + fieldIdValue + '-error');
-}
-
 function submitForm() {
     var firstErrorField = undefined;
     var errorCount = 0;
     var errorCountString;
     for (var i = 0; i < fieldsToValidate.length; i++) {
         switch (validateField(fieldsToValidate[i])) {
-            case true: if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
-                fieldsToValidate[i].removeAttribute('aria-invalid');
-                fieldsToValidate[i].removeAttribute('aria-labelledby');
-            }
-            break;
-            case false: if (fieldsToValidate[i].hasAttribute('aria-invalid') == false) {
-                fieldsToValidate[i].setAttribute('aria-invalid','true');
-                setAriaLabel(fieldsToValidate[i]);
-            }
-            if (errorCount == 0) {
+            case true: break;
+            case false: if (errorCount == 0) {
                 firstErrorField = fieldsToValidate[i];
             }
             errorCount++
@@ -77,12 +65,30 @@ function submitForm() {
     }
 }
 
+function applyValidationState (field, validOrNot) {
+    var fieldID = field.getAttribute('id');
+    switch (validOrNot) {
+        case true: field.removeAttribute('aria-invalid');
+        if (field.getAttribute('data-helper-text','true')) {
+            field.setAttribute('aria-describedby',`${fieldID}-helper-text`)
+        } else {
+            field.removeAttribute('aria-describedby');
+        }
+        break;
+        case false: field.setAttribute('aria-invalid','true');
+        if (field.hasAttribute('data-helper-text')) {
+            field.setAttribute('aria-describedby',`${fieldID}-error ${fieldID}-helper-text`);
+        } else {
+            field.setAttribute('aria-describedby',`${fieldID}-error`);
+        }
+        break;
+    }
+}
+
 function resetForm() {
     for (var i = 0; i <fieldsToValidate.length; i++) {
-        if (fieldsToValidate[i].hasAttribute('aria-invalid')) {
-            fieldsToValidate[i].removeAttribute('aria-invalid');
-            fieldsToValidate[i].removeAttribute('aria-labelledby');
-        }
+        applyValidationState(fieldsToValidate[i], true);
     }
+    fieldsToValidate[0].focus();
     ariaLiveHandler('All fields cleared');
 }
