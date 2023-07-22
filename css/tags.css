@@ -26,9 +26,9 @@ ol ol ol ol ol {
     list-style-type: lower-roman;
 }
 
-a, a:active, a:focus-visible, a:hover, a:visited {
+a, a:active, a:focus, a:hover, a:visited {
     color: var(--white);
 }
-a:focus-visible {
+a:focus {
     outline: 2px dotted var(--white);
 }
