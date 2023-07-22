@@ -20,7 +20,7 @@ textarea, input[type=text] {
     padding: 0 8px;
     margin-right: 8px;
 }
-.sc-button:focus-visible {
+.sc-button:focus {
 outline: 2px dotted var(--blue);
 }
 input + .form-error, textarea + .form-error {
