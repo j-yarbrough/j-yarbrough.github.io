@@ -46,6 +46,8 @@ Trip report on flights from Phoenix to Houston and back On United's 737 MAX 9 in
 Discussing experiences with service animal relief areas in airports and how they could be improved.
 - [How United’s accessible in-seat IFE lives up to expectations](https://runwaygirlnetwork.com/2022/09/how-united-airlines-accessible-in-seat-ife-lives-up-to-expectations/)  
 Trip report for flights between Phoenix and Houston on United's 737 MAX 8 equipped with the accessible in-flight entertainment system United started rolling out to their fleet in 2019.
+- [Op-Ed: Sensory overload and the case for quieter airports](https://runwaygirlnetwork.com/2023/07/op-ed-sensory-overload-and-the-case-for-quieter-airports/)  
+Article examining my personal experiences with sensory overload in airports and strategies that airports, airlines, and travelers can use to mitigate it.
 
 {% endaccordion %}
 
