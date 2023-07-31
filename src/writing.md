@@ -10,21 +10,21 @@ Below you will find a listing of articles Justin has written. To see podcasts an
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 
-{% accordion "2", "Deque Systems" %}
+{% accordion "section","2", "Deque Systems" %}
 
 - [My experiences with inaccessible job applications & how to fix them](https://www.deque.com/blog/my-experiences-with-inaccessible-job-applications-how-to-fix-them/)  
 Blog post examining some of the issues that Justin has had applying for jobs online and some ways employers can prevent accessibility issues with their online hiring portals.
 
 {% endaccordion %}
 
-{% accordion "2", "Nature" %}
+{% accordion "section","2", "Nature" %}
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
   Co-written with Dr. Domenico Chiarella and Dr. Christopher Jackson, this article examines how alt text can be used on science-based Twitter posts to make them more accessible to people with visual impairments.
 
 {% endaccordion %}
 
-{% accordion "2", "Runway Girl Network" %}
+{% accordion "section","2", "Runway Girl Network" %}
 
 - [Op-Ed: Airlines should follow United lead on seatback IFE accessibility](https://runwaygirlnetwork.com/2019/01/23/op-ed-airlines-should-follow-uniteds-lead-on-seatback-ife-accessibility/)  
 Article discussing a newly-announced seatback in-flight entertainment system United was beginning to install that has a plethora of accessibility features, including a built-in screen reader, screen magnification, and assistance for color blind passengers.
@@ -51,7 +51,7 @@ Article examining my personal experiences with sensory overload in airports and 
 
 {% endaccordion %}
 
-{% accordion "2", "Self-Published" %}
+{% accordion "section","2", "Self-Published" %}
 
   ### On LinkedIn
 

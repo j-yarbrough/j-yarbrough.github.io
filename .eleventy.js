@@ -28,18 +28,17 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
-    eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
+    eleventyConfig.addPairedShortcode("accordion", function(content, tagName, level, label) {
         var accordionId = convertToId(label);
-        if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {
-            value = '2';
-        }
-        return `<div id="${accordionId}-acc-wrapper">
+        if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {value = '2';};;
+        if ((tagName != 'nav') && (tagName != 'section')) {tagName = 'section';};
+        return `<${tagName} id="${accordionId}-acc-wrapper" aria-label="${label} Accordion">
         <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel"><span class="accordion-indicator" aria-hidden="true">&rarr;</span>
         <span id="${accordionId}-label">${label}</span>
         </button></h${level}>
 <div class="accordion-panel" id="${accordionId}-panel">
 ${content}
-</div></div>`
+</div></${tagName}>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`

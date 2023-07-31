@@ -35,6 +35,7 @@ Paired short code is "accordion".
 
 #### Arguments
 - content: Section hidden by default. In between opening and closing code.
+- Tag name: Tag name for the wrapper. Will default to section if value is not nav or section.
 - level: Heading level for accordion. Simply enter a number.
 - Label: Label for the accordion button.
 

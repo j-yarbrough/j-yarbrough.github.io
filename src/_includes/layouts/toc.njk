@@ -1,7 +1,5 @@
 {%- if (IncludeTOC == true) %}
-<nav id="toc-wrapper" aria-labelledby="on-this-page-label">
-{% accordion "2", "On This Page" %}
+{% accordion "nav", "2", "On This Page" %}
 {{ content | toc | safe }}
 {% endaccordion %}
-</nav>
 {% endif %}
