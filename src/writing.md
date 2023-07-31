@@ -53,6 +53,13 @@ Article examining my personal experiences with sensory overload in airports and 
 
 {% accordion "2", "Self-Published" %}
 
+  ### On LinkedIn
+
+  - [How Green Day got me thinking about my career journey](https://www.linkedin.com/pulse/how-green-day-got-me-thinking-my-career-journey-yarbrough-cpacc/)  
+  Reflection on my career journey written shortly after I left [Deque Systems](https://www.deque.com) to take a lead accessibility coach role with [PNC Bank](https://www,pnc.com/).
+  
+  ### On this site
+  
   - [Alt Text and Social Media](/writing/alt-text-and-social-media)  
   Introduction to using alt text on different social media platforms.
 
