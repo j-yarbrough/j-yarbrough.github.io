@@ -10,7 +10,7 @@ Below you will find a listing of videos and other media in which Justin has appe
 
 If you would like Justin to  appear on your media project you can [contact him.](/contact)
 
-{% accordion "2", "Media Quoting Justin" %}
+{% accordion "section","2", "Media Quoting Justin" %}
 
 This is a non-exhaustive collection of media quoting Justin. Media featuring Justin in a larger role can be found in the other sections of this page.
 
@@ -31,7 +31,7 @@ Article examining how airlines were trying to accommodate passengers with disabi
     
 {% endaccordion %}
 
-{% accordion "2", "Profiles" %}
+{% accordion "section","2", "Profiles" %}
 
 ### The Athletic
     
@@ -40,7 +40,7 @@ Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about
     
     {% endaccordion %}
 
-{% accordion "2", "Videos" %}
+{% accordion "section","2", "Videos" %}
 
 ### A11yTalks
 
