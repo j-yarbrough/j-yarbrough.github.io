@@ -1,8 +1,8 @@
 <nav aria-label="footer">
-<ul role="list" id="footer-nav-list" aria-label="Footer Navigation Links">
+<p role="list" id="footer-nav-list">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
-<li class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+<span role="listitem" class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
 {%- if entry.url != page.url %}
 <a href="{{ entry.url }}">
 {% endif %}
@@ -13,12 +13,12 @@
 {%- if (loop.index <= navPages | length - 1) %}
 <span class="footer-nav-list-item-separator" aria-hidden="true"> | </span>
 {% endif %}
-</li>
+</span>
 {%- endfor %}
-</ul>
+</p>
 <p>
 <span id="social-links-lead">Connect with Justin: </span>
-<span role="list" aria-labelledby="social-links-lead">
+<span role="list">
 <span role="listitem">
 <a href="https://www.linkedin.com/in/justin-yarbrough/">Linkedin</a>
 <span aria-hidden="true"> | </span>
