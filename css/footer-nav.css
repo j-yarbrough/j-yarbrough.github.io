@@ -4,9 +4,6 @@ footer {
     #footer-nav-list {
         list-style-type: none;
     }
-    .footer-nav-list-item {
-        display: inline;
-    }
     .footer-nav-list-item[aria-current="page"] {
     font-weight: bold;
 }
