@@ -8,8 +8,7 @@
 // Note: Filename should not contain file extension
 
 var indexOfChecks = [
-    ['#nav-btn','nav-collapse'],
-    ['.accordion-button','accordion'],
+    ['#nav-btn, .accordion-button','accordion'],
     ['#contact-form','contact']
     ]; //end index
 
