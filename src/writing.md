@@ -48,6 +48,8 @@ Discussing experiences with service animal relief areas in airports and how they
 Trip report for flights between Phoenix and Houston on United's 737 MAX 8 equipped with the accessible in-flight entertainment system United started rolling out to their fleet in 2019.
 - [Op-Ed: Sensory overload and the case for quieter airports](https://runwaygirlnetwork.com/2023/07/op-ed-sensory-overload-and-the-case-for-quieter-airports/)  
 Article examining my personal experiences with sensory overload in airports and strategies that airports, airlines, and travelers can use to mitigate it.
+- [Why United's decision to add Braille in cabins is profound](https://runwaygirlnetwork.com/2023/08/uniteds-braille-in-cabins/)  
+Article looking at United's recent announcement that they have begun installing Braille signage throughout their mainline aircraft.
 
 {% endaccordion %}
 
