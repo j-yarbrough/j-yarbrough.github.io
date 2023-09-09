@@ -23,4 +23,4 @@ In his spare time, Justin enjoys sports and travel. He lives with his wife, two 
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough)
 - [Mastodon](https://disabled.social/@jyarbrough){rel="me"}
-- [Twitter](https://twitter.com/fatelvis04)
+- [Twitter/X](https://twitter.com/fatelvis04)
