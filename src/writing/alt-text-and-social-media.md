@@ -41,22 +41,29 @@ Many third party social media apps also support adding alt text to images. You s
 
 ## Examples
 
-Below you will find a few examples of alt text from tweets. I'm embedding the tweets. Below them, you'll find the alt text for the images written out.
-
-**Note for screen reader users:** You will not hear the written out versions of the alt text below tweets. I have intentionally hidden it from screen readers since it will be read to you within the embedded tweets.
+Below you will find a few examples of alt text from tweets. I'm embedding the tweets. The accordion below each tweet will show the alt text written out when the accordion is expanded.ut when expanded.
 
 {% ebox "","" %}
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
-**Alt text:** Quinn is on the floor with a half eaten zucchini. Looks guilty.{aria-hidden="true"}
+{% accordion "section","3", "Alt text for first example" %}
+
+Quinn is on the floor with a half eaten zucchini. Looks guilty.
+
+{% endaccordion %}
+
 {% endebox %}
 
 {% ebox "","" %}
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-**Alt text:** Black lab PJ roughhousing with yellow lab mix Quinn{aria-hidden="true"}
+{% accordion "section","3", "Alt text for second example" %}
+
+Black lab PJ roughhousing with yellow lab mix Quinn.
+
+{% endaccordion %}
 
 {% endebox %}
 
@@ -64,7 +71,11 @@ https://twitter.com/quinntx2az/status/1178691633199509507
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-**Alt text:** A black lab laying on a dog bed under an office desk.{aria-hidden="true"}
+{% accordion "section","3", "Alt text for third example" %}
+
+A black lab laying on a dog bed under an office desk.
+
+{% endaccordion %}
 
 {% endebox %}
 
