@@ -1,6 +1,6 @@
 ---
 title: Home
-H1: Welcome to Justin Yarbrough’s personal website
+H1: Justin Yarbrough: Accessibility Advocate, Writer, Speaker
 includeBreadcrumbs: false
 layout: layouts/base.njk
 eleventyNavigation:
