@@ -1,14 +1,11 @@
 ---
 title: Home
-H1: Justin Yarbrough: Accessibility Advocate, Writer, Speaker
-includeBreadcrumbs: false
+H1: About Justin
 layout: layouts/base.njk
 eleventyNavigation:
   key: Home
   order: 0
 ---
-## About Justin
-
 {% include "snippets/mugshot.njk" %}
 
 Justin Yarbrough, [CPACC](https://www.accessibilityassociation.org/s/certified-professional), , is a blind accessibility advocate living in the Austin, Texas area. He currently works for a large bank as a lead accessibility coach, embedding within development teams and helping them incorporate accessibility into the software development lifecycle. Prior to joining the bank, Justin performed similar duties for clients while working for a well-known accessibility consulting company. Before that, Justin worked for a Phoenix-area online community college where he focused on ensuring online course materials were accessible. While there, he helped to reform the affinity resource group for employees with disabilities and allies within the community college district and served as the organization's president where he led a re-branding of the organization and helped start an annual convocation celebrating graduating students with disabilities.
