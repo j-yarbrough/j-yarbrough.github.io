@@ -41,7 +41,7 @@ Many third party social media apps also support adding alt text to images. You s
 
 ## Examples
 
-Below you will find a few examples of alt text from tweets. I'm embedding the tweets. The accordion below each tweet will show the alt text written out when the accordion is expanded.ut when expanded.
+Below are a few embedded tweets that all have alt text on the images. To view the alt text, expand the accordion below the tweet.
 
 {% ebox "","" %}
 
