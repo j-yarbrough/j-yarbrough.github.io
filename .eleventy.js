@@ -43,6 +43,12 @@ ${content}
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
+            eleventyConfig.addPairedShortcode("formgroup", function(content, hlevel, label, id) {
+                return `<div id="${id}-group" role="group" aria-labelledby="${id}-group-label">
+                <h${hlevel} id="${id}-group-label">${label}</h${hlevel}>
+                ${content}
+                </div>`
+                    });            
             eleventyConfig.addPairedShortcode("ebox", function(content, passAttributes, passClass) {
                 if (passClass != '') {passclass = ` ${passClass}`;};
                 if (passAttributes != '') {passAttributes = ` ${passAttributes}`;};

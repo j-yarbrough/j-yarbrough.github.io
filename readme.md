@@ -53,6 +53,19 @@ paired short code is "formcontainer"
 - method: form container's method attribute value.
 - action: form container's action attribute value.
 
+### formgroup
+
+Paired short code to create a group label for a form
+
+Paired short code is "formgroup"
+
+#### Arguments
+
+- content: The content of the group
+- hlevel: Heading level for the label, enter number between 1 and 6.
+- Label: The text of the label.
+- id: Id attribute to be used.
+
 ### Text Input
 
 Standard single-line text input, can be customized with required, an error message, autocomplete, and inputmode attributes.
