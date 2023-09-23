@@ -70,29 +70,41 @@ Contact Justin
 </h1>
 
 <nav id="breadcrumbs" aria-label="breadcrumbs">
-You are here:
-<a href="/index.html">Home</a> &rarr; 
+You are here: 
+<span role="list">
+<span role="listitem"><a href="/index.html">Home</a><span aria-hidden="true">&rarr;</span></span>
 
 
 
-<a href="/contact/" aria-current="page">Contact</a>
+<span role="listitem"><a href="/contact/" aria-current="page">Contact</a></span>
+</span>
 </nav>
 
 
 <p>to contact Justin, simply fill out this form. All fields marked with an asterisk are required.</p>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
-<div id="submitter-name-input-container">
-                        <label for="submitter-name"><span id="submitter-name-label">Name</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="submitter-name" id="submitter-name" autocomplete="name" aria-required="true">
-                        <p class="form-error" id="submitter-name-error"><strong>Error:</strong>&nbsp;<span id="submitter-name-error-text">Please enter your name.</span></p></div>
+<div id="submitter-info-group" role="group" aria-labelledby="submitter-info-group-label">
+                <h2 id="submitter-info-group-label">Your information</h2>
+<div id="name-input-container">
+                        <label for="name"><span id="name-label">Name</span><span aria-hidden="true">*</span></label>
+                        <input type="text" name="name" id="name" autocomplete="name" aria-required="true">
+                        <p class="form-error" id="name-error"><strong>Error:</strong>&nbsp;<span id="name-error-text">Please enter your name.</span></p></div>
 <div id="email-address-input-container">
                         <label for="email-address"><span id="email-address-label">Email Address</span><span aria-hidden="true">*</span></label>
                         <input type="text" name="email" id="email-address" autocomplete="email" inputmode="email" aria-required="true" aria-describedby="email-address-helper-text"' data-helper-text="true">
                         <p class="form-error" id="email-address-error"><strong>Error:</strong>&nbsp;<span id="email-address-error-text">Please enter a valid email address.</span></p><p id="email-address-helper-text">Justin will only use your email address to respond to your message.</p></div>
-<div id="message-textarea-container">
-                        <label for="message"><span id="message-label">Your message to Justin</span><span aria-hidden="true">*</span></label>
-                        <textarea name="message" id="message" aria-required="true"></textarea>
-                        <p class="form-error" id="message-error"><strong>Error:</strong>&nbsp;<span id="message-error-text">Please enter a message.</span></p></div>
+<p></div></p>
+<div id="message-info-group" role="group" aria-labelledby="message-info-group-label">
+                <h2 id="message-info-group-label">Your Message</h2>
+<div id="subject-input-container">
+                        <label for="subject"><span id="subject-label">Subject</span><span aria-hidden="true">*</span></label>
+                        <input type="text" name="subject" id="subject" aria-required="true">
+                        <p class="form-error" id="subject-error"><strong>Error:</strong>&nbsp;<span id="subject-error-text">Please enter a subject for your message.</span></p></div>
+<div id="msg-textarea-container">
+                        <label for="msg"><span id="msg-label">Your message to Justin</span><span aria-hidden="true">*</span></label>
+                        <textarea name="msg" id="msg" aria-required="true"></textarea>
+                        <p class="form-error" id="msg-error"><strong>Error:</strong>&nbsp;<span id="msg-error-text">Please enter a message.</span></p></div>
+<p></div></p>
 <div id="submit-form-button-container"><button class="sc-button" id=submit-form-0" type="submit" aria-describedby="submit-form-helper-text">submit</button><button class="sc-button" id=submit-form-1" type="reset">Reset</button><p id="submit-form-helper-text">You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam.</p></div>
 </form>
             </main>
