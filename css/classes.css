@@ -5,7 +5,7 @@
     text-align: right;
 }
 blockquote, .ebox-border-left {
-    padding-left: 16px;
+    padding-left: 8px;
     border-left: 1px dotted var(--blue);
 }
 .img-center {
