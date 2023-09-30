@@ -80,13 +80,5 @@ flex: 4;
     padding: 16px;
     border-radius: 0 0 8px 8px;
 }
-#on-this-page-acc-wrapper {
-    float: right;
-    width: fit-content;
-    max-width: 30%;
-    padding-left: 8px;
-    padding-bottom: 8px;
-    font-size: smaller;
-}
 }
 /*end large*/

@@ -1,7 +1,6 @@
 ---
 title: Alt Text and Social Media
 layout: layouts/base.njk
-IncludeTOC: true
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Alt Text and Social Media
