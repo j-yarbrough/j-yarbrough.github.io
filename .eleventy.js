@@ -1,22 +1,16 @@
 const markdownIt = require('markdown-it')
 const markdownItAttrs = require('markdown-it-attrs')
-const markdownItAnchor = require("markdown-it-anchor");
 const markdownItOptions = {
   html: true,
   breaks: true,
   linkify: true
 }
-const markdownLib = markdownIt({ html: true }).use(markdownItAnchor).use(markdownItAttrs);
+const markdownLib = markdownIt({ html: true }).use(markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const pluginTOC = require('eleventy-plugin-toc');
 const embedEverything = require("eleventy-plugin-embed-everything");
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
-    eleventyConfig.addPlugin(pluginTOC, {
-        wrapper: 'div',
-        ul: true
-      })
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPassthroughCopy("js");
