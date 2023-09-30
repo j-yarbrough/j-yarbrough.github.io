@@ -19,10 +19,9 @@ To set up a redirect:
 
 There are template variations that can be automatically used based on front matter set in the documents. The front value variables are as follows:
 
-- H1: Allows for the H1 of pa page to be separate from the title of the page.
+- H1: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title will be used.
-- IncludeTOC: true will insert a TOC into the template.
 - includeBreadcrumbs: false will exclude breadcrumbs from the page.
 
 ## Component Short codes
