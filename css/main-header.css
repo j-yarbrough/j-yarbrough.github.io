@@ -1,0 +1,12 @@
+#main-header {
+    border-bottom: 1px dotted var (--blue);;
+}
+
+#breadcrumbs {
+    font-size: smaller;
+    color: var(--blue);
+}
+
+#breadcrumbs a[aria-current="page"] {
+    font-weight: bold;
+}
