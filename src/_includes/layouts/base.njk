@@ -4,12 +4,7 @@
 {% include "layouts/header.njk" %}
 <div id="wrapper">
 {% include "layouts/nav-main.njk" %}
-<main class="white-background" id="main">
-{% include "layouts/h1.njk" %}
-{% include "layouts/breadcrumbs.njk" %}
-{% include "layouts/toc.njk" %}
-{{ content | safe }}
-            </main>
+{% include "layouts/main-content.njk" %}
 </div>
 {% include "layouts/footer.njk" %}
 {% include "layouts/aria-live.njk" %}
