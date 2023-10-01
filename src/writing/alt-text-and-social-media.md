@@ -10,6 +10,8 @@ Social media has a great ability to connect us. Without it, I would have never f
 
 The problem for blind people is that social media can seem pretty photo-intensive, leaving blind people to feel like they're missing out. In the last few years, though, major social media platforms like Twitter, Facebook, and Instagram have been introducing features allowing people to add alt text to pictures, allowing people sharing content to provide a more inclusive experience.
 
+{% include "snippets/toc.njk" %}
+
 ## What is Alt Text?
 
 Simply put, alt text provides a text-based alternative to graphics on the web. Screen readers will read the alt text and identify the item as a graphic when encountered. Additionally, many browsers will display the alt text for a graphic when it's unable to load the graphic. This can happen because of a slow internet connections or being unable to locate the image.
