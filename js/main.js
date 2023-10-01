@@ -9,21 +9,15 @@
 
 var indexOfChecks = [
     ['#nav-btn, .accordion-button','accordion'],
-    ['#contact-form','contact']
+    ['#contact-form','contact'],
+    ['#toc','toc']
     ]; //end index
 
-// Loop that does checks, runs function if check is true
-
-for (var i = 0; i < indexOfChecks.length; i++) {
-    if (document.querySelectorAll(indexOfChecks[i][0]).length >0) {
-        createScriptElements(indexOfChecks[i][1]);
+indexOfChecks.forEach((indexOfChecks) => {scriptLoader(indexOfChecks[0],indexOfChecks[1])});
+function scriptLoader(selector, jsFile) {
+    if (document.querySelectorAll(selector).length != 0) {
+        var elementBeingCreated = document.createElement('script');
+        elementBeingCreated.setAttribute('src',`/js/${jsFile}.js`);
+        document.body.appendChild(elementBeingCreated);
     }
-} //end loop
-
-//function that creates elements
-
-function createScriptElements (scriptFileName) {
-    var elementBeingCreated = document.createElement('script');
-    elementBeingCreated.setAttribute('src','/js/' + scriptFileName + '.js');
-document.body.appendChild(elementBeingCreated);
 }

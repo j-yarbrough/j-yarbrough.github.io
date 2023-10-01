@@ -41,16 +41,16 @@ function submitForm() {
     var firstErrorField = undefined;
     var errorCount = 0;
     var errorCountString;
-    for (var i = 0; i < fieldsToValidate.length; i++) {
-        switch (validateField(fieldsToValidate[i])) {
+    fieldsToValidate.forEach((fieldsToValidate) => {
+        switch (validateField(fieldsToValidate)) {
             case true: break;
             case false: if (errorCount == 0) {
-                firstErrorField = fieldsToValidate[i];
+                firstErrorField = fieldsToValidate;
             }
             errorCount++
             break;
         }
-    }
+    });
     switch (errorCount == 0) {
         case true: break;
         case false: event.preventDefault();
@@ -86,9 +86,9 @@ function applyValidationState (field, validOrNot) {
 }
 
 function resetForm() {
-    for (var i = 0; i <fieldsToValidate.length; i++) {
-        applyValidationState(fieldsToValidate[i], true);
-    }
+    fieldsToValidate.forEach((fieldsToValidate) => {
+        applyValidationState(fieldsToValidate, true);
+    });
     fieldsToValidate[0].focus();
     ariaLiveHandler('All fields cleared');
 }
