@@ -2,13 +2,9 @@
 
 var elAccordionButtons = document.querySelectorAll('#nav-btn, .accordion-button');
 
-//event listener
-
-for(var i = 0; i < elAccordionButtons.length; i++) {
-    elAccordionButtons[i].addEventListener('click',triggerAccordion);
-    };
-
-//functions
+elAccordionButtons.forEach((elAccordionButtons) => {
+    elAccordionButtons.addEventListener('click',triggerAccordion);
+});
 
 function triggerAccordion() {
     var accordionHeader;
@@ -31,4 +27,4 @@ isNavigation = true;
         accordionIndicator.innerHTML = '&darr;';
         break;
     };
-} //end function
+}
