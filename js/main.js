@@ -13,7 +13,7 @@ var indexOfChecks = [
     ]; //end index
 
     indexOfChecks.forEach((indexOfChecks) => {
-        if (document.querySelectorAll(indexOfChecks[0].length > 0)){
+        if  (document.querySelectorAll(indexOfChecks[0]).length > 0) {
             var elementBeingCreated = document.createElement('script');
             elementBeingCreated.setAttribute('src',`/js/${indexOfChecks[1]}.js`);
             document.body.appendChild(elementBeingCreated);

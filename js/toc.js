@@ -1,19 +1,22 @@
 // builds table of contents
 
 var tocContainer = document.querySelector('#toc');
-tocContainer.innerHTML += buildTheTOC();
+buildTheTOC();
 
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(#toc-heading)');
-    var listString = '<ul>';
+var listElement = document.createElement('ul');
     headings.forEach((headings) => {
-        var headingIDString = headings.textContent;
+        var headingText = headings.textContent
+        var headingIDString = headingText.replaceAll(' ','-');
         headings.setAttribute('tabindex','-1');
-        headingIDString = headingIDString.replaceAll(' ','-');
-        headingIDString = headingIDString.replaceAll('?','');
         headings.setAttribute('id',headingIDString);
-        listString += `<li><a href="${headingIDString}">${headings.textContent}</a></li>`;        
+        var listItemElement = document.createElement('li');
+        var listItemElementLink = document.createElement('a');
+        listItemElementLink.setAttribute('href',`#${headingIDString}`);
+        listItemElementLink.textContent = headingText;
+        listItemElement.appendChild(listItemElementLink);
+        listElement.appendChild(listItemElement)
     });
-    listString += '</ul>'
-    return listString
+    tocContainer.appendChild(listElement);
 }
