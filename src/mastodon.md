@@ -1,4 +1,4 @@
 ---
-title: https://disabled.social/@jyarbrough
+title: https://dragonscave.space/@jyarbrough
 layout: layouts/redirect.njk
 ---
