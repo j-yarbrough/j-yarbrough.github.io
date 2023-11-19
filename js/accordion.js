@@ -11,10 +11,10 @@ function triggerAccordion() {
     if (event.target.id == 'nav-btn') {
         accordionHeader = null;
 isNavigation = true;
-    } else {
+    } else if (accordionClicked.classList.contains('accordion-button')) {
         isNavigation = false;
         accordionHeader = accordionClicked.parentElement;
-    }
+    } else {return}
     switch (accordionClicked.getAttribute('aria-expanded')) {
         case 'true': accordionClicked.setAttribute('aria-expanded',false);
         if (isNavigation == false) {accordionHeader.removeAttribute('data-show')};
