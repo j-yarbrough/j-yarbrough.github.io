@@ -1,28 +1,26 @@
 // Script for accordions, nav collapse
 
-var elAccordionButtons = document.querySelectorAll('#nav-btn, .accordion-button');
-
-elAccordionButtons.forEach((elAccordionButtons) => {
-    elAccordionButtons.addEventListener('click',triggerAccordion);
-});
+var wrapper = document.querySelector('#wrapper');
+wrapper.addEventListener('click',triggerAccordion);
 
 function triggerAccordion() {
+    var accordionClicked = document.getElementById(event.target.id);
     var accordionHeader;
     var isNavigation;
-    var accordionIndicator = this.firstElementChild;
-    if (this.getAttribute('id') == 'nav-btn') {
+    var accordionIndicator = accordionClicked.firstElementChild;
+    if (event.target.id == 'nav-btn') {
         accordionHeader = null;
 isNavigation = true;
     } else {
         isNavigation = false;
-        accordionHeader = this.parentElement;
+        accordionHeader = accordionClicked.parentElement;
     }
-    switch (this.getAttribute('aria-expanded')) {
-        case 'true': this.setAttribute('aria-expanded',false);
+    switch (accordionClicked.getAttribute('aria-expanded')) {
+        case 'true': accordionClicked.setAttribute('aria-expanded',false);
         if (isNavigation == false) {accordionHeader.removeAttribute('data-show')};
         accordionIndicator.innerHTML = '&rarr;';
         break;
-        case 'false': this.setAttribute('aria-expanded',true);
+        case 'false': accordionClicked.setAttribute('aria-expanded',true);
         if (isNavigation == false) {accordionHeader.setAttribute('data-show','show')};
         accordionIndicator.innerHTML = '&darr;';
         break;
