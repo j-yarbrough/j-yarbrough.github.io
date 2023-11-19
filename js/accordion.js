@@ -1,26 +1,27 @@
 // Script for accordions, nav collapse
 
-var wrapper = document.querySelector('#wrapper');
-wrapper.addEventListener('click',triggerAccordion);
+var accordionButtons = document.querySelectorAll('#nav-btn, .accordion-button');
+accordionButtons.forEach((accordionButtons) => {
+    accordionButtons.addEventListener('click',triggerAccordion)
+});
 
 function triggerAccordion() {
-    var accordionClicked = document.getElementById(event.target.id);
     var accordionHeader;
     var isNavigation;
-    var accordionIndicator = accordionClicked.firstElementChild;
-    if (event.target.id == 'nav-btn') {
+    var accordionIndicator = this.firstElementChild;
+    if (this.id == 'nav-btn') {
         accordionHeader = null;
 isNavigation = true;
-    } else if (accordionClicked.classList.contains('accordion-button')) {
+    } else  {
         isNavigation = false;
-        accordionHeader = accordionClicked.parentElement;
-    } else {return}
-    switch (accordionClicked.getAttribute('aria-expanded')) {
-        case 'true': accordionClicked.setAttribute('aria-expanded',false);
+        accordionHeader = this.parentElement;
+    }
+    switch (this.getAttribute('aria-expanded')) {
+        case 'true': this.setAttribute('aria-expanded',false);
         if (isNavigation == false) {accordionHeader.removeAttribute('data-show')};
         accordionIndicator.innerHTML = '&rarr;';
         break;
-        case 'false': accordionClicked.setAttribute('aria-expanded',true);
+        case 'false': this.setAttribute('aria-expanded',true);
         if (isNavigation == false) {accordionHeader.setAttribute('data-show','show')};
         accordionIndicator.innerHTML = '&darr;';
         break;
