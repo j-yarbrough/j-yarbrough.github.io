@@ -31,12 +31,6 @@ function validateField (fieldToValidate) {
     return isValid;
 }
 
-function ariaLiveHandler (messageToAnnounce) {
-    var ariaRegion = document.querySelector("#aria-live-region");
-    ariaRegion.textContent = '';
-    setTimeout(ariaRegion.textContent = messageToAnnounce, 200);
-}
-
 function submitForm() {
     var firstErrorField = undefined;
     var errorCount = 0;

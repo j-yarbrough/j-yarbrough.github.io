@@ -22,6 +22,19 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
+    eleventyConfig.addPairedShortcode("accordiongroup", function(content, label, idValue, headingLevel) {
+        if((headingLevel != "2") && (headingLevel != "3") && (headingLevel != "4") && (headingLevel != "5") && (headingLevel != "6")) {
+            headingLevel= "2"
+        }
+        return `<section id="${idValue}-acc-section" aria-labelledby="${idValue}-heading}" class="accordion-group-container">
+        <div role="group" aria-labelledby="${idValue}-heading">
+        <h${headingLevel} id="${idValue}-heading">Controls for all ${label} accordions</h${headingLevel}>
+        <button data-coe="c" class="acc-group-btn" aria-label="Collapse all ${label} accordions">Collapse All</button>
+        <button data-coe="e" class="acc-group-btn" aria-label="Expand all ${label} accordions">Expand All</button>
+        </div>
+        ${content}
+        </section>`
+    });
     eleventyConfig.addPairedShortcode("accordion", function(content, tagName, level, label) {
         var accordionId = convertToId(label);
         if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {value = '2';};;

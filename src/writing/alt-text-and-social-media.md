@@ -42,13 +42,15 @@ Many third party social media apps also support adding alt text to images. You s
 
 ## Examples
 
-Below are a few embedded tweets that all have alt text on the images. To view the alt text, expand the accordion below the tweet.
+Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet. To expand or collapse all the accordions, you can use the controls below.
+
+{% accordiongroup "Alt Text Examples","alt-text-examples","3" %}
 
 {% ebox "","" %}
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
-{% accordion "section","3", "Alt text for first example" %}
+{% accordion "section","4", "Alt text for first example" %}
 
 Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
@@ -60,7 +62,7 @@ Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-{% accordion "section","3", "Alt text for second example" %}
+{% accordion "section","4", "Alt text for second example" %}
 
 Black lab PJ roughhousing with yellow lab mix Quinn.
 
@@ -72,13 +74,15 @@ Black lab PJ roughhousing with yellow lab mix Quinn.
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-{% accordion "section","3", "Alt text for third example" %}
+{% accordion "section","4", "Alt text for third example" %}
 
 A black lab laying on a dog bed under an office desk.
 
 {% endaccordion %}
 
 {% endebox %}
+
+{% endaccordiongroup %}
 
 ## Conclusion
 

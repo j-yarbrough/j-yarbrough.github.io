@@ -7,7 +7,9 @@
 // Note: Filename should not contain file extension
 
 var indexOfChecks = [
+    ['#aria-live-region','arialive'],
     ['#nav-btn, .accordion-button','accordion'],
+    ['.accordion-group-container','accgroup'],
     ['#contact-form','contact'],
     ['#toc','toc']
     ]; //end index

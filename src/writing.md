@@ -10,21 +10,23 @@ Below you will find a listing of articles Justin has written. To see podcasts an
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 
-{% accordion "section","2", "Deque Systems" %}
+{% accordiongroup "Writing Samples","writing-samples" %}
+
+{% accordion "section","3", "Deque Systems" %}
 
 - [My experiences with inaccessible job applications & how to fix them](https://www.deque.com/blog/my-experiences-with-inaccessible-job-applications-how-to-fix-them/)  
 Blog post examining some of the issues that Justin has had applying for jobs online and some ways employers can prevent accessibility issues with their online hiring portals.
 
 {% endaccordion %}
 
-{% accordion "section","2", "Nature" %}
+{% accordion "section","3", "Nature" %}
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
   Co-written with Dr. Domenico Chiarella and Dr. Christopher Jackson, this article examines how alt text can be used on science-based Twitter posts to make them more accessible to people with visual impairments.
 
 {% endaccordion %}
 
-{% accordion "section","2", "Runway Girl Network" %}
+{% accordion "section","3", "Runway Girl Network" %}
 
 - [Op-Ed: Airlines should follow United lead on seatback IFE accessibility](https://runwaygirlnetwork.com/2019/01/23/op-ed-airlines-should-follow-uniteds-lead-on-seatback-ife-accessibility/)  
 Article discussing a newly-announced seatback in-flight entertainment system United was beginning to install that has a plethora of accessibility features, including a built-in screen reader, screen magnification, and assistance for color blind passengers.
@@ -53,18 +55,20 @@ Article looking at United's recent announcement that they have begun installing 
 
 {% endaccordion %}
 
-{% accordion "section","2", "Self-Published" %}
+{% accordion "section","3", "Self-Published" %}
 
-  ### On LinkedIn
+#### On LinkedIn
 
   - [How Green Day got me thinking about my career journey](https://www.linkedin.com/pulse/how-green-day-got-me-thinking-my-career-journey-yarbrough-cpacc/)  
   Reflection on my career journey written shortly after I left [Deque Systems](https://www.deque.com) to take a lead accessibility coach role with [PNC Bank](https://www,pnc.com/).
   
-  ### On this site
+#### On this site
   
   - [Alt Text and Social Media](/writing/alt-text-and-social-media)  
   Introduction to using alt text on different social media platforms.
 
 {% endaccordion %}
+
+{% endaccordiongroup %}
 
 Please note that Justin has no control over the accessibility of any links to third-party sites.
