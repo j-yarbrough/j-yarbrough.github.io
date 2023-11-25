@@ -12,6 +12,7 @@ textarea, input[type=text] {
     caret-color: var(--blue);
 }
 .sc-button {
+    font-family: var(--serif);
     display: inline-block;
     color: var(--blue);
     background-color: var(--white);
