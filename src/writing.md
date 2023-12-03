@@ -10,7 +10,7 @@ Below you will find a listing of articles Justin has written. To see podcasts an
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 
-{% accordiongroup "Writing Samples","writing-samples" %}
+{% accordiongroup "Writing Samples","2" %}
 
 {% accordion "section","3", "Deque Systems" %}
 

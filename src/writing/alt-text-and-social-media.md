@@ -44,7 +44,7 @@ Many third party social media apps also support adding alt text to images. You s
 
 Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet. To expand or collapse all the accordions, you can use the controls below.
 
-{% accordiongroup "Alt Text Examples","alt-text-examples","3" %}
+{% accordiongroup "Alt Text Examples","3" %}
 
 {% ebox "","" %}
 
