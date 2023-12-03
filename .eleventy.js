@@ -27,7 +27,7 @@ module.exports = (function(eleventyConfig) {
             headingLevel= "2"
         }
         var idValue = convertToId(label);
-        return `<section id="${idValue}-acc-section" aria-labelledby="${idValue}-heading" class="accordion-group-container" data-label=${label}">
+        return `<section id="${idValue}-acc-section" aria-labelledby="${idValue}-heading" class="accordion-group-container" data-label="${label}">
         <div role="group" aria-labelledby="${idValue}-heading">
         <h${headingLevel} id="${idValue}-heading">Controls for all ${label} accordions</h${headingLevel}>
         <button data-coe="c" class="acc-group-btn" aria-label="Collapse all ${label} accordions">Collapse All</button>
