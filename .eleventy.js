@@ -22,11 +22,12 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
-    eleventyConfig.addPairedShortcode("accordiongroup", function(content, label, idValue, headingLevel) {
+    eleventyConfig.addPairedShortcode("accordiongroup", function(content, label, headingLevel) {
         if((headingLevel != "2") && (headingLevel != "3") && (headingLevel != "4") && (headingLevel != "5") && (headingLevel != "6")) {
             headingLevel= "2"
         }
-        return `<section id="${idValue}-acc-section" aria-labelledby="${idValue}-heading}" class="accordion-group-container">
+        var idValue = convertToId(label);
+        return `<section id="${idValue}-acc-section" aria-labelledby="${idValue}-heading" class="accordion-group-container" data-label=${label}">
         <div role="group" aria-labelledby="${idValue}-heading">
         <h${headingLevel} id="${idValue}-heading">Controls for all ${label} accordions</h${headingLevel}>
         <button data-coe="c" class="acc-group-btn" aria-label="Collapse all ${label} accordions">Collapse All</button>

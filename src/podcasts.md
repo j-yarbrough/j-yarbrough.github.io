@@ -10,7 +10,7 @@ Below you will find a listing of podcasts in which Justin has appeared. Listings
 
 If you would like Justin to appear on your podcast you can [contact him.](/contact)
 
-{% accordiongroup "Podcast Samples","podcast-samples" %}
+{% accordiongroup "Podcast Samples","2" %}
 
 {% accordion "section","3", "A11y Rules Soundbites" %}
 
