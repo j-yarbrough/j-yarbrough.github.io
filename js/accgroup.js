@@ -7,6 +7,7 @@ accordionGroupButtons.forEach((accordionGroupButtons) => {
 
 function accordionGroupAction () {
     var accordionGroupContainer = this.parentElement.parentElement;
+    var accordionGroupLabel = accordionGroupContainer.getAttribute('data-label');
     var accordionGroupAccButtons = accordionGroupContainer.querySelectorAll('.accordion-button');
     var collapseOrExpand = this.getAttribute('data-coe');
     var ariaExpandedValue;
@@ -23,7 +24,7 @@ if((accordionGroupAccButtons.getAttribute('aria-expanded')) == ariaExpandedValue
 }
     });
     switch(collapseOrExpand) {
-        case 'c': ariaLiveHandler('All accordions in group collapsed.'); break;
-        case 'e': ariaLiveHandler('All accordions in group expanded.'); break;
+        case 'c': ariaLiveHandler(`All accordions in ${accordionGroupLabel} group collapsed.`); break;
+        case 'e': ariaLiveHandler(`All accordions in ${accordionGroupLabel} group expanded.`); break;
     }
 }
