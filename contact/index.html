@@ -23,9 +23,12 @@
     </header>
 <div id="wrapper">
 <nav id="nav" aria-label="Primary">
-<button class="nav-btn" id="nav-btn" aria-expanded="false"><span aria-hidden="true">&rarr;</span>Navigation</button>
+<!--nav for mobile/tablet-->
+<div id="nav-mobile">
+<details id="nav-details">
+<summary id="nav-btn">Navigation</summary>
 
-<ul id="nav-links" role="list">
+<ul class="nav-links" role="list">
 <li>
 <a href="/">
 
@@ -63,6 +66,50 @@ Contact
 </li>
 
 </ul>
+</details>
+</div>
+<!--nav for desktop-->
+<div id="nav-desktop">
+
+<ul class="nav-links" role="list">
+<li>
+<a href="/">
+
+Home
+</a>
+
+</li>
+
+<li>
+<a href="/writing/">
+
+Writing
+</a>
+
+</li>
+
+<li>
+<a href="/podcasts/">
+
+Podcasts
+</a>
+
+</li>
+
+<li>
+<a href="/media/">
+
+Other Media
+</a>
+
+</li>
+
+<li aria-current="page">
+Contact
+</li>
+
+</ul>
+</div>
 </nav>
 <main class="white-background" id="main">
 <div id="main-header">
