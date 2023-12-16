@@ -14,7 +14,7 @@ Justin is also a member of the World Wide Web Consortium's [ARIA and Assistive T
 
 Justin has authored articles on accessibility, blindness, and service animal-related issues for multiple publications. He has also appeared as a guest on podcasts, given presentations, participated in panel discussions, and been interviewed on these topics. A sampling of his writing, podcasts, and other media appearances can be found on the [writing](/writing), [podcasts](/podcasts), and [other media](/media) pages on this site. If you would like Justin to write for you or appear on your podcast or other media, you can [contact him](/contact).
 
-In his spare time, Justin enjoys sports and travel. He lives with his wife, two cats, and dog.
+In his spare time, Justin enjoys sports and travel. He lives with his wife, dog, and three cats.
 
 ## Connect with Justin
 
