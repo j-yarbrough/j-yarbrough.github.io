@@ -51,7 +51,8 @@ ${content}
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
-            eleventyConfig.addPairedShortcode("formgroup", function(content, hlevel, label, id) {
+            eleventyConfig.addPairedShortcode("formgroup", function(content, hlevel, label) {
+                var id = convertToId(label);
                 return `<div id="${id}-group" role="group" aria-labelledby="${id}-group-label">
                 <h${hlevel} id="${id}-group-label">${label}</h${hlevel}>
                 ${content}
@@ -85,6 +86,9 @@ if (i == 0) {
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);
                         var ariaRequired = isAriaRequired(error);
+                        if (id == '') {
+                            id= convertToId(label);
+                        }
                         error = fullErrorMessage(error, id);
                         if (name == '') {
                             name = id;
@@ -99,6 +103,9 @@ if (i == 0) {
                         var ariaRequired = isAriaRequired(error);
                         var ariaDescribedby;
                         var dataHelperText;
+                        if (id == '') {
+                            id= convertToId(label);
+                        }
                         if (helperText.length != 0) {
                             helperText = `<p id="${id}-helper-text">${helperText}</p>`;
                             ariaDescribedby = ` aria-describedby="${id}-helper-text"`;
