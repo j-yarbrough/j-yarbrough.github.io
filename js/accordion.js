@@ -6,7 +6,7 @@ accordionButtons.forEach((accordionButtons) => {
 });
 
 function triggerAccordion() {
-    var accordionHeader;
+    var accordionPanel = this.parentElement.nextElementSibling;
     var accordionIndicator = this.firstElementChild;
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded',false);
@@ -16,4 +16,6 @@ function triggerAccordion() {
         accordionIndicator.innerHTML = '&darr;';
         break;
     };
+    accordionPanel.classList.toggle('accordion-panel-show')
+    accordionPanel.classList.toggle('accordion-panel-hide')
 }
