@@ -22,10 +22,10 @@
 border-radius: 8px 8px 0 0;
 border-bottom: 0;
 }
-.accordion-panel {
+.accordion-panel-hide {
     display: none;
 }
-.accordion-header[data-show=show] + .accordion-panel {
+.accordion-panel-show {
     display: block;
     margin-top: 0;
     margin-bottom: 16px;
