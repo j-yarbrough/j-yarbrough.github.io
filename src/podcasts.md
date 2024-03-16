@@ -12,7 +12,7 @@ If you would like Justin to appear on your podcast you can [contact him.](/conta
 
 {% accordiongroup "Podcast Samples","2" %}
 
-{% accordion "section","3", "A11y Rules Soundbites" %}
+{% accordion "3", "A11y Rules Soundbites" %}
 
 - [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
 Justin discusses the importance of using alt text and thinking outside of our own use case.
@@ -21,7 +21,7 @@ Justin talks about the importance of providing clear and concise error messages 
 
 {% endaccordion %}
 
-{% accordion "section","3", "Next Trip Podcast" %}
+{% accordion "3", "Next Trip Podcast" %}
 
 - [Boarding Pass 013: Airline Accessibility](https://podcasts.apple.com/us/podcast/boarding-pass-013-airline-accessibility/id1490032141?i=1000466483434)  
 Justin discusses the accessible seat-back entertainment system United is starting to roll out on aircraft and the US Department of Transportation's proposed changes to regulations surrounding flying with a service animal.
@@ -32,21 +32,21 @@ Justin discusses the new US Department of Transportation regulations surrounding
 
 {% endaccordion %}
 
-{% accordion "section","3", "Non-rev Lounge" %}
+{% accordion "3", "Non-rev Lounge" %}
 
 - [&num;10 Mountain Goating in Dublin](https://www.buzzsprout.com/1520842/7625287-10-mountain-goating-in-dublin?t=0)  
     Justin and his wife Jen talk about their travels, including the challenges associated with traveling as a blind person.
 
     {% endaccordion %}
 
-{% accordion "section","3", "That Real Blind Tech Show" %}
+{% accordion "3", "That Real Blind Tech Show" %}
 
 - [Episode 115 - Axe-Con 2023 Is Here, Get To Know Deque Systems Justin Yarbrough](https://thatrealblindtechshow.libsyn.com/episode-115-axe-con-2023-is-here-get-to-know-deque-systems-justin-yarbrough)  
 Justin speaks with Brian and Ed about his panel for axe-con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics.
 
 {% endaccordion %}
 
-{% accordion "section","3", "Working Blind" %}
+{% accordion "3", "Working Blind" %}
 
 - [Episode 6 - Justin Yarbrough, Digital Accessibility Specialist](https://catchthesewords.com/working-blind-episode-6-justin-yarbrough-digital-accessibility-specialist/)  
     Justin discusses his work in digital accessibility at a community college.
