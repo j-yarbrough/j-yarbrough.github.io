@@ -42,7 +42,7 @@ function accGroupTogglerChecker(buttonClicked) {
     } else if (collapsedAccCount== 0) {
         collapseControl.setAttribute('aria-pressed','false');
         expandControl.setAttribute('aria-pressed','true');
-    } else {
+    } else if (expandControl.getAttribute('aria-pressed') != 'mixed'){
         expandControl.setAttribute('aria-pressed','mixed');
         collapseControl.setAttribute('aria-pressed','mixed');
     }
