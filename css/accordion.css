@@ -33,16 +33,26 @@ border-bottom: 0;
     border: 1px solid var(--blue);
     border-radius: 8px;
 }
+.accordion-group-button-container {
+    vertical-align: bottom;
+}
 .acc-group-collapse-btn, .acc-group-expand-btn {
     font-family: var(--serif);
     display: inline-block;
     color: var(--blue);
     background-color: var(--white);
-    border: 1px solid var(--blue);
-    border-radius: 8px;
-    padding: 0 8px;
-    margin-right: 8px;
+    border: solid var(--blue);
 }
-.acc-group-btn:focus {
+.acc-group-collapse-btn:focus , .acc-group-expand-btn:focus {
 outline: 2px dotted var(--blue);
 }
+.acc-group-collapse-btn[aria-pressed="true"], .acc-group-expand-btn[aria-pressed="true"] {
+border-width: 1px 1px 1px 1px;
+}
+.acc-group-collapse-btn[aria-pressed="mixed"], .acc-group-expand-btn[aria-pressed="mixed"] {
+    border-width: 1px 2px 2px 1px;
+    }
+    .acc-group-collapse-btn[aria-pressed="false"], .acc-group-expand-btn[aria-pressed="false"] {
+        border-width: 1px 3px 3px 1px;
+        }
+    
