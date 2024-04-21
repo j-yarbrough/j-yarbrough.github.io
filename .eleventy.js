@@ -38,14 +38,22 @@ module.exports = (function(eleventyConfig) {
     });
     eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
         var accordionId = convertToId(label);
-        if ((level == '2' || level =='3' || level == '4' || level == '5' || level == '6') == false) {value = '2';};;
+        if (level == '2' || level =='3' || level == '4' || level == '5' || level == '6') {
+            level = 'h' + level
+        } else if (level != 'p'){
+level = 'h2'
+        }
         return `<div id="${accordionId}-acc-wrapper">
-        <h${level} class="accordion-header" id="${accordionId}" tabindex="-1"><button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel"><span class="accordion-indicator" aria-hidden="true">&rarr;</span>
+        <${level} class="accordion-header" id="${accordionId}" tabindex="-1">
+        <button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel">
+        <span class="accordion-indicator" aria-hidden="true">&rarr;</span>
         <span id="${accordionId}-label">${label}</span>
-        </button></h${level}>
+        </button>
+        </${level}>
 <section aria-labelledby="${accordionId}-label" class="accordion-panel-hide" id="${accordionId}-panel">
 ${content}
-</section></div>`
+</section>
+</div>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
@@ -61,8 +69,7 @@ ${content}
                 if (passClass != '') {passclass = ` ${passClass}`;};
                 if (passAttributes != '') {passAttributes = ` ${passAttributes}`;};
                     return `<div class="ebox-border-left${passClass}"${passAttributes}>${content}</div>`
-                        });    
-            
+                        });                
             eleventyConfig.addShortcode("button", function(label, id, type, helperText) {
                 var ariaDescribedby;
                 var buttonString = '';
@@ -72,15 +79,13 @@ ${content}
                 } else {
                     ariaDescribedby = '';
                 }
-                for (var i = 0; i < label.length; i++) {
-if (i == 0) {
-    buttonString += `<button class="sc-button" id=${id}-${i}" type="${type[i]}"${ariaDescribedby}>${label[i]}</button>`
-} else {
-    buttonString += `<button class="sc-button" id=${id}-${i}" type="${type[i]}">${label[i]}</button>`
-}
+                if ((type != 'submit') && (type != 'reset') && (type != 'button')){
+                    type = 'buttom';
                 }
-                if ((type != 'button') && (type != 'submit') && (type != 'reset')) {type = 'button';};
-                return `<div id="${id}-button-container">${buttonString}${helperText}</div>`
+                return `<div id="${id}-button-container">
+                <button class="sc-button" id="${id}" type="${type}"${ariaDescribedby}>${label}</button>
+                ${helperText}
+                </div>`
                     });            
                     eleventyConfig.addShortcode("textarea", function(id, name, label, error) {
                         var labelStar = formLabelStar(error);

@@ -28,6 +28,6 @@ to contact Justin, simply fill out this form. All fields marked with an asterisk
 
 {% endformgroup %}
 
-{% button ["submit", "Reset"], "submit-form", ["submit", "reset"], "You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam." %}
+{% button "Submit", "submit-form", "submit", "You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam." %}
 
 {% endformcontainer %}
