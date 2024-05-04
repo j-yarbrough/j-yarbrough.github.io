@@ -1,4 +1,4 @@
-// Script for accordions, nav collapse
+// Script for accordions
 
 var accordionButtons = document.querySelectorAll('.accordion-button');
 accordionButtons.forEach((accordionButtons) => {
@@ -30,10 +30,9 @@ function accGroupTogglerChecker(buttonClicked) {
     var expandControl = groupContainerThingy.querySelector('.acc-group-expand-btn');
     var collapseControl = groupContainerThingy.querySelector('.acc-group-collapse-btn');
     groupContainerThingyAccButtons.forEach((groupContainerThingyAccButtons) => {
-        if ((groupContainerThingyAccButtons.getAttribute('aria-expanded')) == 'true') {
-            expandedAccCount++;
-        } else {
-            collapsedAccCount++;
+        switch (groupContainerThingyAccButtons.getAttribute('aria-expanded')) {
+case 'true': expandedAccCount++; break;
+case 'false': collapsedAccCount++; break;
         }
     });
     if(expandedAccCount == 0) {
@@ -42,8 +41,8 @@ function accGroupTogglerChecker(buttonClicked) {
     } else if (collapsedAccCount== 0) {
         collapseControl.setAttribute('aria-pressed','false');
         expandControl.setAttribute('aria-pressed','true');
-    } else if (expandControl.getAttribute('aria-pressed') != 'mixed'){
-        expandControl.setAttribute('aria-pressed','mixed');
-        collapseControl.setAttribute('aria-pressed','mixed');
+    } else if ((expandControl.getAttribute('aria-pressed') == 'true') || (collapseControl.getAttribute('aria-pressed') == 'true')) {
+        expandControl.setAttribute('aria-pressed','false');
+        collapseControl.setAttribute('aria-pressed','false');
     }
 }
