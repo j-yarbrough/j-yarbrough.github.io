@@ -47,11 +47,8 @@ border-bottom: 0;
 outline: 2px dotted var(--blue);
 }
 .acc-group-collapse-btn[aria-pressed="true"], .acc-group-expand-btn[aria-pressed="true"] {
-border-width: 1px 1px 1px 1px;
+border-width: 1px;
 }
-.acc-group-collapse-btn[aria-pressed="mixed"], .acc-group-expand-btn[aria-pressed="mixed"] {
-    border-width: 1px 2px 2px 1px;
-    }
     .acc-group-collapse-btn[aria-pressed="false"], .acc-group-expand-btn[aria-pressed="false"] {
         border-width: 1px 3px 3px 1px;
         }
