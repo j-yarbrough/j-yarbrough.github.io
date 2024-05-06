@@ -21,12 +21,22 @@ There are template variations that can be automatically used based on front matt
 
 - H1: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
-    - If no H1, then the title will be used.
+    - If no H1, then the title value will be used.
 - includeBreadcrumbs: false will exclude breadcrumbs from the page.
 
 ## Component Short codes
 
 This site is designed to use short codes as much as possible to componentize items. These are described below.
+
+### Accordion Group
+
+Provides controls to operate a group of accordions.  Paired short code is "accordiongroup"
+
+#### Arguments
+
+- Content: Content of the accgroup
+- Label: Label for the group, appears in heading and used for button accessible names
+- level: Heading level for container heading
 
 ### Accordion
 
@@ -34,8 +44,7 @@ Paired short code is "accordion".
 
 #### Arguments
 - content: Section hidden by default. In between opening and closing code.
-- Tag name: Tag name for the wrapper. Will default to section if value is not nav or section.
-- level: Heading level for accordion. Simply enter a number.
+- level: Heading level for accordion. Enter a number for the corresponding level or "p" to have it be a paragraph.
 - Label: Label for the accordion button.
 
 ### Form Container
@@ -95,11 +104,9 @@ Regular short code is "button"
 
 - type: Button's type attribute.
     - If not set to submit or reset will default to button.
-    - Must be entered as an array.
 - id: button stack's id attribute value.
 - label: Button's inner HTML.
-    - Must be entered in array format.
-- Helper Text: Any helper text with the button. Left out if this argument is empty. Will display helper text below button stack and programmatically associate it to the first button with aria-describedby.
+- Helper Text: Any helper text with the button. Left out if this argument is empty. Will display helper text below button and programmatically associate it to the button with aria-describedby.
 
 ### Textarea
 
@@ -117,3 +124,13 @@ Standard shortcode is "textarea"
 - error: Error message to be displayed if input is empty.
     - if value is empty, field is not required.
     - Will add aesterisk, aria-required attribute if there is a non-empty value.
+
+    ### Emphasis box
+
+    Creates a container with a dotted line on the left to visually emphasize a block of text. Paired short code is "ebox"
+
+    #### Arguments
+
+    - Content: Content of the ebox
+    - Pass classes: Passes any other CSS classes to the container
+    - Pass attributes: Passes any other attributes to the contaner
