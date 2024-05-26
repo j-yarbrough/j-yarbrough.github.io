@@ -55,22 +55,22 @@ label {
     }
 #wrapper {
     display: flex;
+    align-items: stretch;
     padding: 0;
 }
-#nav, main {
+.primary-nav, main {
     margin: 0;
     border: 0;
 }
-#nav {
+.primary-nav {
 flex: 1;
 }
-#nav li {
+.primary-nav li {
     padding: 8px 0 8px 8px;
     border-radius: 8px 0 0 8px;
 }
 main {
 flex: 4;
-    margin: 0;
     padding: 16px;
     border-radius: 0 0 8px 8px;
 }
