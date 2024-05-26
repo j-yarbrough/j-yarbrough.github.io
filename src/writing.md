@@ -12,14 +12,14 @@ If you would like to have Justin write something for you, you can [contact him.]
 
 {% accordiongroup "Writing Samples" %}
 
-{% accordion "3", "Nature" %}
+{% accordion "2", "Nature" %}
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
   Co-written with Dr. Domenico Chiarella and Dr. Christopher Jackson, this article examines how alt text can be used on science-based Twitter posts to make them more accessible to people with visual impairments.
 
 {% endaccordion %}
 
-{% accordion "3", "Runway Girl Network" %}
+{% accordion "2", "Runway Girl Network" %}
 
 - [Op-Ed: Airlines should follow United lead on seatback IFE accessibility](https://runwaygirlnetwork.com/2019/01/23/op-ed-airlines-should-follow-uniteds-lead-on-seatback-ife-accessibility/)  
 Article discussing a newly-announced seatback in-flight entertainment system United was beginning to install that has a plethora of accessibility features, including a built-in screen reader, screen magnification, and assistance for color blind passengers.
@@ -48,7 +48,7 @@ Article looking at United's recent announcement that they have begun installing 
 
 {% endaccordion %}
 
-{% accordion "3", "Self-Published" %}
+{% accordion "2", "Self-Published" %}
   
   - [Alt Text and Social Media](/writing/alt-text-and-social-media)  
   Introduction to using alt text on different social media platforms.
