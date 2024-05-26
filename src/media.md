@@ -10,7 +10,7 @@ Below you will find a listing of videos and other media in which Justin has appe
 
 If you would like Justin to  appear on your media project you can [contact him.](/contact)
 
-{% accordiongroup "Other Media Samples","2" %}
+{% accordiongroup "Other Media Samples" %}
 
 {% accordion "3", "Media Quoting Justin" %}
 

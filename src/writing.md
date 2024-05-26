@@ -10,7 +10,7 @@ Below you will find a listing of articles Justin has written. To see podcasts an
 
 If you would like to have Justin write something for you, you can [contact him.](/contact)
 
-{% accordiongroup "Writing Samples","2" %}
+{% accordiongroup "Writing Samples" %}
 
 {% accordion "3", "Nature" %}
 
