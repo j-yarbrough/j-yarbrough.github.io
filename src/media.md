@@ -4,7 +4,7 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Other Media
-  order: 4
+  order: 6
 ---
 Below you will find a listing of videos and other media in which Justin has appeared. Listings of articles Justin has written and podcasts Justin has appeared on can be found on the [writing](/writing) and [podcasts](/podcasts) pages.
 
