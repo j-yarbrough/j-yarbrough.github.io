@@ -45,25 +45,10 @@ Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about
 
 {% accordion "2", "Videos" %}
 
-#### A11yTalks
-
-- [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8)  
-A panel discussion moderated by Carie Fisher discussing digital inclusion with co-panelists Liz Davis and Nic Steenhout.
-
-#### axe-con
-
-- [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/)  
-Justin and fellow digital accessibility professionals Trudy Harrington Karl and Steve Lowe, all of whom have a disability, discuss how their personal experiences with disability, inclusion, and accessibility guide and inform their professional lives. Registration is required to view the recording, but is free. Justin, Steve, and Trudy also [recorded a promotional video](https://www.youtube.com/watch?v=XL1HN-3JF0I) ahead of the panel.
-
 #### Rio Salado College
 
 - [Living with Blindness: Interview with Justin Yarbrough](https://www.youtube.com/watch?v=sfHOJfJHav0)  
 Interview conducted with Rio Salado College librarian Kirstin Thomas as part of Rio's recognition of the 31st anniversary of the Americans with Disabilities Act being signed into law.
-
-#### The Staying Inn
-
-- [If you’re blind, how do you tweet?](https://www.youtube.com/watch?v=UVZKctUMZJY)  
-Presentation along with Steven Morris all about screen readers. Stephen provides a basic introduction to how they work while Justin conducts a demo. You can <a href="resources/staying-inn-demo.zip" download>download the demo site here (ZIP file)</a>.
 
 {% endaccordion %}
 
