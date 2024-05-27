@@ -5,7 +5,7 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Contact
-  order: 7
+  order: 4
 ---
 to contact Justin, simply fill out this form. All fields marked with an asterisk are required.
 
