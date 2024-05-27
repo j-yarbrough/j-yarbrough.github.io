@@ -5,9 +5,9 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Contact
-  order: 5
+  order: 4
 ---
-to contact Justin, simply fill out this form. All fields marked with an asterisk are required.
+To contact Justin, all you need to do is fill out this form. All fields are required and all responses will be sent to the email address provided unless you specify another preferred contact method in your message.
 
 {% formcontainer "contact-form", "contact", "post", "https://formspree.io/f/mnqleljw" %}
 

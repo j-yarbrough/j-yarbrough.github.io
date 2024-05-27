@@ -8,13 +8,31 @@ eleventyNavigation:
 ---
 {% include "snippets/mugshot.njk" %}
 
-Justin Yarbrough, [CPACC](https://www.accessibilityassociation.org/s/certified-professional), , is a blind accessibility advocate living in the Austin, Texas area. He works for a large bank as an accessibility coach, embedding within development teams and helping them incorporate accessibility into the software development lifecycle. Prior to joining the bank, Justin performed similar duties for clients while working for a well-known accessibility consulting company. Before that, Justin worked for a Phoenix-area online community college where he focused on ensuring online course materials were accessible. While there, he helped to reform the affinity resource group for employees with disabilities and allies within the community college district and served as the organization's president where he led a re-branding of the organization and helped start an annual convocation celebrating graduating students with disabilities.
+Justin Yarbrough, [CPACC](https://www.accessibilityassociation.org/s/certified-professional) is a blind digital accessibility specialist living in the Austin, Texas area.
 
-Justin has authored articles on accessibility, blindness, and service animal-related issues for multiple publications. He has also appeared as a guest on podcasts, given presentations, participated in panel discussions, and been interviewed on these topics. A sampling of his writing, podcasts, and other media appearances can be found on the [writing](/writing), [podcasts](/podcasts), and [other media](/media) pages on this site. If you would like Justin to write for you or appear on your podcast or other media, you can [contact him](/contact).
+## Work
 
-In his spare time, Justin enjoys sports and travel. He lives with his wife, dog, and three cats.
+Justin has worked in digital accessibility since 2017 in higher education, consulting, and most recently in finance at a large bank. Throughout his time working in the field, Justin has leveraged his experience as a blind screen reader user to help others understand the importance of digital accessibility in the impact it has on people with disabilities. He primarily works with teams to help ensure digital properties are build with accessibility in mind from the start.
 
-## Connect with Justin
+[Read more about Justin’s work in accessibility
+](/work/)
+## Portfolio
+
+Justin has written articles on accessibility-related topics for multiple publications, including Nature and Runway Girl Network. He has also appeared as a guest on podcasts to discuss these topics and spoken about them at conferences such as Axe-Con and AccessU.
+
+[Check out Justin's portfolio](/portfolio/)
+
+## Personal Life
+
+In his spare time, Justin enjoys audiobooks, sports, and traveling. He lives with his wife, dog, and three cats.
+
+## Contact Justin
+
+To contact Justin, fill out the [contact form](/contact).
+
+## Connect on Social Media
+
+Justin is active on the following social media channels:
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough)
 - [Mastodon](https://dragonscave.space/@jyarbrough)
