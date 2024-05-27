@@ -7,9 +7,9 @@ eleventyNavigation:
   parent: Portfolio
   order: 3
 ---
-Below you will find a listing of podcasts in which Justin has appeared. Listings of items Justin has written and other media items Justin has appeared in can be found on the [writing](/writing) and [other media](/media) pages.
+Below you will find a listing of podcasts in which Justin has appeared. To see other work Justin has done, check out the other sections of his [portfolio page](/portfolio/).
 
-If you would like Justin to appear on your podcast you can [contact him.](/contact)
+If you would like Justin to appear on your podcast you can [contact him](/contact).
 
 {% accordiongroup "Podcast Samples" %}
 
