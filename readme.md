@@ -36,7 +36,6 @@ Provides controls to operate a group of accordions.  Paired short code is "accor
 
 - Content: Content of the accgroup
 - Label: Label for the group, appears in heading and used for button accessible names
-- level: Heading level for container heading
 
 ### Accordion
 
