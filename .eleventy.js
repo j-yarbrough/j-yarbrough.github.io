@@ -47,9 +47,9 @@ level = 'h2'
         <span id="${accordionId}-label">${label}</span>
         </button>
         </${level}>
-<section aria-labelledby="${accordionId}-label" class="accordion-panel-hide" id="${accordionId}-panel">
+<div class="accordion-panel-hide" id="${accordionId}-panel">
 ${content}
-</section>
+</div>
 </div>`
     });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
