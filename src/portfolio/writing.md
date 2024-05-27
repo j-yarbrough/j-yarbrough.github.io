@@ -4,7 +4,8 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Writing
-  order: 4
+  parent: Portfolio
+  order: 1
 ---
 Below you will find a listing of articles Justin has written. To see podcasts and other media Justin has appeared in, check out the [podcasts](/podcasts) and [other media](/media) pages.
 

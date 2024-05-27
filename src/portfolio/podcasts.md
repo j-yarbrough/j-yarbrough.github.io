@@ -4,7 +4,8 @@ layout: layouts/base.njk
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Podcasts
-  order: 5
+  parent: Portfolio
+  order: 3
 ---
 Below you will find a listing of podcasts in which Justin has appeared. Listings of items Justin has written and other media items Justin has appeared in can be found on the [writing](/writing) and [other media](/media) pages.
 
