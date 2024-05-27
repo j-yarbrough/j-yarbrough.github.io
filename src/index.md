@@ -16,22 +16,25 @@ Justin has worked in digital accessibility since 2017 in higher education, consu
 
 [Read more about Justin’s work in accessibility
 ](/work/)
+## Portfolio
 
-## Advocacy
+Justin has written articles on accessibility-related topics for multiple publications, including Nature and Runway Girl Network. He has also appeared as a guest on podcasts to discuss these topics and spoken about them at conferences such as Axe-Con and AccessU.
 
-Todo
-
-{Read more about Justin’s advocacy}(/advocacy/)
-
-## Writing, Podcasts, and Other Media
-
-Justin has written articles on accessibility-related topics for multiple publications, including Nature and Runway Girl Network. He has also appeared as a guest on podcasts to discuss these topics and spoken about them at conferences such as Axe-Con and AccessU. Samples of his work can be found on the [writing](/writing/), [podcasts](/podcasts), and [other media](/media/) pages of this site.
+[Check out Justin's portfolio](/portfolio/)
 
 ##Personal Life
 
 In his spare time, Justin enjoys audiobooks, sports, and traveling. He lives with his wife, dog, and three cats.
 
 ## Connect with Justin
+
+### Contact Justin
+
+To contact Justin, fill out the [contact form](/contact).
+
+### Social Media
+
+Justin is active on the following social media channels:
 
 - [LinkedIn](https://www.linkedin.com/in/justin-yarbrough)
 - [Mastodon](https://dragonscave.space/@jyarbrough)
