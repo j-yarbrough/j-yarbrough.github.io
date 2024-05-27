@@ -14,7 +14,7 @@ Since Justin began working in digital accessibility in 2017, he has leveraged hi
 Lead Web Accessibility Coach, August 2023 to present
 
 - Embed within agile teams, helping the roles learn how to incorporate accessibility into the software development lifecycle
-•	Assess web properties against the Web Content Accessibility Guidelines and internal accessibility standards
+- Assess web properties against the Web Content Accessibility Guidelines and internal accessibility standards
 - Conduct role-based training sessions on accessibility topics
 - Serve as a member of the retail digital accessibility steering council, tasked with handling complex WCAG interpretation questions and adopting standards beyond WCAG
 - Maintainer of the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria are needed for development

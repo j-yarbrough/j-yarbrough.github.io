@@ -6,7 +6,7 @@ eleventyNavigation:
   key: Portfolio
   order: 3
 ---
-Throughout Justin’s career in accessibility, he has had the opportunity to share his story, knowledge, and expertise through many mediums including writing, podcasts, and in-person and virtual conferences.
+Throughout Justin's career in accessibility, he has had the opportunity to share his knowledge, skills, and lived experience through multiple venues. He has written articles for publications such as Nature and Runway Girl Network, spoken at in-person and virtual events such as AccessU, Axe-Con, and A11yTalks, and been a guest on multiple podcasts.
 
 ## Categories
 

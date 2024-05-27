@@ -21,7 +21,7 @@ If you would like Justin to speak at your event, you can [contact him](/contact/
 
 {% accordion "2", "Axe-Con" %}
 
-- March 2023: Organized and served as a panelist for [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/).  While free registration is required to view the recording, a [promotional video ](https://www.youtube.com/watch?v=sfHOJfJHav0for the talk is also available.
+- March 2023: Organized and served as a panelist for [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/).  While free registration is required to view the recording, a [promotional video](https://www.youtube.com/watch?v=sfHOJfJHav0) for the talk is also available.
 
 {% endaccordion %}
 
