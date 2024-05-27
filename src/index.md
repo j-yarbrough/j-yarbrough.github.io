@@ -26,13 +26,11 @@ Justin has written articles on accessibility-related topics for multiple publica
 
 In his spare time, Justin enjoys audiobooks, sports, and traveling. He lives with his wife, dog, and three cats.
 
-## Connect with Justin
-
-### Contact Justin
+## Contact Justin
 
 To contact Justin, fill out the [contact form](/contact).
 
-### Social Media
+## Connect on Social Media
 
 Justin is active on the following social media channels:
 
