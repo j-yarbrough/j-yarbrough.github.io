@@ -9,7 +9,7 @@ eleventyNavigation:
 Since Justin began working in digital accessibility in 2017, he has leveraged his experience as a blind screen reader user to drive home the importance of building accessible experiences from the start in finance, higher education, and consulting settings. More information on Justin’s work history can be found on [Justin’s LinkedIn profile](https://www.linkedin.com/in/justin-yarbrough/) or you can [contact him](/contact) with any questions.
 {% accordiongroup "Work Experience" %}
 
-{% accordion "2", "PNC" %}
+{% accordion "2", "PNC Bank" %}
 
 Lead Web Accessibility Coach, August 2023 to present
 
