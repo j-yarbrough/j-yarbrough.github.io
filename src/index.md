@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 {% include "snippets/mugshot.njk" %}
 
-Justin Yarbrough, [CPACC](https://www.accessibilityassociation.org/s/certified-professional) is a blind digital accessibility specialist living in the Austin, Texas area.
+Justin Yarbrough, [CPWA](https://www.accessibilityassociation.org/s/certified-professional) is a blind digital accessibility specialist living in the Austin, Texas area.
 
 ## Work
 
