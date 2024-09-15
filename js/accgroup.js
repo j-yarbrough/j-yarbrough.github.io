@@ -26,7 +26,7 @@ function accordionGroupAction () {
     var ariaExpandedValue;
     switch (collapseOrExpand) {
         case 'acc-group-expand-btn': ariaExpandedValue = 'true'; break;
-        case 'acc-group-collapse-btn': ariaExpandedValue = 'false';
+        case 'acc-group-collapse-btn': ariaExpandedValue = 'false'; break;
     }
     accordionGroupAccButtons.forEach((accordionGroupAccButtons) => {
         if ((accordionGroupAccButtons.getAttribute('aria-expanded')) != ariaExpandedValue) {

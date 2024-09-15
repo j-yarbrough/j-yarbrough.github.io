@@ -10,10 +10,10 @@ var listElement = document.createElement('ul');
         var headingText = headings.textContent
         var headingIDString = headingText.replaceAll(' ','-');
         headings.setAttribute('tabindex','-1');
-        headings.setAttribute('id',headingIDString);
+        headings.id = headingIDString;
         var listItemElement = document.createElement('li');
         var listItemElementLink = document.createElement('a');
-        listItemElementLink.setAttribute('href',`#${headingIDString}`);
+        listItemElementLink.href = `#${headingIDString}`;
         listItemElementLink.textContent = headingText;
         listItemElement.appendChild(listItemElementLink);
         listElement.appendChild(listItemElement)
