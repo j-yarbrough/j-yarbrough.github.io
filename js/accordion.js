@@ -7,7 +7,7 @@ accordionButtons.forEach((accordionButtons) => {
 
 function triggerAccordion() {
     var accordionContainer = this.parentElement.parentElement;
-    var accordionPanel = accordionContainer.querySelector('#' + this.getAttribute('aria-controls'));
+    var accordionPanel = accordionContainer.querySelector('.accordion-panel');
     var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
     switch (this.getAttribute('aria-expanded')) {
         case 'true': this.setAttribute('aria-expanded','false');
@@ -18,7 +18,6 @@ function triggerAccordion() {
         break;
     };
     accordionPanel.classList.toggle('accordion-panel-show')
-    accordionPanel.classList.toggle('accordion-panel-hide')
     if (this.hasAttribute('data-accgroup')) {accGroupTogglerChecker(this)}
 }
 

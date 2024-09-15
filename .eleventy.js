@@ -47,7 +47,7 @@ level = 'h2'
         <span id="${accordionId}-label">${label}</span>
         </button>
         </${level}>
-<div class="accordion-panel-hide" id="${accordionId}-panel">
+<div class="accordion-panel" id="${accordionId}-panel">
 ${content}
 </div>
 </div>`
