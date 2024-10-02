@@ -1,6 +1,6 @@
 {
   "name": "yarbrough.info",
-  "version": "2024.9.21",
+  "version": "2024.10.2",
   "description": "Personal website and portfolio for Justin Yarbrough, an accessibility consultant, writer, and speaker.",
   "main": ".eleventy.js",
   "directories": {
