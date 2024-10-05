@@ -1,6 +1,6 @@
 {
   "name": "yarbrough.info",
-  "version": "2024.9.21",
+  "version": "2024.10.2",
   "description": "Personal website and portfolio for Justin Yarbrough, an accessibility consultant, writer, and speaker.",
   "main": ".eleventy.js",
   "directories": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/j-yarbrough/j-yarbrough.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5"
   },
   "dependencies": {
