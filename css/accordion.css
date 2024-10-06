@@ -16,6 +16,7 @@
 }
 .accordion-button:focus {
     outline: 2px dotted var(--blue);
+    outline-offset: 2px;
 }
 .accordion-button[aria-expanded=true] {
     margin: 0;
@@ -33,23 +34,3 @@ border-bottom: 0;
 .accordion-panel-show {
     display: block !important;
 }
-.accordion-group-button-container {
-    vertical-align: bottom;
-}
-.acc-group-collapse-btn, .acc-group-expand-btn {
-    font-family: var(--serif);
-    display: inline-block;
-    color: var(--blue);
-    background-color: var(--white);
-    border: solid var(--blue);
-}
-.acc-group-collapse-btn:focus , .acc-group-expand-btn:focus {
-outline: 2px dotted var(--blue);
-}
-.acc-group-collapse-btn[aria-pressed="true"], .acc-group-expand-btn[aria-pressed="true"] {
-border-width: 1px;
-}
-    .acc-group-collapse-btn[aria-pressed="false"], .acc-group-expand-btn[aria-pressed="false"] {
-        border-width: 1px 3px 3px 1px;
-        }
-    
