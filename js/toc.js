@@ -5,7 +5,7 @@ buildTheTOC();
 
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(#toc-heading)');
-var listElement = document.createElement('ul');
+var listElement = document.createElement('ol');
     headings.forEach((headings) => {
         var headingText = headings.textContent
         var headingIDString = headingText.replaceAll(' ','-');

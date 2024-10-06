@@ -1,7 +1,7 @@
 ---
 title: Writing
 layout: layouts/base.njk
-templateEngineOverride: njk,md
+templateEngineOverride: webc,md
 eleventyNavigation:
   key: Writing
   parent: Portfolio
@@ -10,14 +10,14 @@ eleventyNavigation:
 Below you will find a listing of articles Justin has written. To see other work Justin has done, check out the other sections of his [portfolio page](/portfolio/).
 If you would like to have Justin write something for you, you can [contact him](/contact).
 
-{% accordion "2", "Nature" %}
+<jy-accordion-2 @label="Nature">
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
   Co-written with Dr. Domenico Chiarella and Dr. Christopher Jackson, this article examines how alt text can be used on science-based Twitter posts to make them more accessible to people with visual impairments.
 
-{% endaccordion %}
+</jy-accordion-2>
 
-{% accordion "2", "Runway Girl Network" %}
+<jy-accordion-2 @label="Runway Girl Network">
 
 - [Op-Ed: Airlines should follow United lead on seatback IFE accessibility](https://runwaygirlnetwork.com/2019/01/23/op-ed-airlines-should-follow-uniteds-lead-on-seatback-ife-accessibility/)  
 Article discussing a newly-announced seatback in-flight entertainment system United was beginning to install that has a plethora of accessibility features, including a built-in screen reader, screen magnification, and assistance for color blind passengers.
@@ -44,13 +44,13 @@ Article examining my personal experiences with sensory overload in airports and 
 - [Why United's decision to add Braille in cabins is profound](https://runwaygirlnetwork.com/2023/08/uniteds-braille-in-cabins/)  
 Article looking at United's recent announcement that they have begun installing Braille signage throughout their mainline aircraft.
 
-{% endaccordion %}
+</jy-accordion-2>
 
-{% accordion "2", "Self-Published" %}
+<jy-accordion-2 @label="Self-Published">
   
   - [Alt Text and Social Media](/writing/alt-text-and-social-media)  
   Introduction to using alt text on different social media platforms.
 
-{% endaccordion %}
+</jy-accordion-2>
 
 Please note that Justin has no control over the accessibility of any links to third-party sites.

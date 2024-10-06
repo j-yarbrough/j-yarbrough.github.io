@@ -1,7 +1,7 @@
 ---
 title: Alt Text and Social Media
 layout: layouts/base.njk
-templateEngineOverride: njk,md
+templateEngineOverride: webc, md
 eleventyNavigation:
   key: Alt Text and Social Media
   parent: Writing
@@ -10,7 +10,7 @@ Social media has a great ability to connect us. Without it, I would have never f
 
 The problem for blind people is that social media can seem pretty photo-intensive, leaving blind people to feel like they're missing out. In the last few years, though, major social media platforms like Twitter, Facebook, and Instagram have been introducing features allowing people to add alt text to pictures, allowing people sharing content to provide a more inclusive experience.
 
-{% include "snippets/toc.njk" %}
+<jy-toc></jy-toc>
 
 ## What is Alt Text?
 
@@ -45,41 +45,41 @@ Many third party social media apps also support adding alt text to images. You s
 Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet.
 
 
-{% ebox "","" %}
+<jy-ebox>
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
-{% accordion "p", "Alt text for first example" %}
+<jy-accordion-p @label="Alt text for first example">
 
 Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
-{% endaccordion %}
+</jy-accordion-p>
 
-{% endebox %}
+</jy-ebox>
 
-{% ebox "","" %}
+<jy-ebox>
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-{% accordion "p", "Alt text for second example" %}
+<jy-accordion-p @label="Alt text for second example">
 
 Black lab PJ roughhousing with yellow lab mix Quinn.
 
-{% endaccordion %}
+</jy-accordion-p>
 
-{% endebox %}
+</jy-ebox>
 
-{% ebox "","" %}
+<jy-ebox>
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-{% accordion "p", "Alt text for third example" %}
+<jy-accordion-p @label="Alt text for third example">
 
 A black lab laying on a dog bed under an office desk.
 
-{% endaccordion %}
+</jy-accordion-p>
 
-{% endebox %}
+</jy-ebox>
 
 ## Conclusion
 

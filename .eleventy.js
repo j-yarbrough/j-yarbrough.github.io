@@ -8,9 +8,11 @@ const markdownItOptions = {
 const markdownLib = markdownIt({ html: true }).use(markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
+    eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPassthroughCopy("js");
@@ -22,25 +24,6 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
-    eleventyConfig.addPairedShortcode("accordion", function(content, level, label) {
-        var accordionId = convertToId(label);
-        if (level == '2' || level =='3' || level == '4' || level == '5' || level == '6') {
-            level = 'h' + level
-        } else if (level != 'p'){
-level = 'h2'
-        }
-        return `<div id="${accordionId}-acc-wrapper">
-        <${level} class="accordion-header" id="${accordionId}" tabindex="-1">
-        <button class="accordion-button" aria-expanded="false" id="${accordionId}-button" aria-controls="${accordionId}-panel">
-        <span class="accordion-indicator" aria-hidden="true">&rarr;</span>
-        <span id="${accordionId}-label">${label}</span>
-        </button>
-        </${level}>
-<div class="accordion-panel" id="${accordionId}-panel">
-${content}
-</div>
-</div>`
-    });
     eleventyConfig.addPairedShortcode("formcontainer", function(content, id, name, method, action) {
         return `<form id="${id}" name="${name}" method="${method}" action="${action}">${content}</form>`
             });    
@@ -51,11 +34,6 @@ ${content}
                 ${content}
                 </div>`
                     });            
-            eleventyConfig.addPairedShortcode("ebox", function(content, passAttributes, passClass) {
-                if (passClass != '') {passclass = ` ${passClass}`;};
-                if (passAttributes != '') {passAttributes = ` ${passAttributes}`;};
-                    return `<div class="ebox-border-left${passClass}"${passAttributes}>${content}</div>`
-                        });                
             eleventyConfig.addShortcode("button", function(label, id, type, helperText) {
                 var ariaDescribedby;
                 var buttonString = '';

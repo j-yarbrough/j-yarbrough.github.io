@@ -1,0 +1,3 @@
+<div class="ebox-border-left">
+<slot></slot>
+</div>
