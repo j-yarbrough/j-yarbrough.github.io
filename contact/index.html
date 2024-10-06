@@ -131,30 +131,28 @@ You are here:
 </div>
 <p>To contact Justin, all you need to do is fill out this form. All fields are required and all responses will be sent to the email address provided unless you specify another preferred contact method in your message.</p>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
-<div id="your-information-group" role="group" aria-labelledby="your-information-group-label">
-                <h2 id="your-information-group-label">Your information</h2>
-<div id="name-input-container">
-                        <label for="name"><span id="name-label">Name</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="name" id="name" autocomplete="name" aria-required="true">
-                        <p class="form-error" id="name-error"><strong>Error:</strong>&nbsp;<span id="name-error-text">Please enter your name.</span></p></div>
-<div id="email-address-input-container">
-                        <label for="email-address"><span id="email-address-label">Email Address</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="email" id="email-address" autocomplete="email" inputmode="email" aria-required="true" aria-describedby="email-address-helper-text"' data-helper-text="true">
-                        <p class="form-error" id="email-address-error"><strong>Error:</strong>&nbsp;<span id="email-address-error-text">Please enter a valid email address.</span></p><p id="email-address-helper-text">Justin will only use your email address to respond to your message.</p></div>
-<p></div></p>
-<div id="your-message-group" role="group" aria-labelledby="your-message-group-label">
-                <h2 id="your-message-group-label">Your Message</h2>
-<div id="subject-input-container">
-                        <label for="subject"><span id="subject-label">Subject</span><span aria-hidden="true">*</span></label>
-                        <input type="text" name="subject" id="subject" aria-required="true">
-                        <p class="form-error" id="subject-error"><strong>Error:</strong>&nbsp;<span id="subject-error-text">Please enter a subject for your message.</span></p></div>
-<div id="msg-textarea-container">
-                        <label for="msg"><span id="msg-label">Your message to Justin</span><span aria-hidden="true">*</span></label>
-                        <textarea name="msg" id="msg" aria-required="true"></textarea>
-                        <p class="form-error" id="msg-error"><strong>Error:</strong>&nbsp;<span id="msg-error-text">Please enter a message.</span></p></div>
-<p></div></p>
+<div class="text-input-wrapper">
+<label for="name"><span>Name</span><span aria-hidden="true">*</span></label>
+<input type="text" aria-required="true" name="name" autocomplete="name" id="name">
+<p id="name-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a name</span></p>
+</div>
+<div class="text-input-wrapper">
+<label for="email"><span>Email Address</span><span aria-hidden="true">*</span></label>
+<input type="text" aria-required="true" name="email" autocomplete="email" id="email" inputmode="email">
+<p id="email-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a valid email address such as "name@example.com"</span></p>
+</div>
+<div class="text-input-wrapper">
+<label for="subject"><span>Subject</span><span aria-hidden="true">*</span></label>
+<input type="text" aria-required="true" name="subject" id="subject">
+<p id="subject-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a subject for your message</span></p>
+</div>
+<div class="textarea-wrapper">
+<label for="msg"><span>Your message to Justin</span><span aria-hidden="true">*</span></label>
+<textarea id="msg" aria-required="true"></textarea>
+<p id="msg-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a message for Justin</span></p>
+</div>
 <div id="submit-form-button-container">
-                <button class="sc-button" id="submit-form" type="submit" aria-describedby="submit-form-helper-text">Submit</button>
+                <button id="submit-form" type="submit" aria-describedby="submit-form-helper-text" class="sc-button">Submit</button>
                 <p id="submit-form-helper-text">You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam.</p>
                 </div>
 </form>
