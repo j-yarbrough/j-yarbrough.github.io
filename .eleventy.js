@@ -8,9 +8,11 @@ const markdownItOptions = {
 const markdownLib = markdownIt({ html: true }).use(markdownItAttrs);
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedEverything = require("eleventy-plugin-embed-everything");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
+    eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
     eleventyConfig.addPassthroughCopy("js");

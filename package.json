@@ -27,6 +27,7 @@
     "@11ty/eleventy-navigation": "^0.3.5"
   },
   "dependencies": {
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
     "eleventy-plugin-embed-everything": "^1.14.1",
     "markdown-it-attrs": "^4.1.4"
   }
