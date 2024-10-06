@@ -11,8 +11,6 @@ Below you will find a listing of podcasts in which Justin has appeared. To see o
 
 If you would like Justin to appear on your podcast you can [contact him](/contact).
 
-{% accordiongroup "Podcast Samples" %}
-
 {% accordion "2", "A11y Rules Soundbites" %}
 
 - [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
@@ -53,7 +51,5 @@ Justin speaks with Brian and Ed about his panel for axe-con 2023, his work in ac
     Justin discusses his work in digital accessibility at a community college.
 
 {% endaccordion %}
-
-{% endaccordiongroup %}
 
 Please note that Justin has no control over the accessibility of any links to third-party sites
