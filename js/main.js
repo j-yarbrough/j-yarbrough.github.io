@@ -9,7 +9,6 @@
 var indexOfChecks = [
     ['#aria-live-region','arialive'],
     ['.accordion-button','accordion'],
-    ['.accordion-group-container','accgroup'],
     ['#contact-form','contact'],
     ['#toc','toc']
     ]; //end index
