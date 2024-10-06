@@ -2,32 +2,21 @@
 title: Contact
 H1: Contact Justin
 layout: layouts/base.njk
-templateEngineOverride: njk,md
+templateEngineOverride: webc,md
 eleventyNavigation:
   key: Contact
   order: 4
 ---
 To contact Justin, all you need to do is fill out this form. All fields are required and all responses will be sent to the email address provided unless you specify another preferred contact method in your message.
 
-{% formcontainer "contact-form", "contact", "post", "https://formspree.io/f/mnqleljw" %}
+<jy-form-wrapper>
 
-{% formgroup "2","Your information","submitter-info"%}
+<jy-input name="name" autocomplete="name" @label="Name" @error="Please enter a name"></jy-input>
 
-{% textInput "name", "name", "Name", "Please enter your name.", "", "name", "" %}
+<jy-input name="email" autocomplete="email" @label="Email Address" inputmode="email" @error="Please enter a valid email address such as &quot;name@example.com&quot;"></jy-input>
 
-{% textInput "email-address", "email", "Email Address", "Please enter a valid email address.", "Justin will only use your email address to respond to your message.", "email", "email" %}
+<jy-input name="subject" @label="Subject" @error="Please enter a subject for your message"></jy-input>
 
-{% endformgroup %}
+<jy-textarea name="msg" @label="Your message to Justin" @error="Please enter a message for Justin"></jy-textarea>
 
-{% formgroup "2","Your Message","message-info" %}
-
-{% textInput "subject", "subject", "Subject", "Please enter a subject for your message.", "", "", "" %}
-
-
-{% textarea "msg", "msg", "Your message to Justin","Please enter a message." %}
-
-{% endformgroup %}
-
-{% button "Submit", "submit-form", "submit", "You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam." %}
-
-{% endformcontainer %}
+</jy/form/wrapper>

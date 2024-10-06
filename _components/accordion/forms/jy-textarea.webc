@@ -1,0 +1,5 @@
+<div class="textarea-wrapper">
+<label :for="name"><span @text="label"></span><span aria-hidden="true">*</span></label>
+<textarea :id="name" :id="name" aria-required="true"></textarea>
+<p class="form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+</div>
