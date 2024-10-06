@@ -11,8 +11,6 @@ Below you will find a listing of videos and other media in which Justin has appe
 
 If you would like Justin to  appear on your media project you can [contact him](/contact).
 
-{% accordiongroup "Other Media Samples" %}
-
 {% accordion "2", "Media Quoting Justin" %}
 
 This is a non-exhaustive collection of media quoting Justin. Media featuring Justin in a larger role can be found in the other sections of this page.
@@ -51,7 +49,5 @@ Profile by Zach Buchanan, former Diamondbacks beat writer for The Athletic about
 Interview conducted with Rio Salado College librarian Kirstin Thomas as part of Rio's recognition of the 31st anniversary of the Americans with Disabilities Act being signed into law.
 
 {% endaccordion %}
-
-{% endaccordiongroup %}
 
 Please note that Justin has no control over the accessibility of any links to third-party sites

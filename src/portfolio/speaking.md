@@ -11,8 +11,6 @@ Below you’ll find a listing of events that Justin has spoken at. If links to r
 
 If you would like Justin to speak at your event, you can [contact him](/contact/).
 
-{% accordiongroup "Speaking Samples" %}
-
 {% accordion "2", "A11yTalks" %}
 
 - Septemer 2019: Panelist for [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8), which discussed all things digital inclusion.
@@ -51,7 +49,5 @@ If you would like Justin to speak at your event, you can [contact him](/contact/
 - 2022: Presented on a [paper I co-wrote on using alt text to make science Twitter more accessible to blind people](https://www.nature.com/articles/s41467-020-19640-w) for a virtual conference the university was hosting on digital accessibility.
 
 {% endaccordion %}
-
-{% endaccordiongroup %}
 
 Please note that Justin has no control over the accessibility of any links to third-party sites

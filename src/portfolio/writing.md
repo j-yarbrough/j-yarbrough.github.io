@@ -10,8 +10,6 @@ eleventyNavigation:
 Below you will find a listing of articles Justin has written. To see other work Justin has done, check out the other sections of his [portfolio page](/portfolio/).
 If you would like to have Justin write something for you, you can [contact him](/contact).
 
-{% accordiongroup "Writing Samples" %}
-
 {% accordion "2", "Nature" %}
 
   - [Using alt text to make science Twitter more accessible for people with visual impairments](https://www.nature.com/articles/s41467-020-19640-w)  
@@ -54,7 +52,5 @@ Article looking at United's recent announcement that they have begun installing 
   Introduction to using alt text on different social media platforms.
 
 {% endaccordion %}
-
-{% endaccordiongroup %}
 
 Please note that Justin has no control over the accessibility of any links to third-party sites.
