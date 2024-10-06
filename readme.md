@@ -4,7 +4,11 @@
 
 This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
 
-Changes are created in their own branches and merget into main via a PR. Items that are to-do will be logged as issues. Work on those will be on branches created from the issues and are automatically closed when the PR is merged. GitHub Actions are used to build the site, which is contained in the "gh-pages" branch.
+## Typical workflow
+
+- Issues are logged for to-do items
+- Changes are created in their own branches and then merged via pull request. If a PR closes an issue, this will be noted in comments of the PR with "closes #123" where 123 would be the number for the issue. This will automatically close the issue when the PR is merged.
+- When PR is merged to main, GitHub actions will perform a build and push those changes to the "gh-pages" branch, which serves the site on GitHub Pages.
 
 ## Redirects
 
@@ -24,35 +28,48 @@ There are template variations that can be automatically used based on front matt
     - If no H1, then the title value will be used.
 - includeBreadcrumbs: false will exclude breadcrumbs from the page.
 
-## Component Short codes
+## Components and Short Codes
 
-This site is designed to use short codes as much as possible to componentize items. These are described below.
+This site is currently being transitioned from using short codes for all componentized items to .webc components.
 
-### Accordion Group
+## .webc components
 
-Provides controls to operate a group of accordions.  Paired short code is "accordiongroup"
-
-#### Arguments
-
-- Content: Content of the accgroup
-- Label: Label for the group, appears in heading and used for button accessible names
+All .webc components can be found in the _components folder at the root of the project.
 
 ### Accordion
 
-Paired short code is "accordion".
+Two versions of this currently exist:
 
-#### Arguments
-- content: Section hidden by default. In between opening and closing code.
-- level: Heading level for accordion. Enter a number for the corresponding level or "p" to have it be a paragraph.
-- Label: Label for the accordion button.
+- <jy-accordion-p> creates an accordion with no heading level for the button
+- <jy-accordion-2> will treat the button as an h2
 
-### Form Container
+**Important:** Each variation requires a @label attribute to designate the visual label and accessible name for the accordion button. Example: <jy-acc-2 @label="Accordion Label"></jy-accordion-2>
+
+### Ebox
+
+Serves as an emphasis box to highlight content. Only one variation:
+
+- <jy-ebox>
+
+### Table of Contents
+
+Will insert a table of contents, displaying a list of all h2's on a page with in-page links Only one variation:
+
+- <jy-toc>
+
+**Note:** TOC list is not built as part of the 11ty build but is built using client-side JS.
+
+## Short codes
+
+These will be phased out when Justin gets to them, but the ones listed are still used.
+
+#### Form Container
 
 Serves as form tags.
 
 paired short code is "formcontainer"
 
-#### Arguments
+**Arguments:**
 
 - content: Form contents, basically the form.
 - id: ID value for the form container
@@ -60,26 +77,26 @@ paired short code is "formcontainer"
 - method: form container's method attribute value.
 - action: form container's action attribute value.
 
-### formgroup
+#### formgroup
 
 Paired short code to create a group label for a form
 
 Paired short code is "formgroup"
 
-#### Arguments
+**Arguments:**
 
 - content: The content of the group
 - hlevel: Heading level for the label, enter number between 1 and 6.
 - Label: The text of the label.
 - id: Id attribute to be used.
 
-### Text Input
+#### Text Input
 
 Standard single-line text input, can be customized with required, an error message, autocomplete, and inputmode attributes.
 
 Standard short code is "textInput"
 
-#### Arguments
+**Arguments:**
 
 - id: input's id attribute.
     - If required, same value will be used, with "-error" appended, for error message
@@ -93,13 +110,13 @@ Standard short code is "textInput"
 - Helper Text: Helper text that will appear below field and be programmatically associated with aria-describedby. Will be left off if this is blank.
 - inputmode: Input's inputmode attribute value, attribute will be left off if empty.
 
-### Button
+#### Button
 
 Standard button, type can be set.
 
 Regular short code is "button"
 
-#### Arguments
+**Arguments:**
 
 - type: Button's type attribute.
     - If not set to submit or reset will default to button.
@@ -113,7 +130,7 @@ Multi-line text input. Can be customized with name attribute and required.
 
 Standard shortcode is "textarea"
 
-#### Arguments
+**Arguments:**
 
 - id: textarea's id attribute.
     - Container div will have same id with "-textarea-container" appended.
@@ -123,13 +140,3 @@ Standard shortcode is "textarea"
 - error: Error message to be displayed if input is empty.
     - if value is empty, field is not required.
     - Will add aesterisk, aria-required attribute if there is a non-empty value.
-
-    ### Emphasis box
-
-    Creates a container with a dotted line on the left to visually emphasize a block of text. Paired short code is "ebox"
-
-    #### Arguments
-
-    - Content: Content of the ebox
-    - Pass classes: Passes any other CSS classes to the container
-    - Pass attributes: Passes any other attributes to the contaner
