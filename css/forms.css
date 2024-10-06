@@ -23,8 +23,9 @@ textarea, input[type=text] {
 }
 .sc-button:focus {
 outline: 2px dotted var(--blue);
+outline-offset: 2px;
 }
-input + .form-error, textarea + .form-error {
+.form-error {
     display: none;
 }
 input[aria-invalid], textarea[aria-invalid] {
@@ -32,6 +33,6 @@ input[aria-invalid], textarea[aria-invalid] {
     border-style: solid;
     border-width: 1px 2px 2px 1px;
 }
-input[aria-invalid] + .form-error, textarea[aria-invalid] + .form-error {
-    display: block;
+input[aria-invalid] ~ .form-error, textarea[aria-invalid] ~ .form-error {
+    display: block !important;
 }

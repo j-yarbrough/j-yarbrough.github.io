@@ -1,0 +1,7 @@
+<form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
+<slot></slot>
+<div id="submit-form-button-container">
+                <button class="sc-button" id="submit-form" type="submit" aria-describedby="submit-form-helper-text">Submit</button>
+                <p id="submit-form-helper-text">You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam.</p>
+                </div>
+</form>
