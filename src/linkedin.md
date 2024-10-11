@@ -1,4 +1,4 @@
 ---
 title: https://www.linkedin.com/in/justin-yarbrough
-layout: layouts/redirect.njk
+layout: layouts/redirect.webc
 ---

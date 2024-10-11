@@ -1,4 +1,4 @@
 ---
 title: /portfolio/podcasts/
-layout: layouts/redirect.njk
+layout: layouts/redirect.webc
 ---

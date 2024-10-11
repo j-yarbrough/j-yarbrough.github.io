@@ -17,7 +17,7 @@ To set up a redirect:
 1. Create a new .md file
 2. in the front matter, set the following:
     - title: The URL you wish to redirect to
-    - layout: layouts/redirect.njk
+    - layout: layouts/redirect.webc
 
 ## Template variations
 

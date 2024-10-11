@@ -1,4 +1,4 @@
 ---
 title: https://dragonscave.space/@jyarbrough
-layout: layouts/redirect.njk
+layout: layouts/redirect.webc
 ---

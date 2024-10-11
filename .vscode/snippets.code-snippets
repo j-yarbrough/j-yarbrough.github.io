@@ -1,7 +1,7 @@
 {
 	"redirect front matter": {
 		"prefix": ["redirect"],
-		"body": ["---","title: ${0:redirect url}","layout: layouts/redirect.njk","---",""],
+		"body": ["---","title: ${0:redirect url}","layout: layouts/redirect.webc","---",""],
 		"description": "Inserts front matter for a redirect file."
 	}
 	"base front matter": {

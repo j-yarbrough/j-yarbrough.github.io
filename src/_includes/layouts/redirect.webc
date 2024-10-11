@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="refresh" content="0; url={{ title }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Justin Yarbrough">
+    <title>Redirecting...</title>
+<link rel="canonical" :href="title"/>
+</head>
+<body>
+<p>
+<a :href="title">Click here if you are not automatically redirected.</a>
+</p>
+</body> 
+</html>
