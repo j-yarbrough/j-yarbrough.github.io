@@ -10,12 +10,12 @@ function triggerAccordion() {
     var accordionHeading = accordionContainer.querySelector('.accordion-header');
     var accordionPanel = accordionContainer.querySelector('.accordion-panel');
     var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
-    switch (this.getAttribute('aria-expanded')) {
-        case 'true': this.setAttribute('aria-expanded','false');
+    switch (this.ariaExpanded) {
+        case 'true': this.ariaExpanded = false;
         accordionIndicator.innerHTML = '&rarr;';
         accordionHeading.removeAttribute('data-show');
         break;
-        case 'false': this.setAttribute('aria-expanded',true);
+        case 'false': this.ariaExpanded = true;
         accordionIndicator.innerHTML = '&darr;';
         accordionHeading.setAttribute('data-show','show');
         break;
