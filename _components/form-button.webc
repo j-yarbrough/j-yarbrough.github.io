@@ -1,0 +1,2 @@
+<link rel="stylesheet" href="/css/form-button.css">
+<button :type="type" :aria-label="ariaLabel" :aria-describedby="ariaDescribedby" @text="label"></button>
