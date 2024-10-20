@@ -1,11 +1,11 @@
-<div class="accordion-wrapper">
-<p class="accordion-header">
+<link rel="stylesheet" href="/css/accordion.css">
+<h2 class="accordion-header">
 <button class="accordion-button" aria-expanded="false">
 <span class="accordion-indicator" aria-hidden="true">&rarr;</span>
 <span @text="label"></span>
 </button>
-        </p>
+        </h2>
 <div class="accordion-panel">
 <slot></slot>
 </div>
-</div>
+<script src="/js/accordion.js"></script>

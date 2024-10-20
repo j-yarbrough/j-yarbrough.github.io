@@ -1,4 +1,4 @@
 ---
 title: /portfolio/writing/
-layout: layouts/redirect.webc
+layout: layouts/redirect.njk
 ---

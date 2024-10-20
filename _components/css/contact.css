@@ -1,0 +1,14 @@
+.sc-button {
+    font-family: var(--serif);
+    display: inline-block;
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    padding: 0 8px;
+    margin-right: 8px;
+}
+.sc-button:focus {
+outline: 2px dotted var(--blue);
+outline-offset: 2px;
+}

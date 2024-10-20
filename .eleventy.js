@@ -20,13 +20,11 @@ module.exports = (function(eleventyConfig) {
     eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.setLibrary('md', markdownLib);
     eleventyConfig.setQuietMode(true);
-    eleventyConfig.addPassthroughCopy("js");
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addWatchTarget('css');
-    eleventyConfig.addWatchTarget('js');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
                             eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);

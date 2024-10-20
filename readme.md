@@ -17,7 +17,7 @@ To set up a redirect:
 1. Create a new .md file
 2. in the front matter, set the following:
     - title: The URL you wish to redirect to
-    - layout: layouts/redirect.webc
+    - layout: <div id="aria-live-region" aria-live="polite"></div>layouts/redirect.njklayouts/redirect.njk
 
 ## Template variations
 
@@ -36,8 +36,8 @@ All .webc components can be found in the _components folder at the root of the p
 
 Two versions of this currently exist:
 
-- ``<jy-accordion-p>`` creates an accordion with no heading level for the button
-- ``<jy-accordion-2>`` will treat the button as an h2
+- ``<accordion-p>`` creates an accordion with no heading level for the button
+- ``<accordion-2>`` will treat the button as an h2
 
 Required attribute
 
@@ -47,13 +47,13 @@ Required attribute
 
 Serves as an emphasis box to highlight content. Only one variation:
 
-- ``<jy-ebox>``
+- ``<e-box>``
 
 ### Table of Contents
 
 Will insert a table of contents, displaying a list of all h2's on a page with in-page links Only one variation:
 
-- ``<jy-toc>``
+- ``<auto-toc>``
 
 **Note:** TOC list is not built as part of the 11ty build but is built using client-side JS.
 
@@ -61,7 +61,7 @@ Will insert a table of contents, displaying a list of all h2's on a page with in
 
 Wrapper for contact form. Currently includes all info for it, including submit button, but that may get split out later.
 
-- ``<jy-form-wrapper>``
+- ``<form-wrapper>``
 
 Nothing to set on this
 
@@ -69,7 +69,7 @@ Nothing to set on this
 
 Used for text inputs. Contains error, label, and other values that may be passed through.
 
-- ``<jy-text-input>``
+- ``<text-input>``
 
 Required:
 
@@ -86,6 +86,6 @@ Optional input attributes that can be passed through:
 
 Textarea input, similar to text input
 
-- <jy-textarea>
+- <text-area>
 
 Required items are same as text input.

@@ -1,5 +1,6 @@
-<div class="text-input-wrapper">
+<link rel="stylesheet" href="/css/text-input.css">
+<div>
 <label :for="name"><span @text="label"></span><span aria-hidden="true">*</span></label>
 <input type="text" aria-required="true" :name="name" :autocomplete="autocomplete"  :id="name" :inputmode="inputmode">
-<p class="form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+<p class="text-input-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
 </div>

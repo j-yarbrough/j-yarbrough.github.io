@@ -1,4 +1,4 @@
 ---
 title: /portfolio/other-media/
-layout: layouts/redirect.webc
+layout: layouts/redirect.njk
 ---
