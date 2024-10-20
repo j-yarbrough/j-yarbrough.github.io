@@ -1,4 +1,4 @@
-.sc-button {
+button {
     font-family: var(--serif);
     display: inline-block;
     color: var(--blue);
@@ -8,7 +8,7 @@
     padding: 0 8px;
     margin-right: 8px;
 }
-.sc-button:focus {
+button:focus {
 outline: 2px dotted var(--blue);
 outline-offset: 2px;
 }

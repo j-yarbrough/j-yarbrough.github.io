@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="/css/form-group.css">
+
+<fieldset>
+<legend @text="label"></legend>
+<slot></slot>
+</fieldset>

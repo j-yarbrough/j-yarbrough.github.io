@@ -17,7 +17,7 @@ To set up a redirect:
 1. Create a new .md file
 2. in the front matter, set the following:
     - title: The URL you wish to redirect to
-    - layout: <div id="aria-live-region" aria-live="polite"></div>layouts/redirect.njklayouts/redirect.njk
+    - layout: layouts/redirect.njk
 
 ## Template variations
 
@@ -30,7 +30,7 @@ There are template variations that can be automatically used based on front matt
 
 ## .webc components
 
-All .webc components can be found in the _components folder at the root of the project.
+All .webc components can be found in the _components folder at the root of the project. Components take advantage of CSS/JS bundling where applicable.
 
 ### Accordion
 
@@ -59,11 +59,16 @@ Will insert a table of contents, displaying a list of all h2's on a page with in
 
 ### Form wrapper
 
-Wrapper for contact form. Currently includes all info for it, including submit button, but that may get split out later.
+Wrapper for contact form
 
 - ``<form-wrapper>``
 
-Nothing to set on this
+Attributes, all for form tag:
+
+- @id: id for wrapper
+- @name: name for wrapper
+- @method: set method
+@action: set action
 
 ### Text input
 
@@ -75,7 +80,7 @@ Required:
 
 - @label: Label for the input
 - @error: error for the input
-- name: name for the input, will also serve as ID
+- @name: name for the input, will also serve as ID
 
 Optional input attributes that can be passed through:
 
@@ -89,3 +94,37 @@ Textarea input, similar to text input
 - <text-area>
 
 Required items are same as text input.
+
+### Form Group
+
+Sets up a group label
+
+``<form-group>``
+
+Attribute:
+
+- @label: label for group
+
+### Button
+
+Serves as a button
+
+``<form-button>``
+
+Attributes:
+
+- @type: Sets button type, submit, button, etc.
+- @label: Text label for button
+
+Additional optional ones:
+
+- @aria-label: Aria label for button
+- @aria-describedby: Allows to designate an aria-describedby. Value should be an ID
+
+### Aria live region
+
+Creates aria live region and includes handler script
+
+``<aria-live>``
+
+No attributes
