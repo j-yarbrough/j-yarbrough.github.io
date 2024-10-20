@@ -47,15 +47,11 @@ textarea[aria-invalid] {
 textarea[aria-invalid] ~ .textarea-form-error {
     display: block !important;
 }
-#aria-live-region {
-    position: absolute;
-    left:  -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+legend {
+    font-size: 1.25rem;
+    color: var(--blue);
 }
-.sc-button {
+button {
     font-family: var(--serif);
     display: inline-block;
     color: var(--blue);
@@ -65,7 +61,15 @@ textarea[aria-invalid] ~ .textarea-form-error {
     padding: 0 8px;
     margin-right: 8px;
 }
-.sc-button:focus {
+button:focus {
 outline: 2px dotted var(--blue);
 outline-offset: 2px;
+}
+#aria-live-region {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
