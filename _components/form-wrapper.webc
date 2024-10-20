@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/contact.css">
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
 <slot></slot>
 <div id="submit-form-button-container">
@@ -5,3 +6,5 @@
                 <p id="submit-form-helper-text">You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam.</p>
                 </div>
 </form>
+<aria-live></aria-live>
+<script src="/js/contact.js">

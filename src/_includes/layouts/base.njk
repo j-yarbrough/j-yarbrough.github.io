@@ -7,7 +7,6 @@
 {% include "layouts/main-content.njk" %}
 </div>
 {% include "layouts/footer.njk" %}
-{% include "layouts/aria-live.njk" %}
-<script src="/js/main.js"></script>
+<script src="{% getBundleFileUrl "js"%}"></script>
 </body> 
 </html>

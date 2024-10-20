@@ -1,0 +1,3 @@
+<link rel="stylesheet" href="/css/arialive.css">
+<div id="aria-live-region" aria-live="polite"></div>
+<script src="/js/arialive.js"></script>

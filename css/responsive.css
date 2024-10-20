@@ -15,9 +15,6 @@
         padding: 0 8px;
         border-radius: 8px;
     }
-label {
-    display: block;
-}
 .mugshot-container {
     float: none;
     margin: auto;

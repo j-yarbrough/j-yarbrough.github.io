@@ -1,4 +1,4 @@
 ---
 title: https://twitter.com/fatelvis04
-layout: layouts/redirect.webc
+layout: layouts/redirect.njk
 ---

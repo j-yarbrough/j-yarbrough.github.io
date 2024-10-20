@@ -10,7 +10,7 @@ Social media has a great ability to connect us. Without it, I would have never f
 
 The problem for blind people is that social media can seem pretty photo-intensive, leaving blind people to feel like they're missing out. In the last few years, though, major social media platforms like Twitter, Facebook, and Instagram have been introducing features allowing people to add alt text to pictures, allowing people sharing content to provide a more inclusive experience.
 
-<jy-toc></jy-toc>
+<auto-toc></auto-toc>
 
 ## What is Alt Text?
 
@@ -45,41 +45,41 @@ Many third party social media apps also support adding alt text to images. You s
 Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet.
 
 
-<jy-ebox>
+<e-box>
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
-<jy-accordion-p @label="Alt text for first example">
+<accordion-p @label="Alt text for first example">
 
 Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
-</jy-accordion-p>
+</accordion-p>
 
-</jy-ebox>
+</e-box>
 
-<jy-ebox>
+<e-box>
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-<jy-accordion-p @label="Alt text for second example">
+<accordion-p @label="Alt text for second example">
 
 Black lab PJ roughhousing with yellow lab mix Quinn.
 
-</jy-accordion-p>
+</accordion-p>
 
-</jy-ebox>
+</e-box>
 
-<jy-ebox>
+<e-box>
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-<jy-accordion-p @label="Alt text for third example">
+<accordion-p @label="Alt text for third example">
 
 A black lab laying on a dog bed under an office desk.
 
-</jy-accordion-p>
+</accordion-p>
 
-</jy-ebox>
+</e-box>
 
 ## Conclusion
 
