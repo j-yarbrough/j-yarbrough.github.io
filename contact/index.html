@@ -6,6 +6,7 @@
     <meta name="author" content="Justin Yarbrough">
     <title>Contact - Justin Yarbrough</title>
 <link rel="stylesheet" href="/css/main.css" type="text/css">
+<link rel="stylesheet" href="/bundle/0_Cwt7x_xk.css" type="text/css">
 </head>
 <body>
     <div id="skip-links" role="list">
@@ -130,32 +131,40 @@ You are here:
 
 </div>
 <p>To contact Justin, all you need to do is fill out this form. All fields are required and all responses will be sent to the email address provided unless you specify another preferred contact method in your message.</p>
+<form-wrapper>
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
-<div class="text-input-wrapper">
+<text-input>
+<div>
 <label for="name"><span>Name</span><span aria-hidden="true">*</span></label>
 <input type="text" aria-required="true" name="name" autocomplete="name" id="name">
-<p id="name-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a name</span></p>
-</div>
-<div class="text-input-wrapper">
-<label for="email"><span>Email Address</span><span aria-hidden="true">*</span></label>
-<input type="text" aria-required="true" name="email" autocomplete="email" id="email" inputmode="email">
-<p id="email-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a valid email address such as "name@example.com"</span></p>
-</div>
-<div class="text-input-wrapper">
+<p id="name-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a name</span></p>
+</div></text-input>
+<text-input>
+<div>
+<label><span>Email Address</span><span aria-hidden="true">*</span></label>
+<input type="text" aria-required="true" autocomplete="email" inputmode="email">
+<p id="undefined-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a valid email address such as "name@example.com"</span></p>
+</div></text-input>
+<text-input>
+<div>
 <label for="subject"><span>Subject</span><span aria-hidden="true">*</span></label>
 <input type="text" aria-required="true" name="subject" id="subject">
-<p id="subject-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a subject for your message</span></p>
-</div>
-<div class="textarea-wrapper">
-<label for="msg"><span>Your message to Justin</span><span aria-hidden="true">*</span></label>
+<p id="subject-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a subject for your message</span></p>
+</div></text-input>
+<text-area>
+<p><label for="msg"><span>Your message to Justin</span><span aria-hidden="true">*</span></label></p>
 <textarea id="msg" aria-required="true"></textarea>
-<p id="msg-error" class="form-error"><strong>Error:</strong>&nbsp;<span>Please enter a message for Justin</span></p>
-</div>
+<p id="msg-error" class="textarea-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a message for Justin</span></p>
+</text-area>
 <div id="submit-form-button-container">
                 <button id="submit-form" type="submit" aria-describedby="submit-form-helper-text" class="sc-button">Submit</button>
                 <p id="submit-form-helper-text">You may be prompted to complete a CAPTCHA if your submission is flagged as possible spam.</p>
                 </div>
 </form>
+<aria-live>
+<div id="aria-live-region" aria-live="polite"></div>
+</aria-live>
+</form-wrapper>
             </main>
 </div>
 <footer id="footer" tabindex="-1">
@@ -240,7 +249,6 @@ Site Map
 <p>&copy; 2021-2024 Justin Yarbrough</p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
-<div id="aria-live-region" aria-live="polite"></div>
-<script src="/js/main.js"></script>
+<script src="/bundle/ZMSHY18yG-.js"></script>
 </body> 
 </html>
