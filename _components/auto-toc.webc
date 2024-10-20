@@ -1,3 +1,4 @@
 <nav class="ebox-border-left" id="toc" aria-labelledby="toc-heading">
 <h2 id="toc-heading">On this page</h2>
 </nav>
+<script src="/js/toc.js"></script>
