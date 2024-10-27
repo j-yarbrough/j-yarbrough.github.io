@@ -3,11 +3,14 @@ import markdownItAttrs  from "markdown-it-attrs";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import embedEverything from "eleventy-plugin-embed-everything";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+import { IdAttributePlugin } from "@11ty/eleventy";
 export default function(eleventyConfig) {
     eleventyConfig.setInputDirectory("src");
 	eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
+    eleventyConfig.addPlugin(EleventyRenderPlugin);	eleventyConfig.addPlugin(IdAttributePlugin);
     let options = {
 		html: true,
 		breaks: true,
