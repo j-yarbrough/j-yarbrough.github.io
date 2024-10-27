@@ -2,6 +2,7 @@
 title: Contact
 H1: Contact Justin
 layout: layouts/base.njk
+hasAriaLive: true
 eleventyNavigation:
   key: Contact
   order: 4
@@ -20,4 +21,3 @@ eleventyNavigation:
 
 <p id="captcha-disclaimer"><strong>Note:</strong> You may be prompted to complete a CAPTCHA if your message is identified as possible spam.</p>
 </form-wrapper>
-<aria-live></aria-live>
