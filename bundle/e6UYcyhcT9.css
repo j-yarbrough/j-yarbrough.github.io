@@ -1,3 +1,7 @@
+text-input {
+    display: block;
+}
+
 input {
     color: var(--black);
     font-family: var(--serif);
@@ -24,6 +28,10 @@ label {
     display: block;
 }
 }
+text-area {
+    display: block;
+}
+
 textarea {
     display: block;
     width: 100%;
