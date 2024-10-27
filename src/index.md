@@ -2,6 +2,7 @@
 title: Home
 H1: About Justin
 layout: layouts/base.njk
+includeBreadcrumbs: false
 eleventyNavigation:
   key: Home
   order: 0
