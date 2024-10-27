@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="/css/text-area.css">
-</div>
 <label :for="name"><span @text="label"></span><span aria-hidden="true">*</span></label>
-<textarea :id="name" :id="name" aria-required="true"></textarea>
+<textarea :name="name" :id="name" aria-required="true"></textarea>
 <p class="textarea-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
-</div>

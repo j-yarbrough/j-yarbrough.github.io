@@ -1,0 +1,10 @@
+
+<link rel="stylesheet" href="/css/accordion.css">
+<!---Conditional logic for heading level--->
+<h2 webc:if="{level == 2}" class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span @text="label"></span></button></h2>
+<h3 webc:elseif="{level == 3}" class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span @text="label"></span></button></h3>
+<div webc:else class="accordion-header"><button class="accordion-button" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span @text="label"></span></button></div>
+<div class="accordion-panel">
+<slot></slot>
+</div>
+<script src="/js/accordion.js"></script>
