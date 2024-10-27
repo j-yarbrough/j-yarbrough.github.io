@@ -5,9 +5,8 @@ function buildTheTOC () {
 var listElement = document.createElement('ol');
     headings.forEach((headings) => {
         var headingText = headings.textContent
-        var headingIDString = headingText.replaceAll(' ','-');
+        var headingIDString = headings.id;
         headings.tabIndex = -1;
-        headings.id = headingIDString;
         var listItemElement = document.createElement('li');
         var listItemElementLink = document.createElement('a');
         listItemElementLink.href = `#${headingIDString}`;
