@@ -1,3 +1,7 @@
+text-area {
+    display: block;
+}
+
 textarea {
     display: block;
     width: 100%;

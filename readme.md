@@ -34,13 +34,13 @@ All .webc components can be found in the _components folder at the root of the p
 
 ### Accordion
 
-Two versions of this currently exist:
+an accordion.
 
-- ``<accordion-p>`` creates an accordion with no heading level for the button
-- ``<accordion-2>`` will treat the button as an h2
+- ``<jy-acc>``
 
-Required attribute
+Required attributes
 
+- @level: Sets a heading level. Will render as a div if no value provided or value is invalid.
 - @label: Provides a label for the accordion 
 
 ### Ebox

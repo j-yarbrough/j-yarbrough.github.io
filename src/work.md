@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 Since Justin began working in digital accessibility in 2017, he has leveraged his experience as a blind screen reader user to drive home the importance of building accessible experiences from the start in finance, higher education, and consulting settings. More information on Justin’s work history can be found on [Justin’s LinkedIn profile](https://www.linkedin.com/in/justin-yarbrough/) or you can [contact him](/contact) with any questions.
 
-<accordion-2 @label="PNC Bank">
+<jy-acc @level="2" @label="PNC Bank">
 
 Lead Web Accessibility Coach, August 2023 to present
 
@@ -19,9 +19,9 @@ Lead Web Accessibility Coach, August 2023 to present
 - Maintainer of the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria are needed for development
 - Mentors other coaches
 
-</accordion-2>
+</jy-acc>
 
-<accordion-2 @label="Deque Systems">
+<jy-acc @level="2" @label="Deque Systems">
 
 Accessibility Consultant/Coach, January 2022 to July 2023
 
@@ -31,9 +31,9 @@ Accessibility Consultant/Coach, January 2022 to July 2023
 - Assisted in conducting instructor-led training sessions and accessibility awareness labs for clients
 - Mentored more junior consultants
 
-</accordion-2>
+</jy-acc>
 
-<accordion-2 @label="Rio Salado College">
+<jy-acc @level="2" @label="Rio Salado College">
 
 Accessibility Specialist, February 2017 to January 2022
 
@@ -44,4 +44,4 @@ Accessibility Specialist, February 2017 to January 2022
 - Collaborated with stakeholders to develop approaches on how to make complex content and interactive activities accessible to students with disabilities
 - Served on accessibility-related committees and working groups
 
-</accordion-2>
+</jy-acc>

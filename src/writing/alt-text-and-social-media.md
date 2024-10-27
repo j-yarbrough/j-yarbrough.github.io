@@ -49,11 +49,11 @@ Below are a few embedded tweets that all have alt text on the images. To view th
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
-<accordion-p @label="Alt text for first example">
+<jy-acc @label="Alt text for first example">
 
 Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
-</accordion-p>
+</jy-acc>
 
 </e-box>
 
@@ -61,11 +61,11 @@ Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-<accordion-p @label="Alt text for second example">
+<jy-acc @label="Alt text for second example">
 
 Black lab PJ roughhousing with yellow lab mix Quinn.
 
-</accordion-p>
+</jy-acc>
 
 </e-box>
 
@@ -73,11 +73,11 @@ Black lab PJ roughhousing with yellow lab mix Quinn.
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-<accordion-p @label="Alt text for third example">
+<jy-acc @label="Alt text for third example">
 
 A black lab laying on a dog bed under an office desk.
 
-</accordion-p>
+</jy-acc>
 
 </e-box>
 
