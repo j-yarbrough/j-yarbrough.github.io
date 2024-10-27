@@ -1,7 +1,3 @@
-#main-header {
-    border-bottom: 1px dotted var (--blue);;
-}
-
 #breadcrumbs {
     font-size: smaller;
     color: var(--blue);

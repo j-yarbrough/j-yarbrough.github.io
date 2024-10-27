@@ -1,6 +1,6 @@
 /* small*/
 @media (max-width: 48rem) {
-    #wrapper, header, footer, nav, main {
+    #wrapper, header, footer, #nav, #main {
         width: 100%;
     }
     #nav-desktop {
@@ -22,7 +22,7 @@
 }
 /*medium*/
 @media (min-width: 48.000000000001rem) and (max-width: 64rem) {
-    #wrapper, header, footer, #nav, main {
+    #wrapper, header, footer, #nav, #main {
         width: 100%;
     }
     #nav-desktop {
@@ -55,18 +55,18 @@
     align-items: stretch;
     padding: 0;
 }
-.primary-nav, main {
+#nav, #main {
     margin: 0;
     border: 0;
 }
-.primary-nav {
+#nav {
 flex: 1;
 }
-.primary-nav li {
+#nav li {
     padding: 8px 0 8px 8px;
     border-radius: 8px 0 0 8px;
 }
-main {
+#main {
 flex: 4;
     padding: 16px;
     border-radius: 0 0 8px 8px;
