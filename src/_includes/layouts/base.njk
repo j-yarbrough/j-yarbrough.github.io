@@ -1,5 +1,9 @@
 {% include "layouts/head.njk" %}
 <body>
+{% renderTemplate "webc" %}
+<css-bundle webc:nokeep></css-bundle>
+{% endrenderTemplate %}
+
 {% include "layouts/skip-links.njk" %}
 {% include "layouts/header.njk" %}
 <div id="wrapper">

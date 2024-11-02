@@ -22,11 +22,9 @@ export default function(eleventyConfig) {
     eleventyConfig.setLibrary("md", markdownIt(options));
     eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItAttrs));
     eleventyConfig.setQuietMode(true);
-    eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("images");
-    eleventyConfig.addWatchTarget('css');
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
