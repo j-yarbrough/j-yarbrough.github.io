@@ -1,4 +1,4 @@
-.mugshot-container {
+.figgy-cap {
     float: right;
     width: fit-content;
     border: 1 px solid var --blue;
@@ -8,7 +8,11 @@
     text-align: center;
     font-size: smaller;
 }
-.mugshot-container img {
-    width: 312px;
-    height: 320px;
+
+/* small*/
+@media (max-width: 48rem) {
+.figgy-cap {
+    float: none;
+    margin: auto;
+}
 }

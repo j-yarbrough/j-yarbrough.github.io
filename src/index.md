@@ -2,12 +2,13 @@
 title: Home
 H1: About Justin
 layout: layouts/base.njk
+templateEngineOverride: webc,md
 includeBreadcrumbs: false
 eleventyNavigation:
   key: Home
   order: 0
 ---
-{% include "snippets/mugshot.njk" %}
+<figgy-cap @src="/images/justin-mug.jpg" @alt="Mug shot of Justin Yarbrough, a white man with a shaved head and goatee wearing sunglasses.">Justin Yarbrough</figgy-cap>
 
 Justin Yarbrough is a blind digital accessibility specialist, writer, and speaker living in the Austin, Texas area.
 
