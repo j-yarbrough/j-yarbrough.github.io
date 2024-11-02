@@ -1,3 +1,15 @@
-<div class="ebox-border-left">
+<link rel="stylesheet" href="/css/arialive.css">
+<script webc:type="js" webc:root>
+if (((!level)&& (label)) || ((!label) && (level))) {
+    throw new Error('e-box component must have both label and level set or neither');
+};
+``
+</script>
+<section class="e-box">
+<h2 webc:if="{level == 2}" @text="label"></h2>
+<h3 webc:elseif="{level == 3}" @text="label"></h3>
+<h4 webc:elseif="{level == 4}" @text="label"></h4>
+<h5 webc:elseif="{level == 5}" @text="label"></h5>
+<h6 webc:elseif="{level == 6}" @text="label"></h6>
 <slot></slot>
-</div>
+</section>

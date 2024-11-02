@@ -1,4 +1,4 @@
-.figgy-cap {
+figgy-cap {
     float: right;
     width: fit-content;
     border: 1 px solid var --blue;
@@ -11,7 +11,7 @@
 
 /* small*/
 @media (max-width: 48rem) {
-.figgy-cap {
+figgy-cap {
     float: none;
     margin: auto;
 }
