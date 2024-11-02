@@ -44,8 +44,7 @@ Many third party social media apps also support adding alt text to images. You s
 
 Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet.
 
-
-<e-box>
+<e-box @level="3" @label="Example 1">
 
 https://twitter.com/quinntx2az/status/1191864360135643137
 
@@ -57,7 +56,7 @@ Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
 </e-box>
 
-<e-box>
+<e-box @level="3" @label="Example 2">
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
@@ -69,7 +68,7 @@ Black lab PJ roughhousing with yellow lab mix Quinn.
 
 </e-box>
 
-<e-box>
+<e-box @level="3" @label="Example 3">
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
