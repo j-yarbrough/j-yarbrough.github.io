@@ -1,0 +1,13 @@
+{%- if (includeBreadcrumbs != false) %}<nav id="breadcrumbs" aria-label="breadcrumbs">
+You are here: 
+<span role="list">
+{%- if (eleventyNavigation.key != "Home") %}
+<span role="listitem"><a href="/">Home</a><span aria-hidden="true">&rarr;</span></span>
+{% endif %}
+{% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
+{% for crumb in crumbs %}
+  <span role="listitem"><a href="{{ crumb.url | url }}">{{ crumb.title }}</a><span aria-hidden="true">&rarr;</span></span>
+{% endfor %}
+<span role="listitem"><a href="{{ page.url }}" aria-current="page">{{ eleventyNavigation.key }}</a></span>
+</span>
+</nav>

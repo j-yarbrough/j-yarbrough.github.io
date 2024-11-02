@@ -1,4 +1,11 @@
 <link rel="stylesheet" href="/css/text-area.css">
+<script webc:type="js" webc:root>
+if (!label) {throw new Error('text area component is missing required prop label');};
+if (!name) {throw new Error('text area component is missing required prop name');};
+if (!error) {throw new Error('text area component is missing required prop error');};
+``
+</script>
+
 <label :for="name"><span @text="label"></span><span aria-hidden="true">*</span></label>
 <textarea :name="name" :id="name" aria-required="true"></textarea>
 <p class="textarea-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>

@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="/css/form-group.css">
-
+<script webc:type="js" webc:root>
+if (!label) {throw new Error('form group component is missing required prop label');};
+``
+</script>
 <fieldset>
 <legend @text="label"></legend>
 <slot></slot>

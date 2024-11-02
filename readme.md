@@ -32,16 +32,22 @@ There are template variations that can be automatically used based on front matt
 
 All .webc components can be found in the _components folder at the root of the project. Components take advantage of CSS/JS bundling where applicable.
 
+Attributes/properties marked as required will throw build errors if missing.
+
 ### Accordion
 
 an accordion.
 
 - ``<jy-acc>``
 
-Required attributes
+Required prop:
+
+- @label: Provides a label for the accordion 
+
+Optional prop:
 
 - @level: Sets a heading level. Will render as a div if no value provided or value is invalid.
-- @label: Provides a label for the accordion 
+
 
 ### Ebox
 
@@ -111,7 +117,7 @@ Serves as a button
 
 ``<form-button>``
 
-Attributes:
+Required Attributes:
 
 - @type: Sets button type, submit, button, etc.
 - @label: Text label for button
@@ -129,3 +135,13 @@ Creates aria live region and includes handler script
 
 No attributes
 
+### Figure caption
+
+Creates a floating (except on mobile) figure caption for an image. Slot is used for caption.
+
+``<figgy-cap>``
+
+Required attributes:
+
+- @src: source for image
+- @alt: alt text for image

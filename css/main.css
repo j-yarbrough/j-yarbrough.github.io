@@ -7,6 +7,5 @@
 @import "/css/main-nav.css"; /*main nav styling, non-responsive parts*/
 @import "/css/white-background.css"; /*styling for areas with white backgrounds */
 @import "/css/main-header.css"; /* H1, breadcrumbs, TOC*/
-@import "/css/mug.css"; /*mugshot on home page*/
 @import "/css/responsive.css"; /*responsive media queries and associated styles*/
 @import "/css/classes.css"; /* catch-all for classes and some stuff that doesn't fit anywhere else */

@@ -10,7 +10,10 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
-    eleventyConfig.addPlugin(EleventyRenderPlugin);	eleventyConfig.addPlugin(IdAttributePlugin);
+    eleventyConfig.addPlugin(EleventyRenderPlugin);
+    eleventyConfig.addPlugin(IdAttributePlugin, {
+        selector: "h2,h3,h4,h5,h6"
+    });
     let options = {
 		html: true,
 		breaks: true,

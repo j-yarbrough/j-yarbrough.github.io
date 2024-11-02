@@ -15,10 +15,6 @@
         padding: 0 8px;
         border-radius: 8px;
     }
-.mugshot-container {
-    float: none;
-    margin: auto;
-}
 }
 /*medium*/
 @media (min-width: 48.000000000001rem) and (max-width: 64rem) {
