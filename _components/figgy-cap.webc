@@ -4,7 +4,7 @@ if (!alt) {throw new Error('figgy cap component missing required prop alt');};
 if (!src) {throw new Error('figgy cap component missing required prop src');};
 ``
 </script>
-<figure class="figgy-cap">
+<figure>
 <img :src="src" :alt="alt">
 <figcaption><slot></slot></figcaption>
 </figure>
