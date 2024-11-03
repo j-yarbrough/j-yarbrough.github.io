@@ -82,18 +82,19 @@ Attributes, all for form tag:
 
 ### Text input
 
-Used for text inputs. Contains error, label, and other values that may be passed through.
+Used for text inputs. Field will only be marked as required if error prop is used
 
 - ``<text-input>``
 
 Required:
 
 - @label: Label for the input
-- @error: error for the input
 - @name: name for the input, will also serve as ID
 
-Optional input attributes that can be passed through:
+Optional props
 
+- @error: Error message if field is required, input will be optional if this is not used.
+- @helper: helper text for input.
 - autocomplete
 - inputmode
 
@@ -103,7 +104,7 @@ Textarea input, similar to text input
 
 - <text-area>
 
-Required items are same as text input.
+Required items are same as text input. Error has same behavior as text input.
 
 ### Form Group
 
