@@ -20,9 +20,13 @@ function buildInput() {
     if (inputmode) {
         inputString += ` inputmode="${inputmode}"`;
     }
+    if (helper) {
+        inputString += ` aria-describedby="${name}-helper"`;
+    }
     inputString += `>`;
     return inputString
 }
 buildInput();
 </script>
 <p webc:if="error" class="text-input-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+<p webc:if="helper" @text="helper" :id="name+'-helper'"></p>
