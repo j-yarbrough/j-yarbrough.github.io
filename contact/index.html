@@ -139,7 +139,7 @@ You are here:
 <h1 id="main-heading" tabindex="-1">
 Contact Justin
 </h1>
-<p>To contact Justin, all you need to do is fill out this form. All fields are required and all responses will be sent to the email address provided unless you specify another preferred contact method in your message.</p>
+<p>To contact Justin, fill out this form. All fields marked with asterisks (*) are required.</p>
 <form-wrapper>
 
 <form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
@@ -151,14 +151,22 @@ Contact Justin
 
 <text-input>
 
-<label for="name"><span>Name</span><span aria-hidden="true">*</span></label>
-<input type="text" aria-required="true" name="name" autocomplete="name" id="name">
-<p id="name-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a name</span></p></text-input>
+<label for="name">
+<span>Name</span>
+<span aria-hidden="true">*</span>
+</label>
+<input type="text" id="name" name="name" aria-required="true" autocomplete="name">
+<p id="name-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a name</span></p>
+</text-input>
 <text-input>
 
-<label for="email"><span>Email Address</span><span aria-hidden="true">*</span></label>
-<input type="text" aria-required="true" name="email" autocomplete="email" id="email" inputmode="email">
-<p id="email-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a valid email address such as "name@example.com"</span></p></text-input>
+<label for="email">
+<span>Email Address</span>
+<span aria-hidden="true">*</span>
+</label>
+<input type="text" id="email" name="email" aria-required="true" autocomplete="email" inputmode="email" aria-describedby="email-helper">
+<p id="email-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a valid email address such as "name@example.com"</span></p>
+<p id="email-helper">Your email address will only be used to respond to your message.</p></text-input>
 
 </fieldset></form-group>
 <form-group>
@@ -168,13 +176,20 @@ Contact Justin
 
 <text-input>
 
-<label for="subject"><span>Subject</span><span aria-hidden="true">*</span></label>
-<input type="text" aria-required="true" name="subject" id="subject">
-<p id="subject-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a subject for your message</span></p></text-input>
+<label for="subject">
+<span>Subject</span>
+<span aria-hidden="true">*</span>
+</label>
+<input type="text" id="subject" name="subject" aria-required="true">
+<p id="subject-error" class="text-input-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a subject for your message</span></p>
+</text-input>
 <text-area>
 
 
-<label for="msg"><span>Message Body</span><span aria-hidden="true">*</span></label>
+<label for="msg">
+<span>Message Body</span>
+<span aria-hidden="true">*</span>
+</label>
 <textarea name="msg" id="msg" aria-required="true"></textarea>
 <p id="msg-error" class="textarea-form-error"><strong>Error:</strong>&nbsp;<span>Please enter a message for Justin</span></p></text-area>
 
@@ -277,6 +292,6 @@ Site Map
 </aria-live>
 
 
-<script src="/bundle/R3VxN8KTu3.js"></script>
+<script src="/bundle/yzZvYR4waE.js"></script>
 </body> 
 </html>
