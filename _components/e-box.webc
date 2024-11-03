@@ -2,7 +2,14 @@
 <script webc:type="js" webc:root>
 if (((!level)&& (label)) || ((!label) && (level))) {
     throw new Error('e-box component must have both label and level set or neither');
-};
+} else if (
+    (level != 2) &&
+    (level != 3) &&
+    (level != 4) &&
+    (level != 5) &&
+    (level != 6) &&
+    (level)
+) {throw new Error('e-box component has invalid level value, must be 2, 3, 4, 5, or 6');};
 ``
 </script>
 <section class="e-box">

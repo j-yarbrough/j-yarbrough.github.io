@@ -63,15 +63,15 @@ function applyValidationState (field, validOrNot) {
     var fieldID = field.getAttribute('id');
     switch (validOrNot) {
         case true: field.removeAttribute('aria-invalid');
-        if (field.getAttribute('data-helper-text','true')) {
-            field.setAttribute('aria-describedby',`${fieldID}-helper-text`)
+        if (document.querySelector(`#${fieldID}-helper`)) {
+            field.setAttribute('aria-describedby',`${fieldID}-helper`)
         } else {
             field.removeAttribute('aria-describedby');
         }
         break;
         case false: field.setAttribute('aria-invalid','true');
-        if (field.hasAttribute('data-helper-text')) {
-            field.setAttribute('aria-describedby',`${fieldID}-error ${fieldID}-helper-text`);
+        if (document.querySelector(`#${fieldID}-helper`)) {
+            field.setAttribute('aria-describedby',`${fieldID}-error ${fieldID}-helper`);
         } else {
             field.setAttribute('aria-describedby',`${fieldID}-error`);
         }

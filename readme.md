@@ -36,7 +36,7 @@ Attributes/properties marked as required will throw build errors if missing.
 
 ### Accordion
 
-an accordion.
+Should be self-explanitory...
 
 - ``<jy-acc>``
 
@@ -46,14 +46,18 @@ Required prop:
 
 Optional prop:
 
-- @level: Sets a heading level. Will render as a div if no value provided or value is invalid.
-
+- @level: Sets a heading level. Will render as a div if value is not set as 2-6.provided or value is invalid.
 
 ### Ebox
 
-Serves as an emphasis box to highlight content. Only one variation:
+Serves as an emphasis box to highlight content. 
 
 - ``<e-box>``
+
+Ebox has an optional heading at the top of the container. If no heading is desired, props can be left out. Note that props must be used together, will throw an error if only one is included.
+
+- @label: heading for ebox
+- @level:heading level, must be set as 2-6. Will throw error if invalid value.
 
 ### Table of Contents
 
@@ -78,18 +82,19 @@ Attributes, all for form tag:
 
 ### Text input
 
-Used for text inputs. Contains error, label, and other values that may be passed through.
+Used for text inputs. Field will only be marked as required if error prop is used
 
 - ``<text-input>``
 
 Required:
 
 - @label: Label for the input
-- @error: error for the input
 - @name: name for the input, will also serve as ID
 
-Optional input attributes that can be passed through:
+Optional props
 
+- @error: Error message if field is required, input will be optional if this is not used.
+- @helper: helper text for input.
 - autocomplete
 - inputmode
 
@@ -99,7 +104,7 @@ Textarea input, similar to text input
 
 - <text-area>
 
-Required items are same as text input.
+Required items are same as text input. Error has same behavior as text input.
 
 ### Form Group
 

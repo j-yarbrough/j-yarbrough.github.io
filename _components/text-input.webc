@@ -2,9 +2,31 @@
 <script webc:type="js" webc:root>
 if (!label) {throw new Error('text inputcomponent is missing required prop label');};
 if (!name) {throw new Error('text input component is missing required prop name');};
-if (!error) {throw new Error('text input component is missing required prop error');};
 ``
 </script>
-<label :for="name"><span @text="label"></span><span aria-hidden="true">*</span></label>
-<input type="text" aria-required="true" :name="name" :autocomplete="autocomplete"  :id="name" :inputmode="inputmode">
-<p class="text-input-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+<label :for="name">
+<span @text="label"></span>
+<span webc:if="error" aria-hidden="true">*</span>
+</label>
+<script webc:type="js" webc:root>
+function buildInput() {
+    var inputString = `<input type="text" id="${name}" name="${name}"`;
+    if (error) {
+        inputString += ` aria-required="true"`;
+    }
+    if (autocomplete) {
+        inputString += ` autocomplete="${autocomplete}"`;
+    }
+    if (inputmode) {
+        inputString += ` inputmode="${inputmode}"`;
+    }
+    if (helper) {
+        inputString += ` aria-describedby="${name}-helper"`;
+    }
+    inputString += `>`;
+    return inputString
+}
+buildInput();
+</script>
+<p webc:if="error" class="text-input-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+<p webc:if="helper" @text="helper" :id="name+'-helper'"></p>
