@@ -1,3 +1,7 @@
+.e-box {
+    padding: 8px;
+    border: 1px dotted var(--blue);
+}
 .accordion.header {
     margin-left: 8px;
 }
@@ -33,14 +37,6 @@ border-bottom: 0;
 }
 .accordion-panel-show {
     display: block !important;
-}
-#aria-live-region {
-    position: absolute;
-    left:  -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
 }
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
