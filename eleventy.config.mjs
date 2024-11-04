@@ -6,7 +6,7 @@ import embedEverything from "eleventy-plugin-embed-everything";
 import { EleventyRenderPlugin } from "@11ty/eleventy";
 import { IdAttributePlugin } from "@11ty/eleventy";
 export default function(eleventyConfig) {
-    eleventyConfig.setInputDirectory("src");
+    eleventyConfig.setInputDirectory("_src");
 	eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything);
