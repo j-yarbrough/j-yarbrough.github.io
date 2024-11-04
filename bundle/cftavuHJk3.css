@@ -1,38 +1,77 @@
-.accordion.header {
-    margin-left: 8px;
+text-input {
+    display: block;
 }
-.accordion-header[data-show=show] {
-    margin-bottom: 0;
-}
-.accordion-button {
-    font-size: inherit;
-    border: 1px solid var(--blue);
-    margin: 0;
-    color: var(--blue);
-    background-color:  var(--white);
-    padding:  0 8px;
-    border-radius: 8px;
+
+input {
+    color: var(--black);
     font-family: var(--serif);
+    border-color: var(--blue);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    caret-color: var(--blue);
 }
-.accordion-button:focus {
-    outline: 2px dotted var(--blue);
-    outline-offset: 2px;
-}
-.accordion-button[aria-expanded=true] {
-    margin: 0;
-border-radius: 8px 8px 0 0;
-border-bottom: 0;
-}
-.accordion-panel {
+
+.text-input-form-error {
     display: none;
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding: 8px;
+}
+input[aria-invalid] {
+    border-color: var(--red);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+input[aria-invalid] ~ .text-input-form-error {
+    display: block !important;
+}
+/* separate label and input on mobile*/
+@media (max-width: 48rem) {
+label {
+    display: block;
+}
+}
+text-area {
+    display: block;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    color: var(--black);
+    font-family: var(--serif);
+    border-color: var(--blue);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    caret-color: var(--blue);
+}
+
+.textarea-form-error {
+    display: none;
+}
+textarea[aria-invalid] {
+    border-color: var(--red);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+textarea[aria-invalid] ~ .textarea-form-error {
+    display: block !important;
+}
+legend {
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+button {
+    font-family: var(--serif);
+    display: inline-block;
+    color: var(--blue);
+    background-color: var(--white);
     border: 1px solid var(--blue);
     border-radius: 8px;
+    padding: 0 8px;
+    margin-right: 8px;
 }
-.accordion-panel-show {
-    display: block !important;
+button:focus {
+outline: 2px dotted var(--blue);
+outline-offset: 2px;
 }
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
@@ -75,6 +114,9 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 a:focus {
     outline: 2px dotted var(--white);
+}
+main li {
+    line-height: 1.5    ;
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -244,4 +286,12 @@ flex: 4;
     color: var(--blue);
     font-size: 2rem;
     font-weight: bold;
+}
+#aria-live-region {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

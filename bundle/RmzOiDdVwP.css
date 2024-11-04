@@ -1,3 +1,21 @@
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
+}
+}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --black: #222222;
@@ -39,6 +57,9 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 a:focus {
     outline: 2px dotted var(--white);
+}
+main li {
+    line-height: 1.5    ;
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
