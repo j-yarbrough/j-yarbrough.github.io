@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/arialive.css">
+<link rel="stylesheet" href="/css/e-box.css">
 <script webc:type="js" webc:root>
 if (((!level)&& (label)) || ((!label) && (level))) {
     throw new Error('e-box component must have both label and level set or neither');
@@ -12,7 +12,7 @@ if (((!level)&& (label)) || ((!label) && (level))) {
 ) {throw new Error('e-box component has invalid level value, must be 2, 3, 4, 5, or 6');};
 ``
 </script>
-<section class="e-box">
+<section class="e-box" :aria-label="label">
 <h2 webc:if="{level == 2}" @text="label"></h2>
 <h3 webc:elseif="{level == 3}" @text="label"></h3>
 <h4 webc:elseif="{level == 4}" @text="label"></h4>

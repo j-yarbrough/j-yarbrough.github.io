@@ -11,6 +11,8 @@
 </div>
 {% include "layouts/footer.njk" %}
 {% include "layouts/arialive.njk" %}
-<script src="{% getBundleFileUrl "js"%}"></script>
+{% renderTemplate "webc" %}
+		<script @raw="getBundle('js')" webc:keep></script>
+        {% endrenderTemplate %}
 </body> 
 </html>

@@ -2,6 +2,7 @@ buildTheTOC();
 
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(#toc-heading)');
+    var tocContainer = document.querySelector('#toc');
 var listElement = document.createElement('ol');
     headings.forEach((headings) => {
         var headingText = headings.textContent
@@ -14,5 +15,5 @@ var listElement = document.createElement('ol');
         listItemElement.appendChild(listItemElementLink);
         listElement.appendChild(listItemElement)
     });
-    toc.appendChild(listElement);
+    tocContainer .appendChild(listElement);
 }

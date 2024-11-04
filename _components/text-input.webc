@@ -1,14 +1,12 @@
 <link rel="stylesheet" href="/css/text-input.css">
-<script webc:type="js" webc:root>
-if (!label) {throw new Error('text inputcomponent is missing required prop label');};
-if (!name) {throw new Error('text input component is missing required prop name');};
-``
-</script>
 <label :for="name">
 <span @text="label"></span>
 <span webc:if="error" aria-hidden="true">*</span>
 </label>
 <script webc:type="js" webc:root>
+if (!label) {throw new Error('text inputcomponent is missing required prop label');};
+if (!name) {throw new Error('text input component is missing required prop name');};
+
 function buildInput() {
     var inputString = `<input type="text" id="${name}" name="${name}"`;
     if (error) {
