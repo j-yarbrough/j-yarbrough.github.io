@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="/css/text-area.css">
-<script webc:type="js" webc:root>
-if (!label) {throw new Error('text area component is missing required prop label');};
-if (!name) {throw new Error('text area component is missing required prop name');};
-``
-</script>
-
 <label :for="name">
 <span @text="label"></span>
 <span webc:if"error" aria-hidden="true">*</span>
 </label>
 <script webc:type="js" webc:root>
+if (!label) {throw new Error('text area component is missing required prop label');};
+if (!name) {throw new Error('text area component is missing required prop name');};
+
 function buildTextArea() {
     var textAreaString = `<textarea name="${name}" id="${name}"`;
     if (error) {
         textAreaString+= ` aria-required="true"`;
+    }
+    if (helper) {
+        textAreaString += ` aria-describedby="${name}-helper"`;
     }
     textAreaString += `></textarea>`;
     return textAreaString
@@ -21,3 +21,4 @@ function buildTextArea() {
 buildTextArea();
 </script>
 <p webc:if="error" class="textarea-form-error" :id="name+'-error'"><strong>Error:</strong>&nbsp;<span @text="error"></span></p>
+<p webc:if="helper" id="name+'-helper'" @text="helper"></p>
