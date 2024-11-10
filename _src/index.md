@@ -33,4 +33,11 @@ To contact Justin, fill out the [contact form](/contact).
 
 ## Connect on Social Media
 
-You can connect with Justin on [LinkedIn](https://www.linkedin.com/in/justin-yarbrough), [Mastodon](https://dragonscave.space/@jyarbrough), or [X/Twitter](https://twitter.com/fatelvis04).
+You can connect with Justin on the following social media networks:
+
+<ul>
+<!---Loop to build list for all social media--->
+<li webc:for="(key, value) in social">
+<a :href="value.url" :rel="value.rel" @text="value.text"></a>
+</li>
+</ul>

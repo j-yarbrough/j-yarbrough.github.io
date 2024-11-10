@@ -86,7 +86,10 @@ With the advent of alt text support on major social media platforms, it's easier
 
 ## More Resources
 
-- [Alt Text article from WebAIM](https://webaim.org/techniques/alttext/)  
-Article from WebAIM discussing the basics of alt text in a wider context.
-- [Justin Yarbrough talks about alt text](https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/)  
-A podcast in which I discuss the importance of using alt text on social media during public health and other emergencies as well as other accessibility-related topics.
+<ul>
+<li webc:for="(key, value) in pages.writing.altTextResources">
+<a :href="value.url" @text="value.name"></a>
+<br>
+<span @raw="value.desc"></span>
+</li>
+</ul>
