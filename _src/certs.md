@@ -9,20 +9,41 @@ eleventyNavigation:
 Justin holds accessibility-related certifications from multiple organizations. You can find a list of these below.
 
 <jy-acc @level="2" @label="International Association of Accessibility Professionals">
-
-- [Certified Professional in Web Accessibility](https://www.accessibilityassociation.org/s/certified-professional-web-accessibility), issued September 2024, expires September 2027
-- [Web Accessibility Specialist](https://www.accessibilityassociation.org/s/wascertification), issued September 2024, expires September 2027
-- [Certified Professional in Accessibility Core Competencies](https://www.accessibilityassociation.org/s/certified-professional), issued March 2023, expires September 2027
-
+<ul>
+<li webc:for="(key, value) in pages.certs.iaap">
+<a :href="value.url" @text="value.name"></a>
+<ul>
+<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+</ul>
+</li>
+</ul>
 </jy-acc>
 
 <jy-acc @level="2" @label="NVAccess">
-
-- [NVDA Expert](https://certification.nvaccess.org/), issued August 2024
-
+<ul>
+<li webc:for="(key, value) in pages.certs.nvaccess">
+<a :href="value.url" @text="value.name"></a>
+<ul>
+<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+</ul>
+</li>
+</ul>
 </jy-acc>
 
 <jy-acc @level="2" @label="Freedom Scientific">
-
-- [JAWS Certification](https://www.freedomscientific.com/training/certification/),  issued June 2018, last renewed December 2022
+<ul>
+<li webc:for="(key, value) in pages.certs.fs">
+<a :href="value.url" @text="value.name"></a>
+<ul>
+<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+</ul>
+</li>
+</ul>
+June 2018, last renewed December 2022
 </jy-acc>

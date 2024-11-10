@@ -87,7 +87,7 @@ With the advent of alt text support on major social media platforms, it's easier
 ## More Resources
 
 <ul>
-<li webc:for="(key, value) in writing.altTextResources">
+<li webc:for="(key, value) in pages.writing.altTextResources">
 <a :href="value.url" @text="value.name"></a>
 <br>
 <span @raw="value.desc"></span>
