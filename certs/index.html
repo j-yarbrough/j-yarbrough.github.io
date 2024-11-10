@@ -145,9 +145,27 @@ Certifications
 <h2 class="accordion-header" id="international-association-of-accessibility-professionals"><button aria-expanded="false" class="accordion-button"><span aria-hidden="true" class="accordion-indicator">→</span><span>International Association of Accessibility Professionals</span></button></h2>
 <div class="accordion-panel">
 <ul>
-<li><a href="https://www.accessibilityassociation.org/s/certified-professional-web-accessibility">Certified Professional in Web Accessibility</a>, issued September 2024, expires September 2027</li>
-<li><a href="https://www.accessibilityassociation.org/s/wascertification">Web Accessibility Specialist</a>, issued September 2024, expires September 2027</li>
-<li><a href="https://www.accessibilityassociation.org/s/certified-professional">Certified Professional in Accessibility Core Competencies</a>, issued March 2023, expires September 2027</li>
+<li>
+<a href="https://www.accessibilityassociation.org/s/certified-professional-web-accessibility">Certified Professional in Web Accessibility</a>
+<ul>
+<li>Issued <span>September 2024</span></li>
+<li>Expires <span>September 2027</span></li>
+</ul>
+</li>
+<li>
+<a href="https://www.accessibilityassociation.org/s/wascertification">Web Accessibility Specialist</a>
+<ul>
+<li>Issued <span>September 2024</span></li>
+<li>Expires <span>September 2027</span></li>
+</ul>
+</li>
+<li>
+<a href="https://www.accessibilityassociation.org/s/certified-professional">Certified Professional in Accessibility Core Competencies</a>
+<ul>
+<li>Issued <span>March 2023</span></li>
+<li>Expires <span>September 2027</span></li>
+</ul>
+</li>
 </ul>
 </div>
 </jy-acc>
@@ -155,7 +173,12 @@ Certifications
 <h2 class="accordion-header" id="nvaccess"><button aria-expanded="false" class="accordion-button"><span aria-hidden="true" class="accordion-indicator">→</span><span>NVAccess</span></button></h2>
 <div class="accordion-panel">
 <ul>
-<li><a href="https://certification.nvaccess.org/">NVDA Expert</a>, issued August 2024</li>
+<li>
+<a href="https://certification.nvaccess.org/">NVDA Expert</a>
+<ul>
+<li>Issued <span>August 2024</span></li>
+</ul>
+</li>
 </ul>
 </div>
 </jy-acc>
@@ -163,8 +186,15 @@ Certifications
 <h2 class="accordion-header" id="freedom-scientific"><button aria-expanded="false" class="accordion-button"><span aria-hidden="true" class="accordion-indicator">→</span><span>Freedom Scientific</span></button></h2>
 <div class="accordion-panel">
 <ul>
-<li><a href="https://www.freedomscientific.com/training/certification/">JAWS Certification</a>,  issued June 2018, last renewed December 2022</li>
+<li>
+<a href="https://www.freedomscientific.com/training/certification/">JAWS Certification</a>
+<ul>
+<li>Issued <span>June 2018</span></li>
+<li>Last renewed <span>December 2022</span></li>
 </ul>
+</li>
+</ul>
+June 2018, last renewed December 2022
 </div>
 </jy-acc>
 </main>
@@ -233,18 +263,21 @@ Site Map
 </span>
 </p>
 <p>
-<span id="social-links-lead">Connect with Justin: </span>
+Connect with Justin: 
 <span role="list">
+
 <span role="listitem">
 <a href="https://www.linkedin.com/in/justin-yarbrough/">LinkedIn</a>
 <span aria-hidden="true"> | </span>
+
 </span>
 <span role="listitem">
-<a href="https://dragonscave.space/@jyarbrough" rel="me">Mastodon</a>
+<a href="https://dragonscave.space/@jyarbrough">Mastodon</a>
 <span aria-hidden="true"> | </span>
+
 </span>
 <span role="listitem">
-<a href="https://twitter.com/fatelvis04">Twitter/X</a>
+<a href="https://www.x.com/fatelvis04">Twitter/X</a>
 </span>
 </span>
 </p>
@@ -253,30 +286,7 @@ Site Map
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
 
-<script>// Script for accordions
-
-var accordionButtons = document.querySelectorAll('.accordion-button');
-accordionButtons.forEach((accordionButtons) => {
-    accordionButtons.addEventListener('click',triggerAccordion)
-});
-
-function triggerAccordion() {
-    var accordionContainer = this.parentElement.parentElement;
-    var accordionHeading = accordionContainer.querySelector('.accordion-header');
-    var accordionPanel = accordionContainer.querySelector('.accordion-panel');
-    var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
-    switch (this.ariaExpanded) {
-        case 'true': this.ariaExpanded = false;
-        accordionIndicator.innerHTML = '&rarr;';
-        accordionHeading.removeAttribute('data-show');
-        break;
-        case 'false': this.ariaExpanded = true;
-        accordionIndicator.innerHTML = '&darr;';
-        accordionHeading.setAttribute('data-show','show');
-        break;
-    };
-    accordionPanel.classList.toggle('accordion-panel-show')
-}</script>
+<script src="/bundle/2L6F-883FN.js"></script>
         
 </body> 
 </html>

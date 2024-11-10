@@ -248,18 +248,21 @@ Site Map
 </span>
 </p>
 <p>
-<span id="social-links-lead">Connect with Justin: </span>
+Connect with Justin: 
 <span role="list">
+
 <span role="listitem">
 <a href="https://www.linkedin.com/in/justin-yarbrough/">LinkedIn</a>
 <span aria-hidden="true"> | </span>
+
 </span>
 <span role="listitem">
-<a href="https://dragonscave.space/@jyarbrough" rel="me">Mastodon</a>
+<a href="https://dragonscave.space/@jyarbrough">Mastodon</a>
 <span aria-hidden="true"> | </span>
+
 </span>
 <span role="listitem">
-<a href="https://twitter.com/fatelvis04">Twitter/X</a>
+<a href="https://www.x.com/fatelvis04">Twitter/X</a>
 </span>
 </span>
 </p>
@@ -268,30 +271,7 @@ Site Map
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
 
-<script>// Script for accordions
-
-var accordionButtons = document.querySelectorAll('.accordion-button');
-accordionButtons.forEach((accordionButtons) => {
-    accordionButtons.addEventListener('click',triggerAccordion)
-});
-
-function triggerAccordion() {
-    var accordionContainer = this.parentElement.parentElement;
-    var accordionHeading = accordionContainer.querySelector('.accordion-header');
-    var accordionPanel = accordionContainer.querySelector('.accordion-panel');
-    var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
-    switch (this.ariaExpanded) {
-        case 'true': this.ariaExpanded = false;
-        accordionIndicator.innerHTML = '&rarr;';
-        accordionHeading.removeAttribute('data-show');
-        break;
-        case 'false': this.ariaExpanded = true;
-        accordionIndicator.innerHTML = '&darr;';
-        accordionHeading.setAttribute('data-show','show');
-        break;
-    };
-    accordionPanel.classList.toggle('accordion-panel-show')
-}</script>
+<script src="/bundle/2L6F-883FN.js"></script>
         
 </body> 
 </html>
