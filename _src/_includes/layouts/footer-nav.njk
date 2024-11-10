@@ -17,19 +17,16 @@
 {%- endfor %}
 </p>
 <p>
-<span id="social-links-lead">Connect with {{site.authorFirstName}}: </span>
+Connect with {{site.authorFirstName}}: 
 <span role="list">
+{% for item in social %}
 <span role="listitem">
-<a href="https://www.linkedin.com/in/justin-yarbrough/">LinkedIn</a>
+<a href="{{item.url}}">{{item.text}}</a>
+{%- if (loop.index <= item| length - 1) %}
 <span aria-hidden="true"> | </span>
+{% endif %}
 </span>
-<span role="listitem">
-<a href="https://dragonscave.space/@jyarbrough" rel="me">Mastodon</a>
-<span aria-hidden="true"> | </span>
-</span>
-<span role="listitem">
-<a href="https://twitter.com/fatelvis04">Twitter/X</a>
-</span>
+{%- endfor %}
 </span>
 </p>
 </nav>        

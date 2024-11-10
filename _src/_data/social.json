@@ -1,5 +1,5 @@
 [
-	{"text": "LinkedIn", "https://www.linkedin.com/in/justin-yarbrough/url": "/about/"},
+	{"text": "LinkedIn","url":"https://www.linkedin.com/in/justin-yarbrough/"},
 	{"text": "Mastodon", "url": "https://dragonscave.space/@jyarbrough","rel":"me"},
 	{"text": "Twitter/X", "url": "https://www.x.com/fatelvis04"}
 ]
