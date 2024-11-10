@@ -1,6 +1,0 @@
-<ul>
-<li webc:for=(key, value) in linkListData">
-<a :href="value.url" @text="value.name"></a><br>
-<span @raw="value.desc"></span>
-</li>
-</ul>
