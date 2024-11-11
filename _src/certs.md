@@ -8,42 +8,22 @@ eleventyNavigation:
 ---
 Justin holds accessibility-related certifications from multiple organizations. You can find a list of these below.
 
-<jy-acc @level="2" @label="International Association of Accessibility Professionals">
+<jy-acc webc:for="(key, value) in pages.certs" :@label="value.issuer" @level="2">
 <ul>
-<li webc:for="(key, value) in pages.certs.iaap">
-<a :href="value.url" @text="value.name"></a>
-<ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
-</ul>
-</li>
-</ul>
-</jy-acc>
-
-<jy-acc @level="2" @label="NVAccess">
-<ul>
-<li webc:for="(key, value) in pages.certs.nvaccess">
-<a :href="value.url" @text="value.name"></a>
-<ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
-</ul>
-</li>
-</ul>
-</jy-acc>
-
-<jy-acc @level="2" @label="Freedom Scientific">
-<ul>
-<li webc:for="(key, value) in pages.certs.fs">
-<a :href="value.url" @text="value.name"></a>
-<ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
-</ul>
-</li>
-</ul>
-June 2018, last renewed December 2022
+  <script webc:type="js">
+var output= ''
+for (cert of value.cert){
+  output += `<li><a href="${cert.url}">${cert.name}</a><ul>`;
+  if  (cert.issued) {
+    output += `<li>Issued ${cert.issued}</li>`
+  } if (cert.renewed) {
+    output += `<li>Renewed ${cert.renewed}</li>`;
+  } if (cert.expires) {
+    output += `<li>Expires ${cert.expires}</li>`;
+  }
+  output += `</ul>`;
+}
+output
+    </script>
+    </ul>
 </jy-acc>
