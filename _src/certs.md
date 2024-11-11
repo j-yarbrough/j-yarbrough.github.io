@@ -13,9 +13,9 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 <li webc:for="(key, value) in pages.certs.iaap">
 <a :href="value.url" @text="value.name"></a>
 <ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+<li webc:if="value.issued">Issued <span webc:nokeep @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span webc:nokeep @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span webc:nokeep @text="value.expires"></span></li>
 </ul>
 </li>
 </ul>
@@ -26,9 +26,9 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 <li webc:for="(key, value) in pages.certs.nvaccess">
 <a :href="value.url" @text="value.name"></a>
 <ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+<li webc:if="value.issued">Issued <span webc:nokeep @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span webc:nokeep @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span webc:nokeep @text="value.expires"></span></li>
 </ul>
 </li>
 </ul>
@@ -39,11 +39,10 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 <li webc:for="(key, value) in pages.certs.fs">
 <a :href="value.url" @text="value.name"></a>
 <ul>
-<li webc:if="value.issued">Issued <span @text="value.issued"></span></li>
-<li webc:if="value.renewed">Last renewed <span @text="value.renewed"></span></li>
-<li webc:if="value.expires">Expires <span @text="value.expires"></span></li>
+<li webc:if="value.issued">Issued <span webc:nokeep @text="value.issued"></span></li>
+<li webc:if="value.renewed">Last renewed <span webc:nokeep @text="value.renewed"></span></li>
+<li webc:if="value.expires">Expires <span webc:nokeep @text="value.expires"></span></li>
 </ul>
 </li>
 </ul>
-June 2018, last renewed December 2022
 </jy-acc>
