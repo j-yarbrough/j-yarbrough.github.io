@@ -8,8 +8,7 @@ eleventyNavigation:
 ---
 Justin holds accessibility-related certifications from multiple organizations. You can find a list of these below.
 
-<div webc:nokeep webc:for="(key, value, index) in certs">
-<jy-acc :@label="value.issuer" @level="2">
+<jy-acc webc:for="(key, value) in pages.certs" :@label="value.issuer" @level="2">
 <ul>
   <script webc:type="js">
 var output= ''
@@ -28,4 +27,3 @@ output
     </script>
     </ul>
 </jy-acc>
-</div>
