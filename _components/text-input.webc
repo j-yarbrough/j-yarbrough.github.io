@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/css/text-input.css">
-<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="error" aria-hidden="true">*</span></label>
+<label :for="slugify(label)"><span webc:nokeep @text="label"></span><span webc:if="error" aria-hidden="true">*</span></label>
 <script webc:type="js" webc:root>
 if (!label) {throw new Error('text inputcomponent is missing required prop label');};
 if (!name) {throw new Error('text input component is missing required prop name');};
 function buildInput() {
-    var inputString = `<input type="text" id="${uid}" name="${name}"`;
+    var inputString = `<input type="text" id="${slugify(label)}" name="${name}"`;
     if (error) {
         inputString += ` aria-required="true"`;
     }
@@ -15,12 +15,12 @@ function buildInput() {
         inputString += ` inputmode="${inputmode}"`;
     }
     if (helper) {
-        inputString += ` aria-describedby="${uid}-helper"`;
+        inputString += ` aria-describedby="${slugify(label)}-helper"`;
     }
     inputString += `>`;
     return inputString
 }
 buildInput();
 </script>
-<p webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
-<p webc:if="helper" @text="helper" :id="uid+'-helper'"></p>
+<p webc:if="error" class="text-input-form-error" :id="slugify(label)+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
+<p webc:if="helper" @text="helper" :id="slugify(label)+'-helper'"></p>

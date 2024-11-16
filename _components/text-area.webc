@@ -1,20 +1,20 @@
 <link rel="stylesheet" href="/css/text-area.css">
-<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if"error" aria-hidden="true">*</span></label>
+<label :for="slugify(label)"><span webc:nokeep @text="label"></span><span webc:if"error" aria-hidden="true">*</span></label>
 <script webc:type="js" webc:root>
 if (!label) {throw new Error('text area component is missing required prop label');};
 if (!name) {throw new Error('text area component is missing required prop name');};
 function buildTextArea() {
-    var textAreaString = `<textarea name="${name}" id="${uid}"`;
+    var textAreaString = `<textarea name="${name}" id="${slugify(label)}"`;
     if (error) {
         textAreaString+= ` aria-required="true"`;
     }
     if (helper) {
-        textAreaString += ` aria-describedby="${uid}-helper"`;
+        textAreaString += ` aria-describedby="${slugify(label)}-helper"`;
     }
     textAreaString += `></textarea>`;
     return textAreaString
 }
 buildTextArea();
 </script>
-<p webc:if="error" class="textarea-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
-<p webc:if="helper" id="uid+'-helper'" @text="helper"></p>
+<p webc:if="error" class="textarea-form-error" :id="slugify(label)+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
+<p webc:if="helper" id="slugify(label)+'-helper'" @text="helper"></p>
