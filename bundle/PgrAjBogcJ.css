@@ -1,3 +1,78 @@
+text-input {
+    display: block;
+}
+
+input {
+    color: var(--black);
+    font-family: var(--serif);
+    border-color: var(--blue);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    caret-color: var(--blue);
+}
+
+.text-input-form-error {
+    display: none;
+}
+input[aria-invalid] {
+    border-color: var(--red);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+input[aria-invalid] ~ .text-input-form-error {
+    display: block !important;
+}
+/* separate label and input on mobile*/
+@media (max-width: 48rem) {
+label {
+    display: block;
+}
+}
+text-area {
+    display: block;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    color: var(--black);
+    font-family: var(--serif);
+    border-color: var(--blue);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+    caret-color: var(--blue);
+}
+
+.textarea-form-error {
+    display: none;
+}
+textarea[aria-invalid] {
+    border-color: var(--red);
+    border-style: solid;
+    border-width: 1px 2px 2px 1px;
+}
+textarea[aria-invalid] ~ .textarea-form-error {
+    display: block !important;
+}
+legend {
+    font-size: 1.25rem;
+    color: var(--blue);
+}
+button {
+    font-family: var(--serif);
+    display: inline-block;
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    padding: 0 8px;
+    margin-right: 8px;
+}
+button:focus {
+outline: 2px dotted var(--blue);
+outline-offset: 2px;
+}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --black: #222222;
@@ -39,9 +114,6 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 a:focus {
     outline: 2px dotted var(--white);
-}
-main li {
-    line-height: 1.5    ;
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -156,6 +228,9 @@ flex: 4;
     font-size: 2rem;
     font-weight: bold;
 }
+.more-line-height {
+    line-height: 1.5;;
+}
 .nav-links {
     list-style-type: none;
 }
@@ -204,3 +279,11 @@ flex: 4;
 }
 }
 /*end large*/
+#aria-live-region {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

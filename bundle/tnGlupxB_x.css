@@ -1,3 +1,7 @@
+.e-box {
+    padding: 8px;
+    border: 1px dotted var(--blue);
+}
 .accordion.header {
     margin-left: 8px;
 }
@@ -75,9 +79,6 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 a:focus {
     outline: 2px dotted var(--white);
-}
-main li {
-    line-height: 1.5    ;
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -191,6 +192,9 @@ flex: 4;
     color: var(--blue);
     font-size: 2rem;
     font-weight: bold;
+}
+.more-line-height {
+    line-height: 1.5;;
 }
 .nav-links {
     list-style-type: none;
