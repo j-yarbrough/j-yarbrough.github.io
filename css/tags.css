@@ -32,6 +32,3 @@ a, a:active, a:focus, a:hover, a:visited {
 a:focus {
     outline: 2px dotted var(--white);
 }
-main li {
-    line-height: 1.5    ;
-}

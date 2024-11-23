@@ -18,7 +18,7 @@ Simply put, alt text provides a text-based alternative to graphics on the web. S
 
 ## Writing Alt Text
 
-Writing good alt text can be a challenge. In my day job as an accessibility consultant, I describe writing alt text as an art rather than a science. While there are a few guiding principles based off accessibility best practices, there's also a lot of wiggle room. The following tips are based off a combination of best practices and my own personal taste:
+Writing good alt text can be a challenge. In my day job as an accessibility coach, I describe writing alt text as an art rather than a science. While there are a few guiding principles based off accessibility best practices, there's also a lot of wiggle room. The following tips are based off a combination of best practices and my own personal taste:
 
 - Be concise. Screen readers take time to read things. How long depends on that person's screen reader settings. An experienced screen reader user like myself may have theirs set to talk really fast, whereas a novice user is likely to have theirs set at a more conversational pace.
 - Don't describe every detail. Remember back in elementary school when you'd be asked to read something and determine what the main idea of the passage was? Do something similar with your images and describe what you'd like someone to take from it.
@@ -28,17 +28,7 @@ Writing good alt text can be a challenge and may seem hard at first. Like anythi
 
 ## How do I add alt text on social media?
 
-The different social media platforms all have help articles describing how to add alt text to images. You can find those articles here:
-
-- [Facebook](https://www.facebook.com/help/214124458607871)
-- [Instagram](https://help.instagram.com/503708446705527)
-- [LinkedIn](https://www.linkedin.com/help/linkedin/answer/109799/adding-alternative-text-to-images-for-accessibility?lang=en)
-- [Mastodon](https://edtechfactotum.com/adding-alt-text-and-more-to-images-in-mastodon/) Please note that this is not an official help article.
-- Twitter:
-    - [How to add alt text on Twitter](https://help.twitter.com/en/using-twitter/picture-descriptions)
-    - [Enabling Twitter's alt text reminder](https://help.twitter.com/en/using-twitter/set-image-description-reminder) which will prompt you to add alt text if you try to send a tweet without it.
-
-Many third party social media apps also support adding alt text to images. You should be able to find instructions by doing a quick Google search. If your preferred app does not support adding alt text, then maybe it's time for a change.
+The folks over at [Accessible Social](https://www.accessible-social.com/) have a guide on [how to add alt text on multiple platforms.](https://www.accessible-social.com/images-and-visuals/platform-image-accessibility)
 
 ## Examples
 
@@ -86,10 +76,4 @@ With the advent of alt text support on major social media platforms, it's easier
 
 ## More Resources
 
-<ul>
-<li webc:for="(key, value) in pages.writing.altTextResources">
-<a :href="value.address" @text="value.name"></a>
-<br>
-<span webc:nokeep @raw="value.desc"></span>
-</li>
-</ul>
+<link-list :@data="pages.writing.altTextResources"></link-list>>
