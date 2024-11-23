@@ -88,8 +88,8 @@ With the advent of alt text support on major social media platforms, it's easier
 
 <ul>
 <li webc:for="(key, value) in pages.writing.altTextResources">
-<a :href="value.url" @text="value.name"></a>
+<a :href="value.address" @text="value.name"></a>
 <br>
-<span @raw="value.desc"></span>
+<span webc:nokeep @raw="value.desc"></span>
 </li>
 </ul>
