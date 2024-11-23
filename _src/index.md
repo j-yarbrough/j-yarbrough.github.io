@@ -37,7 +37,7 @@ You can connect with Justin on the following social media networks:
 
 <ul>
 <!---Loop to build list for all social media--->
-<li webc:for="(key, value) in social">
+<li class="more-line-height" webc:for="(key, value) in social">
 <a :href="value.url" :rel="value.rel" @text="value.text"></a>
 </li>
 </ul>

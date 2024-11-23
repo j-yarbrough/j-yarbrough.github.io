@@ -16,7 +16,7 @@ If you would like Justin to appear on your podcast you can [contact him](/contac
 <script webc:type="js">
 var output="";
 for (item of value.items) {
-  output +=`<li class="link-list">`;
+  output +=`<li>`;
   output += `<a href="$item.address}">`;
   output += `${item.title}`;
   output += `</a><br>`;
