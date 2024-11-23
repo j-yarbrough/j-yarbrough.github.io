@@ -1,0 +1,7 @@
+<ul>
+<li class="link-list" webc:for="(key, value) in data">
+<a :href="value.address" @raw="value.title"></a>
+<br>
+<span webc:nokeep @raw="value.desc"></span>
+</li>
+</ul>

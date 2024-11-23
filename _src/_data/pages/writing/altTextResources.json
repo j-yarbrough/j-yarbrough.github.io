@@ -1,11 +1,11 @@
 [
     {
-        "name":"Alt Text article from WebAIM",
+        "title":"Alt Text article from WebAIM",
         "address":"https://webaim.org/techniques/alttext/",
         "desc":"Article from WebAIM discussing the basics of alt text in a wider context."
     },
     {
-        "name":"Justin Yarbrough talks about alt text",
+        "title":"Justin Yarbrough talks about alt text",
         "address":"https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/",
         "desc":"A podcast in which I discuss the importance of using alt text on social media during public health and other emergencies as well as other accessibility-related topics."
     }
