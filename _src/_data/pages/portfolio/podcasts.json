@@ -1,0 +1,65 @@
+[
+    {
+        "publisher":"A11y Rules Soundbites",
+        "items":
+        [
+            {
+                "title":"Justin Yarbrough talks about alt text",
+                "address":"https://a11yrules.com/podcast/justin-yarbrough-talks-about-alt-text/",
+                "desc":"Justin discusses the importance of using alt text and thinking outside of our own use case."
+            },{
+                "title":"Justin Yarbrough talks about form validation and screen readers",
+                "address":"https://a11yrules.com/podcast/justin-yarbrough-talks-about-form-validation-and-screen-readers/",
+                "desc":"Justin talks about the importance of providing clear and concise error messages within form validation and the best form validation patterns for screen reader users."
+            }
+        ]
+    },{
+        "publisher":"Next Trip Podcast",
+        "items":
+        [
+            {
+                "title":"Boarding Pass 013: Airline Accessibility",
+                "address":"https://podcasts.apple.com/us/podcast/boarding-pass-013-airline-accessibility/id1490032141?i=1000466483434",
+                "desc":"Justin discusses the accessible seat-back entertainment system United is starting to roll out on aircraft and the US Department of Transportation's proposed changes to regulations surrounding flying with a service animal."
+            },{
+                "title":"Boarding Pass 029: Where did my Dog Drop a Nugget?",
+                "address":"https://podcasts.apple.com/us/podcast/boarding-pass-029-where-did-my-dog-drop-a-nugget/id1490032141?i=1000478092482",
+                "desc":"Justin discusses his <a href=\"https://runwaygirlnetwork.com/2020/05/24/flying-blind-in-a-post-pandemic-world-its-complicated/\">Runway Girl article about flying as a blind passenger during the early days of the pandemic</a> and other aviation-related topics."
+            },{
+                "title":"Boarding Pass 059: Dogs on a Plane",
+                "address":"https://podcasts.apple.com/us/podcast/boarding-pass-059-dogs-on-a-plane/id1490032141?i=1000505025762",
+                "desc":"Justin discusses the new US Department of Transportation regulations surrounding flying with a service animal on the eve of their going into effect."
+            }
+        ]
+    },{
+        "publisher":"Non-rev Lounge",
+        "items":
+        [
+            {
+                "title":"#10 Mountain Goating in Dublin",
+                "address":"https://www.buzzsprout.com/1520842/7625287-10-mountain-goating-in-dublin?t=0",
+                "desc":"Justin and his wife Jen talk about their travels, including the challenges associated with traveling as a blind person."
+            }
+        ]
+    },{
+        "publisher":"That Real Blind Tech Show",
+        "items":
+        [
+            {
+                "title":"Episode 115 - Axe-Con 2023 Is Here, Get To Know Deque Systems Justin Yarbrough",
+                "address":"https://thatrealblindtechshow.libsyn.com/episode-115-axe-con-2023-is-here-get-to-know-deque-systems-justin-yarbrough",
+                "desc":"Justin speaks with Brian and Ed about his panel for axe-con 2023, his work in accessibility, and a plethora of other blindness and accessibility-related topics."
+            }
+        ]
+    },{
+        "publisher":"Working Blind",
+        "items":
+        [
+            {
+                "title":"Episode 6 - Justin Yarbrough, Digital Accessibility Specialist",
+                "address":"https://catchthesewords.com/working-blind-episode-6-justin-yarbrough-digital-accessibility-specialist/",
+                "desc":"Justin discusses his work in digital accessibility at a community college."
+            }
+        ]
+    }
+]
