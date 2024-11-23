@@ -1,13 +1,21 @@
 <nav class="primary-nav" id="nav" aria-label="Primary">
-<!--nav for mobile/tablet-->
-<div id="nav-mobile">
-<details id="nav-details">
-<summary id="nav-btn">Navigation</summary>
-{% include "layouts/nav-main-links.njk" %}
-</details>
-</div>
-<!--nav for desktop-->
-<div id="nav-desktop">
-{% include "layouts/nav-main-links.njk" %}
-</div>
+{% renderTemplate "webc" %}
+<nav-main webc:nokeep></nav-main>
+{% endrenderTemplate %}
+{% set navPages = collections.all | eleventyNavigation %}
+<ul id="nav-links" role="list" class="nav-links">
+{%- for entry in navPages %}
+{%- if (loop.index <= site.mainNavLinkCount) %}
+<li class="nav-links-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+{%- if entry.url != page.url %}
+<a href="{{ entry.url }}">
+{% endif %}
+{{ entry.title }}
+{%- if entry.url != page.url %}
+</a>
+{% endif %}
+</li>
+{% endif %}
+{%- endfor %}
+</ul>
 </nav>
