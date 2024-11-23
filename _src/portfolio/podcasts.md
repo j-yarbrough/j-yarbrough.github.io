@@ -27,3 +27,5 @@ output;
 </script>
 </ul>
 </jy-acc>
+
+Please note that Justin has no control over the accessibility of any links to third-party sites
