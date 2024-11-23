@@ -13,12 +13,12 @@ if (((!level)&& (label)) || ((!label) && (level))) {
 ``
 </script>
 <!---if ebox has label--->
-<section webc:if="label" class="e-box" :aria-labelledby="slugify(label)">
-<h2 webc:if="{level == 2}" @text="label" :id="slugify(label)"></h2>
-<h3 webc:elseif="{level == 3}" @text="label" :id="slugify(label)"></h3>
-<h4 webc:elseif="{level == 4}" @text="label" :id="slugify(label)"></h4>
-<h5 webc:elseif="{level == 5}" @text="label" :id="slugify(label)"></h5>
-<h6 webc:elseif="{level == 6}" @text="label" :id="slugify(label)"></h6>
+<section webc:if="label" class="e-box" :aria-labelledby="uid">
+<h2 webc:if="{level == 2}" @text="label" :id="uid"></h2>
+<h3 webc:elseif="{level == 3}" @text="label" :id="uid"></h3>
+<h4 webc:elseif="{level == 4}" @text="label" :id="uid"></h4>
+<h5 webc:elseif="{level == 5}" @text="label" :id="uid"></h5>
+<h6 webc:elseif="{level == 6}" @text="label" :id="uid"></h6>
 <slot></slot>
 </section>
 <!---If no label--->
