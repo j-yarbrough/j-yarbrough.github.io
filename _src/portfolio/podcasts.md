@@ -12,9 +12,7 @@ Below you will find a listing of podcasts in which Justin has appeared. To see o
 If you would like Justin to appear on your podcast you can [contact him](/contact).
 
 <jy-acc webc:for="(key, value) in pages.portfolio.podcasts" @level="2" :@label="value.publisher">
-<script webc:type="js">
-  `<link-list :@data="value.items"></link-list>`
-</script>
+  <link-list :@data="value.items"></link-list>
 </jy-acc>
 
 Please note that Justin has no control over the accessibility of any links to third-party sites

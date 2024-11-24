@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="/css/link-list.css">
 <ul>
 <li webc:for="(key, value) in data">
-<a :href="value.address" @raw="value.title"></a>
+<a class="link-list-link" :href="value.address" @raw="value.title"></a>
 <br>
 <span webc:nokeep @raw="value.desc"></span>
 </li>

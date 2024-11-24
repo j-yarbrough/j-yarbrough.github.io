@@ -11,9 +11,8 @@ Below you will find a listing of articles Justin has written. To see other work 
 If you would like to have Justin write something for you, you can [contact him](/contact).
 
 <jy-acc webc:for="(key, value) in pages.portfolio.writing" @level="2" :@label="value.publisher">
-<script webc:type="js">
-  `<link-list :@data="value.items"></link-list>`
-</script>
+  <link-list :@data="value.items"></link-list>
+
 </jy-acc>
 
 Please note that Justin has no control over the accessibility of any links to third-party sites
