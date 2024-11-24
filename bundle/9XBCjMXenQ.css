@@ -1,6 +1,5 @@
-.e-box {
-    padding: 8px;
-    border: 1px dotted var(--blue);
+.link-list-link {
+    font-weight: bold;
 }
 .accordion.header {
     margin-left: 8px;
