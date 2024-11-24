@@ -1,11 +1,11 @@
 [
     {
-        "section":"Media quoting Justin",
+        "primarysec":"Media quoting Justin",
         "slug":"This is a non-exhaustive collection of media quoting Justin. Media featuring Justin in a larger role can be found in the other sections of this page.",
-        "subsections":
+        "subsec":
         [
             {
-                "subhead":"InAccessible",
+                "publisher":"InAccessible",
                 "items":
                 [
                     {
@@ -15,7 +15,7 @@
                     }
                 ]
             },{
-                "subhead":"Inclusive Communication",
+                "publisher":"Inclusive Communication",
                 "items":
                 [
                     {
@@ -25,7 +25,7 @@
                     }
                 ]
             },{
-                "subhead":"Runway Girl",
+                "publisher":"Runway Girl",
                 "items":
                 [
                     {
@@ -37,11 +37,11 @@
             }
         ]
     },{
-        "section":"Profiles",
-        "subsections":
+        "primarysec":"Profiles",
+        "subsec":
         [
             {
-                "subhead":"The Athletic",
+                "publisher":"The Athletic",
                 "items":
                 [
                     {
@@ -53,11 +53,11 @@
             }
         ]
     },{
-        "section":"Videos",
-        "subsections":
+        "primarysec":"Videos",
+        "subsec":
         [
             {
-                "subhead":"axe-con",
+                "publisher":"axe-con",
                 "items":
                 [
                     {
@@ -67,7 +67,7 @@
                     }
                 ]
             },{
-                "subhead":"Rio Salado College",
+                "publisher":"Rio Salado College",
                 "items":[
                     {
                         "title":"Living with Blindness: Interview with Justin Yarbrough",
