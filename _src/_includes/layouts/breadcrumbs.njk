@@ -5,9 +5,16 @@
 <nav id="breadcrumbs" aria-label="breadcrumbs">
 You are here: 
 <span role="list">
+<span role="listitem">
+<a href="/">Home</a>
+<span aria-hidden="true">&rarr;</span>
+</span>
 {% set crumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
 {% for crumb in crumbs %}
-  <span role="listitem"><a href="{{ crumb.url | url }}">{{ crumb.title }}</a><span aria-hidden="true">&rarr;</span></span>
+  <span role="listitem">
+  <a href="{{ crumb.url | url }}">{{ crumb.title }}</a>
+  <span aria-hidden="true">&rarr;</span>
+  </span>
 {% endfor %}
 <span role="listitem" aria-current="page">{{ eleventyNavigation.key }}</span>
 </span>
