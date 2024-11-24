@@ -1,3 +1,21 @@
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
+}
+}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --black: #222222;
@@ -49,6 +67,9 @@ a:focus {
     height: 1px;
     overflow: hidden;
 }
+#nav {
+    padding: 8px 0;
+}
 footer {
     font-size: smaller;
     }
@@ -60,9 +81,6 @@ footer {
 }
 .footer-nav-list-item-separator {
     font-weight: normal;
-}
-#nav {
-    padding: 8px 0;
 }
 .white-background {
     background-color: var(--white);
@@ -82,14 +100,6 @@ footer {
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--blue);
-}
-#breadcrumbs {
-    font-size: smaller;
-    color: var(--blue);
-}
-
-#breadcrumbs a[aria-current="page"] {
-    font-weight: bold;
 }
 /* small*/
 @media (max-width: 48rem) {
@@ -204,3 +214,7 @@ flex: 4;
 }
 }
 /*end large*/
+.e-box {
+    padding: 8px;
+    border: 1px dotted var(--blue);
+}
