@@ -3,6 +3,6 @@
     color: var(--blue);
 }
 
-#breadcrumbs a[aria-current="page"] {
+#breadcrumbs span[aria-current="page"] {
     font-weight: bold;
 }
