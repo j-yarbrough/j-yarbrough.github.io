@@ -6,7 +6,7 @@ eleventyNavigation:
   parent: Portfolio
   order: 4
 ---
-<p>Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his < a href="/portfolio">portfolio page</a>.</p>
+<p>Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his <a href="/portfolio">portfolio page</a>.</p>
 
 <div webc:nokeep webc:for="(key, value) in pages.portfolio.othermedia" >
 <jy-acc @level="2" :@label="value.primarysec">
