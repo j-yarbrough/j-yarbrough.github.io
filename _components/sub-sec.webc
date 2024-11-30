@@ -1,4 +1,4 @@
-<div webc:nokeep webc:for"(key, value) in data">
-<h3 @text="value.publisher"></h3>
+<div webc:nokeep webc:for="(key, value) in data">
+<h3><span webc:nokeep @text="value.publisher"></span></h3>
 <link-list :@data="value.items"></link-list>
 </div>
