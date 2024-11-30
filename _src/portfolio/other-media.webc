@@ -1,15 +1,12 @@
 ---
 title: Other Media
 layout: layouts/base.njk
-templateEngineOverride: webc,md
 eleventyNavigation:
   key: Other Media
   parent: Portfolio
   order: 4
 ---
-Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his [portfolio page](/portfolio/).
-
-If you would like Justin to  appear on your media project you can [contact him](/contact).
+Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his < a href="/portfolio">portfolio page</a>.
 
 <div webc:nokeep webc:for="(key, value) in pages.portfolio.othermedia" >
 <jy-acc @level="2" :@label="value.primarysec">
