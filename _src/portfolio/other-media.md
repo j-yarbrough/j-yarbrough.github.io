@@ -11,8 +11,10 @@ Below you will find a listing of videos and other media in which Justin has appe
 
 If you would like Justin to  appear on your media project you can [contact him](/contact).
 
-<jy-acc webc:for="(key, value) in pages.portfolio.othermedia" @level="2" :@label="value.primarysec">
+<div webc:nokeep webc:for="(key, value) in pages.portfolio.othermedia" >
+<jy-acc @level="2" :@label="value.primarysec">
 <p webc:if="value.slug" @text="value.slug"></p>
 <sub-sec :@data="value.subsec"></sub-sec>
 </jy-acc>
+</div>
 Please note that Justin has no control over the accessibility of any links to third-party sites
