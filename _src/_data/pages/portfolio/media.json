@@ -1,6 +1,6 @@
 [
     {
-        "primarysec":"Media quoting Justin",
+        "mainsection":"Media quoting Justin",
         "slug":"This is a non-exhaustive collection of media quoting Justin. Media featuring Justin in a larger role can be found in the other sections of this page.",
         "subsec":
         [
@@ -37,7 +37,7 @@
             }
         ]
     },{
-        "primarysec":"Profiles",
+        "mainsection":"Profiles",
         "subsec":
         [
             {
@@ -53,7 +53,7 @@
             }
         ]
     },{
-        "primarysec":"Videos",
+        "mainsection":"Videos",
         "subsec":
         [
             {

@@ -8,6 +8,6 @@ eleventyNavigation:
 ---
 <p>Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his <a href="/portfolio">portfolio page</a>.</p>
 
-<div webc:for="(key, value) in pages.portfolio.othermedia" @text="value.primarysec"></div>
+<div webc:for="(key, value) in pages.portfolio.media" @text="value.primarysec"></div>
 
 <p>Please note that Justin has no control over the accessibility of any links to third-party sites</p>
