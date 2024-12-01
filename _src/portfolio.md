@@ -17,7 +17,7 @@ Because Justin has done such a wide variety of things throughout his time in acc
 - [Writing](/portfolio/writing/)
 - [Speaking](/portfolio/speaking/)
 - [Podcasts](/portfolio/podcasts/)
-- [Other Media](/portfolio/other-media/)
+- [Other Media](/portfolio/media/)
 
 </div>
 
