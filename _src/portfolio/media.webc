@@ -11,6 +11,7 @@ eleventyNavigation:
 <div webc:for="(key, value) in pages.portfolio.media" >
 <jy-acc @level="2" :@label="value.mainsection">
 <p webc:if="value.slug" @text="value.slug"></p>
+<sub-sec :@data="value.subsec"></sub-sec>
 </jy-acc>
 </div>
 
