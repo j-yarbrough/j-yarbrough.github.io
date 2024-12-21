@@ -28,6 +28,7 @@
 <p class="header-first-line"@text="site.siteName"></p>
 <p @text="site.tagline"></p>
 </header>
+<!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main webc:nokeep></nav-main>
@@ -50,7 +51,16 @@
 </template>
 </ul>
 </nav>
+<div class="white-background" id="main">
+<!---breadcrumbs todo--->
+<main>
+<h1 webc:if="h1" id="main-heading" @text="h1"></h1>
+<h1 webc:else id="main-heading" @text="title"></h1>
+<template webc:nokeep @raw="content"></template>
+</main>
 </div>
+</div>
+<!---end responsive wrapper--->
     <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>
