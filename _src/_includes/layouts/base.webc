@@ -62,7 +62,15 @@
 </div>
 <!---end responsive wrapper--->
 <footer id="footer" tabindex="-1">
+<nav aria-label="footer">
 
+</nav>      
+<p>
+Connect with <span webc:nokeep @text="site.authorFirstName"></span>: 
+<span role="list">
+<span role="listitem" webc:for="(key, value) in social"><a :href="value.url" :rel="value.rel" @text="value.text"></a> </span>
+</span>
+</p>
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 </footer>
     <script :src="getBundleFileUrl('js')" webc:keep></script>
