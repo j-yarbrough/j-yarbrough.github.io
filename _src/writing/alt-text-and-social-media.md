@@ -1,6 +1,6 @@
 ---
 title: Alt Text and Social Media
-layout: layouts/base.njk
+layout: layouts/base.webc
 templateEngineOverride: webc, md
 eleventyNavigation:
   key: Alt Text and Social Media

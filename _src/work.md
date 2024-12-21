@@ -1,6 +1,6 @@
 ---
 title: Work Experience
-layout: layouts/base.njk
+layout: layouts/base.webc
 templateEngineOverride: webc,md
 eleventyNavigation:
   key: Work Experience

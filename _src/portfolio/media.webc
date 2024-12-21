@@ -1,6 +1,6 @@
 ---
 title: Other Media
-layout: layouts/base.njk
+layout: layouts/base.webc
 eleventyNavigation:
   key: Other Media
   parent: Portfolio
