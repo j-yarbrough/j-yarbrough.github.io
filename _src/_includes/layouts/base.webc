@@ -98,6 +98,7 @@
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
+<aria-live webc:if="hasAriaLive"></aria-live>
     <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>
