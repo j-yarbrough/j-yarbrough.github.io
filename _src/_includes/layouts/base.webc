@@ -15,19 +15,42 @@
 <link rel="stylesheet" href="/css/classes.css">
 </head>
 <body>
-    <div id="skip-links" role="list">
-        <span role="listitem">
-        <a href="#main-heading">Skip to Main Content</a> 
-        <span aria-hidden="true"> | </span>
-        </span>
-        <span role="listitem">
-        <a href="#footer">Skip to Footer</a>
-        </span>
-        </div>
-        <header class="white-background">
-            <p class="header-first-line"@text="site.siteName"></p>
-            <p @text="site.tagline"></p>
-        </header>
+<div id="skip-links" role="list">
+<span role="listitem">
+<a href="#main-heading">Skip to Main Content</a> 
+<span aria-hidden="true"> | </span>
+</span>
+<span role="listitem">
+<a href="#footer">Skip to Footer</a>
+</span>
+</div>
+<header class="white-background">
+<p class="header-first-line"@text="site.siteName"></p>
+<p @text="site.tagline"></p>
+</header>
+<div id="wrapper">
+<nav class="primary-nav" id="nav" aria-label="Primary">
+<nav-main webc:nokeep></nav-main>
+<ul id="nav-links" role="list" class="nav-links">
+<template webc:type="11ty" 11ty:type="njk">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+{%- if (loop.index <= site.mainNavLinkCount) %}
+<li class="nav-links-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+{%- if entry.url != page.url %}
+<a href="{{ entry.url }}">
+{% endif %}
+{{ entry.title }}
+{%- if entry.url != page.url %}
+</a>
+{% endif %}
+</li>
+{% endif %}
+{%- endfor %}
+</template>
+</ul>
+</nav>
+</div>
     <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>
