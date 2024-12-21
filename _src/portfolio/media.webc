@@ -1,6 +1,6 @@
 ---
 title: Other Media
-layout: layouts/base.njk
+layout: layouts/base.webc
 eleventyNavigation:
   key: Other Media
   parent: Portfolio
@@ -8,7 +8,7 @@ eleventyNavigation:
 ---
 <p>Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his <a href="/portfolio">portfolio page</a>.</p>
 
-<div webc:for="(key, value) in pages.portfolio.media" >
+<div webc:nokeep webc:for="(key, value) in pages.portfolio.media" >
 <jy-acc @level="2" :@label="value.mainsection">
 <p webc:if="value.slug" @text="value.slug"></p>
 <sub-sec :@data="value.subsec"></sub-sec>

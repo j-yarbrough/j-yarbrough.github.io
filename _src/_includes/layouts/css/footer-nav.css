@@ -1,0 +1,12 @@
+footer {
+    font-size: smaller;
+    }
+    #footer-nav-list {
+        list-style-type: none;
+    }
+    .footer-nav-list-item[aria-current="page"] {
+    font-weight: bold;
+}
+.footer-nav-list-item-separator {
+    font-weight: normal;
+}

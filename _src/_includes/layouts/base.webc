@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title @text="`${title} - ${site.siteName}`"></title>
+    <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep />
+    <link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/tags.css">
+<link rel="stylesheet" href="/css/skip-links.css">
+<link rel="stylesheet" href="/css/main-nav.css">
+<link rel="stylesheet" href="/css/footer-nav.css">
+<link rel="stylesheet" href="/css/white-background.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/classes.css">
+</head>
+<body>
+<div id="skip-links" role="list">
+<span role="listitem">
+<a href="#main-heading">Skip to Main Content</a> 
+<span aria-hidden="true"> | </span>
+</span>
+<span role="listitem">
+<a href="#footer">Skip to Footer</a>
+</span>
+</div>
+<header class="white-background">
+<p class="header-first-line"@text="site.siteName"></p>
+<p @text="site.tagline"></p>
+</header>
+<!---wrapper that creates side-by-side for desktop--->
+<div id="wrapper">
+<nav class="primary-nav" id="nav" aria-label="Primary">
+<nav-main webc:nokeep></nav-main>
+<ul id="nav-links" role="list" class="nav-links">
+<template webc:type="11ty" 11ty:type="njk">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+{%- if (loop.index <= site.mainNavLinkCount) %}
+<li class="nav-links-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+{%- if entry.url != page.url %}
+<a href="{{ entry.url }}">
+{% endif %}
+{{ entry.title }}
+{%- if entry.url != page.url %}
+</a>
+{% endif %}
+</li>
+{% endif %}
+{%- endfor %}
+</template>
+</ul>
+</nav>
+<div class="white-background" id="main">
+<!---breadcrumbs todo--->
+<main>
+<h1 id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
+<template webc:nokeep @raw="content"></template>
+</main>
+</div>
+</div>
+<!---end responsive wrapper--->
+<footer id="footer" tabindex="-1">
+<template webc:type="11ty" 11ty:type="njk">
+    <nav aria-label="footer">
+        <p role="list" id="footer-nav-list">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+        <span role="listitem" class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+        {%- if entry.url != page.url %}
+        <a href="{{ entry.url }}">
+        {% endif %}
+        {{ entry.title }}
+        {%- if entry.url != page.url %}
+        </a>
+        {% endif %}
+        {%- if (loop.index <= navPages | length - 1) %}
+        <span class="footer-nav-list-item-separator" aria-hidden="true"> | </span>
+        {% endif %}
+        </span>
+        {%- endfor %}
+        </p>
+        <p>
+        Connect with {{site.authorFirstName}}: 
+        <span role="list">
+        {% for item in social %}
+        <span role="listitem">
+        <a href="{{item.url}}">{{item.text}}</a>
+        {%- if (loop.index <= item| length - 1) %}
+        <span aria-hidden="true"> | </span>
+        {% endif %}
+        </span>
+        {%- endfor %}
+        </span>
+        </p>
+        </nav>        
+</template>
+<p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
+<p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
+</footer>
+<aria-live webc:if="hasAriaLive"></aria-live>
+    <script :src="getBundleFileUrl('js')" webc:keep></script>
+</body>
+</html>

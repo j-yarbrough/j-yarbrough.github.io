@@ -1,7 +1,7 @@
 ---
 title: Contact
 H1: Contact Justin
-layout: layouts/base.njk
+layout: layouts/base.webc
 hasAriaLive: true
 eleventyNavigation:
   key: Contact

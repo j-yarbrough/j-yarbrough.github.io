@@ -1,6 +1,6 @@
 ---
 title: Site Map
-layout: layouts/base.njk
+layout: layouts/base.webc
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Site Map
