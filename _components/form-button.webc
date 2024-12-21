@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/form-button.css">
-<script webc:type="js" webc:root>
+<script webc:type="js">
 if (!label) {throw new Error('form button component is missing required label');};
 ``
 </script>

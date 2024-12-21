@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/figgy-cap.css">
-<script webc:type="js" webc:root>
+<script webc:type="js">
 if (!alt) {throw new Error('figgy cap component missing required prop alt');};
 if (!src) {throw new Error('figgy cap component missing required prop src');};
 ``
