@@ -15,7 +15,19 @@
 <link rel="stylesheet" href="/css/classes.css">
 </head>
 <body>
-    
+    <div id="skip-links" role="list">
+        <span role="listitem">
+        <a href="#main-heading">Skip to Main Content</a> 
+        <span aria-hidden="true"> | </span>
+        </span>
+        <span role="listitem">
+        <a href="#footer">Skip to Footer</a>
+        </span>
+        </div>
+        <header class="white-background">
+            <p class="header-first-line"@text="site.siteName"></p>
+            <p @text="site.tagline"></p>
+        </header>
     <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>
