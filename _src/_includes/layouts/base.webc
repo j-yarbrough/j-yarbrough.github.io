@@ -63,7 +63,17 @@
 <!---end responsive wrapper--->
 <footer id="footer" tabindex="-1">
 <nav aria-label="footer">
-
+<template webc:type="11ty" 11ty:type="njk">
+<span role="list" id="footer-nav-list">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+<span role="listitem" class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+{%- if entry.url != page.url %}<a href="{{ entry.url }}">{% endif %}
+{{ entry.title }}
+{%- if entry.url != page.url %}</a>{% endif %} </span>
+{%- endfor %}
+</span>
+</template>
 </nav>      
 <p>
 Connect with <span webc:nokeep @text="site.authorFirstName"></span>: 
