@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title @text="`${title} - ${site.siteName}`"></title>
+    <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep />
+    <link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/tags.css">
+<link rel="stylesheet" href="/css/skip-links.css">
+<link rel="stylesheet" href="/css/main-nav.css">
+<link rel="stylesheet" href="/css/footer-nav.css">
+<link rel="stylesheet" href="/css/white-background.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link rel="stylesheet" href="/css/classes.css">
 </head>
 <body>
     
+    <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>
