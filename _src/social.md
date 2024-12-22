@@ -2,7 +2,7 @@
 title: Social Media Links
 layout: layouts/base.webc
 templateEngineOverride: webc,md
-includeBreadcrumbs: false
+noBreadcrumbs: true
 ---
 Justin can be found on the following social media platforms:
 <ul>

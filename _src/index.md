@@ -3,7 +3,7 @@ title: Home
 H1: About Justin
 layout: layouts/base.webc
 templateEngineOverride: webc,md
-includeBreadcrumbs: false
+noBreadcrumbs: true
 eleventyNavigation:
   key: Home
   order: 0

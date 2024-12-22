@@ -26,7 +26,7 @@ There are template variations that can be automatically used based on front matt
 - H1: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title value will be used.
-- includeBreadcrumbs: false will exclude breadcrumbs from the page.
+- noBreadcrumbs: true will exclude breadcrumbs from the page.
 
 ## .webc components
 
