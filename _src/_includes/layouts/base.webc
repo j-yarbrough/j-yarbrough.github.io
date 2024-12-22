@@ -52,9 +52,8 @@
 </ul>
 </nav>
 <div class="white-background" id="main">
-<!---breadcrumbs todo--->
 <main>
-<h1 id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
+<h1 tabindex="-1" id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
 <template webc:nokeep @raw="content"></template>
 </main>
 </div>
@@ -62,38 +61,38 @@
 <!---end responsive wrapper--->
 <footer id="footer" tabindex="-1">
 <template webc:type="11ty" 11ty:type="njk">
-    <nav aria-label="footer">
-        <p role="list" id="footer-nav-list">
-        {% set navPages = collections.all | eleventyNavigation %}
-        {%- for entry in navPages %}
-        <span role="listitem" class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
-        {%- if entry.url != page.url %}
-        <a href="{{ entry.url }}">
-        {% endif %}
-        {{ entry.title }}
-        {%- if entry.url != page.url %}
-        </a>
-        {% endif %}
-        {%- if (loop.index <= navPages | length - 1) %}
-        <span class="footer-nav-list-item-separator" aria-hidden="true"> | </span>
-        {% endif %}
-        </span>
-        {%- endfor %}
-        </p>
-        <p>
-        Connect with {{site.authorFirstName}}: 
-        <span role="list">
-        {% for item in social %}
-        <span role="listitem">
-        <a href="{{item.url}}">{{item.text}}</a>
-        {%- if (loop.index <= item| length - 1) %}
-        <span aria-hidden="true"> | </span>
-        {% endif %}
-        </span>
-        {%- endfor %}
-        </span>
-        </p>
-        </nav>        
+<nav aria-label="footer">
+<p role="list" id="footer-nav-list">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+<span role="listitem" class="footer-nav-list-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+{%- if entry.url != page.url %}
+<a href="{{ entry.url }}">
+{% endif %}
+{{ entry.title }}
+{%- if entry.url != page.url %}
+</a>
+{% endif %}
+{%- if (loop.index <= navPages | length - 1) %}
+<span class="footer-nav-list-item-separator" aria-hidden="true"> | </span>
+{% endif %}
+</span>
+{%- endfor %}
+</p>
+<p>
+Connect with {{site.authorFirstName}}: 
+<span role="list">
+{% for item in social %}
+<span role="listitem">
+<a href="{{item.url}}">{{item.text}}</a>
+{%- if (loop.index <= item| length - 1) %}
+<span aria-hidden="true"> | </span>
+{% endif %}
+</span>
+{%- endfor %}
+</span>
+</p>
+</nav>        
 </template>
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
