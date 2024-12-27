@@ -1,8 +1,0 @@
-#breadcrumbs {
-    font-size: smaller;
-    color: var(--blue);
-}
-
-#breadcrumbs span[aria-current="page"] {
-    font-weight: bold;
-}

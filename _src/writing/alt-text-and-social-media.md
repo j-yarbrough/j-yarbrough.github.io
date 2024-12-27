@@ -76,4 +76,4 @@ With the advent of alt text support on major social media platforms, it's easier
 
 ## More Resources
 
-<link-list :@data="pages.writing.altTextResources"></link-list>>
+<link-list :@data="pages.writing.altTextResources"></link-list>

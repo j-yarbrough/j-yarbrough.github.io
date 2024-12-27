@@ -32,3 +32,7 @@ a, a:active, a:focus, a:hover, a:visited {
 a:focus {
     outline: 2px dotted var(--white);
 }
+dt {
+    font-weight: bold;
+    color: var(--blue);
+}
