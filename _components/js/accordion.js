@@ -8,7 +8,7 @@ accordionButtons.forEach((accordionButtons) => {
 function triggerAccordion() {
     var accordionContainer = this.parentElement.parentElement;
     var accordionHeading = accordionContainer.querySelector('.accordion-header');
-    var accordionPanel = accordionContainer.querySelector('.accordion-panel');
+    var accordionPanel = document.querySelector('#' + this.getAttribute('aria-controls'));
     var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
     switch (this.ariaExpanded) {
         case 'true': this.ariaExpanded = false;

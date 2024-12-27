@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/accordion.css">
-<script webc:type="js" webc:root>
+<script webc:type="js">
 if (!label) {throw new Error('jy-acc component is missing required prop label');};
 ``
 </script>
