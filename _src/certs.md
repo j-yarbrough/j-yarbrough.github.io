@@ -9,21 +9,20 @@ eleventyNavigation:
 Justin holds accessibility-related certifications from multiple organizations. You can find a list of these below.
 
 <jy-acc webc:for="(key, value) in pages.certs" :@label="value.issuer" @level="2">
+<dl>
 <script webc:type="js">
 var output= '';
 for (cert of value.cert){
-  output += `<h3><a href="${cert.url}">${cert.name}</a><h3>`;
-  output += `<ul>`;
+  output += `<dt><a href="${cert.url}">${cert.name}</a><dt>`;
   if  (cert.issued) {
-    output += `<li>Issued ${cert.issued}</li>`
+    output += `<dd>Issued ${cert.issued}</dd>`
   } if (cert.renewed) {
-    output += `<li>Renewed ${cert.renewed}</li>`;
+    output += `<dd>Renewed ${cert.renewed}</dd>`;
   } if (cert.expires) {
-    output += `<li>Expires ${cert.expires}</li>`;
+    output += `<dd>Expires ${cert.expires}</dd>`;
   }
-  output += `</ul>`;
 }
 output
     </script>
-  
+  </dl>
 </jy-acc>
