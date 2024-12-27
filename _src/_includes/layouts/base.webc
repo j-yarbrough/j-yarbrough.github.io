@@ -31,7 +31,7 @@
 <!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
-<nav-main webc:nokeep></nav-main>
+<nav-main>
 <ul id="nav-links" role="list" class="nav-links">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
@@ -50,6 +50,7 @@
 {%- endfor %}
 </template>
 </ul>
+</nav-main>
 </nav>
 <div class="white-background" id="main">
 <main>
