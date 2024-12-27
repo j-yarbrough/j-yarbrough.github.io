@@ -1,6 +1,6 @@
 // Script for accordions
 
-var accordionButtons = document.querySelectorAll('.accordion-button');
+var accordionButtons = document.querySelectorAll('#nav-btn, .accordion-button');
 accordionButtons.forEach((accordionButtons) => {
     accordionButtons.addEventListener('click',triggerAccordion)
 });
@@ -8,17 +8,19 @@ accordionButtons.forEach((accordionButtons) => {
 function triggerAccordion() {
     var accordionContainer = this.parentElement.parentElement;
     var accordionHeading = accordionContainer.querySelector('.accordion-header');
-    var accordionPanel = accordionContainer.querySelector('.accordion-panel');
+    var accordionPanel = document.querySelector('#' + this.getAttribute('aria-controls'));
     var accordionIndicator = accordionContainer.querySelector('.accordion-indicator');
     switch (this.ariaExpanded) {
         case 'true': this.ariaExpanded = false;
         accordionIndicator.innerHTML = '&rarr;';
-        accordionHeading.removeAttribute('data-show');
         break;
         case 'false': this.ariaExpanded = true;
         accordionIndicator.innerHTML = '&darr;';
-        accordionHeading.setAttribute('data-show','show');
         break;
     };
-    accordionPanel.classList.toggle('accordion-panel-show')
+    if (this.id == 'nav-btn') {
+        accordionPanel.classList.toggle('nav-links-show')
+    } else {
+        accordionPanel.classList.toggle('accordion-panel-show')
+    }
 }

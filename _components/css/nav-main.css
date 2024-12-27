@@ -27,7 +27,7 @@
     .nav-links {
         display: none;
     }
-     .show-the-panel {
+     .nav-links-show {
         display: block !important;
     }
     .nav-links-item {

@@ -1,7 +1,5 @@
 .accordion.header {
     margin-left: 8px;
-}
-.accordion-header[data-show=show] {
     margin-bottom: 0;
 }
 .accordion-button {
