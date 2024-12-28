@@ -1,3 +1,21 @@
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
+    border-radius: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
+}
+}
 .nav-links {
     list-style-type: none;
 }
@@ -92,6 +110,9 @@ dt {
     font-weight: bold;
     color: var(--blue);
 }
+dd {
+    margin-left: 16px;
+}
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
     position: absolute;
@@ -107,14 +128,18 @@ dt {
 footer {
     font-size: smaller;
     }
-    #footer-nav-list {
+    footer ul {
         list-style-type: none;
+        display: inline;
     }
-    .footer-nav-list-item[aria-current="page"] {
+    footer li {
+        display: inline;
+    }
+    footer li[aria-current="page"] {
     font-weight: bold;
 }
-.footer-nav-list-item-separator {
-    font-weight: normal;
+footer li .separator {
+    font-weight: normal !important;
 }
 .white-background {
     background-color: var(--white);
