@@ -36,3 +36,6 @@ dt {
     font-weight: bold;
     color: var(--blue);
 }
+dd {
+    margin-left: 16px;
+}
