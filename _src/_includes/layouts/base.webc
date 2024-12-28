@@ -61,7 +61,7 @@
 <footer id="footer" tabindex="-1">
 <template webc:type="11ty" 11ty:type="njk">
 <nav aria-label="footer">
-<ul role="list" id="footer-nav-list">
+<ul role="list">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
 <li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
