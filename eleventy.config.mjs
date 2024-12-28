@@ -27,5 +27,4 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addWatchTarget('resources');
     eleventyConfig.addWatchTarget('images');
-    eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 };
