@@ -78,20 +78,10 @@
 </li>
 {%- endfor %}
 </ul>
-<p>
-Connect with {{site.authorFirstName}}: 
-<ul role="list">
-{% for item in social %}
-<li>
-<a href="{{item.url}}">{{item.text}}</a>
-{%- if (loop.index <= item| length - 1) %}
-<span class="separator" aria-hidden="true"> | </span>
-{% endif %}
-</li>
-{%- endfor %}
-</ul>
-</p>
 </nav>        
+<p>
+Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item.url}}">{{item.text}}</a>{%- if (loop.index < social| length - 1) %}, {% elif (loop.index < social| length ) %}, and {% else %}.{% endif %}{%- endfor %}
+</p>
 </template>
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
