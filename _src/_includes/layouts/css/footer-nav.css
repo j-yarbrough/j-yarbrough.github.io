@@ -1,12 +1,16 @@
 footer {
     font-size: smaller;
     }
-    #footer-nav-list {
+    footer ul {
         list-style-type: none;
+        display: inline;
     }
-    .footer-nav-list-item[aria-current="page"] {
+    footer li {
+        display: inline;
+    }
+    footer li[aria-current="page"] {
     font-weight: bold;
 }
-.footer-nav-list-item-separator {
-    font-weight: normal;
+footer li .separator {
+    font-weight: normal !important;
 }
