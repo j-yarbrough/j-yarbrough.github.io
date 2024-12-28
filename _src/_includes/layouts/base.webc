@@ -52,12 +52,10 @@
 </ul>
 </nav-main>
 </nav>
-<div class="white-background" id="main">
-<main>
+<main class="white-background" id="main">
 <h1 tabindex="-1" id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
 <template webc:nokeep @raw="content"></template>
 </main>
-</div>
 </div>
 <!---end responsive wrapper--->
 <footer id="footer" tabindex="-1">
