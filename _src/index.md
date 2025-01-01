@@ -10,7 +10,7 @@ eleventyNavigation:
 ---
 <figgy-cap @src="/images/justin-mug.jpg" @alt="Mug shot of Justin Yarbrough, a white man with a shaved head and goatee wearing sunglasses.">Justin Yarbrough</figgy-cap>
 
-Justin Yarbrough, CPWA, is a blind digital accessibility specialist, writer, and speaker living in the Austin, Texas area.
+Justin Yarbrough is a blind digital accessibility specialist, writer, and speaker living in the Austin, Texas area.
 
 ## Work
 
