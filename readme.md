@@ -9,6 +9,7 @@ This repo is for a personal website/portfolio and is built using [eleventy.](htt
 - Issues are logged for to-do items
 - Changes are created in their own branches and then merged via pull request. If a PR closes an issue, this will be noted in comments of the PR with "closes #123" where 123 would be the number for the issue. This will automatically close the issue when the PR is merged.
 - When PR is merged to main, GitHub actions will perform a build and push those changes to the "gh-pages" branch, which serves the site on GitHub Pages.
+- A build will also be triggered at midnight US Central time (GMT -6) to update the copyright year on all pages.
 
 ## Redirects
 
@@ -150,3 +151,13 @@ Required attributes:
 
 - @src: source for image
 - @alt: alt text for image
+
+### Link list
+
+Creates a ``<dl>`` for a list of links with descriptions
+
+``<link-list>``
+
+Required attributes:
+
+- @data: Reference to data where these can be found. For syntax, check out some of the ffiles in ``/_src/_data/`` for examples. I highly recommend leaning on that to create the list.
