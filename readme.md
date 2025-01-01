@@ -16,7 +16,7 @@ To set up a redirect:
 
 1. Create a new .md file
 2. in the front matter, set the following:
-    - title: The URL you wish to redirect to
+    - redirectURL: The URL you wish to redirect to
     - layout: layouts/redirect.njk
 
 ## Template variations
@@ -26,7 +26,7 @@ There are template variations that can be automatically used based on front matt
 - H1: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title value will be used.
-- noBreadcrumbs: true will exclude breadcrumbs from the page.
+- noBreadcrumbs: true will exclude breadcrumbs from the page. Note breadcrumbs are not currently available in the base template, but this variable still exists in front matter since it may be brought back.
 
 ## .webc components
 
