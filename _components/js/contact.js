@@ -1,14 +1,8 @@
-// script to handle all contact form validation actions
-
-//global variables
-
-var formContainer = document.querySelector('#contact-form');
-var fieldsToValidate = document.querySelectorAll('input[aria-required], textarea[aria-required]');
-
 //event listeners
 
-formContainer.addEventListener('submit',submitForm);
-formContainer.addEventListener('reset',resetForm);
+document.querySelectorAll('form-wrapper').forEach((formContainer) =>{
+    formContainer.addEventListener('submit',submitForm);
+});
 
 //functions
 
@@ -17,12 +11,12 @@ formContainer.addEventListener('reset',resetForm);
 function validateField (fieldToValidate) {
     var isValid;
     if (fieldToValidate.getAttribute('autocomplete') == 'email') {
-        switch ((fieldToValidate.value.length >= 6) && (fieldToValidate.value.includes('@')) && (fieldToValidate.value.includes('.')) && (fieldToValidate.value.includes(' ') == false)) {
+        switch ((fieldToValidate.value.trim().length >= 6) && (fieldToValidate.value.includes('@')) && (fieldToValidate.value.includes('.')) && (fieldToValidate.value.includes(' ') == false)) {
             case true: isValid = true; break;
             case false: isValid = false; break;
         }
     } else {
-        switch (fieldToValidate.value != '') {
+        switch (fieldToValidate.value.trim().length != 0) {
             case true: isValid = true; break;
             case false: isValid = false; break;
         }
@@ -33,6 +27,7 @@ function validateField (fieldToValidate) {
 
 function submitForm() {
     var firstErrorField = undefined;
+    var fieldsToValidate = this.querySelectorAll('[aria-required="true"]');
     var errorCount = 0;
     var errorCountString;
     fieldsToValidate.forEach((fieldsToValidate) => {
@@ -77,12 +72,4 @@ function applyValidationState (field, validOrNot) {
         }
         break;
     }
-}
-
-function resetForm() {
-    fieldsToValidate.forEach((fieldsToValidate) => {
-        applyValidationState(fieldsToValidate, true);
-    });
-    fieldsToValidate[0].focus();
-    ariaLiveHandler('All fields cleared');
 }
