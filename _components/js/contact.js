@@ -1,7 +1,7 @@
 //event listeners
 
 document.querySelectorAll('form-wrapper').forEach((formContainer) =>{
-    formContainer.addEventListener('submit',submitForm);
+    formContainer.firstElementChild.addEventListener('submit',submitForm);
 });
 
 //functions
