@@ -12,10 +12,6 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-.accordion-button:focus {
-    outline: 2px dotted var(--blue);
-    outline-offset: 2px;
-}
 .accordion-button[aria-expanded=true] {
     margin: 0;
 border-radius: 8px 8px 0 0;
