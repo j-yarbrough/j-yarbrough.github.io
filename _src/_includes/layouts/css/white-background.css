@@ -7,10 +7,6 @@
 .white-background a, .white-background a:visited, .white-background a:hover{
     color: var(--blue);
 }
-.white-background a:focus{
-    outline: 2px dotted var(--blue);
-    color: var(--blue);
-}
 .white-background a:active {
     color: var(--red);
 }
