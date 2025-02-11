@@ -85,15 +85,16 @@ ol ol ol ol ol {
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--white);
 }
-a:focus {
-    outline: 2px dotted var(--white);
-}
 dt {
     font-weight: bold;
     color: var(--blue);
 }
 dd {
     margin-left: 16px;
+}
+:focus-visible {
+    outline: 3px double var(--blue);
+    box-shadow: 0 0 2px var(--white);
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -130,10 +131,6 @@ footer li .separator {
     padding: 8px;
 }
 .white-background a, .white-background a:visited, .white-background a:hover{
-    color: var(--blue);
-}
-.white-background a:focus{
-    outline: 2px dotted var(--blue);
     color: var(--blue);
 }
 .white-background a:active {
