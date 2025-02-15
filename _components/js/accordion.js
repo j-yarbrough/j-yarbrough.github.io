@@ -20,7 +20,5 @@ function triggerAccordion() {
     };
     if (this.id == 'nav-btn') {
         accordionPanel.classList.toggle('nav-links-show')
-    } else {
-        accordionPanel.classList.toggle('accordion-panel-show')
     }
 }
