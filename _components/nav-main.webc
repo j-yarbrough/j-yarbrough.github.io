@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="/css/nav-main.css">
-<div id="nav-main-btn-container">
 <button aria-controls="nav-links" id="nav-btn" aria-expanded="false">
 <span class="accordion-indicator" aria-hidden="true">&rarr;</span>
 Navigation
 </button>
-</div>
 <slot></slot>
 <script src="/js/accordion.js"></script>

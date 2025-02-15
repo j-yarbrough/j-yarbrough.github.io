@@ -1,6 +1,8 @@
-.accordion.header {
+.accordion-header {
     margin-left: 8px;
-    margin-bottom: 0;
+}
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) {
+    margin-bottom: 0    ;
 }
 .accordion-button {
     font-size: inherit;
@@ -17,14 +19,13 @@
 border-radius: 8px 8px 0 0;
 border-bottom: 0;
 }
-.accordion-panel {
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
     display: none;
+}
+.accordion-panel {
     margin-top: 0;
     margin-bottom: 16px;
     padding: 8px;
     border: 1px solid var(--blue);
     border-radius: 8px;
-}
-.accordion-panel-show {
-    display: block !important;
 }
