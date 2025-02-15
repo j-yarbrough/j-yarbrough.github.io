@@ -69,7 +69,7 @@ legend {
     padding: 0 8px;
     margin-right: 8px;
 }
-.nav-links {
+#nav-links {
     list-style-type: none;
 }
 .nav-links-item[aria-current] {
@@ -95,11 +95,8 @@ legend {
         margin-left: auto;
         margin-right: auto;
     }
-    .nav-links {
+    #nav-btn[aria-expanded="false"] + #nav-links {
         display: none;
-    }
-     .nav-links-show {
-        display: block !important;
     }
     .nav-links-item {
         padding: 0 8px;
