@@ -22,5 +22,5 @@ function buildInput() {
 }
 buildInput();
 </script>
-<p webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
-<p webc:if="helper" @text="helper" :id="uid+'-helper'"></p>
+<div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
+<div webc:if="helper" @text="helper" :id="uid+'-helper'"></div>
