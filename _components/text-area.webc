@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="/css/text-area.css">
 <div class="text-area-wrapper" webc:root>
-<label class="text-area-label"><span class="text-area-text-label"><span webc:nokeep @text="label"></span><span webc:if"error" aria-hidden="true">*</span></label></span>
+<label class="text-area-label">
+<span class="text-area-text-label">
+<span webc:nokeep @text="label"></span>
+<span webc:if"error" aria-hidden="true">*</span>
+</span>
 <script webc:type="js">
 if (!label) {throw new Error('text area component is missing required prop label');};
 if (!name) {throw new Error('text area component is missing required prop name');};
