@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/text-area.css">
-<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if"error" aria-hidden="true">*</span></label>
+<div class="text-area-wrapper" webc:root>
+<label class="text-area-label"><span class="text-area-text-label"><span webc:nokeep @text="label"></span><span webc:if"error" aria-hidden="true">*</span></label></span>
 <script webc:type="js">
 if (!label) {throw new Error('text area component is missing required prop label');};
 if (!name) {throw new Error('text area component is missing required prop name');};
@@ -16,5 +17,7 @@ function buildTextArea() {
 }
 buildTextArea();
 </script>
+</label>
 <div webc:if="error" class="textarea-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
 <div webc:if="helper" id="uid+'-helper'" @text="helper"></div>
+</div>
