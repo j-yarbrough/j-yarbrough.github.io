@@ -1,6 +1,11 @@
 <link rel="stylesheet" href="/css/text-input.css">
-<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="error" aria-hidden="true">*</span></label>
-<script webc:type="js" webc:root>
+<div class="text-input-wrapper" webc:root>
+<label class="text-input-label">
+<span class="text-input-text-label">
+<span webc:nokeep @text="label"></span>
+<span webc:if="error" aria-hidden="true">*</span>
+</span>
+<script webc:type="js">
 if (!label) {throw new Error('text inputcomponent is missing required prop label');};
 if (!name) {throw new Error('text input component is missing required prop name');};
 function buildInput() {
@@ -22,5 +27,7 @@ function buildInput() {
 }
 buildInput();
 </script>
-<p webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></p>
-<p webc:if="helper" @text="helper" :id="uid+'-helper'"></p>
+</label>
+<div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
+<div webc:if="helper" @text="helper" :id="uid+'-helper'"></div>
+</div>
