@@ -1,3 +1,7 @@
+.e-box {
+    padding: 8px;
+    border: 1px dotted var(--blue);
+}
 .accordion-header {
     margin-left: 8px;
 }
@@ -121,8 +125,8 @@ dd {
     margin-left: 16px;
 }
 :focus-visible {
-    outline: 3px double var(--blue);
-    box-shadow: 0 0 2px var(--white);
+    outline: 6px double var(--blue);
+    box-shadow: 0 0 4px var(--white);
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
