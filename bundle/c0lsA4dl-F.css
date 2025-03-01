@@ -8,14 +8,9 @@
 }
 #nav-btn {
     font-family: var(--serif);
-    color: var(--white);
-    background-color: var(--blue);
-    border: 1px solid var(--white);
-    border-radius: 8px;
-}
-#nav-btn[aria-expanded=true] {
     color: var(--blue);
     background-color: var(--white);
+    border-radius: 8px;
 }
 /* small and medium*/
 @media (max-width: 64rem) {
@@ -31,6 +26,9 @@
         padding: 0 8px;
         border-radius: 8px;
     }
+}
+#nav-btn .accordion-indicator {
+    color: var(--red);
 }
 /*large*/
 @media (min-width: 64.0000000001rem) {
