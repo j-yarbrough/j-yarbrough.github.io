@@ -29,3 +29,6 @@ border-bottom: 0;
     border: 1px solid var(--blue);
     border-radius: 8px;
 }
+.accordion-header  .accordion-indicator {
+    color: var(--red);
+}
