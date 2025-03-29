@@ -3,8 +3,9 @@
 if (!label) {throw new Error('modal-dialog component is missing required prop label');};
 ``
 </script>
-
+<div class="modal-trigger-button-wrapper">
 <button :aria-controls="uid" class="modal-trigger" aria-haspopup="dialog" @text="label"></button>
+</div>
 <dialog class="white-background" :id="uid" :aria-labelledby="uid + '-heading'">
 <h1 tabindex="-1" autofocus :id="uid + '-heading'" @text="label"></h1>
 <div class="modal-content-container">

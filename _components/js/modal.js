@@ -3,15 +3,15 @@
 document.querySelectorAll('.modal-trigger').forEach((dialogTrigger) => {
     dialogTrigger.addEventListener('click', triggerDialog)
 });
-document.querySelectorAll('.modal-close').forEach((dialogClose) => {
-    dialogClose.addEventListener('click',dialogClose)
+document.querySelectorAll('.modal-close').forEach((dialogCloseBtn) => {
+    dialogCloseBtn.addEventListener('click',closeDialog);
 });
-//functions
+        
+        //functions
 
 function triggerDialog() {
-this.nextElementSibling.showModal();
+this.parentElement.nextElementSibling.showModal();
 }
-
 function closeDialog() {
-this.parentElement.parentElement.close();
+    this.parentElement.parentElement.close();
 }
