@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/css/modal.css">
 <button :aria-controls="uid" class="modal-trigger" aria-haspopup="dialog" @text="label"></button>
-<dialog class="white-background" :id="uid" :aria-labelledby="uid + '-heading'">
-<h1 autofocus :id="uid + '-heading'" @text="label"></h1>
+<dialog autofocus  class="white-background" :id="uid" :aria-labelledby="uid + '-heading'">
+<h1 :id="uid + '-heading'" @text="label"></h1>
+<div class="modal-content-wrapper">
 <slot></slot>
-<div>
-<button type="button" class="modal-close" :aria-controls="uid">Close</button>
 </div>
+<button type="button" class="modal-close" :aria-controls="uid">Close</button>
 </dialog>
 <script src="js/modal.js"></script>

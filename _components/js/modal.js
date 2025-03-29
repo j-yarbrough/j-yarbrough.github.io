@@ -4,14 +4,14 @@ document.querySelectorAll('.modal-trigger').forEach((dialogTrigger) => {
     dialogTrigger.addEventListener('click', triggerDialog)
 });
 document.querySelectorAll('.modal-close').forEach((dialogCloseButton) => {
-    dialogClosechr.addEventListener('click',dialogClose)
+    dialogClose.addEventListener('click',dialogClose)
 });
 //functions
 
 function triggerDialog() {
-document.getElementById(this.ariaControls).showModal();
+this.nextElementSibling.showModal();
 }
 
 function closeDialog() {
-document.getElementById(this.ariaControls).close();
+this.parentElement.close();
 }

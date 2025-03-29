@@ -39,7 +39,6 @@ Below are a few embedded tweets that all have alt text on the images. To view th
 https://twitter.com/quinntx2az/status/1191864360135643137
 
 <modal-dialog @label="Alt text for first example">
-
 Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
 </modal-dialog>
