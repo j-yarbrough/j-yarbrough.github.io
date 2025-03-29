@@ -4,7 +4,7 @@ document.querySelectorAll('.modal-trigger').forEach((dialogTrigger) => {
     dialogTrigger.addEventListener('click', triggerDialog)
 });
 document.querySelectorAll('.modal-close').forEach((dialogCloseButton) => {
-    dialogCloseButton.addEventListener('click',dialogClose)
+    dialogClosechr.addEventListener('click',dialogClose)
 });
 //functions
 
