@@ -49,6 +49,16 @@ Optional prop:
 
 - @level: Sets a heading level. Will render as a div if value is not set as 2-6.provided or value is invalid.
 
+### Modal dialog
+
+Serves as a modal dialog, leaning heavily on the ``<dialog>`` element's native behaviors.
+
+- ``<modal-dialog>``
+
+Required prop:
+
+` @label: Serves as label for trigger button and h1 for modal. Will throw error if not included.
+
 ### Ebox
 
 Serves as an emphasis box to highlight content. 

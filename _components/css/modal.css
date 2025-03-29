@@ -1,0 +1,11 @@
+dialog::backdrop {
+    background-color: var(--blue);
+}
+.modal-trigger, .modal-close {
+    font-family: var(--serif);
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    padding: 0 8px;
+}
