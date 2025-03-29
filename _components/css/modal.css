@@ -9,6 +9,3 @@ dialog::backdrop {
     border-radius: 8px;
     padding: 0 8px;
 }
-.modal-close {
-    display: block;
-}

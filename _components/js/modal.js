@@ -3,7 +3,7 @@
 document.querySelectorAll('.modal-trigger').forEach((dialogTrigger) => {
     dialogTrigger.addEventListener('click', triggerDialog)
 });
-document.querySelectorAll('.modal-close').forEach((dialogCloseButton) => {
+document.querySelectorAll('.modal-close').forEach((dialogClose) => {
     dialogClose.addEventListener('click',dialogClose)
 });
 //functions
@@ -13,5 +13,5 @@ this.nextElementSibling.showModal();
 }
 
 function closeDialog() {
-this.parentElement.close();
+this.parentElement.parentElement.close();
 }

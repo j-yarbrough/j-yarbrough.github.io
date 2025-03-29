@@ -49,11 +49,11 @@ Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
 https://twitter.com/quinntx2az/status/1178691633199509507
 
-<jy-acc @label="Alt text for second example">
+<modal-dialog @label="Alt text for second example">
 
 Black lab PJ roughhousing with yellow lab mix Quinn.
 
-</jy-acc>
+</modal-dialog>
 
 </e-box>
 
@@ -61,11 +61,11 @@ Black lab PJ roughhousing with yellow lab mix Quinn.
 
 https://twitter.com/GuidingJustin/status/1146132784009711616
 
-<jy-acc @label="Alt text for third example">
+<modal-dialog @label="Alt text for third example">
 
 A black lab laying on a dog bed under an office desk.
 
-</jy-acc>
+</modal-dialog>
 
 </e-box>
 
