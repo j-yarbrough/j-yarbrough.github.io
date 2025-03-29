@@ -4,7 +4,7 @@
 <h1 autofocus :id="uid + '-heading'" @text="label"></h1>
 <slot></slot>
 <div>
-<button type="button" class="modal-close">Close</button>
+<button type="button" class="modal-close" :aria-controls="uid">Close</button>
 </div>
 </dialog>
 <script src="js/modal.js"></script>
