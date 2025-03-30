@@ -32,7 +32,7 @@ The folks over at [Accessible Social](https://www.accessible-social.com/) have a
 
 ## Examples
 
-Below are a few embedded tweets that all have alt text on the images. To view the alt text, you can expand the accordion below the tweet.
+Below are a few embedded tweets that all have alt text on the images. You can activate the button below each tweet to open a modal dialog containing the alt text for the image in that tweet, then activate the close button or press the escape key on your keyboard to close the modal dialog.
 
 <e-box @level="3" @label="Example 1">
 
