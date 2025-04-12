@@ -11,6 +11,6 @@ function modalActivate () {
     if (dialogContainer.hasAttribute('open')) {
 dialogContainer.close();
     } else {
-        dialogContainer.showDialog();
+        dialogContainer.showModal();
     }
 }
