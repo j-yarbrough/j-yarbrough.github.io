@@ -4,9 +4,9 @@ if (!label) {throw new Error('jy-acc component is missing required prop label');
 ``
 </script>
 <!---Conditional logic for heading level--->
-<h2 webc:if="{level == 2}" class="accordion-header" :id="uid"><button :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h2>
-<h3 webc:elseif="{level == 3}" class="accordion-header" :id="uid"><button :aria-controls="uid + 'acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h3>
-<div webc:else class="accordion-header" :id="uid"><button :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></div>
+<h2 webc:if="{level == 2}" class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h2>
+<h3 webc:elseif="{level == 3}" class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + 'acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h3>
+<div webc:else class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></div>
 <div class="accordion-panel" :id="uid + '-acc-panel'">
 <slot></slot>
 </div>
