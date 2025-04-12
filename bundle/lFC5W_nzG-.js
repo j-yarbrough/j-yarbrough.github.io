@@ -73,22 +73,23 @@ function applyValidationState (field, validOrNot) {
         break;
     }
 }
-// Script for accordions
+// event listener
 
-document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButtons) => {
-    accordionButtons.addEventListener('click',triggerAccordion)
-});
+document.getElementById('nav-btn').addEventListener('click',navTrigger);
 
-function triggerAccordion() {
-    var accordionIndicator = this.querySelector('.accordion-indicator');
-    switch (this.ariaExpanded) {
-        case 'true': this.ariaExpanded = false;
-        accordionIndicator.innerHTML = '&rarr;';
-        break;
-        case 'false': this.ariaExpanded = true;
-        accordionIndicator.innerHTML = '&darr;';
-        break;
-    };
+//function
+
+function navTrigger () {
+    var navIndicator = document.getElementById('nav-indicator');
+    var navPanel = document.getElementById('nav-links');
+    if (this.getAttribute('aria-expanded') == 'true') {
+        this.setAttribute('aria-expanded','false');
+        navIndicator.innerHTML = '&rarr;';
+    } else {
+        this.setAttribute('aria-expanded','true');
+        navIndicator.innerHTML = '&darr;';
+    }
+    navPanel.classList.toggle('nav-links-show');
 }
 // Handles all aria live announcements
 // called on by multiple scripts
