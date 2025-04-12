@@ -1,7 +1,4 @@
-/* small and medium*/
-@media (max-width: 64rem) {
-
-.accordion-button {
+.acc-button {
     font-size: inherit;
     border: 1px solid var(--blue);
     color: var(--blue);
@@ -10,13 +7,15 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-.accordion-panel {
+/* small and medium*/
+@media (max-width: 64rem) {
+.acc-panel-hide {
     display: none;
 }
-.accordion-panel-show {
-    display: block !important;
+.acc-panel-show {
+    display: block;
 }
- .accordion-indicator {
+ .acc-indicator {
     color: var(--red);
 }
 .acc-responsive-desktop {
@@ -25,7 +24,7 @@
 }
 /*Large*/
 @media (min-width: 64.0000000001rem) {
-    .accordion-button {
+    .acc-button {
         display: none;
     }
 }
