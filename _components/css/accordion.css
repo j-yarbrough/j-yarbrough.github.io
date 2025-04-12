@@ -10,8 +10,11 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+.accordion-panel {
     display: none;
+}
+.accordion-header:has(> .accordion-button[aria-expanded="true"]) + .accordion-panel {
+    display: block;
 }
 .accordion-header  .accordion-indicator {
     color: var(--red);
