@@ -1,0 +1,5 @@
+<button aria-expanded="false" :aria-controls="idval + '-acc-panel'" class="accordion-button" :id="uid + '-acc-btn'">
+<span class="acc-indicator" aria-hidden="true"></span>
+<span webc:nokeep @text="label"></span>
+</button>
+<span class="acc-responsive-desktop" @text="label"></span>

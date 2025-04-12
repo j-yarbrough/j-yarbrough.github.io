@@ -4,9 +4,24 @@ if (!label) {throw new Error('jy-acc component is missing required prop label');
 ``
 </script>
 <!---Conditional logic for heading level--->
-<h2 webc:if="{level == 2}" class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h2>
-<h3 webc:elseif="{level == 3}" class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + 'acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></h3>
-<div webc:else class="accordion-header" :id="uid"><button :aria-label="label" :aria-controls="uid + '-acc-panel'" class="accordion-button" :id="uid + '-acc-button'" aria-expanded="false"><span class="accordion-indicator" aria-hidden="true">&rarr;</span><span webc:nokeep @text="label"></span></button><span class="acc-responsive-desktop" @text="label"></span></div>
+<h2 webc:if="{level == 2}" class="accordion-header" :id="uid">
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</h2>
+<h3 webc:elseif="{level == 3}" class="accordion-header" :id="uid"><
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</h3>
+<h4 webc:elseif="{level == 4}" class="accordion-header" :id="uid"><
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</h4>
+<h5 webc:elseif="{level == 5}" class="accordion-header" :id="uid"><
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</h5>
+<h6 webc:elseif="{level == 6}" class="accordion-header" :id="uid"><
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</h6>
+<div webc:else class="accordion-header" :id="uid">
+<acc-btn :@label="label" :@idval="uid"></acc-btn>
+</div>
 <div class="accordion-panel" :id="uid + '-acc-panel'">
 <slot></slot>
 </div>
