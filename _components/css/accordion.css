@@ -1,3 +1,6 @@
+/* small and medium*/
+@media (max-width: 64rem) {
+
 .accordion-header {
     margin-left: 8px;
 }
@@ -31,4 +34,14 @@ border-bottom: 0;
 }
 .accordion-header  .accordion-indicator {
     color: var(--red);
+}
+.acc-responsive-desktop {
+    display: none;
+}
+}
+/*Large*/
+@media (min-width: 64.0000000001rem) {
+    .accordion-button {
+        display: none;
+    }
 }
