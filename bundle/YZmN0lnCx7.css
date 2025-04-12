@@ -1,17 +1,30 @@
-.e-box {
-    padding: 8px;
-    border: 1px dotted var(--blue);
-}
-dialog::backdrop {
-    background-color: var(--blue);
-}
-.modal-trigger, .modal-close {
-    font-family: var(--serif);
-    color: var(--blue);
-    background-color: var(--white);
+/* small and medium*/
+@media (max-width: 64rem) {
+
+.accordion-button {
+    font-size: inherit;
     border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color:  var(--white);
+    padding:  0 8px;
     border-radius: 8px;
-    padding: 0 8px;
+    font-family: var(--serif);
+}
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+    display: none;
+}
+.accordion-header  .accordion-indicator {
+    color: var(--red);
+}
+.acc-responsive-desktop {
+    display: none;
+}
+}
+/*Large*/
+@media (min-width: 64.0000000001rem) {
+    .accordion-button {
+        display: none;
+    }
 }
 #nav-links {
     list-style-type: none;

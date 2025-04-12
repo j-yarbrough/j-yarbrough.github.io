@@ -17,22 +17,21 @@ var listElement = document.createElement('ol');
     });
     tocContainer .appendChild(listElement);
 }
-//dialog event listeners
+// event listeners
 
-document.querySelectorAll('.modal-trigger').forEach((dialogTrigger) => {
-    dialogTrigger.addEventListener('click', triggerDialog)
-});
-document.querySelectorAll('.modal-close').forEach((dialogCloseBtn) => {
-    dialogCloseBtn.addEventListener('click',closeDialog);
-});
-        
-        //functions
+document.querySelectorAll('.modal-trigger, .modal-close').forEach((triggerButton) => {
+    triggerButton.addEventListener('click', modalActivate)
+})
 
-function triggerDialog() {
-this.parentElement.nextElementSibling.showModal();
-}
-function closeDialog() {
-    this.parentElement.parentElement.close();
+// function
+
+function modalActivate () {
+    var dialogContainer = this.closest('modal-dialog').querySelector('dialog');
+    if (dialogContainer.hasAttribute('open')) {
+dialogContainer.close();
+    } else {
+        dialogContainer.showModal();
+    }
 }
 // Script for accordions
 
