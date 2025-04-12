@@ -80,15 +80,11 @@ document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButto
 });
 
 function triggerAccordion() {
-    var accordionIndicator = this.querySelector('.accordion-indicator');
-    switch (this.ariaExpanded) {
-        case 'true': this.ariaExpanded = false;
-        accordionIndicator.innerHTML = '&rarr;';
-        break;
-        case 'false': this.ariaExpanded = true;
-        accordionIndicator.innerHTML = '&darr;';
-        break;
-    };
+    if (this.ariaExpanded == 'true') {
+        this.ariaExpanded = false;
+    } else {
+        this.ariaExpanded = true;
+}
 }
 // Handles all aria live announcements
 // called on by multiple scripts
