@@ -1,15 +1,15 @@
 // event listeners
 
-document.querySelectorAll('.accordion-button').forEach((button) => {
-    button.addEventListener('click',triggerAccordion);
+document.querySelectorAll('.acc-button').forEach((accButton) => {
+    accButton.addEventListener('click',triggerAccordion);
 })
 
 // function
 
 function triggerAccordion () {
-    var accordionContainer = this.closest('jy-acc');
-    var indicator = accordionContainer.querySelector('.accordion-indicator');
-    var panel = accordionContainer.querySelector('.accordion-panel');
+    var accContainer = this.closest('jy-acc');
+    var indicator = accContainer.querySelector('.acc-indicator');
+    var panel = accContainer.querySelector('.acc-panel');
     if (this.getAttribute('aria-expanded') == 'true') {
         this.setAttribute('aria-expanded','false');
         indicator.innerHTML = '&rarr;';
@@ -17,5 +17,6 @@ function triggerAccordion () {
         this.setAttribute('aria-expanded','true');
         indicator.innerHTML = '&darr;';
     }
-    panel.classList.toggle('accordion-panel-show');
+    panel.classList.toggle('acc-panel-show');
+    panel.classList.toggle('acc-panel-hide');
 }
