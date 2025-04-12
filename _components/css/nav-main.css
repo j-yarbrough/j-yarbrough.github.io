@@ -12,6 +12,14 @@
     background-color: var(--white);
     border-radius: 8px;
 }
+#nav-btn[aria-expanded="false"] #nav-indicator::before {
+    color: var(--red);
+    content: "\2192";
+}
+#nav-btn[aria-expanded="true"] #nav-indicator::before {
+    color: var(--red);
+    content: "\2193";
+}
 /* small and medium*/
 @media (max-width: 64rem) {
     #nav-btn {
@@ -27,9 +35,7 @@
         border-radius: 8px;
     }
 }
-#nav-btn .accordion-indicator {
-    color: var(--red);
-}
+/*end small and medium */
 /*large*/
 @media (min-width: 64.0000000001rem) {
 .nav-links-item {

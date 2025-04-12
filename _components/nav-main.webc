@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/nav-main.css">
 <button aria-controls="nav-links" id="nav-btn" aria-expanded="false">
-<span class="accordion-indicator" aria-hidden="true">&rarr;</span>
+<span id="nav-indicator" aria-hidden="true"></span>
 Navigation
 </button>
 <slot></slot>

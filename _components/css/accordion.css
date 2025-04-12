@@ -7,7 +7,12 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-.accordion-header  .accordion-indicator {
+.accordion-button[aria-expanded="false"] .acc-indicator::before {
+    content: "\2192";
+    color: var(--red);
+}
+.accordion-button[aria-expanded="true"] .acc-indicator::before {
+    content: "\2193";
     color: var(--red);
 }
 /* small and medium*/
