@@ -33,21 +33,20 @@ dialogContainer.close();
         dialogContainer.showModal();
     }
 }
-// event listener
+// Script for accordions
 
-document.getElementById('nav-btn').addEventListener('click',navTrigger);
+document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButtons) => {
+    accordionButtons.addEventListener('click',triggerAccordion)
+});
 
-//function
-
-function navTrigger () {
-    var navIndicator = document.getElementById('nav-indicator');
-    var navPanel = document.getElementById('nav-links');
-    if (this.getAttribute('aria-expanded') == 'true') {
-        this.setAttribute('aria-expanded','false');
-        navIndicator.innerHTML = '&rarr;';
-    } else {
-        this.setAttribute('aria-expanded','true');
-        navIndicator.innerHTML = '&darr;';
-    }
-    navPanel.classList.toggle('nav-links-show');
+function triggerAccordion() {
+    var accordionIndicator = this.querySelector('.accordion-indicator');
+    switch (this.ariaExpanded) {
+        case 'true': this.ariaExpanded = false;
+        accordionIndicator.innerHTML = '&rarr;';
+        break;
+        case 'false': this.ariaExpanded = true;
+        accordionIndicator.innerHTML = '&darr;';
+        break;
+    };
 }
