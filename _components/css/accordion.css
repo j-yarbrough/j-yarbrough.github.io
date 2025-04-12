@@ -13,10 +13,10 @@
 .accordion-panel {
     display: none;
 }
-.accordion-header:has(> .accordion-button[aria-expanded="true"]) + .accordion-panel {
-    display: block;
+.accordion-panel-show {
+    display: block !important;
 }
-.accordion-header  .accordion-indicator {
+ .accordion-indicator {
     color: var(--red);
 }
 .acc-responsive-desktop {
