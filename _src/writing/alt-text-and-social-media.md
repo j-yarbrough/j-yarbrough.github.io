@@ -32,26 +32,26 @@ The folks over at [Accessible Social](https://www.accessible-social.com/) have a
 
 ## Examples
 
-Below are a few embedded tweets that all have alt text on the images. You can activate the button below each tweet to open a modal dialog containing the alt text for the image in that tweet, then activate the close button or press the escape key on your keyboard to close the modal dialog.
+Here are a few examples from [We Rate Dogs](https://bsky.app/profile/weratedogs.com) on Bluesky. They do a great job of describing the images, as well as having a little fun with the descriptions and occasionally including an easter egg in their descriptions. To view the alt text for a skeet, just click the button below the embedded skeet and a modal dialog will open with the alt text. You can hit the escape key or click the close button to close the dialog.
 
 <e-box @level="3" @label="Example 1">
 
-https://twitter.com/quinntx2az/status/1191864360135643137
+https://bsky.app/profile/weratedogs.com/post/3lif5s6znwk2n
 
 <modal-dialog @label="Alt text for first example">
-Quinn is on the floor with a half eaten zucchini. Looks guilty.
 
+a little brown pup in a gray hoodie stands confidently on a skateboard with red and white wheels. he’s smiling wide, presumably because he just landed a sick kickflip.
 </modal-dialog>
 
 </e-box>
 
 <e-box @level="3" @label="Example 2">
 
-https://twitter.com/quinntx2az/status/1178691633199509507
+https://bsky.app/profile/weratedogs.com/post/3lmfzyh6rms2l
 
 <modal-dialog @label="Alt text for second example">
 
-Black lab PJ roughhousing with yellow lab mix Quinn.
+a gray, curly sheep-like creature stands over us and looks down at us. their ears stick out to either side, and they have a beautiful soft glow about them. it is very possible this sheep is actually a standard poodle.
 
 </modal-dialog>
 
@@ -59,11 +59,11 @@ Black lab PJ roughhousing with yellow lab mix Quinn.
 
 <e-box @level="3" @label="Example 3">
 
-https://twitter.com/GuidingJustin/status/1146132784009711616
+https://bsky.app/profile/weratedogs.com/post/3lmzrfnypos2w
 
 <modal-dialog @label="Alt text for third example">
 
-A black lab laying on a dog bed under an office desk.
+a golden retriever pokes his head around a corner in a hallway and looks up at the camera with a stuffed duck toy in his mouth. he has a lump squarely in the middle of the top of his head.
 
 </modal-dialog>
 
