@@ -10,7 +10,7 @@ export default function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginWebc);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(embedEverything,{
-        add: ['bluesky']
+        add: ['bluesky, mastodon']
     });
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(IdAttributePlugin, {

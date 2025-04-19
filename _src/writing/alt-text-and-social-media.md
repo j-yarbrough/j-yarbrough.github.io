@@ -36,7 +36,7 @@ Here are a few examples from [We Rate Dogs](https://bsky.app/profile/weratedogs.
 
 <e-box @level="3" @label="Example 1">
 
-https://bsky.app/profile/weratedogs.com/post/3lif5s6znwk2n
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lif5s6znwk2n" data-bluesky-cid="bafyreigrniemzipiqwk3apg5j2tzlhjx6e2oifavmxxpurei5ta4f5vsmm" data-bluesky-embed-color-mode="system"><p lang="en">This is Chewy. He is a skater boy. She said see you later boy. He was way too good for her. All of her friends, stuck pup their nose. They had a pawblem with his doggy clothes. 12/10<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lif5s6znwk2n?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lif5s6znwk2n?ref_src=embed">February 17, 2025 at 10:23 AM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 <modal-dialog @label="Alt text for first example">
 
@@ -47,7 +47,7 @@ a little brown pup in a gray hoodie stands confidently on a skateboard with red 
 
 <e-box @level="3" @label="Example 2">
 
-https://bsky.app/profile/weratedogs.com/post/3lmfzyh6rms2l
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pc7md7klwf5wmg72ei54fznx/app.bsky.feed.post/3lmg22xqb4k2z" data-bluesky-cid="bafyreigqktbejlszwcecih3ll6vgz5vbi3mxpxcyf6tig6wyylnfrrxhvy" data-bluesky-embed-color-mode="system"><p lang="en">Are you sure this isn&#x27;t a wolf in sheep&#x27;s clothing?</p>&mdash; Dumbstash (<a href="https://bsky.app/profile/did:plc:pc7md7klwf5wmg72ei54fznx?ref_src=embed">@dnlmsstch.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:pc7md7klwf5wmg72ei54fznx/post/3lmg22xqb4k2z?ref_src=embed">April 9, 2025 at 5:29 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 <modal-dialog @label="Alt text for second example">
 
@@ -59,7 +59,7 @@ a gray, curly sheep-like creature stands over us and looks down at us. their ear
 
 <e-box @level="3" @label="Example 3">
 
-https://bsky.app/profile/weratedogs.com/post/3lmzrfnypos2w
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lmzrfnypos2w" data-bluesky-cid="bafyreichvznnaawspuwrhlsfh4qeglvhzbpe5og5hzwistuqj7ugievjhu" data-bluesky-embed-color-mode="system"><p lang="en">This is Finley. He has a very large bump on his noggin. It&#x27;s where he stores his infinite wisdom. 13/10 would pet to increase my own knowledge<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmzrfnypos2w?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmzrfnypos2w?ref_src=embed">April 17, 2025 at 1:48 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 <modal-dialog @label="Alt text for third example">
 
