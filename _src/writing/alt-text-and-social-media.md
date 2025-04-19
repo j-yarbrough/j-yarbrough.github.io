@@ -47,11 +47,11 @@ a little brown pup in a gray hoodie stands confidently on a skateboard with red 
 
 <e-box @level="3" @label="Example 2">
 
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:pc7md7klwf5wmg72ei54fznx/app.bsky.feed.post/3lmg22xqb4k2z" data-bluesky-cid="bafyreigqktbejlszwcecih3ll6vgz5vbi3mxpxcyf6tig6wyylnfrrxhvy" data-bluesky-embed-color-mode="system"><p lang="en">Are you sure this isn&#x27;t a wolf in sheep&#x27;s clothing?</p>&mdash; Dumbstash (<a href="https://bsky.app/profile/did:plc:pc7md7klwf5wmg72ei54fznx?ref_src=embed">@dnlmsstch.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:pc7md7klwf5wmg72ei54fznx/post/3lmg22xqb4k2z?ref_src=embed">April 9, 2025 at 5:29 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lmx3xrks622e" data-bluesky-cid="bafyreietr7xvqo37ovs2qfyj4y3f4bgawcxichyxpmw7fp72xjxjqkbvwy" data-bluesky-embed-color-mode="system"><p lang="en">This dog got a little impatient waiting for his pup cup. Decided to make sure everything was going alright in there. 14/10<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmx3xrks622e?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmx3xrks622e?ref_src=embed">April 16, 2025 at 12:19 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
 <modal-dialog @label="Alt text for second example">
 
-a gray, curly sheep-like creature stands over us and looks down at us. their ears stick out to either side, and they have a beautiful soft glow about them. it is very possible this sheep is actually a standard poodle.
+two photos side by side. in the left photo, a dog is leaning out the driver window of a red vehicle toward a drive-thru window. in the right photo the dog has entered the establishment through the window, only his hind end sticking out.
 
 </modal-dialog>
 
