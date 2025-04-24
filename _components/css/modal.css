@@ -15,3 +15,15 @@ dialog {
     border-radius: 8px;
     padding: 8px;
 }
+.dialog-header-wrapper {
+    display: flex;
+    height: auto;
+    align-items: start;
+}
+.dialog-header {
+    height: auto;
+    flex-grow: 1    ;
+}
+.modal-close {
+    margin-left: auto;
+}
