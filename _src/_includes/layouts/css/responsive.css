@@ -14,7 +14,7 @@
 @media (min-width: 64.0000000001rem) {
     #wrapper, header, footer {
         width: 100%;
-        max-width: 87.5rem;
+        max-width: 75rem;
         margin: 0 auto;
     }
     header {
@@ -31,11 +31,8 @@
     margin: 0;
     border: 0;
 }
-#nav {
-flex: 1;
-}
 #main {
-flex: 4;
+flex-grow: 1;
     padding: 16px;
     border-radius: 0 0 8px 8px;
 }
