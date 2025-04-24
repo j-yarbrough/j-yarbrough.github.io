@@ -1,35 +1,20 @@
-.e-box {
-    padding: 8px;
-    border: 1px dotted var(--blue);
-}
-dialog::backdrop {
-    background-color: var(--blue);
-    opacity: 80%;
-}
-.modal-trigger, .modal-close {
-    font-family: var(--serif);
-    color: var(--blue);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
     border-radius: 8px;
-    padding: 0 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
 }
-dialog {
-    border: 0;
-    border-radius: 8px;
-    padding: 8px;
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
 }
-.dialog-header-wrapper {
-    display: flex;
-    height: auto;
-    align-items: start;
-}
-.dialog-header {
-    height: auto;
-    flex-grow: 1    ;
-}
-.modal-close {
-    margin-left: auto;
 }
 #nav-links {
     list-style-type: none;
@@ -189,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 64.0000000001rem) {
     #wrapper, header, footer {
         width: 100%;
-        max-width: 87.5rem;
+        max-width: 75rem;
         margin: 0 auto;
     }
     header {
@@ -206,11 +191,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     border: 0;
 }
-#nav {
-flex: 1;
-}
 #main {
-flex: 4;
+flex-grow: 1;
     padding: 16px;
     border-radius: 0 0 8px 8px;
 }
