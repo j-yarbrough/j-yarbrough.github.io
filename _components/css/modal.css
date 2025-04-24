@@ -14,10 +14,11 @@ dialog {
     border: 0;
     border-radius: 8px;
     padding: 8px;
+    margin: auto;
+    max-width: 50rem;
 }
 .dialog-header-wrapper {
     display: flex;
-    height: auto;
     align-items: start;
 }
 .dialog-header {
