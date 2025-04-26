@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="/css/nav-main.css">
-<button aria-controls="nav-links" id="nav-btn" aria-expanded="false">
-<span id="nav-indicator" aria-hidden="true"></span>
-Navigation
-</button>
+<details id="nav-mobile">
+<summary id="nav-btn">Navigation</summary>
 <slot></slot>
-<script src="/js/accordion.js"></script>
+</details>
+<div id="nav-desktop">
+<slot></slot>
+</div>

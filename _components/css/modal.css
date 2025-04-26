@@ -4,6 +4,7 @@ dialog::backdrop {
 }
 .modal-trigger, .modal-close {
     font-family: var(--serif);
+    font-size: 1rem;
     color: var(--blue);
     background-color: var(--white);
     border: 1px solid var(--blue);
@@ -20,11 +21,11 @@ dialog {
 .dialog-header-wrapper {
     display: flex;
     align-items: start;
+    border-bottom: 1px solid var(--blue);
 }
 .dialog-header {
-    height: auto;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
     flex-grow: 1    ;
-}
-.modal-close {
-    margin-left: auto;
 }
