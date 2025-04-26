@@ -32,7 +32,7 @@
 <div id="wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
-<ul id="nav-links" role="list">
+<ul class="nav-links" role="list">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
