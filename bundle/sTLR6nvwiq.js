@@ -73,19 +73,6 @@ function applyValidationState (field, validOrNot) {
         break;
     }
 }
-// Script for accordions
-
-document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButtons) => {
-    accordionButtons.addEventListener('click',triggerAccordion)
-});
-
-function triggerAccordion() {
-    if (this.ariaExpanded == 'true') {
-        this.ariaExpanded = false;
-    } else {
-        this.ariaExpanded = true;
-}
-}
 // Handles all aria live announcements
 // called on by multiple scripts
 

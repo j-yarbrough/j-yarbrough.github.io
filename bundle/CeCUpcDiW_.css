@@ -1,22 +1,4 @@
-figgy-cap {
-    float: right;
-    width: fit-content;
-    border: 1 px solid var --blue;
-    border-radius: 8px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    text-align: center;
-    font-size: smaller;
-}
-
-/* small*/
-@media (max-width: 48rem) {
-figgy-cap {
-    float: none;
-    margin: auto;
-}
-}
-#nav-links {
+.nav-links {
     list-style-type: none;
 }
 .nav-links-item[aria-current] {
@@ -26,45 +8,43 @@ figgy-cap {
 }
 #nav-btn {
     font-family: var(--serif);
+    font-size: 1rem;
     color: var(--blue);
     background-color: var(--white);
     border-radius: 8px;
+    padding: 0 8px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 }
-#nav-btn[aria-expanded="false"] #nav-indicator::before {
+#nav-btn::marker {
     color: var(--red);
-    content: "\2192";
 }
-#nav-btn[aria-expanded="true"] #nav-indicator::before {
-    color: var(--red);
-    content: "\2193";
+#nav-desktop, #nav-mobile {
+    margin: 0   ;
+    padding: 0  ;
+    border: 0   ;
 }
 /* small and medium*/
 @media (max-width: 64rem) {
-    #nav-btn {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #nav-btn[aria-expanded="false"] + #nav-links {
-        display: none;
-    }
     .nav-links-item {
         padding: 0 8px;
         border-radius: 8px;
     }
+    #nav-desktop {
+        display: none;
+    }
 }
-/*end small and medium */
 /*large*/
 @media (min-width: 64.0000000001rem) {
 .nav-links-item {
     padding: 8px 0 8px 8px;
     border-radius: 8px 0 0 8px;
 }
-#nav-btn {
+#nav-mobile {
     display: none;
 }
 }
-/*end large*/
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --black: #222222;
