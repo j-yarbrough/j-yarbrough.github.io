@@ -27,9 +27,17 @@
     align-items: stretch;
     padding: 0;
 }
-#nav, #main {
+#nav, #nav-wrapper, #main {
     margin: 0;
     border: 0;
+}
+#nav-wrapper {
+    background-color: var(--white);
+}
+#nav {
+    background-color: var(--blue);
+    border-top-right-radius: 8px;
+    height: 100%;
 }
 #main {
 flex-grow: 1;
