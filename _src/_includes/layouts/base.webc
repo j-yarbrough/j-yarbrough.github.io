@@ -30,6 +30,7 @@
 </header>
 <!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
+<div id="nav-wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
 <ul class="nav-links" role="list">
@@ -52,6 +53,7 @@
 </ul>
 </nav-main>
 </nav>
+</div>
 <main class="white-background" id="main">
 <h1 tabindex="-1" id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
 <template webc:nokeep @raw="content"></template>
