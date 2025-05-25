@@ -1,9 +1,10 @@
-<dl>
+<ul>
 <div webc:nokeep webc:for="(key, value) in data">
-<dt>
+<li>
 <a webc:if="value.address" :href="value.address" @text="value.title"></a>
 <span webc:nokeep webc:else @text="value.title"></span>
-</dt>
-<dd @raw="value.desc"></dd>
+<br>
+<span webc:nokeep  @raw="value.desc"></span>
+</li>
 </div>
-</dl>
+</ul>
