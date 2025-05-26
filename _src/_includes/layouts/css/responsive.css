@@ -16,10 +16,10 @@
         width: 100%;
         max-width: 75rem;
         margin: 0 auto;
+        box-sizing: border-box;
     }
     header {
         border-radius:  8px 8px 0 8px;
-        margin-top: 16px;
         text-align: left;
     }
 #wrapper {
@@ -30,19 +30,22 @@
 #nav, #nav-wrapper, #main {
     margin: 0;
     border: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 #nav-wrapper {
     background-color: var(--white);
 }
 #nav {
     background-color: var(--blue);
-    border-top-right-radius: 8px;
+    border-radius: 0 8px 0 0;
     height: 100%;
+    padding-top: 16px;
 }
 #main {
 flex-grow: 1;
-    padding: 16px;
     border-radius: 0 0 8px 8px;
+    padding: 16px;
 }
 }
 /*end large*/
