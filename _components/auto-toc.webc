@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/e-box.css">
-<nav class="e-box" id="toc" aria-labelledby="toc-heading">
+<div webc:root role="navigation" aria-labelledby="toc-heading">
 <h2 id="toc-heading">On this page</h2>
-</nav>
+</div>
 <script src="/js/toc.js"></script>

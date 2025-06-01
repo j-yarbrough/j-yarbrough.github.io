@@ -39,6 +39,5 @@ dd {
 }
 :focus-visible {
     outline: 6px double var(--blue);
-    outline-offset: 0   ;
-    box-shadow: 0 0 4px var(--white);
+    box-shadow: 0 0 0 5px var(--white);
 }
