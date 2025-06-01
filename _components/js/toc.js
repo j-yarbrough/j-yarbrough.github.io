@@ -1,7 +1,7 @@
 buildTheTOC();
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(#toc-heading)');
-    var tocContainer = document.querySelector('#toc');
+    var tocContainer = document.querySelector('auto-toc');
 var listElement = document.createElement('ol');
 listElement.classList.add('more-line-height');
     headings.forEach((headings) => {
