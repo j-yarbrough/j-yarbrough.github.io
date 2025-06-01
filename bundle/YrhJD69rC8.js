@@ -77,7 +77,7 @@ function applyValidationState (field, validOrNot) {
 // called on by multiple scripts
 
 function ariaLiveHandler (messageToAnnounce) {
-    var ariaRegion = document.querySelector("#aria-live-region");
+    var ariaRegion = document.querySelector('aria-live');
     ariaRegion.textContent = '';
     setTimeout(ariaRegion.textContent = messageToAnnounce, 200);
 }

@@ -38,6 +38,9 @@
     background: var(--white);
     font-weight: bold;
 }
+.nav-links-item a {
+    text-decoration: none;
+}
 #nav-btn {
     font-family: var(--serif);
     font-size: 1rem;
@@ -126,8 +129,7 @@ dd {
 }
 :focus-visible {
     outline: 6px double var(--blue);
-    outline-offset: 0   ;
-    box-shadow: 0 0 4px var(--white);
+    box-shadow: 0 0 0 5px var(--white);
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
