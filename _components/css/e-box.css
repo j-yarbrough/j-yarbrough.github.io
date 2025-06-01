@@ -1,4 +1,4 @@
-e-box {
+e-box, auto-toc {
     padding: 8px;
     border-left: 1px dotted var(--blue);
     display: block;
