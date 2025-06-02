@@ -1,34 +1,20 @@
-.accordion-button {
-    font-size: inherit;
-    border: 1px solid var(--blue);
-    color: var(--blue);
-    background-color:  var(--white);
-    padding:  0 8px;
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --blue;
     border-radius: 8px;
-    font-family: var(--serif);
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
 }
-.accordion-button[aria-expanded="false"] .acc-indicator::before {
-    content: "\2192";
-    color: var(--red);
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
 }
-.accordion-button[aria-expanded="true"] .acc-indicator::before {
-    content: "\2193";
-    color: var(--red);
-}
-/* small and medium*/
-@media (max-width: 64rem) {
-.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
-    display: none;
-}
-.acc-responsive-desktop {
-    display: none;
-}
-}
-/*Large*/
-@media (min-width: 64.0000000001rem) {
-    .accordion-button {
-        display: none;
-    }
 }
 .nav-links {
     list-style-type: none;
@@ -128,8 +114,8 @@ dd {
     margin-left: 16px;
 }
 :focus-visible {
-    outline: 6px double var(--blue);
-    box-shadow: 0 0 0 5px var(--white);
+    outline: 6px double var(--white);
+    box-shadow: 0 0 0 4px var(--blue);
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -173,6 +159,10 @@ footer li .separator {
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--blue);
+}
+.white-background :focus-visible {
+    outline: 6px double var(--blue);
+    box-shadow: 0 0 0 4px var(--white);
 }
 /* small*/
 @media (max-width: 48rem) {
