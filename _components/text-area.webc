@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/text-area.css">
+<link rel="stylesheet" href="/css/inputs.css">
 <div class="text-area-wrapper" webc:root>
 <label class="text-area-label">
 <span class="text-area-text-label">
