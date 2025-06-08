@@ -1,9 +1,7 @@
 buildTheTOC();
 function buildTheTOC () {
-    var headings = document.querySelectorAll('h2:not(#toc-heading)');
-    var tocContainer = document.querySelector('auto-toc');
-var listElement = document.createElement('ol');
-listElement.classList.add('more-line-height');
+    var headings = document.querySelectorAll('h2:not(.accordion-header, .dialog-header)');
+    var tocList = document.querySelector('#toc-list');
     headings.forEach((headings) => {
         var headingText = headings.textContent
         var headingIDString = headings.id;
@@ -13,7 +11,6 @@ listElement.classList.add('more-line-height');
         listItemElementLink.href = `#${headingIDString}`;
         listItemElementLink.textContent = headingText;
         listItemElement.appendChild(listItemElementLink);
-        listElement.appendChild(listItemElement)
+        tocList.appendChild(listItemElement)
     });
-    tocContainer .appendChild(listElement);
 }
