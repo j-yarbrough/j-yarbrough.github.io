@@ -1,3 +1,35 @@
+.accordion-button {
+    font-size: inherit;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color:  var(--white);
+    padding:  0 8px;
+    border-radius: 8px;
+    font-family: var(--serif);
+}
+.accordion-button[aria-expanded="false"] .acc-indicator::before {
+    content: "\2192";
+    color: var(--red);
+}
+.accordion-button[aria-expanded="true"] .acc-indicator::before {
+    content: "\2193";
+    color: var(--red);
+}
+/* small and medium*/
+@media (max-width: 64rem) {
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+    display: none;
+}
+.acc-responsive-desktop {
+    display: none;
+}
+}
+/*Large*/
+@media (min-width: 64.0000000001rem) {
+    .accordion-button {
+        display: none;
+    }
+}
 e-box, auto-toc {
     padding: 8px;
     border-left: 1px dotted var(--blue);
