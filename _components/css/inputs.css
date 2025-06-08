@@ -5,9 +5,9 @@ text-area, text-input {
 text-area textarea, text-input input {
     color: var(--black);
     background-color: var(--white);
+    border: 1px solid var(--blue);
     font-family: var(--serif);
     font-size: 1rem;
-    border: 1px solid var (--blue);
     caret-color: var(--blue);
 }
 text-area textarea {
@@ -16,8 +16,8 @@ text-area textarea {
     height: 10rem;
 }
 text-area textarea:focus-visible, text-input input:focus-visible {
-    outline: none;
     box-shadow: none;
+    outline: 0;
 }
 .text-area-label:has(> textarea:not([aria-invalid="true"])) ~ .textarea-form-error, .text-input-label:has(> input:not([aria-invalid="true"])) ~ .text-input-form-error {
     display: none;
