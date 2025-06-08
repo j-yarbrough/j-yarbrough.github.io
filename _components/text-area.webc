@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="/css/text-area.css">
-<div class="text-area-wrapper" webc:root>
+<link rel="stylesheet" href="/css/inputs.css">
 <label class="text-area-label">
 <span class="text-area-text-label">
 <span webc:nokeep @text="label"></span>
@@ -24,4 +23,3 @@ buildTextArea();
 </label>
 <div webc:if="error" class="textarea-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
 <div webc:if="helper" id="uid+'-helper'" @text="helper"></div>
-</div>
