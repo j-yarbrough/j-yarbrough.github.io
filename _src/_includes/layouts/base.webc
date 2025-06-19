@@ -33,7 +33,7 @@
 <div id="nav-wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
-<ul class="nav-links" role="list">
+<ul class="nav-links">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
@@ -63,7 +63,7 @@
 <footer id="footer" tabindex="-1">
 <template webc:type="11ty" 11ty:type="njk">
 <nav aria-label="footer">
-<ul role="list">
+<ul>
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
 <li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
