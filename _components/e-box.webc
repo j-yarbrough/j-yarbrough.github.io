@@ -13,15 +13,15 @@ if (((!level)&& (label)) || ((!label) && (level))) {
 ``
 </script>
 <!---if ebox has label--->
-<div role="region" webc:root webc:if="label" :aria-labelledby="uid">
+<template role="region" webc:root webc:if="label" :aria-labelledby="uid">
 <h2 webc:if="{level == 2}" @text="label" :id="uid"></h2>
 <h3 webc:elseif="{level == 3}" @text="label" :id="uid"></h3>
 <h4 webc:elseif="{level == 4}" @text="label" :id="uid"></h4>
 <h5 webc:elseif="{level == 5}" @text="label" :id="uid"></h5>
 <h6 webc:elseif="{level == 6}" @text="label" :id="uid"></h6>
 <slot></slot>
-</div>
+</template>
 <!---If no label--->
-<div webc:root role="region" webc:else>
+<template webc:root role="region" webc:else>
 <slot></slot>
-</div>
+</template>
