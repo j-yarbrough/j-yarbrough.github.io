@@ -1,12 +1,13 @@
 ---
 title: Other Media
 layout: layouts/base.webc
+templateEngineOverride: webc,md
 eleventyNavigation:
   key: Other Media
   parent: Portfolio
   order: 4
 ---
-<p>Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his <a href="/portfolio">portfolio page</a>.</p>
+Below you will find a listing of videos and other media in which Justin has appeared. To see other work Justin has done, check out the other sections of his <a href="/portfolio">portfolio page</a>.
 
 <div webc:nokeep webc:for="(key, value) in pages.portfolio.media" >
 <jy-acc @level="2" :@label="value.mainsection">
@@ -15,4 +16,4 @@ eleventyNavigation:
 </jy-acc>
 </div>
 
-<p>Please note that Justin has no control over the accessibility of any links to third-party sites</p>
+Please note that Justin has no control over the accessibility of any links to third-party sites
