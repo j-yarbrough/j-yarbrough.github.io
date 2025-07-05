@@ -1,16 +1,17 @@
 // event listeners
 
-document.querySelectorAll('.modal-trigger, .modal-close').forEach((triggerButton) => {
-    triggerButton.addEventListener('click', modalActivate)
-})
+document.querySelectorAll('.modal-trigger').forEach((triggerButton) => {
+    triggerButton.addEventListener('click', modalOpen)
+});
+document.querySelectorAll('.modal-close').forEach((closeButton) => {
+    closeButton.addEventListener('click',modalClose);
+});
 
-// function
+// functions
 
-function modalActivate () {
-    var dialogContainer = this.closest('modal-dialog').querySelector('dialog');
-    if (dialogContainer.hasAttribute('open')) {
-dialogContainer.close();
-    } else {
-        dialogContainer.showModal();
-    }
+function modalOpen() {
+    document.querySelector('#' + this.getAttribute('aria-controls')).showModal();
+}
+function modalClose() {
+    document.querySelector('#' + this.getAttribute('aria-controls')).close();
 }
