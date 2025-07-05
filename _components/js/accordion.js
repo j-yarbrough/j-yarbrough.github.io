@@ -4,10 +4,9 @@ document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButto
     accordionButtons.addEventListener('click',triggerAccordion)
 });
 
-function triggerAccordion() {
-    if (this.ariaExpanded == 'true') {
-        this.ariaExpanded = false;
-    } else {
-        this.ariaExpanded = true;
-}
+function triggerAccordion()  {
+    switch (this.ariaExpanded == 'true') {
+        case true: this.ariaExpanded = 'false'; break;
+        case false: this.ariaExpanded = 'true'; break;
+    }
 }
