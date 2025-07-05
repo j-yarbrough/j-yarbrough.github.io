@@ -4,12 +4,11 @@ document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButto
     accordionButtons.addEventListener('click',triggerAccordion)
 });
 
-function triggerAccordion() {
-    if (this.ariaExpanded == 'true') {
-        this.ariaExpanded = false;
-    } else {
-        this.ariaExpanded = true;
-}
+function triggerAccordion()  {
+    switch (this.ariaExpanded == 'true') {
+        case true: this.ariaExpanded = 'false'; break;
+        case false: this.ariaExpanded = 'true'; break;
+    }
 }
 buildTheTOC();
 function buildTheTOC () {
@@ -29,17 +28,18 @@ function buildTheTOC () {
 }
 // event listeners
 
-document.querySelectorAll('.modal-trigger, .modal-close').forEach((triggerButton) => {
-    triggerButton.addEventListener('click', modalActivate)
-})
+document.querySelectorAll('.modal-trigger').forEach((triggerButton) => {
+    triggerButton.addEventListener('click', modalOpen)
+});
+document.querySelectorAll('.modal-close').forEach((closeButton) => {
+    closeButton.addEventListener('click',modalClose);
+});
 
-// function
+// functions
 
-function modalActivate () {
-    var dialogContainer = this.closest('modal-dialog').querySelector('dialog');
-    if (dialogContainer.hasAttribute('open')) {
-dialogContainer.close();
-    } else {
-        dialogContainer.showModal();
-    }
+function modalOpen() {
+    document.querySelector('#' + this.getAttribute('aria-controls')).showModal();
+}
+function modalClose() {
+    document.querySelector('#' + this.getAttribute('aria-controls')).close();
 }
