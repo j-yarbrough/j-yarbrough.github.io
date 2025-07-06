@@ -1,4 +1,4 @@
-buildTheTOC();
+window.addEventListener('load',buildTheTOC);
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(.accordion-header, .dialog-header)');
     var tocList = document.querySelector('#toc-list');

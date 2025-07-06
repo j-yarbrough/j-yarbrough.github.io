@@ -1,17 +1,11 @@
-// event listeners
-
-document.querySelectorAll('.modal-trigger').forEach((triggerButton) => {
-    triggerButton.addEventListener('click', modalOpen)
-});
-document.querySelectorAll('.modal-close').forEach((closeButton) => {
-    closeButton.addEventListener('click',modalClose);
+document.querySelectorAll('.modal-open, .modal-close').forEach((modalButton) => {
+    modalButton.addEventListener('click',modalActivate);
 });
 
-// functions
-
-function modalOpen() {
-    document.querySelector('#' + this.getAttribute('aria-controls')).showModal();
-}
-function modalClose() {
-    document.querySelector('#' + this.getAttribute('aria-controls')).close();
+function modalActivate() {
+    var dialogContainer = document.querySelector('#' + this.getAttribute('aria-controls'));
+    switch (this.classList.contains('modal-open')) {
+        case true:  dialogContainer.showModal();break;
+        case false: dialogContainer.close(); break;
+    }
 }
