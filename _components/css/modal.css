@@ -2,7 +2,7 @@ dialog::backdrop {
     background-color: var(--blue);
     opacity: 80%;
 }
-.modal-trigger, .modal-close {
+.modal-open, .modal-close {
     font-family: var(--serif);
     font-size: 1rem;
     color: var(--blue);
