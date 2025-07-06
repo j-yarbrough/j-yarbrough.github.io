@@ -1,16 +1,13 @@
-// Script for accordions
-
-document.querySelectorAll('#nav-btn, .accordion-button').forEach((accordionButtons) => {
+document.querySelectorAll('.accordion-button').forEach((accordionButtons) => {
     accordionButtons.addEventListener('click',triggerAccordion)
 });
-
 function triggerAccordion()  {
     switch (this.ariaExpanded == 'true') {
         case true: this.ariaExpanded = 'false'; break;
         case false: this.ariaExpanded = 'true'; break;
     }
 }
-buildTheTOC();
+window.addEventListener('load',buildTheTOC);
 function buildTheTOC () {
     var headings = document.querySelectorAll('h2:not(.accordion-header, .dialog-header)');
     var tocList = document.querySelector('#toc-list');
@@ -26,20 +23,14 @@ function buildTheTOC () {
         tocList.appendChild(listItemElement)
     });
 }
-// event listeners
-
-document.querySelectorAll('.modal-trigger').forEach((triggerButton) => {
-    triggerButton.addEventListener('click', modalOpen)
-});
-document.querySelectorAll('.modal-close').forEach((closeButton) => {
-    closeButton.addEventListener('click',modalClose);
+document.querySelectorAll('.modal-open, .modal-close').forEach((modalButton) => {
+    modalButton.addEventListener('click',modalActivate);
 });
 
-// functions
-
-function modalOpen() {
-    document.querySelector('#' + this.getAttribute('aria-controls')).showModal();
-}
-function modalClose() {
-    document.querySelector('#' + this.getAttribute('aria-controls')).close();
+function modalActivate() {
+    var dialogContainer = document.querySelector('#' + this.getAttribute('aria-controls'));
+    switch (this.classList.contains('modal-open')) {
+        case true:  dialogContainer.showModal();break;
+        case false: dialogContainer.close(); break;
+    }
 }
