@@ -1,6 +1,9 @@
-document.querySelectorAll('.accordion-button').forEach((accordionButtons) => {
-    accordionButtons.addEventListener('click',triggerAccordion)
+window.addEventListener('load',function() {
+    this.document.querySelectorAll('.accordion-button').forEach((accButton) => {
+        accButton.addEventListener('click',triggerAccordion);
+    })
 });
+
 function triggerAccordion()  {
     switch (this.ariaExpanded == 'true') {
         case true: this.ariaExpanded = 'false'; break;
