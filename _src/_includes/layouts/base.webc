@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="/css/white-background.css">
 <link rel="stylesheet" href="/css/responsive.css">
 <link rel="stylesheet" href="/css/classes.css">
+<script webc:keep :src="getBundleFileUrl('js')"></script>
 </head>
 <body>
 <div id="skip-links" role="list">
@@ -89,6 +90,5 @@ Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
 <aria-live webc:if="hasAriaLive"></aria-live>
-    <script :src="getBundleFileUrl('js')" webc:keep></script>
 </body>
 </html>

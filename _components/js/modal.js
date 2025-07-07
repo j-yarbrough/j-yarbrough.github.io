@@ -1,7 +1,8 @@
-document.querySelectorAll('.modal-open, .modal-close').forEach((modalButton) => {
-    modalButton.addEventListener('click',modalActivate);
-});
-
+window.addEventListener('load',function () {
+    document.querySelectorAll('.modal-open, .modal-close').forEach((dialogButton) => {
+        dialogButton.addEventListener('click',modalActivate);
+    })
+})
 function modalActivate() {
     var dialogContainer = document.querySelector('#' + this.getAttribute('aria-controls'));
     switch (this.classList.contains('modal-open')) {

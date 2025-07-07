@@ -1,12 +1,8 @@
-//event listeners
-
-document.querySelectorAll('form-wrapper').forEach((formContainer) =>{
-    formContainer.firstElementChild.addEventListener('submit',submitForm);
+window.addEventListener('load',function() {
+    document.querySelectorAll('form-wrapper').forEach((formContainer) => {
+        formContainer.firstElementChild.addEventListener('submit',submitForm);
+    })
 });
-
-//functions
-
-//function to perform validation
 
 function validateField (fieldToValidate) {
     var isValid;
