@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="/css/yt-embed.css">
 <video :id="uid" data-able-player preload="auto" :data-youtube-id="yt">
-<p>The video player failed to load for some reason but you can <a :href="'https://youtu.be/' + yt">watch it on YouTube.</a></p>
+<p>The video player failed to load for some reason but you can <a :href="yt">watch it on YouTube.</a></p>
 </video>

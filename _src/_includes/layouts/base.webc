@@ -19,12 +19,11 @@
 <!-- Dependencies -->
 <script webc:keep src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script webc:keep src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
-
 <!-- CSS -->
-<link webc:keep rel="stylesheet" href="build/ableplayer.min.css" type="text/css"/>
+<link webc:keep rel="stylesheet" href="/build/ableplayer.min.css" type="text/css"/>
 
 <!-- JavaScript -->
-<script webc:keep src="build/ableplayer.min.js"></script>
+<script webc:keep src="/build/ableplayer.min.js"></script>
 </template>
 </head>
 <body>

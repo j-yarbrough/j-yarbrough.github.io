@@ -63,7 +63,8 @@
                     {
                         "title":"Meet Justin, Steve and Trudy at axe-con 2023!",
                         "address":"https://www.youtube.com/watch?v=XL1HN-3JF0I",
-                        "desc":"Promotional video recorded for an axe-con panel Justin participated in discussing working in accessibility while having a disability."
+                        "desc":"Promotional video recorded for an axe-con panel Justin participated in discussing working in accessibility while having a disability.",
+                        "yt":"true"
                     }
                 ]
             },{
@@ -72,7 +73,8 @@
                     {
                         "title":"Living with Blindness: Interview with Justin Yarbrough",
                         "address":"https://www.youtube.com/watch?v=sfHOJfJHav0",
-                        "desc":"Interview conducted with Rio Salado College librarian Kirstin Thomas as part of Rio's recognition of the 31st anniversary of the Americans with Disabilities Act being signed into law."
+                        "desc":"Interview conducted with Rio Salado College librarian Kirstin Thomas as part of Rio's recognition of the 31st anniversary of the Americans with Disabilities Act being signed into law.",
+                        "yt":"true"
                     }
                 ]
             }
