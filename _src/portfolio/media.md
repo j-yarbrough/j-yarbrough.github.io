@@ -2,6 +2,7 @@
 title: Other Media
 layout: layouts/base.webc
 templateEngineOverride: webc,md
+hasVideo: true
 eleventyNavigation:
   key: Other Media
   parent: Portfolio

@@ -1,6 +1,7 @@
 ---
 title: Speaking
 layout: layouts/base.webc
+hasVideo: true
 templateEngineOverride: webc,md
 eleventyNavigation:
   key: Speaking
@@ -13,8 +14,9 @@ If you would like Justin to speak at your event, you can [contact him](/contact/
 
 <jy-acc @level="2" @label="A11yTalks">
 
-- September 2019: Panelist for [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8), which discussed all things digital inclusion.
-
+- September 2019: Panelist for [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8), which discussed all things digital inclusion.  
+<yt-embed @yt="https://www.youtube.com/watch?v=uY5BWqTzTd8">
+</yt-embed>
 </jy-acc>
 
 <jy-acc @level="2" @label="AccessU">
@@ -40,8 +42,8 @@ If you would like Justin to speak at your event, you can [contact him](/contact/
 
 <jy-acc @level="2" @label="The Staying Inn">
 
-- July 2020: Co-presented [If you're Blind, how do you tweet?](https://www.youtube.com/watch?v=UVZKctUMZJY) in which my co-presenter provided a basic introduction to screen readers and I conducted a demo. You can [download the demo site here (.zip file)](/resources/staying-inn-demo.zip).
-
+- July 2020: Co-presented [If you're Blind, how do you tweet?](https://www.youtube.com/watch?v=UVZKctUMZJY) in which my co-presenter provided a basic introduction to screen readers and I conducted a demo. You can [download the demo site here (.zip file)](/resources/staying-inn-demo.zip).  
+<yt-embed @yt="https://www.youtube.com/watch?v=UVZKctUMZJY"></yt-embed>
 </jy-acc>
 
 <jy-acc @level="2" @label="University College London">

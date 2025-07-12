@@ -23,6 +23,10 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("resources");
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("images");
-    eleventyConfig.addWatchTarget('resources');
+    eleventyConfig.addPassthroughCopy("build");
+    eleventyConfig.addPassthroughCopy("button-icon");
+    eleventyConfig.addPassthroughCopy("styles");
+    eleventyConfig.addPassthroughCopy("translations");
+    eleventyConfig.addPassthroughCopy("license");
     eleventyConfig.addWatchTarget('images');
 };

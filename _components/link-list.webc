@@ -1,10 +1,14 @@
 <ul>
-<div webc:nokeep webc:for="(key, value) in data">
+<template webc:nokeep webc:for="(key, value) in data">
 <li>
 <a webc:if="value.address" :href="value.address" @text="value.title"></a>
 <span webc:nokeep webc:else @text="value.title"></span>
 <br>
 <span webc:nokeep  @raw="value.desc"></span>
+<template webc:nokeep webc:if="value.yt">
+<br>
+<yt-embed :@yt="value.address"></yt-embed"
+</template>
 </li>
-</div>
+</template>
 </ul>
