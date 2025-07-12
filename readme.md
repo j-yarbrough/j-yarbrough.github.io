@@ -164,10 +164,20 @@ Required attributes:
 
 ### Link list
 
-Creates a ``<dl>`` for a list of links with descriptions
+Creates an unordered list of links with descriptions and optional YouTube embeds
 
 ``<link-list>``
 
 Required attributes:
 
 - @data: Reference to data where these can be found. For syntax, check out some of the ffiles in ``/_src/_data/`` for examples. I highly recommend leaning on that to create the list.
+
+### YouTube embeds with Able Player
+
+Sets up all the HTML needed to create a YouTube embed overlaid with Able Player
+
+``<yt-embed>``
+
+Required attribute:
+
+- @yt: URL for the YouTube video you're looking to embed.
