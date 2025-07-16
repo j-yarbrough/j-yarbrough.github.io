@@ -13,7 +13,7 @@
 h1, h2, h3, h4, h5, h6 {
     color: var(--blue);
 }
-.white-background :focus-visible {
+.white-background a:focus-visible, .white-background button:focus-visible {
     outline: 6px double var(--blue);
     box-shadow: 0 0 0 4px var(--white);
 }
