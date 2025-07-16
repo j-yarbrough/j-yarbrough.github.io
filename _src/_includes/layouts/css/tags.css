@@ -37,7 +37,7 @@ dt {
 dd {
     margin-left: 16px;
 }
-:focus-visible {
+a:focus-visible, summary:focus-visible {
     outline: 6px double var(--white);
     box-shadow: 0 0 0 4px var(--blue);
 }
