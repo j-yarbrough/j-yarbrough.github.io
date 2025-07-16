@@ -1,20 +1,70 @@
-figgy-cap {
-    float: right;
-    width: fit-content;
-    border: 1 px solid var --blue;
+.accordion-button {
+    font-size: inherit;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color:  var(--white);
+    padding:  0 8px;
     border-radius: 8px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    text-align: center;
-    font-size: smaller;
+    font-family: var(--serif);
 }
-
-/* small*/
-@media (max-width: 48rem) {
-figgy-cap {
-    float: none;
+.accordion-button[aria-expanded="false"] .acc-indicator::before {
+    content: "\2192";
+    color: var(--red);
+}
+.accordion-button[aria-expanded="true"] .acc-indicator::before {
+    content: "\2193";
+    color: var(--red);
+}
+/* small and medium*/
+@media (max-width: 64rem) {
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+    display: none;
+}
+.acc-responsive-desktop {
+    display: none;
+}
+}
+/*Large*/
+@media (min-width: 64.0000000001rem) {
+    .accordion-button {
+        display: none;
+    }
+}
+dialog::backdrop {
+    background-color: var(--blue);
+    opacity: 80%;
+}
+.modal-open, .modal-close {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--blue);
+    background-color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    padding: 0 8px;
+}
+dialog {
+    border: 0;
+    border-radius: 8px;
+    padding: 8px;
     margin: auto;
+    max-width: 50rem;
 }
+.dialog-header-wrapper {
+    display: flex;
+    align-items: start;
+    border-bottom: 1px solid var(--blue);
+}
+.dialog-header {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1    ;
+}
+e-box {
+    padding: 8px;
+    border-left: 1px dotted var(--blue);
+    display: block;
 }
 .nav-links {
     list-style-type: none;
@@ -113,7 +163,7 @@ dt {
 dd {
     margin-left: 16px;
 }
-:focus-visible {
+a:focus-visible, summary:focus-visible {
     outline: 6px double var(--white);
     box-shadow: 0 0 0 4px var(--blue);
 }
@@ -160,7 +210,7 @@ footer li .separator {
 h1, h2, h3, h4, h5, h6 {
     color: var(--blue);
 }
-.white-background :focus-visible {
+.white-background a:focus-visible, .white-background button:focus-visible {
     outline: 6px double var(--blue);
     box-shadow: 0 0 0 4px var(--white);
 }
