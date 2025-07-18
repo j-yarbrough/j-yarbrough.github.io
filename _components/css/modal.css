@@ -16,12 +16,12 @@ dialog {
     border-radius: 8px;
     padding: 8px;
     margin: auto;
-    max-width: 800px;
+    max-width: 50rem;
 }
 .dialog-header-wrapper {
     display: flex;
     align-items: start;
-    border-bottom: 1px solid var(--red);
+    border-bottom: 1px solid var(--blue);
 }
 .dialog-header {
     font-size: 1.5rem;

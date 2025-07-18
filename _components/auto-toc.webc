@@ -1,6 +1,6 @@
-<script src="/js/toc.js"></script>
 <div webc:root role="navigation" aria-label="On this page">
 <jy-acc @label="On this page" @level="2">
 <ol class="more-line-height" id="toc-list"></ol>
 </jy-acc>
 </div>
+<script src="/js/toc.js"></script>
