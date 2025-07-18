@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/css/accordion.css">
-<script src="/js/accordion.js"></script>
 <script webc:type="js">
 if (!label) {throw new Error('jy-acc component is missing required prop label');};
 ``
@@ -26,3 +25,4 @@ if (!label) {throw new Error('jy-acc component is missing required prop label');
 <div class="accordion-panel" :id="uid + '-acc-panel'">
 <slot></slot>
 </div>
+<script src="/js/accordion.js"></script>

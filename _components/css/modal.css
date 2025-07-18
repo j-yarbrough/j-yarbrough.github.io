@@ -21,7 +21,7 @@ dialog {
 .dialog-header-wrapper {
     display: flex;
     align-items: start;
-    border-bottom: 1px solid var(--red);
+    border-bottom: 1px solid var(--blue);
 }
 .dialog-header {
     font-size: 1.5rem;

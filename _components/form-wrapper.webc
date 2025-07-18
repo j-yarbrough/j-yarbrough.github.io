@@ -1,5 +1,4 @@
 <script webc:type="js" webc:root>
-<script src="/js/contact.js">
 if (!name) {throw new Error('form wrapper component is missing required prop name');};
 if (!id) {throw new Error('form wrapper component is missing required prop id');};
 if (!method) {throw new Error('form wrapper component is missing required prop method');};
@@ -10,3 +9,4 @@ if (!action) {throw new Error('form wrapper component is missing required prop a
 <form :id="id" :name="name" :method="method" :action="action">
 <slot></slot>
 </form>
+<script src="/js/contact.js">
