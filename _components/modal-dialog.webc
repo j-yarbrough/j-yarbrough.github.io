@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/modal.css">
+<script src="js/modal.js"></script>
 <script webc:type="js">
 if (!label) {throw new Error('modal-dialog component is missing required prop label');};
 ``
@@ -13,4 +14,3 @@ if (!label) {throw new Error('modal-dialog component is missing required prop la
 </div>
 <slot></slot>
 </dialog>
-<script src="js/modal.js"></script>
