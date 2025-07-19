@@ -28,4 +28,4 @@ buildInput();
 </script>
 </label>
 <div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
-<div webc:if="helper" @text="helper" :id="uid+'-helper'"></div>
+<div class="helper-text" webc:if="helper" @text="helper" :id="uid+'-helper'"></div>

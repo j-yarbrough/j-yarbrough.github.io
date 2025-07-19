@@ -27,3 +27,7 @@ text-area textarea {
     display: block;
 }
 }
+.helper-text {
+    color: var(--secondary);
+    font-size: smaller;
+}
