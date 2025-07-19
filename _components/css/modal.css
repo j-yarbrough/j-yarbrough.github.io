@@ -1,13 +1,12 @@
 dialog::backdrop {
-    background-color: var(--blue);
-    opacity: 80%;
+    background-color: var(--secondary);
 }
 .modal-open, .modal-close {
     font-family: var(--serif);
     font-size: 1rem;
-    color: var(--blue);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+    color: var(--highlight);
+    background-color: var(--background);
+    border: 1px solid var(--highlight);
     border-radius: 8px;
     padding: 0 8px;
 }
@@ -21,7 +20,7 @@ dialog {
 .dialog-header-wrapper {
     display: flex;
     align-items: start;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid var(--secondary);
 }
 .dialog-header {
     font-size: 1.5rem;

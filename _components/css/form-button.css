@@ -1,10 +1,9 @@
 .form-button {
     font-family: var(--serif);
     font-size: 1rem;
-    color: var(--blue);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+    color: var(--highlight);
+    background-color: var(--background);
+    border: 1px solid var(--highlight);
     border-radius: 8px;
     padding: 0 8px;
-    margin-right: 8px;
 }

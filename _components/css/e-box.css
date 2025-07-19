@@ -1,5 +1,5 @@
 e-box {
     padding: 8px;
-    border-left: 1px dotted var(--blue);
+    border-left: 1px dashed var(--secondary);
     display: block;
 }
