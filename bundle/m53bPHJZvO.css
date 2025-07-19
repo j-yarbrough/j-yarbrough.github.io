@@ -1,9 +1,77 @@
+.accordion-button {
+    font-size: inherit;
+    border: 1px solid var(--highlight);
+    color: var(--highlight);
+    background-color:  var(--background);
+    padding:  0 8px;
+    border-radius: 8px;
+    font-family: var(--serif);
+}
+.accordion-button[aria-expanded="false"] .acc-indicator::before {
+    content: "\2192";
+    color: var(--secondary);
+}
+.accordion-button[aria-expanded="true"] .acc-indicator::before {
+    content: "\2193";
+    color: var(--secondary);
+}
+/* small and medium*/
+@media (max-width: 64rem) {
+.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+    display: none;
+}
+.acc-responsive-desktop {
+    display: none;
+}
+}
+/*Large*/
+@media (min-width: 64.0000000001rem) {
+    .accordion-button {
+        display: none;
+    }
+}
+dialog::backdrop {
+    background-color: var(--background);
+}
+.modal-open, .modal-close {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--highlight);
+    background-color: var(--background);
+    border: 1px solid var(--highlight);
+    border-radius: 8px;
+    padding: 0 8px;
+}
+dialog {
+    border: 1px solid var(--secondary);
+    background-color: var(--background);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px;
+    margin: auto;
+    max-width: 800px;
+}
+.dialog-header-wrapper {
+    display: flex;
+    align-items: start;
+    border-bottom: 1px dashed var(--secondary);
+}
+.dialog-header {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1    ;
+}
+e-box {
+    padding: 8px;
+    border-left: 1px dashed var(--secondary);
+    display: block;
+}
 .nav-links {
     list-style-type: none;
+    line-height: 1.5    ;
 }
 .nav-links-item[aria-current] {
-    color: var(--black);
-    background: var(--white);
     font-weight: bold;
 }
 .nav-links-item a {
@@ -12,8 +80,8 @@
 #nav-btn {
     font-family: var(--serif);
     font-size: 1rem;
-    color: var(--blue);
-    background-color: var(--white);
+    color: var(--highlight);
+    background-color: var(--background);
     border-radius: 8px;
     padding: 0 8px;
     margin-left: auto;
@@ -21,53 +89,36 @@
     width: fit-content;
 }
 #nav-btn::marker {
-    color: var(--red);
-}
-#nav-desktop, #nav-mobile {
-    margin: 0   ;
-    padding: 0  ;
-    border: 0   ;
+    color: var(--secondary);
 }
 /* small and medium*/
 @media (max-width: 64rem) {
-    .nav-links-item {
-        padding: 0 8px;
-        border-radius: 8px;
-    }
     #nav-desktop {
         display: none;
     }
 }
 /*large*/
 @media (min-width: 64.0000000001rem) {
-.nav-links-item {
-    padding: 8px 0 8px 8px;
-    border-radius: 8px 0 0 8px;
-}
 #nav-mobile {
     display: none;
 }
 }
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
-    --black: #222222;
-    --white: #ffffff;
-    --blue:#00247d;
-    --red: #cf142b;
-    --disabled-gray: #898989;
+    --background: #000000;
+    --text-color: #ffffff;
+    --highlight:#ff9900;
+    --secondary: #999999;
     }
 body {
-    background-color: var(--blue);
-        color: var(--white);
+    background-color: var(--background);
+        color: var(--text-color);
     font-family: var(--serif);
     font-size: 16px;
     padding: 8px
 }
 header, footer, .text-center {
     text-align: center;
-}
-header p {
-    color: var(--blue);
 }
 ol {
     list-style-type: decimal;
@@ -84,20 +135,22 @@ ol ol ol ol {
 ol ol ol ol ol {
     list-style-type: lower-roman;
 }
-
 a, a:active, a:focus, a:hover, a:visited {
-    color: var(--white);
+    color: var(--highlight);
 }
 dt {
     font-weight: bold;
-    color: var(--blue);
+    color: var(--highlight);
 }
 dd {
     margin-left: 16px;
 }
-a:focus-visible, summary:focus-visible {
-    outline: 6px double var(--white);
-    box-shadow: 0 0 0 4px var(--blue);
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight)
+}
+:focus-visible {
+    outline: 6px double var(--highlight);
+    box-shadow: 0 0 0 4px var(--background);
 }
 /*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
@@ -107,9 +160,6 @@ a:focus-visible, summary:focus-visible {
     width: 1px;
     height: 1px;
     overflow: hidden;
-}
-#nav {
-    padding: 8px 0;
 }
 footer {
     font-size: smaller;
@@ -126,25 +176,6 @@ footer {
 }
 footer li .separator {
     font-weight: normal !important;
-}
-.white-background {
-    background-color: var(--white);
-    color: var(--black);
-    border-radius: 8px;
-    padding: 8px;
-}
-.white-background a, .white-background a:visited, .white-background a:hover{
-    color: var(--blue);
-}
-.white-background a:active {
-    color: var(--red);
-}
-h1, h2, h3, h4, h5, h6 {
-    color: var(--blue);
-}
-.white-background a:focus-visible, .white-background button:focus-visible {
-    outline: 6px double var(--blue);
-    box-shadow: 0 0 0 4px var(--white);
 }
 /* small*/
 @media (max-width: 48rem) {
@@ -167,33 +198,22 @@ h1, h2, h3, h4, h5, h6 {
         box-sizing: border-box;
     }
     header {
-        border-radius:  8px 8px 0 8px;
         text-align: left;
     }
 #wrapper {
     display: flex;
     align-items: stretch;
-    padding: 0;
-}
-#nav, #nav-wrapper, #main {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#nav-wrapper {
-    background-color: var(--white);
-}
-#nav {
-    background-color: var(--blue);
-    border-radius: 0 8px 0 0;
-    height: 100%;
-    padding-top: 16px;
 }
 #main {
 flex-grow: 1;
-    border-radius: 0 0 8px 8px;
-    padding: 16px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-left: 1px dashed var(--secondary);
+}
+#nav {
+    padding-top: 8px;
+    padding-right: 8px;
 }
 }
 /*end large*/
@@ -212,7 +232,7 @@ flex-grow: 1;
     list-style-type: none;
 }
 .header-first-line {
-    color: var(--blue);
+    color: var(--highlight);
     font-size: 2rem;
     font-weight: bold;
 }
