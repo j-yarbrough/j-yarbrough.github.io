@@ -1,19 +1,19 @@
 .accordion-button {
     font-size: inherit;
-    border: 1px solid var(--blue);
-    color: var(--blue);
-    background-color:  var(--white);
+    border: 1px solid var(--highlight);
+    color: var(--highlight);
+    background-color:  var(--background);
     padding:  0 8px;
     border-radius: 8px;
     font-family: var(--serif);
 }
 .accordion-button[aria-expanded="false"] .acc-indicator::before {
     content: "\2192";
-    color: var(--red);
+    color: var(--secondary);
 }
 .accordion-button[aria-expanded="true"] .acc-indicator::before {
     content: "\2193";
-    color: var(--red);
+    color: var(--secondary);
 }
 /* small and medium*/
 @media (max-width: 64rem) {

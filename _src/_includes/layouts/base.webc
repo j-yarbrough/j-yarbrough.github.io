@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="/css/variables.css">
 <link rel="stylesheet" href="/css/tags.css">
 <link rel="stylesheet" href="/css/skip-links.css">
-<link rel="stylesheet" href="/css/main-nav.css">
 <link rel="stylesheet" href="/css/footer-nav.css">
-<link rel="stylesheet" href="/css/white-background.css">
 <link rel="stylesheet" href="/css/responsive.css">
 <link rel="stylesheet" href="/css/classes.css">
 <script webc:keep :src="getBundleFileUrl('js')"></script>
@@ -21,7 +19,6 @@
 <script webc:keep src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 <!-- CSS -->
 <link webc:keep rel="stylesheet" href="/build/ableplayer.min.css" type="text/css"/>
-
 <!-- JavaScript -->
 <script webc:keep src="/build/ableplayer.min.js"></script>
 </template>
@@ -36,13 +33,12 @@
 <a href="#footer">Skip to Footer</a>
 </span>
 </div>
-<header class="white-background">
+<header>
 <p class="header-first-line"@text="site.siteName"></p>
 <p @text="site.tagline"></p>
 </header>
 <!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
-<div id="nav-wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
 <ul class="nav-links">
@@ -65,8 +61,7 @@
 </ul>
 </nav-main>
 </nav>
-</div>
-<main class="white-background" id="main">
+<main id="main">
 <h1 tabindex="-1" id="main-heading" @text="{if (H1) {H1} else {title}}"></h1>
 <template webc:nokeep @raw="content"></template>
 </main>

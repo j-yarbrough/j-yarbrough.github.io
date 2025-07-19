@@ -1,4 +1,8 @@
+fieldset {
+    border: 0;
+    padding: 0;
+}
 legend {
     font-size: 1.25rem;
-    color: var(--blue);
+    color: var(--highlight);
 }

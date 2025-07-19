@@ -3,29 +3,20 @@ text-area, text-input {
     min-height: 24px;
 }
 text-area textarea, text-input input {
-    color: var(--black);
-    background-color: var(--white);
-    border: 1px solid var(--blue);
+    color: var(--text-color);
+    background-color: var(--background);
+    border: 1px solid var(--highlight);
     font-family: var(--serif);
     font-size: 1rem;
-    caret-color: var(--blue);
+    caret-color: var(--text-color);
 }
 text-area textarea {
     display: block;
     width: 100%;
     height: 10rem;
 }
-text-area textarea:focus, text-input input:focus {
-    box-shadow: 0 0 4px 0 var(--blue);
-}
 .text-area-label:has(> textarea:not([aria-invalid="true"])) ~ .textarea-form-error, .text-input-label:has(> input:not([aria-invalid="true"])) ~ .text-input-form-error {
     display: none;
-}
-text-area textarea[aria-invalid],text-input input[aria-invalid] {
-    border-color: var(--red);
-}
-text-area textarea[aria-invalid]:focus, text-input input[aria-invalid]:focus {
-    box-shadow: 0 0 4px 0 var(--red);
 }
 .text-area-text-label {
     display: block;
@@ -35,4 +26,8 @@ text-area textarea[aria-invalid]:focus, text-input input[aria-invalid]:focus {
 .text-input-label {
     display: block;
 }
+}
+.helper-text {
+    color: var(--secondary);
+    font-size: smaller;
 }

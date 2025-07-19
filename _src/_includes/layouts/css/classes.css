@@ -13,7 +13,7 @@
     list-style-type: none;
 }
 .header-first-line {
-    color: var(--blue);
+    color: var(--highlight);
     font-size: 2rem;
     font-weight: bold;
 }
