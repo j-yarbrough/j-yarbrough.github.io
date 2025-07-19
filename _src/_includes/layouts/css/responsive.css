@@ -19,33 +19,15 @@
         box-sizing: border-box;
     }
     header {
-        border-radius:  8px 8px 0 8px;
         text-align: left;
     }
 #wrapper {
     display: flex;
     align-items: stretch;
-    padding: 0;
-}
-#nav, #nav-wrapper, #main {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#nav-wrapper {
-    background-color: var(--white);
-}
-#nav {
-    background-color: var(--blue);
-    border-radius: 0 8px 0 0;
-    height: 100%;
-    padding-top: 16px;
 }
 #main {
 flex-grow: 1;
-    border-radius: 0 0 8px 8px;
-    padding: 16px;
+    padding: 8px;
 }
 }
 /*end large*/

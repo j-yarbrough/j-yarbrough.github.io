@@ -1,15 +1,12 @@
 body {
-    background-color: var(--blue);
-        color: var(--white);
+    background-color: var(--background);
+        color: var(--text-color);
     font-family: var(--serif);
     font-size: 16px;
     padding: 8px
 }
 header, footer, .text-center {
     text-align: center;
-}
-header p {
-    color: var(--blue);
 }
 ol {
     list-style-type: decimal;
@@ -26,18 +23,20 @@ ol ol ol ol {
 ol ol ol ol ol {
     list-style-type: lower-roman;
 }
-
 a, a:active, a:focus, a:hover, a:visited {
-    color: var(--white);
+    color: var(--highlight);
 }
 dt {
     font-weight: bold;
-    color: var(--blue);
+    color: var(--highlight);
 }
 dd {
     margin-left: 16px;
 }
-a:focus-visible, summary:focus-visible {
-    outline: 6px double var(--white);
-    box-shadow: 0 0 0 4px var(--blue);
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight)
+}
+:focus-visible {
+    outline: 6px double var(--highlight);
+    box-shadow: 0 0 0 4px var(--background);
 }
