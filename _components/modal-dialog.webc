@@ -6,11 +6,16 @@ if (!label) {throw new Error('modal-dialog component is missing required prop la
 <div class="modal-trigger-button-wrapper">
 <button :aria-controls="uid" class="modal-open" aria-haspopup="dialog" @text="label"></button>
 </div>
-<dialog class="white-background" :id="uid" :aria-labelledby="uid + '-heading'">
+<dialog :id="uid" :aria-labelledby="uid + '-heading'">
 <div class="dialog-header-wrapper">
 <h1 class="dialog-header" tabindex="-1" autofocus :id="uid + '-heading'" @text="label"></h1>
-<button aria-label="Close" type="button" class="modal-close" :aria-controls="uid">&times;</button>
+<button aria-hidden="true" tabindex="-1" aria-label="Close" type="button" class="modal-close" :aria-controls="uid">&times;</button>
 </div>
+<div class="dialog-main-wrapper">
 <slot></slot>
+</div>
+<div class="dialog-footer-wrapper">
+<button type="button" class="modal-close" :aria-controls="uid">Close</button>
+</div>
 </dialog>
 <script src="js/modal.js"></script>
