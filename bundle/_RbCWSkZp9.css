@@ -1,20 +1,7 @@
-figgy-cap {
-    float: right;
-    width: fit-content;
-    border: 1 px solid var --secondary;
-    border-radius: 8px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    text-align: center;
-    font-size: smaller;
-}
-
-/* small*/
-@media (max-width: 48rem) {
-figgy-cap {
-    float: none;
-    margin: auto;
-}
+yt-embed {
+    display: block;
+    max-width: 750px;
+    margin: 0 auto;
 }
 .nav-links {
     list-style-type: none;
@@ -187,4 +174,12 @@ flex-grow: 1;
 }
 .more-line-height {
     line-height: 1.5;
+}
+#portfolio-sections ul li {
+  line-height: 1.5;
+}
+@media (min-width: 64.0000000001rem) {
+  #portfolio-sections ul {
+    column-count: 2;
+  }
 }

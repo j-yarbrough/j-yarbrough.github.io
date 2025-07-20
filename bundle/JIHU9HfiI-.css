@@ -202,3 +202,11 @@ flex-grow: 1;
 .more-line-height {
     line-height: 1.5;
 }
+#portfolio-sections ul li {
+  line-height: 1.5;
+}
+@media (min-width: 64.0000000001rem) {
+  #portfolio-sections ul {
+    column-count: 2;
+  }
+}
