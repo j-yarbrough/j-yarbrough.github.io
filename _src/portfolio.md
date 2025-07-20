@@ -12,7 +12,7 @@ Throughout Justin's career in accessibility, he has had the opportunity to share
 
 Because Justin has done such a wide variety of things throughout his time in accessibility, his portfolio is split up into different sections addressing specific areas. You can check these out below:
 
-<div class="more-line-height">
+<div id="portfolio-sections">
 
 - [Writing](/portfolio/writing/)
 - [Speaking](/portfolio/speaking/)
