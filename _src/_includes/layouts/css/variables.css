@@ -1,7 +1,15 @@
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
-    --background: #000000;
-    --text-color: #ffffff;
-    --highlight:#ff9900;
-    --secondary: #999999;
+    --background: #ffffff;
+    --text-color: #222222;
+    --highlight:#995500;
+    --secondary: #666666;
+    }
+    @media(prefers-color-scheme: dark) {
+        :root {
+            --background: #000000;
+            --text-color: #dddddd;
+            --highlight:#ff9900;
+            --secondary: #999999;
+        }
     }
