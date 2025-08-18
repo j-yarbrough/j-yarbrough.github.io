@@ -1,34 +1,20 @@
-.accordion-button {
-    font-size: inherit;
-    border: 1px solid var(--highlight);
-    color: var(--highlight);
-    background-color:  var(--background);
-    padding:  0 8px;
+figgy-cap {
+    float: right;
+    width: fit-content;
+    border: 1 px solid var --secondary;
     border-radius: 8px;
-    font-family: var(--serif);
+    margin-left: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: smaller;
 }
-.accordion-button[aria-expanded="false"] .acc-indicator::before {
-    content: "\2192";
-    color: var(--secondary);
+
+/* small*/
+@media (max-width: 48rem) {
+figgy-cap {
+    float: none;
+    margin: auto;
 }
-.accordion-button[aria-expanded="true"] .acc-indicator::before {
-    content: "\2193";
-    color: var(--secondary);
-}
-/* small and medium*/
-@media (max-width: 64rem) {
-.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
-    display: none;
-}
-.acc-responsive-desktop {
-    display: none;
-}
-}
-/*Large*/
-@media (min-width: 64.0000000001rem) {
-    .accordion-button {
-        display: none;
-    }
 }
 .nav-links {
     list-style-type: none;
@@ -68,10 +54,18 @@
 }
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
-    --background: #000000;
-    --text-color: #ffffff;
-    --highlight:#ff9900;
-    --secondary: #999999;
+    --background: #ffffff;
+    --text-color: #222222;
+    --highlight:#995500;
+    --secondary: #666666;
+    }
+    @media(prefers-color-scheme: dark) {
+        :root {
+            --background: #000000;
+            --text-color: #dddddd;
+            --highlight:#ff9900;
+            --secondary: #999999;
+        }
     }
 body {
     background-color: var(--background);
