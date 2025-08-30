@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/inputs.css">
 <label class="text-input-label">
 <span class="text-input-text-label">
-<span webc:nokeep @text="label"></span>
+<span class="label-text" @text="label"></span>
 <span webc:if="error" aria-hidden="true">*</span>
 </span>
 <script webc:type="js">
@@ -27,5 +27,5 @@ function buildInput() {
 buildInput();
 </script>
 </label>
-<div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span webc:nokeep @text="error"></span></div>
+<div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span class="error-text" @text="error"></span></div>
 <div class="helper-text" webc:if="helper" @text="helper" :id="uid+'-helper'"></div>
