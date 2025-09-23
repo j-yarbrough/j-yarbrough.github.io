@@ -1,5 +1,6 @@
 dialog::backdrop {
     background-color: var(--background);
+    opacity: 50%;
 }
 .modal-open, .modal-close {
     font-family: var(--serif);

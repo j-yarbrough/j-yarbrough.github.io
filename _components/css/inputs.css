@@ -21,13 +21,13 @@ text-area textarea {
 .text-area-text-label {
     display: block;
 }
+.helper-text {
+    color: var(--secondary);
+    font-size: smaller;
+}
 /* separate label and input on mobile*/
 @media (max-width: 48rem) {
 .text-input-label {
     display: block;
 }
-}
-.helper-text {
-    color: var(--secondary);
-    font-size: smaller;
 }
