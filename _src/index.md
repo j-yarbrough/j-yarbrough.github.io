@@ -25,7 +25,7 @@ Justin has written articles about accessibility-related topics for multiple publ
 
 ## Personal Life
 
-In his spare time, Justin enjoys audiobooks, sports, and traveling. He lives with his wife Jennifer, dogs Saul and Quinn, and cats Sam, Dean, and Misha.
+In his spare time, Justin enjoys audiobooks, sports, and traveling. He lives with his wife, three cats, and two dogs.
 
 ## Contact Justin
 
