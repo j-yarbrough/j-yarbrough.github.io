@@ -5,7 +5,6 @@ window.addEventListener('load',function(){
 })
 
 function validateForm() {
-    event.preventDefault();
     var fieldsToValidate = this.querySelectorAll('[aria-required]');
     var isValid = true;
     var firstErrorField = undefined;
@@ -20,9 +19,8 @@ function validateForm() {
     if (isValid == false) {
         event.preventDefault();
         firstErrorField.focus();
-    } else {event.preventDefault(); alert('Field validates');}//only for testing purposes, will be commented out in prod
+    }
 }
-
 function validateField(valThisField) {
 var fieldContainer =     valThisField.parentElement;
 var fieldLabel=fieldContainer.querySelector('label').firstChild.textContent;
