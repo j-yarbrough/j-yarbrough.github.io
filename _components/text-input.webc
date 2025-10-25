@@ -1,31 +1,9 @@
 <link rel="stylesheet" href="/css/inputs.css">
-<label class="text-input-label">
-<span class="text-input-text-label">
-<span class="label-text" @text="label"></span>
-<span webc:if="error" aria-hidden="true">*</span>
-</span>
-<script webc:type="js">
-if (!label) {throw new Error('text inputcomponent is missing required prop label');};
-if (!name) {throw new Error('text input component is missing required prop name');};
-function buildInput() {
-    var inputString = `<input type="text" id="${uid}" name="${name}"`;
-    if (error) {
-        inputString += ` aria-required="true"`;
-    }
-    if (autocomplete) {
-        inputString += ` autocomplete="${autocomplete}"`;
-    }
-    if (inputmode) {
-        inputString += ` inputmode="${inputmode}"`;
-    }
-    if (helper) {
-        inputString += ` aria-describedby="${uid}-helper"`;
-    }
-    inputString += `>`;
-    return inputString
-}
-buildInput();
-</script>
-</label>
-<div webc:if="error" class="text-input-form-error" :id="uid+'-error'"><strong>Error:</strong> <span class="error-text" @text="error"></span></div>
-<div class="helper-text" webc:if="helper" @text="helper" :id="uid+'-helper'"></div>
+<div class="text-input-container">
+<label :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
+<input type="text" :id="uid" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="{if((required)||(helper)){`${uid}-adb`}}">
+<div webc:if="required || helper" :id="`${uid}-adb`" class="helper-and-feedback-container"]>
+<div webc:if="required" class="validation-feedback"></div>
+<div webc:if="helper" class="helper-text" @text="helper"></div>
+</div>
+</div>
