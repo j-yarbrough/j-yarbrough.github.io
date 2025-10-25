@@ -2,7 +2,7 @@
 <div class="text-input-container">
 <label :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
 <input type="text" :id="uid" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="{if((required)||(helper)){`${uid}-adb`}}">
-<div webc:if="required || helper" :id="`${uid}-adb`" class="helper-and-feedback-container"]>
+<div webc:if="required || helper" :id="`${uid}-adb`" class="helper-and-feedback-container">
 <div webc:if="required" class="validation-feedback"></div>
 <div webc:if="helper" class="helper-text" @text="helper"></div>
 </div>

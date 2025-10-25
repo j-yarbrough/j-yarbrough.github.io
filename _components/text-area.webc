@@ -2,7 +2,7 @@
 <div class="textarea-container">
 <label :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
 <textarea :id="uid" :name="name" :aria-required="{if(required){true}}" :aria-describedby="{if((required)||(helper)){`${uid}-adb`}}"></textarea>
-<div webc:if="required || helper" :id="`${uid}-adb`" class="helper-and-feedback-container"]>
+<div webc:if="required || helper" :id="`${uid}-adb`" class="helper-and-feedback-container">
 <div webc:if="required" class="validation-feedback"></div>
 <div webc:if="helper" class="helper-text" @text="helper"></div>
 </div>

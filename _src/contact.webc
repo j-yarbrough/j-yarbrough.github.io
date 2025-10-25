@@ -7,7 +7,7 @@ eleventyNavigation:
   key: Contact
   order: 4
 ---
-<p>To contact Justin, fill out this form. All fields marked with asterisks (*) are required.</p>
+<p>To contact Justin, fill out this form.</p>
 <form-wrapper @name="contact" @method="post" @action="https://formspree.io/f/mnqleljw">
 <form-group @label="Your Information">
 <text-input @name="name" @required="true" @autocomplete="name">Name</text-input>
