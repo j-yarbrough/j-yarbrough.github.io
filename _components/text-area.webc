@@ -1,25 +1,9 @@
 <link rel="stylesheet" href="/css/inputs.css">
-<label class="text-area-label">
-<span class="text-area-text-label">
-<span class="label-text" @text="label"></span>
-<span webc:if"error" aria-hidden="true">*</span>
-</span>
-<script webc:type="js">
-if (!label) {throw new Error('text area component is missing required prop label');};
-if (!name) {throw new Error('text area component is missing required prop name');};
-function buildTextArea() {
-    var textAreaString = `<textarea name="${name}" id="${uid}"`;
-    if (error) {
-        textAreaString+= ` aria-required="true"`;
-    }
-    if (helper) {
-        textAreaString += ` aria-describedby="${uid}-helper"`;
-    }
-    textAreaString += `></textarea>`;
-    return textAreaString
-}
-buildTextArea();
-</script>
-</label>
-<div webc:if="error" class="textarea-form-error" :id="uid+'-error'"><strong>Error:</strong> <span class="error-text" @text="error"></span></div>
-<div webc:if="helper" id="uid+'-helper'" @text="helper"></div>
+<div class="textarea-container">
+<label :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
+<textarea :id="uid" :name="name" :aria-required="{if(required){true}}" :aria-describedby="{if((required)||(helper)){`${uid}-adb`}}"></textarea>
+<div webc:if="helper || required" class="validation-and-helper-container" :id="`${uid}-adb`">
+<div webc:if="required" class="validation-feedback"></div>
+<div webc:if="helper" class="helper-text" @text="helper"></div>
+</div>
+</div>

@@ -1,12 +1,15 @@
+<link rel="stylesheet" href="/css/form-wrapper.css">
 <script webc:type="js" webc:root>
 if (!name) {throw new Error('form wrapper component is missing required prop name');};
-if (!id) {throw new Error('form wrapper component is missing required prop id');};
 if (!method) {throw new Error('form wrapper component is missing required prop method');};
 if (!action) {throw new Error('form wrapper component is missing required prop action');};
 ``
 </script>
-
-<form :id="id" :name="name" :method="method" :action="action">
+<form novalidate :name="name" :method="method" :action="action">
+<p class="required-instructions">All fields marked with asterisks (*) are required.</p>
 <slot></slot>
+<div class="form-submit-button-wrapper">
+<button class="form-button" type="submit">Submit</button>
+</div>
 </form>
 <script src="/js/contact.js">
