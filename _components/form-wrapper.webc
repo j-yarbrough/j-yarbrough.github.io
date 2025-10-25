@@ -9,7 +9,7 @@ if (!action) {throw new Error('form wrapper component is missing required prop a
 <p class="required-instructions">All fields marked with asterisks (*) are required.</p>
 <slot></slot>
 <div class="form-submit-button-wrapper">
-<button class="form-button" type="submit">SubmitSubmit</button>
+<button class="form-button" type="submit">Submit</button>
 </div>
 </form>
 <script src="/js/contact.js">
