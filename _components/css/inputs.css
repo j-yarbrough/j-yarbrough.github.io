@@ -1,4 +1,4 @@
-textarea, input[type="email"], input[type="text"] {
+textarea, input[type="text"] {
     color: var(--text-color);
     background-color: var(--background);
     border: 1px solid var(--highlight);
@@ -14,7 +14,7 @@ textarea {
 text-area label {
     display: block;
 }
-.helper-and-feedback-container {
+.validation-and-helper-container {
     color: var(--secondary);
     font-size: smaller;
 }
