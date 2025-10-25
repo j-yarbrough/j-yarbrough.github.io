@@ -1,5 +1,7 @@
 # Readme
 
+Last updated October 25, 2025
+
 ## Purpose
 
 This repo is for a personal website/portfolio and is built using [eleventy.](https://www.11ty.dev/)
