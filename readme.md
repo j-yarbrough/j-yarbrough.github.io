@@ -24,10 +24,12 @@ To set up a redirect:
 
 There are template variations that can be automatically used based on front matter set in the documents. The front value variables are as follows:
 
-- H1: Allows for the H1 of the page to be separate from the title of the page.
+- ``H1``: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title value will be used.
-- noBreadcrumbs: true will exclude breadcrumbs from the page. Note breadcrumbs are not currently available in the base template, but this variable still exists in front matter since it may be brought back.
+- ``noBreadcrumbs`` true will exclude breadcrumbs from the page. Note breadcrumbs are not currently available in the base template, but this variable still exists in front matter since it may be brought back.
+- ``hasVideo`` required if audio/video embeds will be on the page for AblePlayer to work.
+- ``hasAriaLive`` must be set to true for the aria-live component to be included on the page
 
 ## .webc components
 
@@ -91,31 +93,26 @@ Attributes, all for form tag:
 - @method: set method
 @action: set action
 
-### Text input
+### Form inputs
 
-Used for text inputs. Field will only be marked as required if error prop is used
+This covers all form input variants.
 
-- ``<text-input>``
+Note that the field label must be included as the inner text for the component.
+\
+
+- ``<text-input>`` for standard inputs
+- ``<email-input>`` for emails. Forces inputmode="email" on the field and extra validation logic on submit when used in conjunction with the form wrapper.
+- ``<text-area>`` for multi-line inputs
 
 Required:
 
-- @label: Label for the input
-- @name: name for the input, will also serve as ID
+- @name: name for the input.
 
 Optional props
 
-- @error: Error message if field is required, input will be optional if this is not used.
+- @required: any value for attribute can be used, will mark field as required and include it in on submit validation if used as child of ``<form-wrapper>``
 - @helper: helper text for input.
-- autocomplete
-- inputmode
-
-### Textarea
-
-Textarea input, similar to text input
-
-- <text-area>
-
-Required items are same as text input. Error has same behavior as text input.
+- @autocomplete allows you to set an autocomplete token for text and email variants
 
 ### Form Group
 
@@ -127,29 +124,13 @@ Attribute:
 
 - @label: label for group
 
-### Button
-
-Serves as a button
-
-``<form-button>``
-
-Required Attributes:
-
-- @type: Sets button type, submit, button, etc.
-- @label: Text label for button
-
-Additional optional ones:
-
-- @aria-label: Aria label for button
-- @aria-describedby: Allows to designate an aria-describedby. Value should be an ID
-
 ### Aria live region
 
 Creates aria live region and includes handler script
 
 ``<aria-live>``
 
-No attributes
+No attributesm but ``hasarialive`` must be set to true on the page's front matter for this to work.
 
 ### Figure caption
 
@@ -175,6 +156,8 @@ Required attributes:
 ### YouTube embeds with Able Player
 
 Sets up all the HTML needed to create a YouTube embed overlaid with Able Player
+
+``hasVideo`` must be set to true in the page's front matter for this to work
 
 ``<yt-embed>``
 
