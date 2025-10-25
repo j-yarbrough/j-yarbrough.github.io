@@ -1,6 +1,0 @@
-<link rel="stylesheet" href="/css/form-button.css">
-<script webc:type="js">
-if (!label) {throw new Error('form button component is missing required label');};
-``
-</script>
-<button class="form-button" :type="type" :aria-label="ariaLabel" :aria-describedby="ariaDescribedby" @text="label"></button>
