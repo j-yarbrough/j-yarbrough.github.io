@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Justin Yarbrough</title>
-    <link rel="stylesheet" href="/bundle/44B5MAqJJJ.css">
+    <link rel="stylesheet" href="/bundle/vSHfVRVKzz.css">
     
 
 
 
 
 
-<script src="/bundle/pcfCoglL5u.js"></script>
+<script src="/bundle/W_BFNbt4rQ.js"></script>
 
 
 </head>
@@ -123,10 +123,11 @@ Contact
 </nav>
 <main id="main">
 <h1 tabindex="-1" id="main-heading">Contact Justin</h1>
-<p>To contact Justin, fill out this form. All fields marked with asterisks (*) are required.</p>
+<p>To contact Justin, fill out this form.</p>
 <form-wrapper>
 
-<form id="contact-form" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
+<form novalidate="" name="contact" method="post" action="https://formspree.io/f/mnqleljw">
+<p class="required-instructions">All fields marked with asterisks (*) are required.</p>
 
 <form-group>
 
@@ -134,25 +135,23 @@ Contact
 <legend>Your Information</legend>
 
 <text-input>
-<label class="text-input-label">
-<span class="text-input-text-label">
-<span class="label-text">Name</span>
-<span aria-hidden="true">*</span>
-</span>
-<input type="text" id="webc-PCrWl" name="name" aria-required="true" autocomplete="name">
-</label>
-<div id="webc-PCrWl-error" class="text-input-form-error"><strong>Error:</strong> <span class="error-text">Please enter a name</span></div>
-</text-input>
-<text-input>
-<label class="text-input-label">
-<span class="text-input-text-label">
-<span class="label-text">Email Address</span>
-<span aria-hidden="true">*</span>
-</span>
-<input type="text" id="webc-Fywjh" name="email" aria-required="true" autocomplete="email" inputmode="email">
-</label>
-<div id="webc-Fywjh-error" class="text-input-form-error"><strong>Error:</strong> <span class="error-text">Please enter a valid email address such as name@example.com</span></div>
-</text-input>
+<div class="text-input-container">
+<label for="webc-EYHdH">Name<span aria-hidden="true">*</span></label>
+<input type="text" id="webc-EYHdH" name="name" autocomplete="name" aria-required="true" aria-describedby="webc-EYHdH-adb">
+<div id="webc-EYHdH-adb" class="validation-and-helper-container">
+<div class="validation-feedback"></div>
+
+</div>
+</div></text-input>
+<email-input>
+<div class="email-input-container">
+<label for="webc-wLBf7">Email address<span aria-hidden="true">*</span></label>
+<input type="text" inputmode="email" id="webc-wLBf7" name="email" autocomplete="email" aria-required="true" aria-describedby="webc-wLBf7-adb">
+<div id="webc-wLBf7-adb" class="validation-and-helper-container">
+<div class="validation-feedback"></div>
+<div class="helper-text">Your email address will only be used to respond to your message.</div>
+</div>
+</div></email-input>
 
 </fieldset></form-group>
 <form-group>
@@ -161,32 +160,29 @@ Contact
 <legend>Your message</legend>
 
 <text-input>
-<label class="text-input-label">
-<span class="text-input-text-label">
-<span class="label-text">Subject</span>
-<span aria-hidden="true">*</span>
-</span>
-<input type="text" id="webc-xC1CE" name="subject" aria-required="true">
-</label>
-<div id="webc-xC1CE-error" class="text-input-form-error"><strong>Error:</strong> <span class="error-text">Please enter a subject for your message</span></div>
-</text-input>
+<div class="text-input-container">
+<label for="webc-BLjEg">Subject<span aria-hidden="true">*</span></label>
+<input type="text" id="webc-BLjEg" name="subject" aria-required="true" aria-describedby="webc-BLjEg-adb">
+<div id="webc-BLjEg-adb" class="validation-and-helper-container">
+<div class="validation-feedback"></div>
+
+</div>
+</div></text-input>&gt;
 <text-area>
-<label class="text-area-label">
-<span class="text-area-text-label">
-<span class="label-text">Message Body</span>
-<span aria-hidden="true">*</span>
-</span>
-<textarea name="msg" id="webc-oDn2P" aria-required="true"></textarea>
-</label>
-<div id="webc-oDn2P-error" class="textarea-form-error"><strong>Error:</strong> <span class="error-text">Please enter a message for Justin</span></div>
-</text-area>
+<div class="textarea-container">
+<label for="webc-xXOSH">Message body<span aria-hidden="true">*</span></label>
+<textarea id="webc-xXOSH" name="msg" aria-required="true" aria-describedby="webc-xXOSH-adb"></textarea>
+<div id="webc-xXOSH-adb" class="validation-and-helper-container">
+<div class="validation-feedback"></div>
+
+</div>
+</div></text-area>
 
 </fieldset></form-group>
-<form-button>
 
-<button type="submit" aria-describedby="captcha-disclaimer" class="form-button">submit</button></form-button>
-<p id="captcha-disclaimer"><strong>Note:</strong> You may be prompted to complete a CAPTCHA if your message is identified as possible spam.</p>
-
+<div class="form-submit-button-wrapper">
+<button type="submit" class="form-button">Submit</button>
+</div>
 </form>
 </form-wrapper>
 </main>
@@ -262,9 +258,7 @@ Connect with Justin on <a href="https://bsky.app/profile/yarbrough.info">Blue Sk
 <p>© 2021-2025 Justin L. Yarbrough, CPWA</p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
-<aria-live aria-live="polite">
 
-</aria-live>
 
 </body>
 </html>
