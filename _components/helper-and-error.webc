@@ -1,0 +1,4 @@
+<div class="validation-and-helper-container" :id="`${idpass}-adb`">
+<div webc:if="required" class="validation-feedback"></div>
+<div webc:if="helper" class="helper-text" @text="helper"></div>
+</div>
