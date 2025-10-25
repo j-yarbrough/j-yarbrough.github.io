@@ -13,7 +13,7 @@ eleventyNavigation:
 <email-input @required="true" @name="email" @autocomplete="email" @helper="Your email address will only be used to respond to your message.">Email address</email-input>
 </form-group>
 <form-group @label="Your message">
-<text-input @name="subject" @required="true">Subject</text-input>>
+<text-input @name="subject" @required="true">Subject</text-input>
 <text-area @name="msg" @required="true">Message body</text-area>
 </form-group>
 </form-wrapper>
