@@ -63,6 +63,10 @@ Required prop:
 
 ` @label: Serves as label for trigger button and h1 for modal. Will throw error if not included.
 
+Optional prop:
+
+- @heading: Will change heading for dialog, defaults to label if not set.
+
 ### Ebox
 
 Serves as an emphasis box to highlight content. 
@@ -84,7 +88,7 @@ Will insert a table of contents, displaying a list of all h2's on a page with in
 
 ### Form wrapper
 
-Wrapper for contact form
+Wrapper for forms, including validation. Will detect if running on local and block form submission, providing an alert if form submission would have gone through instead.
 
 - ``<form-wrapper>``
 

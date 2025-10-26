@@ -8,7 +8,7 @@ if (!label) {throw new Error('modal-dialog component is missing required prop la
 </div>
 <dialog :id="uid" :aria-labelledby="uid + '-heading'">
 <div class="dialog-header-wrapper">
-<h1 class="dialog-header" tabindex="-1" autofocus :id="uid + '-heading'" @text="label"></h1>
+<h1 class="dialog-header" tabindex="-1" autofocus :id="uid + '-heading'" @text="if (heading) heading; else label"></h1>
 <button aria-hidden="true" tabindex="-1" aria-label="Close" type="button" class="modal-close" :aria-controls="uid">&times;</button>
 </div>
 <div class="dialog-main-wrapper">
