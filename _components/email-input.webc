@@ -1,6 +1,5 @@
-<link rel="stylesheet" href="/css/inputs.css">
-<div class="email-input-container">
-<label :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
+<link webc:scoped rel="stylesheet" href="/css/inputs.css">
+<label class="text-input-label" :for="uid"><slot></slot><span webc:if="required" aria-hidden="true">*</span></label>
 <input type="text" inputmode="email" :id="uid" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="{if((required)||(helper)){`${uid}-adb`}}">
 <div webc:if="helper || required" class="validation-and-helper-container" :id="`${uid}-adb`">
 <div webc:if="required" class="validation-feedback"></div>
