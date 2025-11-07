@@ -20,7 +20,7 @@ function validateForm() {
     }
  }
     })
-    if (isValid == false) {
+    if (!isValid) {
         event.preventDefault();
         firstErrorField.focus();
     } else if (runningOnLocal) {
