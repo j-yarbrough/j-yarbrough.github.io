@@ -13,8 +13,12 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 var output= '';
 for (cert of value.cert){
   output += `<h3><a href="${cert.url}">${cert.name}</a></h3>`;
-  if ((cert.issued) || (cert.expires) || (cert.renewed)) {
-    output += '<ul>';
+  var itemCount = 0;
+  if (cert.issued) {itemCount++};
+  if (cert.renewed) {itemCount++};
+  if (cert.expires) {itemCount++};
+  if (itemCount != 0) {
+    output += `<ul class="cert-details cert-item-count-${itemCount}">`;
   if  (cert.issued) {
     output += `<li>Issued ${cert.issued}</li>`
   } if (cert.renewed) {
