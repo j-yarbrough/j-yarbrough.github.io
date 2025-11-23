@@ -18,15 +18,18 @@ for (cert of value.cert){
   if (cert.renewed) {itemCount++};
   if (cert.expires) {itemCount++};
   if (itemCount != 0) {
-    output += `<ul class="cert-details cert-item-count-${itemCount}">`;
+    output += `<div role="list" class="cert-details">`;
   if  (cert.issued) {
-    output += `<li>Issued ${cert.issued}</li>`
+    output += `<div class="cert-detail-item" role="listitem"><strong>Issued:</strong> ${cert.issued}</div>`
   } if (cert.renewed) {
-    output += `<li>Renewed ${cert.renewed}</li>`;
+    output += `<div class="cert-detail-item" role="listitem"><strong>Renewed:</strong> ${cert.renewed}</div>`;
   } if (cert.expires) {
-    output += `<li>Expires ${cert.expires}</li>`;
+    output += `<div class="cert-detail-item" role="listitem"><strong>Expires:</strong> ${cert.expires}</div>`;
   }
-  output += '</ul>';
+  output += '</div>';
+  }
+  if (cert.note) {
+    output += `<p class="smaller">${cert.note}</p>`
   }
 }
 output

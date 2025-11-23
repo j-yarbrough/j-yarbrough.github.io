@@ -28,3 +28,11 @@
     column-count: 2;
   }
 }
+.cert-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cert-detail-item {
+    flex: 1;
+    white-space: nowrap;
+}

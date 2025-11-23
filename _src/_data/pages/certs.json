@@ -18,7 +18,9 @@
                 "name":"Certified Professional in Accessibility Core Competencies",
                 "url":"https://www.accessibilityassociation.org/s/certified-professional",
                 "issued":"March 2023",
-                "expires":"September 2027"
+                "renewed":"September 2024",
+                "expires":"September 2027",
+                "note":"Certification automatically renewed for a three-year term upon earning the CPWA."
             }
         ]
     },
