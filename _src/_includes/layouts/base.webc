@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="/css/skip-links.css">
 <link rel="stylesheet" href="/css/footer-nav.css">
 <link rel="stylesheet" href="/css/responsive.css">
-<link rel="stylesheet" href="/css/cert-list.css">
 <link rel="stylesheet" href="/css/classes.css">
 <script webc:keep :src="getBundleFileUrl('js')"></script>
 <!---for able player--->
