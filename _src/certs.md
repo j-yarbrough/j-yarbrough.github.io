@@ -10,28 +10,25 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 
 <jy-acc webc:for="(key, value) in pages.certs" :@label="value.issuer" @level="2">
 <script webc:type="js">
-var output= '';
-for (cert of value.cert){
+var output = '';
+var listItemMarkup = [
+  '<div class="cert-detail-item" role="listitem"><strong>',
+  ':</strong> ',
+  '</div>'];
+for (cert of value.cert) {
   output += `<h3><a href="${cert.url}">${cert.name}</a></h3>`;
-  var itemCount = 0;
-  if (cert.issued) {itemCount++};
-  if (cert.renewed) {itemCount++};
-  if (cert.expires) {itemCount++};
-  if (itemCount != 0) {
-    output += `<div role="list" class="cert-details">`;
-  if  (cert.issued) {
-    output += `<div class="cert-detail-item" role="listitem"><strong>Issued:</strong> ${cert.issued}</div>`
-  } if (cert.renewed) {
-    output += `<div class="cert-detail-item" role="listitem"><strong>Renewed:</strong> ${cert.renewed}</div>`;
-  } if (cert.expires) {
-    output += `<div class="cert-detail-item" role="listitem"><strong>Expires:</strong> ${cert.expires}</div>`;
-  }
-  output += '</div>';
-  }
-  if (cert.note) {
-    output += `<p class="smaller">${cert.note}</p>`
+  if (cert.issued) {
+    output+= `<div role="list" class="cert-details">`;
+    output += `${listItemMarkup[0]}Issued${listItemMarkup[1]}${cert.issued}${listItemMarkup[2]}`;
+    if (cert.renewed) {
+      output += `${listItemMarkup[0]}Renewed${listItemMarkup[1]}${cert.renewed}${listItemMarkup[2]}`;
+    }
+    if (cert.expires) {
+      output += `${listItemMarkup[0]}Expires${listItemMarkup[1]}${cert.expires}${listItemMarkup[2]}`;
+    }
+    output += `</div>`;
   }
 }
 output
-    </script>
+</script>
 </jy-acc>
