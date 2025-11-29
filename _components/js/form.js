@@ -30,28 +30,28 @@ function validateForm() {
     }
 }
 function validateField(valThisField) {
-var fieldContainer =     valThisField.parentElement;
-var label=fieldContainer.querySelector('label').firstChild.textContent;
-var errorContainer = fieldContainer.querySelector('.validation-feedback');
+var label=valThisField.parentElement.querySelector('label').firstChild.textContent;
 var fieldValue = valThisField.value.trim();
-valThisField.removeAttribute('aria-invalid');
-errorContainer.textContent = '';
-if (fieldValue.length == 0){
-    invalidateField(valThisField,errorContainer,`${label} cannot be blank.`);
-    return false;
+var isValid = true;
+var errorMessage = '';
+if (!fieldValue){
+    isValid = false;
+    errorMessage = `${label} cannot be blank.`
 } else if (valThisField.getAttribute('inputmode') == 'email') {
-    if ((fieldValue.length >= 6) || (fieldValue.includes('.')) || (fieldValue.includes('@'))){        
-        return true;
-    } else {
-        invalidateField(valThisField,errorContainer,`${label} is not valid. Example: name@example.com.`);
-        return false;
+    if (((fieldValue.length >= 6) && (fieldValue.includes('.')) && (fieldValue.includes('@')))==false){
+        isValid = false;
+        errorMessage = 'Enter a valid email address, such as name@example.com.';
     }
-} else {
-    return true;
-}
+} 
+setField(valThisField,isValid,errorMessage);
+return isValid;
 }
 
-function invalidateField (field, errorContainer, errorText) {
-    field.setAttribute('aria-invalid','true');
-    errorContainer.textContent = errorText;
+function setField(field, validBoolean, errorMessage) {
+    var errorContainer = field.parentElement.querySelector('.validation-feedback');
+switch(validBoolean) {
+    case true: field.removeAttribute('aria-invalid'); break;
+    case false: field.setAttribute('aria-invalid','true'); break;
+}
+errorContainer.textContent = errorMessage
 }
