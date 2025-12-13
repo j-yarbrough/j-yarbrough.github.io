@@ -31,7 +31,6 @@ There are template variations that can be automatically used based on front matt
     - If no H1, then the title value will be used.
 - ``noBreadcrumbs`` true will exclude breadcrumbs from the page. Note breadcrumbs are not currently available in the base template, but this variable still exists in front matter since it may be brought back.
 - ``hasVideo`` required if audio/video embeds will be on the page for AblePlayer to work.
-- ``hasAriaLive`` must be set to true for the aria-live component to be included on the page
 
 ## .webc components
 
@@ -107,7 +106,6 @@ Note that the field label must be included as the inner text for the component.
 \
 
 - ``<text-input>`` for standard inputs
-- ``<email-input>`` for emails. Forces inputmode="email" on the field and extra validation logic on submit when used in conjunction with the form wrapper.
 - ``<text-area>`` for multi-line inputs
 
 Required:
@@ -118,17 +116,8 @@ Optional props
 
 - @required: any value for attribute can be used, will mark field as required and include it in on submit validation if used as child of ``<form-wrapper>``
 - @helper: helper text for input.
-- @autocomplete allows you to set an autocomplete token for text and email variants
-
-### Form Group
-
-Sets up a group label
-
-``<form-group>``
-
-Attribute:
-
-- @label: label for group
+- @autocomplete allows you to set an autocomplete token for text inputs
+- @inputmode: Sets inputmode attribute for text input. Using "email" will trigger email validation when used in conjunction with form wrapper.
 
 ### Aria live region
 
@@ -136,7 +125,7 @@ Creates aria live region and includes handler script
 
 ``<aria-live>``
 
-No attributesm but ``hasarialive`` must be set to true on the page's front matter for this to work.
+No attributes, but ``hasarialive`` must be set to true on the page's front matter for this to work.
 
 ### Figure caption
 
