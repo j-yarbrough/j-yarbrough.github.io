@@ -9,7 +9,7 @@ eleventyNavigation:
 <p>To contact Justin, fill out this form.</p>
 <form-wrapper @name="contact" @method="post" @action="https://formspree.io/f/mnqleljw">
 <text-input @name="name" @required="true" @autocomplete="name">Name</text-input>
-<email-input @required="true" @name="email" @autocomplete="email" @helper="Your email address will only be used to respond to your message.">Email address</email-input>
+<text-input @required="true" @inputmode="email" @name="email" @autocomplete="email" @helper="Your email address will only be used to respond to your message.">Email address</text-input>
 <text-input @name="subject" @required="true">Subject</text-input>
 <text-area @name="msg" @required="true">Message body</text-area>
 </form-wrapper>
