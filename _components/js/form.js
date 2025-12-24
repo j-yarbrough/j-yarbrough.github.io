@@ -5,28 +5,21 @@ window.addEventListener('load',function(){
 })
 
 function validateForm() {
-    var isValid = true;
     var firstErrorField = undefined;
-    var runningOnLocal = false; //stores if running locally, changes some form behaviors for testing
+    var runningOnLocal = window.location.hostname.toLowerCase().includes('localhost'); //stores if running locally, changes some form behaviors for testing
     var subjectField = this.querySelector('input[name="subject"]');
-    if (window.location.hostname.toLowerCase().includes('localhost')) {
-        runningOnLocal = true;
-        event.preventDefault();
-    }
-    this.querySelectorAll('[aria-required]').forEach((fieldToValidate) => {
+    if (runningOnLocal) event.preventDefault();
+    this.querySelectorAll('[aria-required="true"], [inputmode="email"').forEach((fieldToValidate) => {
  if (!validateField(fieldToValidate)) {
-    if (isValid) {
-        isValid = false;
-        firstErrorField= fieldToValidate;
-    }
+    if (!firstErrorField) firstErrorField= fieldToValidate;
  }
     })
-    if (!isValid) {
+    if (firstErrorField) {
         event.preventDefault();
         firstErrorField.focus();
     } else {
-        subjectField.value = '[yarbrough.info contact form] ' + subjectField.value;
-        if (runningOnLocal) {alert('Form is valid and would have submitted.');}
+        if (subjectField) subjectField.value = '[yarbrough.info contact form] ' + subjectField.value;;
+        if (runningOnLocal) alert('Form is valid and would have submitted.');;
     }
 }
 function validateField(valThisField) {
@@ -34,7 +27,7 @@ var label=valThisField.parentElement.querySelector('label').firstChild.textConte
 var fieldValue = valThisField.value.trim();
 var isValid = true;
 var errorMessage = '';
-if (!fieldValue){
+if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
     isValid = false;
     errorMessage = `${label} cannot be blank.`
 } else if (valThisField.getAttribute('inputmode') == 'email') {

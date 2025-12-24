@@ -4,18 +4,34 @@
         "jobs":
         [
             {
-                "jobTitle":"Digital Accessibility Coach Lead",
-                "started":"August 2023",
-                "ended":"present",
+                "jobTitle":"AVP, Digital Accessibility Coach Lead",
+                "started":"December 2025",
+"ended":"present",
                 "duties":
                 [
                     "Embed within agile teams, helping the roles learn how to incorporate accessibility into the software development lifecycle",
-                    "Assist in the creation of new user experiences or enhancements to existing ones to ensure they meet accessibility requirements.",
+                    "Assist in the creation of new user experiences or enhancements to existing ones to ensure they meet accessibility requirements",
                     "Assess web properties against the Web Content Accessibility Guidelines and internal accessibility standards",
                     "Conduct role-based training sessions on accessibility topics",
                     "Serve as a member of the retail digital accessibility steering council, tasked with handling complex WCAG interpretation questions and adopting standards beyond WCAG",
                     "Maintainer of the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria are needed for development",
                     "Mentors more junior coaches on the team"
+                ]
+            },{
+                "jobTitle":"Digital Product Manager Lead",
+                "started":"August 2023",
+                "ended":"December 2025",
+                "duties":
+                [
+                    "Embedded within agile teams, helping the roles learn how to incorporate accessibility into the software development lifecycle",
+                    "Assisted in the creation of new user experiences or enhancements to existing ones to ensure they meet accessibility requirements",
+                    "Assessed web properties against the Web Content Accessibility Guidelines and internal accessibility standards",
+                    "Conducted role-based training sessions on accessibility topics",
+                    "Served as a member of the retail digital accessibility steering council, tasked with handling complex WCAG interpretation questions and adopting standards beyond WCAG",
+                    "Maintained the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria are needed for development",
+                    "Mentored more junior coaches on the team",
+                    "Was named an Assistant Vice President in January 2025",
+                    "Reclassified to Digital Accessibility Coach Lead in December 2025"
                 ]
             }
         ]
