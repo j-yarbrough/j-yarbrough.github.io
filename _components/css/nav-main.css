@@ -1,14 +1,14 @@
-.nav-links {
+:host ul {
     list-style-type: none;
     line-height: 1.5    ;
 }
-.nav-links-item[aria-current] {
+:host [aria-current] {
     font-weight: bold;
 }
-.nav-links-item a {
+:host a {
     text-decoration: none;
 }
-#nav-btn {
+:host summary {
     font-family: var(--serif);
     font-size: 1rem;
     color: var(--highlight);
@@ -19,7 +19,7 @@
     margin-right: auto;
     width: fit-content;
 }
-#nav-btn::marker {
+:host summary::marker {
     color: var(--secondary);
 }
 /* small and medium*/
@@ -30,7 +30,7 @@
 }
 /*large*/
 @media (min-width: 64.0000000001rem) {
-#nav-mobile {
+:host details {
     display: none;
 }
 }
