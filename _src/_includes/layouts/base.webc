@@ -41,12 +41,11 @@
 <div id="wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
-<ul class="nav-links">
+<ul>
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
-{%- if (loop.index <= site.mainNavLinkCount) %}
-<li class="nav-links-item"{%- if entry.url == page.url %} aria-current="page"{% endif %}>
+<li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
 {%- if entry.url != page.url %}
 <a href="{{ entry.url }}">
 {% endif %}
@@ -55,7 +54,6 @@
 </a>
 {% endif %}
 </li>
-{% endif %}
 {%- endfor %}
 </template>
 </ul>
@@ -69,25 +67,6 @@
 <!---end responsive wrapper--->
 <footer id="footer" tabindex="-1">
 <template webc:type="11ty" 11ty:type="njk">
-<nav aria-label="footer">
-<ul>
-{% set navPages = collections.all | eleventyNavigation %}
-{%- for entry in navPages %}
-<li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
-{%- if entry.url != page.url %}
-<a href="{{ entry.url }}">
-{% endif %}
-{{ entry.title }}
-{%- if entry.url != page.url %}
-</a>
-{% endif %}
-{%- if (loop.index <= navPages | length - 1) %}
-<span class="separator" aria-hidden="true"> | </span>
-{% endif %}
-</li>
-{%- endfor %}
-</ul>
-</nav>        
 <p>
 Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item.url}}"{% if item.rel %} rel="{{item.rel}}"{% endif %}>{{item.text}}</a>{% if (loop.index < social| length - 1) %}, {% elif (loop.index < social| length ) %}, and {% else %}.{% endif %}{%- endfor %}
 </p>
