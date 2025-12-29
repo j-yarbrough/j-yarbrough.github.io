@@ -21,7 +21,7 @@ Justin holds certifications from the International Association of Accessibility 
 
 ## Portfolio
 
-Justin has written articles about accessibility-related topics for multiple publications, including [Nature](https://www.nature.com/), [PaxEx.aero](https://paxex.aero), and [Runway Girl](https://runwaygirl.com). He has also appeared as a guest on podcasts to discuss these topics and spoken about them at conferences such as Axe-Con and AccessU. [Read more...](/portfolio/){Read more about Justin's portfolio}
+Justin has written articles about accessibility-related topics for multiple publications, including [Nature](https://www.nature.com/), [PaxEx.aero](https://paxex.aero), and [Runway Girl](https://runwaygirl.com). He has also appeared as a guest on podcasts to discuss these topics and spoken about them at conferences such as Axe-Con and AccessU. [Read more...](/portfolio/){aria-label="Read more about Justin's portfolio"}
 
 ## Personal Life
 
@@ -35,9 +35,9 @@ To contact Justin, fill out the [contact form](/contact).
 
 You can connect with Justin on the following social media networks:
 
-<ul>
+<ul class="more-line-height">
 <!---Loop to build list for all social media--->
-<li class="more-line-height" webc:for="(key, value) in social">
+<li webc:for="(key, value) in social">
 <a :href="value.url" :rel="value.rel" @text="value.text"></a>
 </li>
 </ul>
