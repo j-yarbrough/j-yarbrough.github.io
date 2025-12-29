@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/form-wrapper.css">
+<link webc:scoped rel="stylesheet" href="/css/form-wrapper.css">
 <script webc:type="js" webc:root>
 if (!name) {throw new Error('form wrapper component is missing required prop name');};
 if (!method) {throw new Error('form wrapper component is missing required prop method');};
@@ -9,7 +9,7 @@ if (!action) {throw new Error('form wrapper component is missing required prop a
 <p class="required-instructions">All fields marked with asterisks (*) are required.</p>
 <slot></slot>
 <div class="form-submit-button-wrapper">
-<button class="form-button" type="submit">Submit</button>
+<button type="submit">Submit</button>
 </div>
 </form>
 <script src="/js/form.js">
