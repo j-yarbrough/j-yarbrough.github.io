@@ -23,7 +23,7 @@ function validateForm() {
     }
 }
 function validateField(valThisField) {
-var label=valThisField.parentElement.querySelector('label').firstChild.textContent;
+var label=valThisField.closest('text-area, text-input').querySelector('label').firstChild.textContent;
 var fieldValue = valThisField.value.trim();
 var isValid = true;
 var errorMessage = '';
@@ -41,7 +41,7 @@ return isValid;
 }
 
 function setField(field, validBoolean, errorMessage) {
-    var errorContainer = field.parentElement.querySelector('.validation-feedback');
+    var errorContainer = field.closest('text-area, text-input').querySelector('.validation-feedback');
 switch(validBoolean) {
     case true: field.removeAttribute('aria-invalid'); break;
     case false: field.setAttribute('aria-invalid','true'); break;
