@@ -1,5 +1,5 @@
-:host ul {
-    list-style-type: none;
+:host li {
+    text-wrap: nowrap;
 }
 :host [aria-current] {
     font-weight: bold;
