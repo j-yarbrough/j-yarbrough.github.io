@@ -1,22 +1,4 @@
-figgy-cap {
-    float: right;
-    width: fit-content;
-    border: 1 px solid var --secondary;
-    border-radius: 8px;
-    margin-left: 8px;
-    margin-bottom: 8px;
-    text-align: center;
-    font-size: smaller;
-}
-
-/* small*/
-@media (max-width: 48rem) {
-figgy-cap {
-    float: none;
-    margin: auto;
-}
-}
-.wwxnrnuvf ul{list-style-type:none;line-height:1.5}.wwxnrnuvf [aria-current]{font-weight:bold}.wwxnrnuvf a{text-decoration:none}.wwxnrnuvf summary{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border-radius:8px;padding:0 8px;margin-left:auto;margin-right:auto;width:fit-content}.wwxnrnuvf summary::marker{color:var(--secondary)}@media (max-width:64rem){.wwxnrnuvf #nav-desktop{display:none}}@media (min-width:64.0000000001rem){.wwxnrnuvf details{display:none}}
+.wwxnrnuvf ul{list-style-type:none}.wwxnrnuvf [aria-current]{font-weight:bold}.wwxnrnuvf a{text-decoration:none}.wwxnrnuvf summary{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border-radius:8px;padding:0 8px;margin-left:auto;margin-right:auto;width:fit-content}.wwxnrnuvf summary::marker{color:var(--secondary)}@media (max-width:64rem){.wwxnrnuvf #nav-desktop{display:none}}@media (min-width:64.0000000001rem){.wwxnrnuvf details{display:none}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --background: #ffffff;
