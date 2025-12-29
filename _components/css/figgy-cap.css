@@ -1,4 +1,4 @@
-figgy-cap {
+:host {
     float: right;
     width: fit-content;
     border: 1 px solid var --secondary;
@@ -11,7 +11,7 @@ figgy-cap {
 
 /* small*/
 @media (max-width: 48rem) {
-figgy-cap {
+:host {
     float: none;
     margin: auto;
 }
