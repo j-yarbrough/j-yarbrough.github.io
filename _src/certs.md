@@ -12,13 +12,13 @@ Justin holds accessibility-related certifications from multiple organizations. Y
 <script webc:type="js">
 var output = '';
 var listItemMarkup = [
-  '<div class="cert-detail-item" role="listitem"><strong>',
+  '<li><strong>',
   ':</strong> ',
-  '</div>'];
+  '</li>'];
 for (cert of value.cert) {
   output += `<h3><a href="${cert.url}">${cert.name}</a></h3>`;
   if (cert.issued) {
-    output+= `<div role="list" class="cert-details">`;
+    output+= `<ul>`;
     output += `${listItemMarkup[0]}Issued${listItemMarkup[1]}${cert.issued}${listItemMarkup[2]}`;
     if (cert.renewed) {
       output += `${listItemMarkup[0]}Renewed${listItemMarkup[1]}${cert.renewed}${listItemMarkup[2]}`;
@@ -26,7 +26,7 @@ for (cert of value.cert) {
     if (cert.expires) {
       output += `${listItemMarkup[0]}Expires${listItemMarkup[1]}${cert.expires}${listItemMarkup[2]}`;
     }
-    output += `</div>`;
+    output += `</ul>`;
   }
 }
 output

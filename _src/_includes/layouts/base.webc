@@ -41,7 +41,7 @@
 <div id="wrapper">
 <nav class="primary-nav" id="nav" aria-label="Primary">
 <nav-main>
-<ul class="more-line-height">
+<ul class="more-line-height no-bullets">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
