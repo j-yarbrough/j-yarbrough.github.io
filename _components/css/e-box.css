@@ -1,4 +1,4 @@
-e-box {
+:host {
     padding: 8px;
     border-left: 1px dashed var(--secondary);
     display: block;

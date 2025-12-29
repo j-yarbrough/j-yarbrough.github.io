@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/e-box.css">
+<link webc:scoped rel="stylesheet" href="/css/e-box.css">
 <script webc:type="js">
 if (((!level)&& (label)) || ((!label) && (level))) {
     throw new Error('e-box component must have both label and level set or neither');
