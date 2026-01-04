@@ -1,1 +1,2 @@
-<link rel="stylesheet" href="/css/yt-embed.css"><video :id="uid" data-able-player :data-youtube-id="yt" playsinline><p>The video player failed to load for some reason but you can <a :href="yt">watch it on YouTube.</a></p></video>
+<link webc:scoped rel="stylesheet" href="/css/yt-embed.css">
+<video data-able-player :data-youtube-id="yt" playsinline><p>The video player failed to load for some reason but you can <a :href="yt">watch it on YouTube.</a></p></video>
