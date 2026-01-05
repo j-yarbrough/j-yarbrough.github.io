@@ -45,15 +45,7 @@
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
-<li{%- if entry.url == page.url %} aria-current="page"{% endif %}>
-{%- if entry.url != page.url %}
-<a href="{{ entry.url }}">
-{% endif %}
-{{ entry.title }}
-{%- if entry.url != page.url %}
-</a>
-{% endif %}
-</li>
+<li><a href="{{ entry.url }}"{%- if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 {%- endfor %}
 </template>
 </ul>
