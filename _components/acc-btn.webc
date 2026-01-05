@@ -2,4 +2,3 @@
 <span class="acc-indicator" aria-hidden="true"></span>
 <span webc:nokeep @text="label"></span>
 </button>
-<span class="acc-responsive-desktop" @text="label"></span>
