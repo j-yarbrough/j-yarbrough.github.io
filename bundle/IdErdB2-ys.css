@@ -1,6 +1,5 @@
-.wju00n7ua .accordion-button{font-size:inherit;border:1px solid var(--highlight);color:var(--highlight);background-color:var(--background);padding:0 8px;border-radius:8px;font-family:var(--serif)}.wju00n7ua .accordion-button[aria-expanded="false"] .acc-indicator::before{content:"→";color:var(--secondary)}.wju00n7ua .accordion-button[aria-expanded="true"] .acc-indicator::before{content:"↓";color:var(--secondary)}.wju00n7ua .accordion-header:has(>.accordion-button[aria-expanded="false"])+.accordion-panel{display:none}
-.whrzhjx_f dialog::backdrop{background-color:var(--background);opacity:50%}.whrzhjx_f .modal-open,.whrzhjx_f .modal-close{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border:1px solid var(--highlight);border-radius:8px;padding:0 8px}.whrzhjx_f dialog{border:1px solid var(--highlight);background-color:var(--background);color:var(--text-color);border-radius:8px;padding:8px;margin:auto;max-width:50rem;box-shadow:16px 16px 8px 0 var(--secondary)}.whrzhjx_f .dialog-header-wrapper{display:flex;align-items:start}.whrzhjx_f h1{font-size:1.5rem;padding:0;margin:0;flex-grow:1}.whrzhjx_f .dialog-main-wrapper{border-top:1px dashed var(--secondary);border-bottom:1px dashed var(--secondary)}
-.wg_0vsxqu{padding:8px;border-left:1px dashed var(--secondary);display:block}
+.wwylxvzbj .text-input-flex-wrapper{display:flex}.wwylxvzbj textarea,.wwylxvzbj input[type="text"]{color:var(--text-color);background-color:var(--background);border:1px solid var(--highlight);font-family:var(--serif);font-size:1rem;caret-color:var(--text-color)}.wwylxvzbj textarea{display:block;width:100%;height:10rem}.wwylxvzbj .validation-and-helper-container{color:var(--secondary);font-size:smaller}@media (max-width:48rem){.wwylxvzbj .text-input-flex-wrapper{flex-direction:column}.wwylxvzbj input[type="text"]{width:100%}}@media (min-width:48.0000000001rem){.wwylxvzbj .text-input-flex-wrapper{min-height:24px;align-items:center}.wwylxvzbj input[type="text"]{flex-grow:1}}
+.w4vgjio-d button[type="submit"]{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border:1px solid var(--highlight);border-radius:8px;padding:0 8px}
 .wwxnrnuvf li{text-wrap:nowrap}.wwxnrnuvf [aria-current]{font-weight:bold}.wwxnrnuvf a{text-decoration:none}.wwxnrnuvf summary{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border-radius:8px;padding:0 8px;margin-left:auto;margin-right:auto;width:fit-content}.wwxnrnuvf summary::marker{color:var(--secondary)}@media (max-width:64rem){.wwxnrnuvf #nav-desktop{display:none}}@media (min-width:64.0000000001rem){.wwxnrnuvf details{display:none}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
@@ -45,21 +44,17 @@ ol ol ol ol ol {
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--highlight);
 }
-dt {
-    font-weight: bold;
-    color: var(--highlight);
-}
-dd {
-    margin-left: 16px;
-}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
+footer {
+    font-size: smaller;
+    }
+
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);
 }
-/*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
     position: absolute;
     left:  -10000px;
@@ -68,31 +63,15 @@ h1, h2, h3, h4, h5, h6 {
     height: 1px;
     overflow: hidden;
 }
-footer {
-    font-size: smaller;
-    }
-    footer ul {
-        list-style-type: none;
-        display: inline;
-    }
-    footer li {
-        display: inline;
-    }
-    footer li[aria-current="page"] {
-    font-weight: bold;
-}
-footer li .separator {
-    font-weight: normal !important;
-}
 /* small*/
 @media (max-width: 48rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
 /*medium*/
 @media (min-width: 48.000000000001rem) and (max-width: 64rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
@@ -111,19 +90,15 @@ footer li .separator {
     display: flex;
     align-items: stretch;
 }
-#main {
-flex-grow: 1;
-    padding-left: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+#wrapper main {
+flex: 1;
+    padding: 8px 0 8px 8px;
     border-left: 1px dashed var(--secondary);
 }
-#nav {
-    padding-top: 8px;
-    padding-right: 8px;
+#wrapper nav {
+    padding: 8px 8px 8px 0;
 }
 }
-/*end large*/
 .smaller {
     font-size: smaller;
 }

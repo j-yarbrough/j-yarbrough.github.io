@@ -1,4 +1,5 @@
-.wmnmml6zo{float:right;width:fit-content;border:1 px solid var --secondary;border-radius:8px;margin-left:8px;margin-bottom:8px;text-align:center;font-size:smaller}@media (max-width:48rem){.wmnmml6zo{float:none;margin:auto}}
+.wclpk35re{display:block;max-width:750px;margin:0 auto}
+.wju00n7ua .accordion-button{font-size:inherit;border:1px solid var(--highlight);color:var(--highlight);background-color:var(--background);padding:0 8px;border-radius:8px;font-family:var(--serif)}.wju00n7ua .accordion-button[aria-expanded="false"] .acc-indicator::before{content:"→";color:var(--secondary)}.wju00n7ua .accordion-button[aria-expanded="true"] .acc-indicator::before{content:"↓";color:var(--secondary)}.wju00n7ua .accordion-header:has(>.accordion-button[aria-expanded="false"])+.accordion-panel{display:none}
 .wwxnrnuvf li{text-wrap:nowrap}.wwxnrnuvf [aria-current]{font-weight:bold}.wwxnrnuvf a{text-decoration:none}.wwxnrnuvf summary{font-family:var(--serif);font-size:1rem;color:var(--highlight);background-color:var(--background);border-radius:8px;padding:0 8px;margin-left:auto;margin-right:auto;width:fit-content}.wwxnrnuvf summary::marker{color:var(--secondary)}@media (max-width:64rem){.wwxnrnuvf #nav-desktop{display:none}}@media (min-width:64.0000000001rem){.wwxnrnuvf details{display:none}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
@@ -43,21 +44,17 @@ ol ol ol ol ol {
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--highlight);
 }
-dt {
-    font-weight: bold;
-    color: var(--highlight);
-}
-dd {
-    margin-left: 16px;
-}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
+footer {
+    font-size: smaller;
+    }
+
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);
 }
-/*skip link CSS, hidden visually, but will appear in reading order. Will be displayed when either is in focus.*/
 .sr-only, #skip-links:not(:focus-within), #aria-live-region {
     position: absolute;
     left:  -10000px;
@@ -66,31 +63,15 @@ h1, h2, h3, h4, h5, h6 {
     height: 1px;
     overflow: hidden;
 }
-footer {
-    font-size: smaller;
-    }
-    footer ul {
-        list-style-type: none;
-        display: inline;
-    }
-    footer li {
-        display: inline;
-    }
-    footer li[aria-current="page"] {
-    font-weight: bold;
-}
-footer li .separator {
-    font-weight: normal !important;
-}
 /* small*/
 @media (max-width: 48rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
 /*medium*/
 @media (min-width: 48.000000000001rem) and (max-width: 64rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
@@ -109,19 +90,15 @@ footer li .separator {
     display: flex;
     align-items: stretch;
 }
-#main {
-flex-grow: 1;
-    padding-left: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+#wrapper main {
+flex: 1;
+    padding: 8px 0 8px 8px;
     border-left: 1px dashed var(--secondary);
 }
-#nav {
-    padding-top: 8px;
-    padding-right: 8px;
+#wrapper nav {
+    padding: 8px 8px 8px 0;
 }
 }
-/*end large*/
 .smaller {
     font-size: smaller;
 }
