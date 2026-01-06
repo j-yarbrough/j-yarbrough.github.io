@@ -1,12 +1,12 @@
 /* small*/
 @media (max-width: 48rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
 /*medium*/
 @media (min-width: 48.000000000001rem) and (max-width: 64rem) {
-    #wrapper, header, footer, #nav, #main {
+    #wrapper, header, footer, #wrapper nav, #wrapper main {
         width: 100%;
     }
 }
@@ -25,16 +25,12 @@
     display: flex;
     align-items: stretch;
 }
-#main {
-flex-grow: 1;
-    padding-left: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+#wrapper main {
+flex: 1;
+    padding: 8px 0 8px 8px;
     border-left: 1px dashed var(--secondary);
 }
-#nav {
-    padding-top: 8px;
-    padding-right: 8px;
+#wrapper nav {
+    padding: 8px 8px 8px 0;
 }
 }
-/*end large*/
