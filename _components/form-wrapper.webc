@@ -8,7 +8,7 @@ if (!action) {throw new Error('form wrapper component is missing required prop a
 <form novalidate :name="name" :method="method" :action="action">
 <p class="required-instructions">All fields marked with asterisks (*) are required.</p>
 <slot></slot>
-<div class="form-submit-button-wrapper">
+<div class="submit-btn-wrapper">
 <button type="submit">Submit</button>
 </div>
 </form>
