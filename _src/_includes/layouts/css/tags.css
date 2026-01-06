@@ -26,16 +26,13 @@ ol ol ol ol ol {
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--highlight);
 }
-dt {
-    font-weight: bold;
-    color: var(--highlight);
-}
-dd {
-    margin-left: 16px;
-}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
+footer {
+    font-size: smaller;
+    }
+
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);
