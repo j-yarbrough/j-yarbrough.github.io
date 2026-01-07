@@ -1,4 +1,8 @@
-:host .accordion-button {
+:host {
+    display: block;
+    min-height: 24px;
+}
+:host [aria-expanded] {
     font-size: inherit;
     border: 1px solid var(--highlight);
     color: var(--highlight);
@@ -7,14 +11,14 @@
     border-radius: 8px;
     font-family: var(--serif);
 }
-:host .accordion-button[aria-expanded="false"] .acc-indicator::before {
+:host [aria-expanded="false"] .acc-indicator::before {
     content: "\2192";
     color: var(--secondary);
 }
-:host .accordion-button[aria-expanded="true"] .acc-indicator::before {
+:host [aria-expanded="true"] .acc-indicator::before {
     content: "\2193";
     color: var(--secondary);
 }
-.accordion-header:has(> .accordion-button[aria-expanded="false"]) + .accordion-panel {
+.acc-header:has(> [aria-expanded="false"]) + .acc-panel {
     display: none;
 }

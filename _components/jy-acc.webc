@@ -4,25 +4,25 @@ if (!label) {throw new Error('jy-acc component is missing required prop label');
 ``
 </script>
 <!---Conditional logic for heading level--->
-<h2 webc:if="{level == 2}" class="accordion-header" :id="uid">
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<h2 webc:if="{level == 2}" class="acc-header">
+<acc-btn :@label="label"></acc-btn>
 </h2>
-<h3 webc:elseif="{level == 3}" class="accordion-header" :id="uid"><
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<h3 webc:elseif="{level == 3}" class="acc-header"><
+<acc-btn :@label="label"></acc-btn>
 </h3>
-<h4 webc:elseif="{level == 4}" class="accordion-header" :id="uid"><
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<h4 webc:elseif="{level == 4}" class="acc-header"><
+<acc-btn :@label="label"></acc-btn>
 </h4>
-<h5 webc:elseif="{level == 5}" class="accordion-header" :id="uid"><
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<h5 webc:elseif="{level == 5}" class="acc-header"><
+<acc-btn :@label="label"></acc-btn>
 </h5>
-<h6 webc:elseif="{level == 6}" class="accordion-header" :id="uid"><
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<h6 webc:elseif="{level == 6}" class="acc-header"><
+<acc-btn :@label="label"></acc-btn>
 </h6>
-<div webc:else class="accordion-header" :id="uid">
-<acc-btn :@label="label" :@idval="uid"></acc-btn>
+<div webc:else class="acc-header">
+<acc-btn :@label="label"></acc-btn>
 </div>
-<div class="accordion-panel" :id="uid + '-acc-panel'">
+<div class="acc-panel">
 <slot></slot>
 </div>
 <script src="/js/accordion.js"></script>
