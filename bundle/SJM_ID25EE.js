@@ -1,5 +1,5 @@
 window.addEventListener('load',function() {
-    this.document.querySelectorAll('.accordion-button').forEach((accButton) => {
+    document.querySelectorAll('.acc-header [aria-expanded]').forEach((accButton) => {
         accButton.addEventListener('click',triggerAccordion);
     })
 });
