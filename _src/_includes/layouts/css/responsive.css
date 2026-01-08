@@ -1,16 +1,17 @@
-/* small*/
-@media (max-width: 48rem) {
-    #wrapper, header, footer, #wrapper nav, #wrapper main {
+/*mobile and tablet*/
+@media (max-width: 64rem) {
+    #wrapper, header, footer, #nav, main {
         width: 100%;
     }
-}
-/*medium*/
-@media (min-width: 48.000000000001rem) and (max-width: 64rem) {
-    #wrapper, header, footer, #wrapper nav, #wrapper main {
-        width: 100%;
+    #desktop-nav-list {
+        display: none;
+    }
+    #nav .modal-open {
+        display: block;
+        margin: 0 auto;
     }
 }
-/*large*/
+/*desktop*/
 @media (min-width: 64.0000000001rem) {
     #wrapper, header, footer {
         width: 100%;
@@ -18,19 +19,22 @@
         margin: 0 auto;
         box-sizing: border-box;
     }
-    header {
-        text-align: left;
-    }
 #wrapper {
     display: flex;
     align-items: stretch;
 }
-#wrapper main {
+main {
 flex: 1;
     padding: 8px 0 8px 8px;
     border-left: 1px dashed var(--secondary);
 }
-#wrapper nav {
+#nav {
     padding: 8px 8px 8px 0;
+}
+#nav li {
+    text-wrap: nowrap;
+}
+#nav modal-dialog {
+    display: none;
 }
 }

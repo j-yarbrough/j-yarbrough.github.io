@@ -26,13 +26,18 @@ ol ol ol ol ol {
 a, a:active, a:focus, a:hover, a:visited {
     color: var(--highlight);
 }
+#nav [aria-current="page"] {
+    font-weight: bold;
+}
+#desktop-nav-list a {
+    text-decoration: none;
+}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
 footer {
     font-size: smaller;
     }
-
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);

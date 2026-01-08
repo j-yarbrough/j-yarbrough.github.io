@@ -32,9 +32,9 @@
 </header>
 <!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
-<nav aria-label="Primary">
-<nav-main>
-<ul class="more-line-height no-bullets">
+<nav id="nav">
+<modal-dialog @label="Site Navigation">
+<ul class="more-line-height">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
@@ -42,7 +42,16 @@
 {%- endfor %}
 </template>
 </ul>
-</nav-main>
+</modal-dialog>
+<ul class="more-line-height no-bullets" id="desktop-nav-list">
+<template webc:type="11ty" 11ty:type="njk">
+{% set navPages = collections.all | eleventyNavigation %}
+{%- for entry in navPages %}
+<li><a href="{{ entry.url }}"{%- if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+{%- endfor %}
+</template>
+</ul>
+
 </nav>
 <main>
 <h1 tabindex="-1" id="main" @text="{if (H1) {H1} else {title}}"></h1>

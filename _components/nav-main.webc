@@ -1,8 +1,0 @@
-<link webc:scoped rel="stylesheet" href="/css/nav-main.css">
-<details>
-<summary>Navigation</summary>
-<slot></slot>
-</details>
-<div id="nav-desktop">
-<slot></slot>
-</div>
