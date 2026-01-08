@@ -1,6 +1,6 @@
 window.addEventListener('load',buildTheTOC);
 function buildTheTOC () {
-    var headings = document.querySelectorAll('h2:not(.accordion-header, .dialog-header)');
+    var headings = document.querySelectorAll('h2:not(.accordion-header, .dialog-header, .toc-skip)');
     var tocList = document.querySelector('#toc-list');
     headings.forEach((headings) => {
         var headingText = headings.textContent
