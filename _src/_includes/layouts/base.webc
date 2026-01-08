@@ -33,7 +33,7 @@
 <!---wrapper that creates side-by-side for desktop--->
 <div id="wrapper">
 <nav id="nav">
-<modal-dialog @label="Site Navigation">
+<modal-dialog @label="Site Navigation" @heading="Navigation">
 <ul class="more-line-height">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
