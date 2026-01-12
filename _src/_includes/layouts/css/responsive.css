@@ -3,12 +3,12 @@
     #wrapper, header, footer, #nav, main {
         width: 100%;
     }
-    #desktop-nav-list {
-        display: none;
-    }
-    #nav .modal-open {
+    #nav button[aria-expanded] {
         display: block;
         margin: 0 auto;
+    }
+    #nav li {
+        padding: 4px 0;
     }
 }
 /*desktop*/
@@ -33,8 +33,19 @@ flex: 1;
 }
 #nav li {
     text-wrap: nowrap;
+    padding: 4px 0;
 }
-#nav modal-dialog {
+#nav jy-acc {
+    visibility: hidden;
+}
+#nav jy-acc .acc-header {
     display: none;
+}
+#nav jy-acc ul {
+        padding: 0  ;
+        visibility: visible;
+}
+#nav .acc-panel {
+    display: block;
 }
 }
