@@ -34,7 +34,7 @@
 <div id="wrapper">
 <nav id="nav">
 <jy-acc @label="Site Navigation">
-<ul class="more-line-height no-bullets">
+<ul class="no-bullets">
 <template webc:type="11ty" 11ty:type="njk">
 {% set navPages = collections.all | eleventyNavigation %}
 {%- for entry in navPages %}
