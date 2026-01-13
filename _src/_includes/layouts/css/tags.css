@@ -39,6 +39,12 @@ a, a:active, a:focus, a:hover, a:visited {
 #nav li {
     padding: 3px 0;
 }
+#nav li:first-child {
+    padding-top: 0  ;
+}
+#nav li:last-child{
+    padding-bottom: 0   ;
+}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
