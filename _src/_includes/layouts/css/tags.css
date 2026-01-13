@@ -29,8 +29,15 @@ a, a:active, a:focus, a:hover, a:visited {
 #nav [aria-current="page"] {
     font-weight: bold;
 }
-#desktop-nav-list a {
+#nav a {
     text-decoration: none;
+}
+#nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+#nav li {
+    padding: 3px 0;
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)

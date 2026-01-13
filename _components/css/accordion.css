@@ -2,6 +2,8 @@
     display: block;
     min-height: 24px;
 }
+/*mobile and tablet*/
+@media (max-width: 64rem) {
 :host [aria-expanded] {
     font-size: inherit;
     border: 1px solid var(--highlight);
@@ -21,4 +23,14 @@
 }
 .acc-header:has(> [aria-expanded="false"]) + .acc-panel {
     display: none;
+}
+}
+/*desktop*/
+@media (min-width: 64.0000000001rem) {
+:host [aria-expanded] {
+    visibility: hidden;
+}
+:host .acc-label-text {
+    visibility: visible;
+}
 }
