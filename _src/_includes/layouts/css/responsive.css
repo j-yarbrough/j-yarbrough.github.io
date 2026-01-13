@@ -7,9 +7,6 @@
         display: block;
         margin: 0 auto;
     }
-    #nav li {
-        padding: 4px 0;
-    }
 }
 /*desktop*/
 @media (min-width: 64.0000000001rem) {
@@ -31,21 +28,7 @@ flex: 1;
 #nav {
     padding: 8px 8px 8px 0;
 }
-#nav li {
-    text-wrap: nowrap;
-    padding: 4px 0;
-}
-#nav jy-acc {
-    visibility: hidden;
-}
-#nav jy-acc .acc-header {
+#nav .acc-header {
     display: none;
-}
-#nav jy-acc ul {
-        padding: 0  ;
-        visibility: visible;
-}
-#nav .acc-panel {
-    display: block;
 }
 }
