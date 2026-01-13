@@ -1,4 +1,5 @@
-.wju00n7ua{display:block;min-height:24px}.wju00n7ua [aria-expanded]{font-size:inherit;border:1px solid var(--highlight);color:var(--highlight);background-color:var(--background);padding:0 8px;border-radius:8px;font-family:var(--serif)}.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→";color:var(--secondary)}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓";color:var(--secondary)}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}
+.wmnmml6zo{float:right;width:fit-content;border:1 px solid var --secondary;border-radius:8px;margin-left:8px;margin-bottom:8px;text-align:center;font-size:smaller}@media (max-width:48rem){.wmnmml6zo{float:none;margin:auto}}
+.wju00n7ua{display:block;min-height:24px}@media (max-width:64rem){.wju00n7ua [aria-expanded]{font-size:inherit;border:1px solid var(--highlight);color:var(--highlight);background-color:var(--background);padding:0 8px;border-radius:8px;font-family:var(--serif)}.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→";color:var(--secondary)}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓";color:var(--secondary)}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}}@media (min-width:64.0000000001rem){.wju00n7ua [aria-expanded]{visibility:hidden}.wju00n7ua .acc-label-text{visibility:visible}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --background: #ffffff;
@@ -45,8 +46,15 @@ a, a:active, a:focus, a:hover, a:visited {
 #nav [aria-current="page"] {
     font-weight: bold;
 }
-#desktop-nav-list a {
+#nav a {
     text-decoration: none;
+}
+#nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+#nav li {
+    padding: 3px 0;
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
@@ -75,9 +83,6 @@ footer {
         display: block;
         margin: 0 auto;
     }
-    #nav li {
-        padding: 4px 0;
-    }
 }
 /*desktop*/
 @media (min-width: 64.0000000001rem) {
@@ -99,22 +104,8 @@ flex: 1;
 #nav {
     padding: 8px 8px 8px 0;
 }
-#nav li {
-    text-wrap: nowrap;
-    padding: 4px 0;
-}
-#nav jy-acc {
-    visibility: hidden;
-}
-#nav jy-acc .acc-header {
+#nav .acc-header {
     display: none;
-}
-#nav jy-acc ul {
-        padding: 0  ;
-        visibility: visible;
-}
-#nav .acc-panel {
-    display: block;
 }
 }
 .smaller {
