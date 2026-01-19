@@ -8,8 +8,8 @@ eleventyNavigation:
 ---
 <p>To contact Justin, fill out this form.</p>
 <form-wrapper @name="contact" @method="post" @action="https://formspree.io/f/mnqleljw">
-<text-input @name="name" @required="true" @autocomplete="name">Name</text-input>
-<text-input @required="true" @inputmode="email" @name="email" @autocomplete="email" @helper="Your email address will only be used to respond to your message.">Email address</text-input>
-<text-input @name="subject" @required="true">Subject</text-input>
-<text-area @name="msg" @required="true">Message body</text-area>
+<text-input @label="Name" @name="name" @required="true" @autocomplete="name"></text-input>
+<text-input @label="Email address" @required="true" @inputmode="email" @name="email" @autocomplete="email" @helper="Your email address will only be used to respond to your message."></text-input>
+<text-input @label="subject" @name="subject" @required="true"></text-input>
+<text-area @label="Message body" @name="msg" @required="true"></text-area>
 </form-wrapper>
