@@ -23,7 +23,7 @@ function validateForm() {
     }
 }
 function validateField(valThisField) {
-var label=valThisField.closest('text-area, text-input').querySelector('label').firstChild.textContent;
+var label=valThisField.closest('text-area, text-input').querySelector('.input-label-text').textContent;
 var fieldValue = valThisField.value.trim();
 var isValid = true;
 var errorMessage = '';
