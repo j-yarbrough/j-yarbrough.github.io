@@ -1,6 +1,6 @@
 # Readme
 
-Last updated October 25, 2025
+Last updated January 19, 2026
 
 ## Purpose
 
@@ -111,6 +111,7 @@ Note that the field label must be included as the inner text for the component.
 Required:
 
 - @name: name for the input.
+- @label: Visual label for input.
 
 Optional props
 
