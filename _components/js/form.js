@@ -23,8 +23,8 @@ function validateForm() {
     }
 }
 function validateField(valThisField) {
-var label=valThisField.closest('text-area, text-input').querySelector('.input-label-text').textContent;
-var fieldValue = valThisField.value.trim();
+var label=valThisField.closest('text-area, text-input').querySelector('label').textContent.replace('*','');
+var fieldValue = valThisField.value.trim();;
 var isValid = true;
 var errorMessage = '';
 if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
