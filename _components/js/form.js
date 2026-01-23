@@ -28,23 +28,21 @@ var fieldValue = valThisField.value.trim();;
 var isValid = true;
 var errorMessage = '';
 if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
-    isValid = false;
     errorMessage = `${label} cannot be blank.`
 } else if (valThisField.getAttribute('inputmode') == 'email') {
     if (((fieldValue.length >= 6) && (fieldValue.includes('.')) && (fieldValue.includes('@')))==false){
-        isValid = false;
         errorMessage = 'Enter a valid email address, such as name@example.com.';
     }
 } 
-setField(valThisField,isValid,errorMessage);
+if (errorMessage.length) isValid = false;
+setField(valThisField,errorMessage);
 return isValid;
 }
 
-function setField(field, validBoolean, errorMessage) {
-    var errorContainer = field.closest('text-area, text-input').querySelector('.validation-feedback');
-switch(validBoolean) {
-    case true: field.removeAttribute('aria-invalid'); break;
-    case false: field.setAttribute('aria-invalid','true'); break;
+function setField(field, errorMessage) {
+switch(errorMessage.length) {
+    case false: field.removeAttribute('aria-invalid'); break;
+    case true: field.setAttribute('aria-invalid','true');break;
 }
-errorContainer.textContent = errorMessage
+field.closest('text-area, text-input').querySelector('.validation-feedback').textContent = errorMessage;
 }
