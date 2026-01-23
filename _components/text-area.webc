@@ -1,5 +1,5 @@
 <link webc:scoped rel="stylesheet" href="/css/inputs.css">
-<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="required" webc:nokeep>*</span></label>
+<label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="required" aria-hidden="true">*</span></label>
 <textarea :id="uid" :name="name" :aria-required="{if(required){true}}" :aria-describedby="`${uid}-adb`"></textarea>
 <div class="validation-and-helper-container" :id="`${uid}-adb`">
 <div class="validation-feedback"></div>
