@@ -1,6 +1,6 @@
 # Readme
 
-Last updated January 19, 2026
+Last updated 02/15/2026
 
 ## Purpose
 
@@ -76,14 +76,6 @@ Ebox has an optional heading at the top of the container. If no heading is desir
 
 - @label: heading for ebox
 - @level:heading level, must be set as 2-6. Will throw error if invalid value.
-
-### Table of Contents
-
-Will insert a table of contents, displaying a list of all h2's on a page with in-page links Only one variation:
-
-- ``<auto-toc>``
-
-**Note:** TOC list is not built as part of the 11ty build but is built using client-side JS.
 
 ### Form wrapper
 
