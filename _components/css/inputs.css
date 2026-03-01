@@ -1,39 +1,46 @@
-:host .text-input-flex-wrapper {
-    display: flex;
+:host .field-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
 }
-:host textarea, :host input[type="text"] {
-    color: var(--text-color);
-    background-color: var(--background);
-    border: 1px solid var(--highlight);
-    font-family: var(--serif);
-    font-size: 1rem;
-    caret-color: var(--text-color);
+
+/* Inputs and textareas */
+:host .field-wrapper input[type="text"],
+:host .field-wrapper textarea {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--highlight);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-color);
+  font-family: var(--serif);
 }
-:host textarea {
-    display: block;
-    width: 100%;
-    height: 10rem;
+
+/* Label (initial state) */
+:host .field-wrapper label {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  pointer-events: none;
+  background: var(--background);
+  padding: 0 0.25rem;
+  transition: transform 0.15s ease, font-size 0.15s ease, top 0.15s ease;
 }
-:host .validation-and-helper-container {
-    color: var(--secondary);
-    font-size: smaller;
+
+/* Floating state: when input has content or is focused */
+:host .field-wrapper input[type="text"]:not(:placeholder-shown) + label,
+:host .field-wrapper textarea:not(:placeholder-shown) + label,
+:host .field-wrapper input[type="text"]:focus + label,
+:host .field-wrapper textarea:focus + label {
+  top: -0.6rem;
+  font-size: 0.85rem;
+  transform: translateY(-50%);
 }
-/* mobile styling*/
-@media (max-width: 48rem) {
-:host .text-input-flex-wrapper {
-    flex-direction: column;
-}
-:host input[type="text"] {
-    width: 100%;
-}
-}
-/* tablet and desktop */
-@media (min-width: 48.0000000001rem)  {
-    :host .text-input-flex-wrapper {
-        min-height: 24px;
-        align-items: center;
-    }
-:host input[type="text"]{
-    flex-grow: 1;
-}
+
+/* Ensure placeholder-shown works without visible placeholder */
+:host .field-wrapper input[type="text"]::placeholder,
+:host .field-wrapper textarea::placeholder {
+  opacity: 0;
 }

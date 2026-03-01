@@ -1,5 +1,5 @@
 <link webc:scoped rel="stylesheet" href="/css/inputs.css">
-<div class="text-input-flex-wrapper">
+<div class="field-wrapper">
 <label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="required" aria-hidden="true">*</span></label>
 <input type="text" :id="uid" :inputmode="inputmode" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="`${uid}-adb`">
 </div>
