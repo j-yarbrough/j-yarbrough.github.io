@@ -9,7 +9,7 @@
   width: 100%;
   padding: 1rem 0.75rem;
   font-size: 1rem;
-  border: 1px solid var(--highlight);
+  border: 2px solid var(--highlight);
   border-radius: 4px;
   background: transparent;
   color: var(--text-color);
