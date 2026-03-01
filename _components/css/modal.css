@@ -7,16 +7,16 @@
     font-size: 1rem;
     color: var(--highlight);
     background-color: var(--background);
-    border: 1px solid var(--highlight);
-    border-radius: 8px;
-    padding: 0 8px;
+    border: 2px solid var(--highlight);
+    border-radius: 4px;
+    padding: 0 4px;
 }
 :host dialog {
-    border: 1px solid var(--highlight);
+    border: 2px solid var(--highlight);
     background-color: var(--background);
     color: var(--text-color);
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 4px;
+    padding: 4px;
     margin: auto;
     max-width: 50rem;
     box-shadow: 16px 16px 8px 0 var(--secondary);
