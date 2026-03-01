@@ -8,13 +8,13 @@ if (level == 1 || level == 2 || level ==3 || level == 4 || level ==5 || level ==
     headingTag = 'div';
 }
 `<${headingTag} class="acc-header">
-<button aria-expanded="false">
+<button aria-expanded="false" aria-controls="${uid}">
 <span class="acc-indicator" aria-hidden="true"></span>
 <span class="acc-label-text">${label}</span>
 </button>
 </${headingTag}>`;
 </script>
-<div class="acc-panel">
+<div class="acc-panel" :id="uid">
 <slot></slot>
 </div>
 <script src="/js/accordion.js"></script>
