@@ -18,21 +18,20 @@ function validateForm() {
         event.preventDefault();
         firstErrorField.focus();
     } else {
-        if (subjectField) subjectField.value = '[yarbrough.info contact form] ' + subjectField.value;;
-        if (runningOnLocal) alert('Form is valid and would have submitted.');;
+        if (subjectField) subjectField.value = '[yarbrough.info contact form] ' + subjectField.value;
+        if (runningOnLocal) alert('Form is valid and would have submitted.');
     }
 }
 function validateField(valThisField) {
 var label=valThisField.closest('text-area, text-input').querySelector('label').textContent.replace('*','');
-var fieldValue = valThisField.value.trim();;
+var fieldValue = valThisField.value.trim();
 var isValid = true;
 var errorMessage = '';
+var emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
     errorMessage = `${label} cannot be blank.`
-} else if (valThisField.getAttribute('inputmode') == 'email') {
-    if (((fieldValue.length >= 6) && (fieldValue.includes('.')) && (fieldValue.includes('@')))==false){
-        errorMessage = 'Enter a valid email address, such as name@example.com.';
-    }
+} else if (valThisField.getAttribute('inputmode') == 'email' && !emailRegEx.test(fieldValue) && fieldValue) {
+    errorMessage = 'Enter a valid email address, such as name@example.com.';
 } 
 if (errorMessage.length) isValid = false;
 setField(valThisField,errorMessage);

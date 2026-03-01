@@ -29,7 +29,6 @@ There are template variations that can be automatically used based on front matt
 - ``H1``: Allows for the H1 of the page to be separate from the title of the page.
     - If H1 is in front matter, it will be used as the H1 text.
     - If no H1, then the title value will be used.
-- ``noBreadcrumbs`` true will exclude breadcrumbs from the page. Note breadcrumbs are not currently available in the base template, but this variable still exists in front matter since it may be brought back.
 - ``hasVideo`` required if audio/video embeds will be on the page for AblePlayer to work.
 
 ## .webc components

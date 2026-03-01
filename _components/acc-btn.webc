@@ -1,4 +1,0 @@
-<button aria-expanded="false">
-<span class="acc-indicator" aria-hidden="true"></span>
-<span class="acc-label-text" @text="label"></span>
-</button>
