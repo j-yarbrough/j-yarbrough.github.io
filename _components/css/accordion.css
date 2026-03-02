@@ -6,11 +6,11 @@
 @media (max-width: 64rem) {
 :host [aria-expanded] {
     font-size: inherit;
-    border: 2px solid var(--highlight);
+    border: var(--border-width) solid var(--highlight);
     color: var(--highlight);
     background-color:  var(--background);
-    padding:  0 4px;
-    border-radius: 4px;
+    padding: var(--button-padding);
+    border-radius: var(--rounded-corner);
     font-family: var(--serif);
 }
 :host [aria-expanded="false"] .acc-indicator::before {
