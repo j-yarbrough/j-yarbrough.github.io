@@ -44,3 +44,6 @@
 :host .field-wrapper textarea::placeholder {
   opacity: 0;
 }
+:host .field-wrapper textarea {
+  height: 10rem;
+}
