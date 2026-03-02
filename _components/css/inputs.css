@@ -15,7 +15,9 @@
   color: var(--text-color);
 }
 :host textarea {
-  height: 10rem;;
+  height: 10rem;
+  width: 100%;
+  display: block;
 }
 :host .validation-and-helper-container {
   font-size: smaller;
