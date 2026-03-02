@@ -1,49 +1,19 @@
-:host .field-wrapper {
-  position: relative;
-  margin: 1.5rem 0;
+:host {
+  display: block;
+  min-height: 24px;;
 }
-
-/* Inputs and textareas */
-:host .field-wrapper input[type="text"],
-:host .field-wrapper textarea {
-  width: 100%;
-  padding: 1rem 0.75rem;
-  font-size: 1rem;
-  border: var(--border-width) solid var(--highlight);
-  border-radius: var(--rounded-corner);
-  background: transparent;
-  color: var(--text-color);
+:host input[type="text"], :host textarea {
   font-family: var(--serif);
-}
-
-/* Label (initial state) */
-:host .field-wrapper label {
-  position: absolute;
-  top: 0.9rem;
-  left: 0.75rem;
+  border: var(--border-width) solid var(--highlight);
   font-size: 1rem;
+  border-radius: var(--rounded-corner);
+  padding: var(--button-padding);
+  background-color: var(--background);
   color: var(--text-color);
-  pointer-events: none;
-  background: var(--background);
-  padding: 0 0.25rem;
-  transition: transform 0.15s ease, font-size 0.15s ease, top 0.15s ease;
 }
-
-/* Floating state: when input has content or is focused */
-:host .field-wrapper input[type="text"]:not(:placeholder-shown) + label,
-:host .field-wrapper textarea:not(:placeholder-shown) + label,
-:host .field-wrapper input[type="text"]:focus + label,
-:host .field-wrapper textarea:focus + label {
-  top: -0.6rem;
-  font-size: 0.85rem;
-  transform: translateY(-50%);
+:host textarea {
+  height: 10rem;;
 }
-
-/* Ensure placeholder-shown works without visible placeholder */
-:host .field-wrapper input[type="text"]::placeholder,
-:host .field-wrapper textarea::placeholder {
-  opacity: 0;
-}
-:host .field-wrapper textarea {
-  height: 10rem;
+:host .validation-and-helper-container {
+  font-size: smaller;
 }
