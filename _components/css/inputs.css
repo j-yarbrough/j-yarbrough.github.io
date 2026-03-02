@@ -9,8 +9,8 @@
   width: 100%;
   padding: 1rem 0.75rem;
   font-size: 1rem;
-  border: 2px solid var(--highlight);
-  border-radius: 4px;
+  border: var(--border-width) solid var(--highlight);
+  border-radius: var(--rounded-corner);
   background: transparent;
   color: var(--text-color);
   font-family: var(--serif);
@@ -43,4 +43,7 @@
 :host .field-wrapper input[type="text"]::placeholder,
 :host .field-wrapper textarea::placeholder {
   opacity: 0;
+}
+:host .field-wrapper textarea {
+  height: 10rem;
 }

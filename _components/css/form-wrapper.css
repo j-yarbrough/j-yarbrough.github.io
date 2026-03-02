@@ -3,9 +3,9 @@
     font-size: 1rem;
     color: var(--highlight);
     background-color: var(--background);
-    border: 2px solid var(--highlight);
-    border-radius: 4px;
-    padding: 0 4px;
+    border: var(--border-width) solid var(--highlight);
+    border-radius: var(--rounded-corner);
+    padding: var(--button-padding);
 }
 :host .submit-btn-wrapper {
     margin-top: 6px;
