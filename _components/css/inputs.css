@@ -1,6 +1,9 @@
 :host {
   display: block;
-  min-height: 24px;;
+  min-height: 24px;
+}
+:host .flex-wrapper {
+  display: flex;
 }
 :host input[type="text"], :host textarea {
   font-family: var(--serif);
@@ -12,8 +15,23 @@
   color: var(--text-color);
 }
 :host textarea {
-  height: 10rem;;
+  height: 10rem;
+  width: 100%;
+  display: block;
 }
 :host .validation-and-helper-container {
   font-size: smaller;
+}
+@media (max-width: 64rem) {
+  :host .flex-wrapper {
+    flex-direction: column;
+  }
+}
+@media (min-width: 64.0000000001rem){
+  :host .flex-wrapper {
+    align-items: start;
+  }
+  :host input[type="text"] {
+    flex-grow: 1  ;
+  }
 }
