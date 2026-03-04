@@ -2,15 +2,6 @@
     background-color: var(--background);
     opacity: 50%;
 }
-:host .modal-open, :host .modal-close {
-    font-family: var(--serif);
-    font-size: 1rem;
-    color: var(--highlight);
-    background-color: var(--background);
-    border: var(--border-width) solid var(--highlight);
-    border-radius: var(--rounded-corner);
-    padding: var(--button-padding);
-}
 :host dialog {
     border: var(--border-width) solid var(--highlight);
     background-color: var(--background);
@@ -31,8 +22,6 @@
     margin: 0;
     flex-grow: 1    ;
 }
-:host .dialog-main-wrapper {
-    border: dashed var(--secondary);
-    border-width: var(--border-width) 0;
+.dialog-main-wrapper{
     padding: 4px 0;
 }

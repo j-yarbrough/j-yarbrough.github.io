@@ -1,9 +1,0 @@
-:host button {
-    font-family: var(--serif);
-    font-size: 1rem;
-    color: var(--highlight);
-    background-color: var(--background);
-    border: var(--border-width) solid var(--highlight);
-    border-radius: var(--rounded-corner);
-    padding: var(--button-padding);
-}

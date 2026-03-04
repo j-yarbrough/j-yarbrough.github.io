@@ -1,11 +1,11 @@
 window.addEventListener('load',function () {
-    document.querySelectorAll('.modal-open, .modal-close').forEach((dialogButton) => {
+    document.querySelectorAll('.modal-btn').forEach((dialogButton) => {
         dialogButton.addEventListener('click',modalActivate);
     })
 })
 function modalActivate() {
-    var dialogContainer = document.querySelector('#' + this.getAttribute('aria-controls'));
-    switch (this.classList.contains('modal-open')) {
+    var dialogContainer = document.getElementById(this.getAttribute('aria-controls'));;
+    switch (this.hasAttribute('aria-haspopup')) {
         case true:  dialogContainer.showModal();break;
         case false: dialogContainer.close(); break;
     }

@@ -2,17 +2,11 @@
     display: block;
     min-height: 24px;
 }
-/*mobile and tablet*/
-@media (max-width: 64rem) {
 :host [aria-expanded] {
     font-size: inherit;
-    border: var(--border-width) solid var(--highlight);
-    color: var(--highlight);
-    background-color:  var(--background);
-    padding: var(--button-padding);
-    border-radius: var(--rounded-corner);
-    font-family: var(--serif);
 }
+/*mobile and tablet*/
+@media (max-width: 64rem) {
 :host [aria-expanded="false"] .acc-indicator::before {
     content: "\2192";
     color: var(--secondary);
