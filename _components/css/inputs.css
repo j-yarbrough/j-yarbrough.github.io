@@ -1,6 +1,5 @@
 :host {
   display: block;
-  min-height: 24px;
 }
 :host .flex-wrapper {
   display: flex;
@@ -29,7 +28,7 @@
 }
 @media (min-width: 64.0000000001rem){
   :host .flex-wrapper {
-    align-items: start;
+    align-items: center;
   }
   :host input[type="text"] {
     flex-grow: 1  ;
