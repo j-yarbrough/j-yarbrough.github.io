@@ -1,4 +1,4 @@
-:host button[type="submit"] {
+:host button {
     font-family: var(--serif);
     font-size: 1rem;
     color: var(--highlight);
