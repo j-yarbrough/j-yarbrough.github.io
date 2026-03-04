@@ -51,6 +51,15 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     font-size: smaller;
     }
+button {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--highlight);
+    background-color: var(--background);
+    border: var(--border-width) solid var(--highlight);
+    border-radius: var(--rounded-corner);
+    padding: var(--button-padding);
+}
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);
