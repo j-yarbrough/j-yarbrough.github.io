@@ -7,6 +7,3 @@
     border-radius: var(--rounded-corner);
     padding: var(--button-padding);
 }
-:host .submit-btn-wrapper {
-    margin-top: 6px;
-}
