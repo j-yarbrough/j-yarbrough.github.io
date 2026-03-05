@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title @text="`${title} - ${site.siteName}`"></title>
     <link rel="icon" href="data:," />
-
     <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep />
     <link rel="stylesheet" href="/css/variables.css">
 <link rel="stylesheet" href="/css/tags.css">
@@ -47,12 +46,12 @@
 </jy-acc>
 </nav>
 <main>
-<h1 tabindex="-1" id="main" @text="{if (H1) {H1} else {title}}"></h1>
+<h1 id="main" @text="{if (H1) {H1} else {title}}"></h1>
 <template webc:nokeep @raw="content"></template>
 </main>
 </div>
 <!---end responsive wrapper--->
-<footer id="footer" tabindex="-1">
+<footer>
 <template webc:type="11ty" 11ty:type="njk">
 <p>
 Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item.url}}"{% if item.rel %} rel="{{item.rel}}"{% endif %}>{{item.text}}</a>{% if (loop.index < social| length - 1) %}, {% elif (loop.index < social| length ) %}, and {% else %}.{% endif %}{%- endfor %}
