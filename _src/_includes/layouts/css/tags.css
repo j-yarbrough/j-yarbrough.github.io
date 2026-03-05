@@ -54,11 +54,13 @@ footer {
 button {
     font-family: var(--serif);
     font-size: 1rem;
-    color: var(--highlight);
+    color: var(--text-color);
     background-color: var(--background);
     border: var(--border-width) solid var(--highlight);
     border-radius: var(--rounded-corner);
     padding: var(--button-padding);
+    box-sizing: border-box;
+    min-height: 24px;
 }
 :focus-visible {
     outline: 6px double var(--highlight);

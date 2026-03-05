@@ -1,19 +1,19 @@
 :host {
     display: block;
-    min-height: 24px;
 }
 :host [aria-expanded] {
     font-size: inherit;
 }
 /*mobile and tablet*/
 @media (max-width: 64rem) {
+    :host .acc-indicator::before {
+        color: var(--highlight);
+    }
 :host [aria-expanded="false"] .acc-indicator::before {
     content: "\2192";
-    color: var(--secondary);
 }
 :host [aria-expanded="true"] .acc-indicator::before {
     content: "\2193";
-    color: var(--secondary);
 }
 .acc-header:has(> [aria-expanded="false"]) + .acc-panel {
     display: none;
@@ -26,5 +26,6 @@
 }
 :host .acc-label-text {
     visibility: visible;
+    color: var(--highlight);
 }
 }
