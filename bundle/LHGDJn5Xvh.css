@@ -1,14 +1,14 @@
-.wclpk35re{display:block;max-width:750px;margin:0 auto}
-.wju00n7ua{display:block;min-height:24px}.wju00n7ua [aria-expanded]{font-size:inherit}@media (max-width:64rem){.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→";color:var(--secondary)}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓";color:var(--secondary)}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}}@media (min-width:64.0000000001rem){.wju00n7ua [aria-expanded]{visibility:hidden}.wju00n7ua .acc-label-text{visibility:visible}}
+.wmnmml6zo{float:right;width:fit-content;border:var(--border-width) dashed var(--secondary);border-radius:var(--rounded-corner);margin-left:8px;margin-bottom:8px;text-align:center;font-size:smaller}@media (max-width:48rem){.wmnmml6zo{float:none;margin:auto}}
+.wju00n7ua{display:block}.wju00n7ua [aria-expanded]{font-size:inherit}@media (max-width:64rem){.wju00n7ua .acc-indicator::before{color:var(--highlight)}.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→"}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓"}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}}@media (min-width:64.0000000001rem){.wju00n7ua [aria-expanded]{visibility:hidden}.wju00n7ua .acc-label-text{visibility:visible;color:var(--highlight)}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
     --background: #ffffff;
     --text-color: #222222;
     --highlight:#995500;
     --secondary: #666666;
-    --rounded-corner: 4px;
+    --rounded-corner: 6px;
     --border-width: 2px;
-    --button-padding: 2px;
+    --button-padding: 1px 4px;
     }
     @media(prefers-color-scheme: dark) {
         :root {
@@ -74,11 +74,13 @@ footer {
 button {
     font-family: var(--serif);
     font-size: 1rem;
-    color: var(--highlight);
+    color: var(--text-color);
     background-color: var(--background);
     border: var(--border-width) solid var(--highlight);
     border-radius: var(--rounded-corner);
     padding: var(--button-padding);
+    box-sizing: border-box;
+    min-height: 24px;
 }
 :focus-visible {
     outline: 6px double var(--highlight);
