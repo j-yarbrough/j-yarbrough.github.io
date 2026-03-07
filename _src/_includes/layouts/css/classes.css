@@ -23,6 +23,11 @@
 #portfolio-sections ul {
   line-height: 1.5;
 }
+.badge-center {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
 @media (min-width: 64.0000000001rem) {
   #portfolio-sections ul {
     column-count: 2;
