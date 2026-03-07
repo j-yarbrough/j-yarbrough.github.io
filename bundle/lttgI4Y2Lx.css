@@ -1,5 +1,4 @@
-.whrzhjx_f dialog::backdrop{background-color:var(--background);opacity:50%}.whrzhjx_f dialog{border:var(--border-width) solid var(--highlight);background-color:var(--background);color:var(--text-color);border-radius:var(--rounded-corner);padding:var(--rounded-corner);margin:auto;max-width:50rem;box-shadow:16px 16px 8px 0 var(--secondary)}.whrzhjx_f .dialog-header-wrapper{display:flex;align-items:start}.whrzhjx_f h1{font-size:1.5rem;padding:0;margin:0;flex-grow:1}.whrzhjx_f .dialog-main-wrapper{padding:4px 0}
-.wg_0vsxqu{padding-left:8px;border-left:var(--border-width) dashed var(--secondary);display:block}
+.wclpk35re{display:block;max-width:750px;margin:0 auto}
 .wju00n7ua{display:block}.wju00n7ua [aria-expanded]{font-size:inherit}@media (max-width:64rem){.wju00n7ua .acc-indicator::before{color:var(--highlight)}.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→"}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓"}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}}@media (min-width:64.0000000001rem){.wju00n7ua [aria-expanded]{visibility:hidden}.wju00n7ua .acc-label-text{visibility:visible;color:var(--highlight)}}
 :root {
     --serif: Georgia, "Times New Roman", Times, Serif;
@@ -153,6 +152,11 @@ flex: 1;
 }
 #portfolio-sections ul {
   line-height: 1.5;
+}
+.badge-center {
+    display: block;
+    margin: auto;
+    max-width: 100%;
 }
 @media (min-width: 64.0000000001rem) {
   #portfolio-sections ul {
