@@ -1,5 +1,5 @@
 ---
-title: Work Experience
+title: Work and Volunteer Experience
 layout: layouts/base.webc
 templateEngineOverride: webc,md
 eleventyNavigation:
@@ -8,7 +8,9 @@ eleventyNavigation:
 ---
 Since Justin began working in digital accessibility in 2017, he has leveraged his experience as a blind screen reader user to drive home the importance of building accessible experiences from the start in finance, higher education, and consulting settings. More information on Justin’s work history can be found on [Justin’s LinkedIn profile](https://www.linkedin.com/in/justin-yarbrough/) or you can [contact him](/contact) with any questions.
 
-<jy-acc webc:for="(key, value) in pages.work" :@label="value.employer" @level="2">
+## Work
+
+<jy-acc webc:for="(key, value) in pages.work" :@label="value.employer" @level="3">
 <script webc:type="js">
 var content = '';
 for (job of value.jobs) {
@@ -25,3 +27,5 @@ for (job of value.jobs) {
 content
   </script>
 </jy-acc>
+
+## Volunteering
