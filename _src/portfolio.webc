@@ -1,6 +1,7 @@
 ---
 title: Portfolio
 layout: layouts/base.webc
+hasVideo: true
 eleventyNavigation:
   key: Portfolio
   order: 4
@@ -34,7 +35,6 @@ eleventyNavigation:
 <sub-sec :@data="value.subsec"></sub-sec>
 </jy-acc>
 </template>
-
 </tabpanel>
 </tab-interface>
 <p>Please note that Justin has no control over the accessibility of any links to third-party sites</p>
