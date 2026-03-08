@@ -11,9 +11,12 @@ eleventyNavigation:
 
 Justin Yarbrough is a blind digital accessibility coach, writer, and speaker living in the Austin, Texas area.
 
-## Work
+## Experience
 
 Justin has worked in digital accessibility since 2017 in higher education, consulting, and currently works in finance at a large bank. Throughout his time working in the field, Justin has leveraged his strong technical knowledge, deep understanding of accessibility guidelines, and lived experience as a blind screen reader user to help others understand the importance of digital accessibility in the impact it has on people with disabilities. He primarily works with teams to help ensure digital properties are build with accessibility in mind from the start. [Read more...](/work/){aria-label="Read more about Justin's work experience}
+
+Justin also volunteers his time to causes that further accessibility, including [Knowbility](https://knowbility.org/)'s annual [Accessibility Internet Rally](https://knowbility.org/programs/air). [Read more...](/volunteer/){aria-label="Read more about Justin's volunteering"}
+
 ## Certifications
 
 Justin holds certifications from the International Association of Accessibility Professionals, Freedom Scientific, and NVAccess.  [Read more...](/certs/){aria-label="Read more about Justin's certifications}

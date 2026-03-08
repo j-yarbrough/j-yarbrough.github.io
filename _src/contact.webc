@@ -4,7 +4,7 @@ H1: Contact Justin
 layout: layouts/base.webc
 eleventyNavigation:
   key: Contact
-  order: 4
+  order: 5
 ---
 <p>To contact Justin, fill out this form.</p>
 <form-wrapper @name="contact" @method="post" @action="https://formspree.io/f/mnqleljw">

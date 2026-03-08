@@ -1,0 +1,26 @@
+:host .tabs {
+  display: block;
+}
+:host [role="tab"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0 ;
+  cursor: pointer;
+}
+:host [role="tab"][aria-selected="true"] {
+  font-weight: bold;
+}
+:host [role="tab"]:focus-visible{
+  outline: none;
+  box-shadow: none;
+}
+:host [role="tab"]:focus-visible .focus {
+  text-decoration: underline;
+}
+:host [role="tabpanel"] {
+  border: var(--border-width) solid var(--highlight);
+  padding: 4px;
+  width: 100%;
+}
+:host [role="tabpanel"].is-hidden {
+  display: none;
+}
