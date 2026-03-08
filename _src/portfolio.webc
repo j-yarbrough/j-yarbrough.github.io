@@ -26,7 +26,51 @@ eleventyNavigation:
 </jy-acc>
 </tab-panel>
 <tab-panel @label="Speaking" @index="3">
+<jy-acc @level="3" @label="A11yTalks">
+<template webc:type="11ty" 11ty:type="md">
+- September 2019: Panelist for [Digital Inclusion - What? Who? Why?](https://www.youtube.com/watch?v=uY5BWqTzTd8), which discussed all things digital inclusion.  
+</template>
+<yt-embed @yt="https://www.youtube.com/watch?v=uY5BWqTzTd8">
+</yt-embed>
+</jy-acc>
 
+<jy-acc @level="3" @label="AccessU">
+<template webc:type="11ty" 11ty:type="md">
+
+- May 2022: Participated in a panel hosted by Deque Systems discussing working as an accessibility coach
+- May 2024: Hosted an "Unconference" session, an informal discussion over lunch, where attendees were able to ask questions of me as a blind screen reader user and accessibility expert.
+</template>
+</jy-acc>
+
+<jy-acc @level="3" @label="axe-con">
+<template webc:type="11ty" 11ty:type="md">
+- March 2023: Organized and served as a panelist for [Working from Within: Having a Disability and Working in Digital Accessibility](https://www.deque.com/axe-con/sessions/working-from-within-having-a-disability-and-working-in-digital-accessibility/).  While free registration is required to view the recording, a [promotional video](Meet Justin, Steve and Trudy at axe-con 2023!) for the talk is also available.
+</template>
+</jy-acc>
+
+<jy-acc @level="3" @label="Maricopa County Community College District">
+<template webc:type="11ty" 11ty:type="md">
+
+- October 2021: Co-presented an overview of accessibility in higher education hosted by MCCCD's Diversity Advisory Council.
+- October 2021: Organized and served as a panelist for a discussion on working within MCCCD as an employee with a disability hosted by Ability Maricopa for Disability Employment Awareness Month.
+- May 2022: Served as the master of ceremonies for Ability Maricopa's first ever convocation held for graduating students with disabilities.
+</template>
+</jy-acc>
+
+<jy-acc @level="3" @label="The Staying Inn">
+<template webc:type="11ty" 11ty:type="md">
+- July 2020: Co-presented [If you're Blind, how do you tweet?](https://www.youtube.com/watch?v=UVZKctUMZJY) in which my co-presenter provided a basic introduction to screen readers and I conducted a demo. You can [download the demo site here (.zip file)](/resources/staying-inn-demo.zip).  
+</template>
+
+<yt-embed @yt="https://www.youtube.com/watch?v=UVZKctUMZJY"></yt-embed>
+
+</jy-acc>
+
+<jy-acc @level="3" @label="University College London">
+<template webc:type="11ty" 11ty:type="md">
+- 2022: Presented on a [paper I co-wrote on using alt text to make science Twitter more accessible to blind people](https://www.nature.com/articles/s41467-020-19640-w) for a virtual conference the university was hosting on digital accessibility.
+</template>
+</jy-acc>
 </tab-panel>
 <tab-panel @label="Other Media" @index="4">
 <template webc:nokeep webc:for="(key, value) in pages.portfolio.media" >
