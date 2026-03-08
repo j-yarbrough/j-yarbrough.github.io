@@ -4,7 +4,7 @@ layout: layouts/base.webc
 templateEngineOverride: webc, md
 eleventyNavigation:
   key: Alt Text and Social Media
-  parent: Writing
+  parent: Portfolio
 ---
 Social media has a great ability to connect us. Without it, I would have never found all the wonderful people in the blindness community on Twitter that have had such a positive impact on my life. Heck, you probably found this post on some social media platform.
 
