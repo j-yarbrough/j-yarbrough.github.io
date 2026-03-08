@@ -1,0 +1,165 @@
+.whrzhjx_f dialog::backdrop{background-color:var(--background);opacity:50%}.whrzhjx_f dialog{border:var(--border-width) solid var(--highlight);background-color:var(--background);color:var(--text-color);border-radius:var(--rounded-corner);padding:var(--rounded-corner);margin:auto;max-width:50rem;box-shadow:16px 16px 8px 0 var(--secondary)}.whrzhjx_f .dialog-header-wrapper{display:flex;align-items:start}.whrzhjx_f h1{font-size:1.5rem;padding:0;margin:0;flex-grow:1}.whrzhjx_f .dialog-main-wrapper{padding:4px 0}
+.wju00n7ua{display:block}.wju00n7ua [aria-expanded]{font-size:inherit}@media (max-width:64rem){.wju00n7ua .acc-indicator::before{color:var(--highlight)}.wju00n7ua [aria-expanded="false"] .acc-indicator::before{content:"→"}.wju00n7ua [aria-expanded="true"] .acc-indicator::before{content:"↓"}.wju00n7ua .acc-header:has(>[aria-expanded="false"])+.acc-panel{display:none}}@media (min-width:64.0000000001rem){.wju00n7ua [aria-expanded]{visibility:hidden}.wju00n7ua .acc-label-text{visibility:visible;color:var(--highlight)}}
+:root {
+    --serif: Georgia, "Times New Roman", Times, Serif;
+    --background: #ffffff;
+    --text-color: #222222;
+    --highlight:#995500;
+    --secondary: #666666;
+    --rounded-corner: 6px;
+    --border-width: 2px;
+    --button-padding: 1px 4px;
+    }
+    @media(prefers-color-scheme: dark) {
+        :root {
+            --background: #000000;
+            --text-color: #dddddd;
+            --highlight:#ff9900;
+            --secondary: #999999;
+        }
+    }
+body {
+    background-color: var(--background);
+        color: var(--text-color);
+    font-family: var(--serif);
+    font-size: 16px;
+    padding: 8px
+}
+header, footer, .text-center {
+    text-align: center;
+}
+ol {
+    list-style-type: decimal;
+}
+ol ol {
+    list-style-type: upper-alpha;
+}
+ol ol ol {
+    list-style-type: upper-roman;
+}
+ol ol ol ol {
+    list-style-type: lower-alpha;
+}
+ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+a, a:active, a:focus, a:hover, a:visited {
+    color: var(--highlight);
+}
+#nav [aria-current="page"] {
+    font-weight: bold;
+}
+#nav a {
+    text-decoration: none;
+}
+#nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+#nav li {
+    padding: 3px 0;
+}
+#nav li:first-child {
+    padding-top: 0  ;
+}
+#nav li:last-child{
+    padding-bottom: 0   ;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight)
+}
+footer {
+    font-size: smaller;
+    }
+button {
+    font-family: var(--serif);
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--background);
+    border: var(--border-width) solid var(--highlight);
+    border-radius: var(--rounded-corner);
+    padding: var(--button-padding);
+    box-sizing: border-box;
+    min-height: 24px;
+}
+:focus-visible {
+    outline: 6px double var(--highlight);
+    box-shadow: 0 0 0 4px var(--background);
+}
+.sr-only, #skip-links:not(:focus-within), #aria-live-region {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+/*mobile and tablet*/
+@media (max-width: 64rem) {
+    #wrapper, header, footer, #nav, main {
+        width: 100%;
+    }
+    #nav button[aria-expanded] {
+        display: block;
+        margin: 0 auto;
+    }
+}
+/*desktop*/
+@media (min-width: 64.0000000001rem) {
+    #wrapper, header, footer {
+        width: 100%;
+        max-width: 75rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+main {
+flex: 1;
+    padding: 8px 0 8px 8px;
+    border-left: var(--border-width) dashed var(--secondary);
+}
+#nav {
+    padding: 8px 8px 8px 0;
+}
+#nav .acc-header {
+    display: none;
+}
+}
+.smaller {
+    font-size: smaller;
+}
+.text-right {
+    text-align: right;
+}
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.no-bullets {
+    list-style-type: none;
+}
+.header-first-line {
+    color: var(--highlight);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.more-line-height {
+    line-height: 1.5;
+}
+#portfolio-sections ul {
+  line-height: 1.5;
+}
+.badge-center {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+@media (min-width: 64.0000000001rem) {
+  #portfolio-sections ul {
+    column-count: 2;
+  }
+}
