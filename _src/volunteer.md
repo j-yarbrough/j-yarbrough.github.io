@@ -13,9 +13,15 @@ Throughout his career, Justin has volunteered his time for causes furthering acc
 
 Served as a mentor for teams participating in the 2024 and 2025 [Accessibility Internet Rally](https://knowbility.org/programs/air) competitions, where teams work together to build new, accessible websites for artists and non-profit organizations. AIR mentors provide guidance to their teams on accessible design, content creation, and testing as well as advice on competition strategy.
 
+<modal-dialog @label="View AIR volunteer badges">
+
+These badges were provided by Knowbility for participating as a mentor in AIR competitions.
+
 ![AIR 2024 mentor badge](/images/air/2024_mentor.png){class="badge-center"}
 
 ![AIR 2025 mentor badge](/images/air/2025_mentor.png){class="badge-center"}
+
+</modal-dialog>
 
 </jy-acc>
 
