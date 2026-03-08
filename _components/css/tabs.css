@@ -1,6 +1,9 @@
 :host .tabs {
   display: block;
 }
+:host [role="tablist"] {
+  padding: 0 var(--rounded-corner);
+}
 :host [role="tab"] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0 ;
@@ -20,6 +23,7 @@
   border: var(--border-width) solid var(--highlight);
   padding: 4px;
   width: 100%;
+  border-radius: var(--rounded-corner);
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
