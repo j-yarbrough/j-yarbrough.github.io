@@ -2,17 +2,12 @@
   display: block;
 }
 :host [role="tab"] {
-  padding: 4px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0 ;
   cursor: pointer;
-  margin: 0 ;
-}
-:host [role="tab"]:not([aria-selected="true"]) {
-  margin-top: 4px;
 }
 :host [role="tab"][aria-selected="true"] {
-  padding-bottom: 8px;
+  font-weight: bold;
 }
 :host [role="tab"]:focus-visible{
   outline: none;
