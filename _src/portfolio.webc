@@ -19,5 +19,22 @@ eleventyNavigation:
   <link-list :@data="value.items"></link-list>
 </jy-acc>
 </tab-panel>
+<tab-panel @label="Podcasts" @index="2">
+<jy-acc webc:for="(key, value) in pages.portfolio.podcasts" @level="3" :@label="value.publisher">
+  <link-list :@data="value.items"></link-list>
+</jy-acc>
+</tab-panel>
+<tab-panel @label="Speaking" @index="3">
+
+</tab-panel>
+<tab-panel @label="Other Media" @index="4">
+<template webc:nokeep webc:for="(key, value) in pages.portfolio.media" >
+<jy-acc @level="3" :@label="value.mainsection">
+<p webc:if="value.slug" @text="value.slug"></p>
+<sub-sec :@data="value.subsec"></sub-sec>
+</jy-acc>
+</template>
+
+</tabpanel>
 </tab-interface>
 <p>Please note that Justin has no control over the accessibility of any links to third-party sites</p>
