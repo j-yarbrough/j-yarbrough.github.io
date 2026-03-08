@@ -6,8 +6,12 @@ eleventyNavigation:
   key: Portfolio
   order: 4
 ---
-<p>Throughout Justin's career in accessibility, he has had the opportunity to share his knowledge, skills, and lived experience through multiple venues. He has written articles for publications such as Nature and Runway Girl Network, spoken at in-person and virtual events such as AccessU, Axe-Con, and A11yTalks, and been a guest on multiple podcasts.</p>
+<template webc:type="11ty" 11ty:type="md">
 
+Throughout Justin's career in accessibility, he has had the opportunity to share his knowledge, skills, and lived experience through multiple venues. He has written articles for publications such as Nature and Runway Girl Network, spoken at in-person and virtual events such as AccessU, Axe-Con, and A11yTalks, and been a guest on multiple podcasts.
+
+If you would like justin to write something for you, speak at your event, or anything else, you can [contact him](/contact) to discuss options.
+</template>
 <tab-interface>
 <tab-list>
 <tab-btn @label="Writing" @index="1"></tab-btn>
@@ -61,9 +65,7 @@ eleventyNavigation:
 <template webc:type="11ty" 11ty:type="md">
 - July 2020: Co-presented [If you're Blind, how do you tweet?](https://www.youtube.com/watch?v=UVZKctUMZJY) in which my co-presenter provided a basic introduction to screen readers and I conducted a demo. You can [download the demo site here (.zip file)](/resources/staying-inn-demo.zip).  
 </template>
-
 <yt-embed @yt="https://www.youtube.com/watch?v=UVZKctUMZJY"></yt-embed>
-
 </jy-acc>
 
 <jy-acc @level="3" @label="University College London">
