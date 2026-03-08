@@ -4,7 +4,7 @@ layout: layouts/base.webc
 templateEngineOverride: njk,md
 eleventyNavigation:
   key: Portfolio
-  order: 3
+  order: 4
 ---
 Throughout Justin's career in accessibility, he has had the opportunity to share his knowledge, skills, and lived experience through multiple venues. He has written articles for publications such as Nature and Runway Girl Network, spoken at in-person and virtual events such as AccessU, Axe-Con, and A11yTalks, and been a guest on multiple podcasts.
 

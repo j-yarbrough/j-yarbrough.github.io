@@ -4,7 +4,7 @@ layout: layouts/base.webc
 templateEngineOverride: webc,md
 eleventyNavigation:
   key: Certifications
-  order: 2
+  order: 3
 ---
 Justin holds accessibility-related certifications from multiple organizations. You can find a list of these below.
 
