@@ -9,6 +9,15 @@ eleventyNavigation:
 
 <tab-interface>
 <tab-list>
-
+<tab-btn @label="Writing" @index="1"></tab-btn>
+<tab-btn @label="Podcasts" @index="2"></tab-btn>
+<tab-btn @label="Speaking" @index="3"></tab-btn>
+<tab-btn @label="Other Media" @index="4"></tab-btn>
 </tab-list>
+<tab-panel @index="1" @label="Writing">
+<jy-acc webc:for="(key, value) in pages.portfolio.writing" @level="3" :@label="value.publisher">
+  <link-list :@data="value.items"></link-list>
+</jy-acc>
+</tab-panel>
 </tab-interface>
+<p>Please note that Justin has no control over the accessibility of any links to third-party sites</p>
