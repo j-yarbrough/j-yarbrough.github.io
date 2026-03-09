@@ -2,7 +2,7 @@
   display: block;
 }
 :host [role="tablist"] {
-  padding: 0 var(--rounded-corner);
+  margin: 0 6px;
 }
 :host [role="tab"] {
   border-bottom-left-radius: 0;
