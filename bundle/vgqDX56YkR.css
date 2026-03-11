@@ -22,7 +22,7 @@ body {
         color: var(--text-color);
     font-family: var(--serif);
     font-size: 16px;
-    padding: 8px
+    padding: 4px;
 }
 header, footer, .text-center {
     text-align: center;
@@ -66,6 +66,24 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+h5 {
+    font-size: 1.2rem;
+}
+h6 {
+    font-size: 1rem;
 }
 footer {
     font-size: smaller;
