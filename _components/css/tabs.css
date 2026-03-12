@@ -9,10 +9,11 @@
   border-bottom-right-radius: 0 ;
   cursor: pointer;
   border-bottom: none;
-  padding: 2px;
+  padding-bottom: 3px;
 }
-:host [role="tab"][aria-selected="true"] {
-  font-weight: bold;
+:host [role="tab"][aria-selected="true"] .indicator::before{
+  color: var(--highlight);
+  content: "\2193";
 }
 :host [role="tab"]:focus-visible{
   outline: none;
