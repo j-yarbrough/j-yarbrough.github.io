@@ -6,9 +6,9 @@
     --text-color: #222222;
     --highlight:#995500;
     --secondary: #666666;
-    --rounded-corner: 6px;
+    --rounded-corner: 8px;
     --border-width: 2px;
-    --button-padding: 1px 4px;
+    --button-padding: 1px 6px;
     }
     @media(prefers-color-scheme: dark) {
         :root {
