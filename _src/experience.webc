@@ -23,7 +23,10 @@ More information on Justin’s work and volunteer experience can be found on [Ju
 **August 2023 to present**
 
 - Embed within agile teams, helping the roles learn how to incorporate accessibility into the software development lifecycle
-- Assist in the creation of new experiences and updates to existing experiences to ensure they meet accessibility guidelines, including an enhanced access recovery flow for users that forgot their usernames or passwords, an enhanced first-time user enrollment flow for new PNC customers to create online banking credentials, and the PNC Total Rewards program which provides extra incentives to high-value clients to strengthen customer engagement and loyalty
+- Assist in the creation of new experiences and updates to existing experiences to ensure they meet accessibility requirements, including:
+  - Modernized first-time user enrollment flow for new customers creating online and mobile banking credentials
+  - Enhanced access recovery process for users that have forgotten their user ID or password
+  - PNC Total Rewards, a rewards program that provides extra benefits to high-value customers across the bank's suite of products.
 - Assess web properties against the Web Content Accessibility Guidelines and internal accessibility standards
 - Conduct role-based training sessions on accessibility topics
 - Serve as a member of the retail digital accessibility steering council, tasked with handling complex WCAG interpretation questions and adopting standards beyond WCAG
@@ -73,7 +76,7 @@ More information on Justin’s work and volunteer experience can be found on [Ju
 
 Served as a mentor for teams participating in [Knowbility](https://knowbility.org/)'s Accessibility Internet Rally (AIR) competitions, where teams work together to build new, accessible websites for artists and non-profit organizations. AIR mentors provide guidance to their teams on accessible design, content creation, and testing as well as advice on competition strategy.
 </template>
-<modal-dialog @label="View AIR badges">
+<modal-dialog @label="View AIR mentor badges" @heading="AIR mentor badges">
 <template webc:type="11ty" 11ty:type="md">
 These badges were provided by Knowbility for participating in AIR.
 
