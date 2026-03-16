@@ -4,15 +4,12 @@ window.addEventListener('load',function() {
     });
 });
 function arrowButtonTrigger() {
-var panelIndex = this.getAttribute('data-index');
-var tabToClick;
-var headingToFocus;
+var panelIndex = this.closest('[role="tabpanel"]').getAttribute('data-index');
+var tabInterface = this.closest('tab-interface');
 switch(this.getAttribute('aria-label').includes('Previous')) {
     case true: panelIndex--; break;
     case false: panelIndex++; break;
 }
-tabToClick = document.getElementById(`tab-${panelIndex}`);
-headingToFocus = document.getElementById(`tabpanel-heading-${panelIndex}`);
-tabToClick.click();
-headingToFocus.focus()
+tabInterface.querySelector(`#tab-${panelIndex}`).click();
+tabInterface.querySelector(`#tabpanel-heading-${panelIndex}`).focus();
 }
