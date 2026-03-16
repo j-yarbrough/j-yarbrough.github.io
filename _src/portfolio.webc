@@ -74,7 +74,7 @@ If you would like justin to write something for you, speak at your event, or any
 </template>
 </jy-acc>
 </tab-panel>
-<tab-panel @label="Other Media" @index="4">
+<tab-panel @label="Other Media" @index="4" @last="true">
 <template webc:nokeep webc:for="(key, value) in pages.portfolio.media" >
 <jy-acc @level="3" :@label="value.mainsection">
 <p webc:if="value.slug" @text="value.slug"></p>

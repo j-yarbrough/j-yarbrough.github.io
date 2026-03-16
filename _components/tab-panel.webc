@@ -6,4 +6,9 @@ if (!label) {throw new Error('tab panel missing required label prop')};
 <div role="tabpanel" :aria-labelledby="'tabpanel-heading-' + index" :id="'tabpanel-' + index" :class="if (index != 1) {'is-hidden'} else {''}">
 <h2 tabindex="0" :id="'tabpanel-heading-' + index" @text="label"></h2>
 <slot></slot>
+<div class="arrow-wrapper">
+<button webc:if="index != 1" aria-label="Previous tab" :aria-controls="`tab-${index - 1}`" :data-focustarget="`tabpanel-heading-${index - 1}`">&larr;</button>
+<span aria-hidden="true" class="spacer"></span>
+<button webc:if="!last" aria-label="Next tab" :aria-controls="`tab-${index + 1}`" data-focustarget="`tabpanel-heading-${index + 1}`">&larr;</button>
+</div>
 </div>
