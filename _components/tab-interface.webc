@@ -3,3 +3,4 @@
 <slot></slot>
 </div>
 <script src="/js/tabs-automatic.js"></script>
+<script src="/js/tab-arrows.js"></script>
