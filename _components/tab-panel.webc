@@ -7,8 +7,8 @@ if (!label) {throw new Error('tab panel missing required label prop')};
 <h2 tabindex="0" :id="'tabpanel-heading-' + index" @text="label"></h2>
 <slot></slot>
 <div class="arrow-wrapper">
-<button webc:if="index != 1" aria-label="Previous tab" :aria-controls="`tab-${index - 1}`" :data-focustarget="`tabpanel-heading-${index - 1}`">&larr;</button>
-<span aria-hidden="true" class="spacer"></span>
-<button webc:if="!last" aria-label="Next tab" :aria-controls="`tab-${index + 1}`" data-focustarget="`tabpanel-heading-${index + 1}`">&larr;</button>
+<button webc:if="index != 1" aria-label="Previous tab" :data-index="index">&larr;</button>
+<div aria-hidden="true" class="spacer"></div>
+<button webc:if="!last" aria-label="Next tab" :data-index="index">&rarr;</button>
 </div>
 </div>
