@@ -23,6 +23,7 @@
   text-decoration: underline;
 }
 :host [role="tabpanel"] {
+  box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
