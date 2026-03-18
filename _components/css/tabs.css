@@ -31,9 +31,3 @@
 :host [role="tabpanel"].is-hidden {
   display: none;
 }
-:host .arrow-wrapper {
-  display: flex;
-}
-:host .arrow-wrapper .spacer {
-  flex-grow: 1  ;
-}
