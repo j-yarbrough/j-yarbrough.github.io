@@ -23,6 +23,7 @@
   text-decoration: underline;
 }
 :host [role="tabpanel"] {
+  box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
@@ -30,10 +31,4 @@
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
-}
-:host .arrow-wrapper {
-  display: flex;
-}
-:host .arrow-wrapper .spacer {
-  flex-grow: 1  ;
 }
