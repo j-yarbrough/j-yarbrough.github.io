@@ -1,0 +1,6 @@
+:host {
+    display: flex;
+}
+:host .spacer {
+    flex: 1;
+}
