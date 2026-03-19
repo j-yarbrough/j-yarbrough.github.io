@@ -1,5 +1,5 @@
 <link webc:scoped rel="stylesheet" href="/css/tab-arrows.css" type="text/css">
 <button aria-label="Previous tab">&larr;</button>
-<div clas="spacer"></div>
+<div class="spacer"></div>
 <button aria-label="Next tab">&rarr;</button>
 <script src="/js/tab-arrows.js"></script>
