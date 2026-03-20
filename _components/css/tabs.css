@@ -1,4 +1,4 @@
-:host .tabs {
+:host  {
   display: block;
 }
 :host [role="tablist"] {

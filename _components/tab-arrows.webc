@@ -1,5 +1,4 @@
 <link webc:scoped rel="stylesheet" href="/css/tab-arrows.css" type="text/css">
-<template webc:root role="group" aria-label="Controls to go the previous or next tab">
 <button role="button" data-pn="p">
 <span aria-hidden="true">&larr;</span>
 <span class="sr-only">Previous tab</span>
@@ -9,6 +8,4 @@
 <span aria-hidden="true">&rarr;</span>
 <span class="sr-only">Next tab</span>
 </button>
-
-</template>
 <script src="/js/tab-arrows.js"></script>
