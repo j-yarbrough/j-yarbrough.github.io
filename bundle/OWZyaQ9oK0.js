@@ -1,15 +1,3 @@
-window.addEventListener('load',function () {
-    document.querySelectorAll('.modal-btn').forEach((dialogButton) => {
-        dialogButton.addEventListener('click',modalActivate);
-    })
-})
-function modalActivate() {
-    var dialogContainer = document.getElementById(this.getAttribute('aria-controls'));;
-    switch (this.hasAttribute('aria-haspopup')) {
-        case true:  dialogContainer.showModal();break;
-        case false: dialogContainer.close(); break;
-    }
-}
 window.addEventListener('load',function() {
     document.querySelectorAll('.acc-header [aria-expanded]').forEach((accButton) => {
         accButton.addEventListener('click',triggerAccordion);
@@ -41,7 +29,7 @@ function arrowButtonTrigger () {
     tabInterface.querySelector(`#tab-${tabIndexToClick}`).click();
     tabInterface.querySelector(`#tabpanel-heading-${tabIndexToClick}`).focus();
 }
-/*
+{/*
  *   This content is licensed according to the W3C Software License at
  *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
  *
@@ -177,3 +165,4 @@ window.addEventListener('load', function () {
     new TabsAutomatic(tablists[i]);
   }
 });
+}
