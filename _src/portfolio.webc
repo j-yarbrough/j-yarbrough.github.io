@@ -38,6 +38,12 @@ If you would like justin to write something for you, speak at your event, or any
 </yt-embed>
 </jy-acc>
 
+<jy-acc @level="3" @label="AccessAbility Officer">
+<template webc:type="11ty" 11ty:type="md">
+- April 2026: Interview with Tanner Gers, [AccessAbility Officer](https://accessabilityofficer.com/) CEO, discussing my career journey in accessibility from doing testing at a community college to working in consulting and moving on to being a lead coach with a large company. AccessAbility Offcer employs early-career testers, many with disabilities, who learn accessibility testing through their CAT program.
+</template>
+</jy-acc>
+
 <jy-acc @level="3" @label="AccessU">
 <template webc:type="11ty" 11ty:type="md">
 
