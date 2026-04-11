@@ -2,32 +2,23 @@
   display: block;
 }
 :host [role="tablist"] {
-  margin: 0 8px;
+  margin: 0;
+  padding: 0;;
 }
 :host [role="tab"] {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0 ;
+  border-radius: 0;
+  border-width: 1px;
+  padding: 2px;
   cursor: pointer;
-  border-bottom: none;
-  padding-bottom: 3px;
 }
-:host [role="tab"][aria-selected="true"] .indicator::before{
-  color: var(--highlight);
-  content: "\2193";
-}
-:host [role="tab"]:focus-visible{
-  outline: none;
-  box-shadow: none;
-}
-:host [role="tab"]:focus-visible .focus {
-  text-decoration: underline;
+:host [role="tab"][aria-selected="true"] {
+  font-weight: bold;
 }
 :host [role="tabpanel"] {
   box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
-  border-radius: var(--rounded-corner);
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
