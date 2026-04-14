@@ -7,7 +7,6 @@ function arrowButtonTrigger () {
     var tabInterface = this.closest('tab-interface');
     var allTabs = tabInterface.querySelectorAll('[role="tab"]');
     var tabIndexToClick = tabInterface.querySelector('[role="tab"][aria-selected="true"]').getAttribute('id').replace('tab-','');
-
     switch (this.getAttribute('data-pn')) {
         case 'p':  tabIndexToClick--; break;
         case 'n': tabIndexToClick++; break;
