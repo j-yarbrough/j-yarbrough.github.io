@@ -1,19 +1,18 @@
 window.addEventListener('load',function () {
-    this.document.querySelectorAll('tab-arrows button').forEach((arrowButton) => {
+    document.querySelectorAll('tab-arrows button').forEach((arrowButton) => {
         arrowButton.addEventListener('click',arrowButtonTrigger);
     })
 })
 function arrowButtonTrigger () {
     var tabInterface = this.closest('tab-interface');
-    var numberOfTabs = tabInterface.querySelectorAll('[role="tab"]').length;
-    var currentTabIndex = tabInterface.querySelector('[role="tab"][aria-selected="true"]').getAttribute('id').replace('tab-','');
-    var tabIndexToClick = currentTabIndex;
+    var allTabs = tabInterface.querySelectorAll('[role="tab"]');
+    var tabIndexToClick = tabInterface.querySelector('[role="tab"][aria-selected="true"]').getAttribute('id').replace('tab-','');
     switch (this.getAttribute('data-pn')) {
         case 'p':  tabIndexToClick--; break;
         case 'n': tabIndexToClick++; break;
     }
-    if (tabIndexToClick == 0) tabIndexToClick = numberOfTabs;
-    if (tabIndexToClick > numberOfTabs) tabIndexToClick = 1;
+    if (tabIndexToClick == 0) tabIndexToClick = allTabs.length;
+    if (tabIndexToClick > allTabs.length) tabIndexToClick = 1;
     tabInterface.querySelector(`#tab-${tabIndexToClick}`).click();
     tabInterface.querySelector(`#tabpanel-heading-${tabIndexToClick}`).focus();
 }
