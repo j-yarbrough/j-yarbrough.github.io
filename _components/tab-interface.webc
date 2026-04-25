@@ -1,6 +1,11 @@
 <link webc:scoped rel="stylesheet" href="/css/tabs.css" type="text/css">
 <div webc:root class="tabs">
+<div role="tablist" class="automatic">
+<slot name="tablist"></slot>
+</div>
+<div class="panel-wrapper">
 <slot></slot>
 <tab-arrows></tab-arrows>
+</div>
 </div>
 <script src="/js/tabs-automatic.js"></script>

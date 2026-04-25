@@ -11,10 +11,10 @@ Since Justin began working in digital accessibility in 2017, he has leveraged hi
 More information on Justin’s work and volunteer experience can be found on [Justin’s LinkedIn profile](https://www.linkedin.com/in/justin-yarbrough/).
 </template>
 <tab-interface>
-<tab-list>
+<div webc:nokeep slot="tablist">
 <tab-btn @index="1" @label="Work"></tab-btn>
 <tab-btn @index="2" @label="Volunteering"></tab-btn>
-</tab-list>
+</div>
 <tab-panel @index="1" @label="Work">
 <jy-acc @level="3" @label="PNC">
 <template webc:type="11ty" 11ty:type="md">
