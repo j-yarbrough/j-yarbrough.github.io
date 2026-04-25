@@ -15,7 +15,7 @@
 :host [aria-expanded="true"] .acc-indicator::before {
     content: "\2193";
 }
-.acc-header:has(> [aria-expanded="false"]) + .acc-panel {
+:host .acc-header:has(> [aria-expanded="false"]) + .acc-panel {
     display: none;
 }
 }
