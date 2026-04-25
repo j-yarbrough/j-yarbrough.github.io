@@ -1,6 +1,7 @@
 :host {
     display: flex;
-    margin: 6px 0;
+    border-top: var(--border-width) dotted var(--secondary);
+    padding-top: 6px;
 }
 :host .spacer {
     flex: 1;

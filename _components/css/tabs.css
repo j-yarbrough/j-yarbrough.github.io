@@ -3,22 +3,22 @@
 }
 :host [role="tablist"] {
   margin: 0;
-  padding: 0;;
+  padding: 0;
 }
 :host [role="tab"] {
-  border-radius: 0;
-  border-width: 1px;
-  padding: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;;
   cursor: pointer;
 }
 :host [role="tab"][aria-selected="true"] {
   font-weight: bold;
 }
-:host [role="tabpanel"] {
+:host .panel-wrapper {
   box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
+  border-radius: 0 0 var(--rounded-corner)  var(--rounded-corner);
 }
 :host [role="tabpanel"].is-hidden {
   display: none;

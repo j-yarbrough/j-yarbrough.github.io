@@ -13,12 +13,12 @@ Throughout Justin's career in accessibility, he has had the opportunity to share
 If you would like justin to write something for you, speak at your event, or anything else, you can [contact him](/contact) to discuss options.
 </template>
 <tab-interface>
-<tab-list>
+<div webc:nokeep slot="tablist">
 <tab-btn @label="Writing" @index="1"></tab-btn>
 <tab-btn @label="Podcasts" @index="2"></tab-btn>
 <tab-btn @label="Speaking" @index="3"></tab-btn>
 <tab-btn @label="Other Media" @index="4"></tab-btn>
-</tab-list>
+</div>
 <tab-panel @index="1" @label="Writing">
 <jy-acc webc:for="(key, value) in pages.portfolio.writing" @level="3" :@label="value.publisher">
   <link-list :@data="value.items"></link-list>

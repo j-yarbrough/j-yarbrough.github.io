@@ -11,10 +11,10 @@ Since Justin began working in digital accessibility in 2017, he has leveraged hi
 More information on Justin’s work and volunteer experience can be found on [Justin’s LinkedIn profile](https://www.linkedin.com/in/justin-yarbrough/).
 </template>
 <tab-interface>
-<tab-list>
+<div webc:nokeep slot="tablist">
 <tab-btn @index="1" @label="Work"></tab-btn>
 <tab-btn @index="2" @label="Volunteering"></tab-btn>
-</tab-list>
+</div>
 <tab-panel @index="1" @label="Work">
 <jy-acc @level="3" @label="PNC">
 <template webc:type="11ty" 11ty:type="md">
@@ -28,9 +28,11 @@ More information on Justin’s work and volunteer experience can be found on [Ju
   - Modernized first-time user enrollment flow for new customers creating online and mobile banking credentials
   - Enhanced access recovery process for users that have forgotten their user ID or password
 - Assess web properties against the Web Content Accessibility Guidelines and internal accessibility standards
+- Work with third-party vendors to address and remediate accessibility issues within their products used by the bank
+- Explain open accessibility issues to leagal, risk, and compliance partners to determine if an issue can be risk-accepted until it can be remediated
 - Conduct role-based training sessions on accessibility topics
 - Serve as a member of the retail digital accessibility steering council, tasked with handling complex WCAG interpretation questions and adopting standards beyond WCAG
-- Maintainer of the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria are needed for development
+- Maintainer of the accessibility acceptance criteria library, which provides templates for accessibility-related acceptance criteria and guidance on which criteria need to be included in user stories
 - Mentors more junior coaches on the team
 - Named an Associate Vice President in January 2025
 - Reclassified from Digital Product Manager Lead to Digital Accessibility Coach Lead in December 2025
