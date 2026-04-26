@@ -7,8 +7,8 @@
     --highlight:#995500;
     --secondary: #666666;
     --rounded-corner: 8px;
-    --border-width: 2px;
-    --button-padding: 1px 6px;
+    --border-width: 1px;
+    --button-padding: 2px 4px;
     }
     @media(prefers-color-scheme: dark) {
         :root {
