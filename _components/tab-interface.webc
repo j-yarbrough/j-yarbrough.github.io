@@ -9,8 +9,8 @@
 <button role="button" data-pn="p" aria-label="Previous tab">&larr;</button>
 <div class="spacer"></div>
 <button type="button" data-pn="n" aria-label="Next tab">&rarr;</button>
-
-</div>>
+<script src="/js/tab-arrows.js"></script>
+</div>
 </div>
 </div>
 <script src="/js/tabs-automatic.js"></script>
