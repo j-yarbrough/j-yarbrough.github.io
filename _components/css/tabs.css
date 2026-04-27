@@ -23,3 +23,17 @@
 :host [role="tabpanel"].is-hidden {
   display: none;
 }
+:host .arrow-wrapper {
+    display: flex;
+    border-top: var(--border-width) dashed var(--secondary);
+    padding-top: 6px;
+}
+:host .arrow-wrapper .spacer {
+    flex: 1;
+}
+:host .arrow-wrapper  [data-pn] {
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  min-height: unset;
+}
