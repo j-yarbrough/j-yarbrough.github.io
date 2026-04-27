@@ -13,6 +13,9 @@
 :host [role="tab"][aria-selected="true"] {
   font-weight: bold;
 }
+  :host [role="tab"][aria-selected="false"] {
+  border-color: var(--secondary);
+}
 :host .panel-wrapper {
   box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
@@ -36,4 +39,5 @@
   padding: 0;
   border-radius: 0;
   min-height: unset;
+  color: var(--highlight);
 }
