@@ -1,8 +1,0 @@
-:host {
-    display: flex;
-    border-top: var(--border-width) dashed var(--secondary);
-    padding-top: 6px;
-}
-:host .spacer {
-    flex: 1;
-}

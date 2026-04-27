@@ -1,6 +1,6 @@
 # Readme
 
-Last updated 02/15/2026
+Last updated 04/27/2026
 
 ## Purpose
 
@@ -92,9 +92,6 @@ Attributes, all for form tag:
 ### Form inputs
 
 This covers all form input variants.
-
-Note that the field label must be included as the inner text for the component.
-\
 
 - ``<text-input>`` for standard inputs
 - ``<text-area>`` for multi-line inputs
