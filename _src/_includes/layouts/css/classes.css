@@ -28,8 +28,11 @@
     margin: auto;
     max-width: 100%;
 }
-@media (min-width: 64.0000000001rem) {
-  #portfolio-sections ul {
-    column-count: 2;
-  }
+.sr-only, #skip-links:not(:focus-within) , aria-live {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
