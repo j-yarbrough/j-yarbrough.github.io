@@ -8,7 +8,6 @@
     <link rel="stylesheet" :href="getBundleFileUrl('css')" webc:keep />
     <link rel="stylesheet" href="/css/variables.css">
 <link rel="stylesheet" href="/css/tags.css">
-<link rel="stylesheet" href="/css/skip-links.css">
 <link rel="stylesheet" href="/css/responsive.css">
 <link rel="stylesheet" href="/css/classes.css">
 <script webc:keep :src="getBundleFileUrl('js')"></script>
@@ -60,6 +59,6 @@ Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
-<aria-live webc:if="hasAriaLive"></aria-live>
+<aria-live></aria-live>
 </body>
 </html>

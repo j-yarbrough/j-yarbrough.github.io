@@ -24,4 +24,6 @@
 }
 .dialog-main-wrapper{
     padding: 4px 0;
+    border: dashed var(--secondary);
+    border-width: 1px 0;;
 }
