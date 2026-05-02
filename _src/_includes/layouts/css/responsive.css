@@ -3,13 +3,13 @@
     #wrapper, header, footer, #nav, main {
         width: 100%;
     }
-    #nav button[aria-expanded] {
+    #nav [aria-expanded] {
         display: block;
         margin: 0 auto;
     }
 }
 /*desktop*/
-@media (min-width: 64.0000000001rem) {
+@media (min-width: 64rem) {
     #wrapper, header, footer {
         width: 100%;
         max-width: 75rem;
