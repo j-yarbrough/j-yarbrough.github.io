@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/css/responsive.css">
 <link rel="stylesheet" href="/css/classes.css">
 <script webc:keep :src="getBundleFileUrl('js')"></script>
+<script src="/js/arialive.js"></script>
 <!---for able player--->
 <template webc:if="hasVideo" webc:nokeep>
 <!-- Dependencies -->
