@@ -1,2 +1,0 @@
-<template webc:root aria-live="polite"></template>
-<script src="/js/arialive.js"></script>
