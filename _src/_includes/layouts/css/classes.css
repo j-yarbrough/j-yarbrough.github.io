@@ -1,9 +1,6 @@
 .smaller {
     font-size: smaller;
 }
-.text-right {
-    text-align: right;
-}
 .img-center {
     margin-left: auto;
     margin-right: auto;
@@ -19,9 +16,6 @@
 }
 .more-line-height {
     line-height: 1.5;
-}
-#portfolio-sections ul {
-  line-height: 1.5;
 }
 .badge-center {
     display: block;
