@@ -8,7 +8,8 @@ header, footer, .text-center {
     text-align: center;
 }
 header p:first-child {
-    font-size: 2rem;;
+    font-size: 2rem;
+    color: var(--highlight);
 }
 ol {
     list-style-type: decimal;
@@ -25,13 +26,13 @@ ol ol ol ol {
 ol ol ol ol ol {
     list-style-type: lower-roman;
 }
-a, a:active, a:focus, a:hover, a:visited {
+:any-link {
     color: var(--highlight);
 }
 #nav [aria-current="page"] {
     font-weight: bold;
 }
-#nav a {
+#nav :any-link {
     text-decoration: none;
 }
 #nav ul {
