@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/css/responsive.css">
 <link rel="stylesheet" href="/css/classes.css">
 <script webc:keep :src="getBundleFileUrl('js')"></script>
+<script src="/js/arialive.js"></script>
 <!---for able player--->
 <template webc:if="hasVideo" webc:nokeep>
 <!-- Dependencies -->
@@ -27,7 +28,7 @@
 <a href="#main">Skip to Main Content</a> 
 </div>
 <header>
-<p class="header-first-line"@text="site.siteName"></p>
+<p @text="site.siteName"></p>
 <p @text="site.tagline"></p>
 </header>
 <!---wrapper that creates side-by-side for desktop--->
@@ -59,6 +60,6 @@ Connect with {{site.authorFirstName}} on {% for item in social %}<a href="{{item
 <p>&copy; 2021-<span webc:nokeep @text="`${new Date().getFullYear()}`"></span> <span webc:nokeep @text="site.fullAuthorName"></span></p>
 <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
 </footer>
-<aria-live></aria-live>
+<div id="aria-live" aria-live="polite"></div>   
 </body>
 </html>

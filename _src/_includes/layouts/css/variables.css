@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light dark;
     --serif: Georgia, "Times New Roman", Times, Serif;
     --background: #ffffff;
     --text-color: #222222;
@@ -10,8 +11,8 @@
     }
     @media(prefers-color-scheme: dark) {
         :root {
-            --background: #000000;
-            --text-color: #dddddd;
+            --background: #111111;
+            --text-color: #ffffff;
             --highlight:#ff9900;
             --secondary: #999999;
         }

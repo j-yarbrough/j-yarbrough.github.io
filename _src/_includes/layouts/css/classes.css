@@ -1,9 +1,6 @@
 .smaller {
     font-size: smaller;
 }
-.text-right {
-    text-align: right;
-}
 .img-center {
     margin-left: auto;
     margin-right: auto;
@@ -12,23 +9,15 @@
 .no-bullets {
     list-style-type: none;
 }
-.header-first-line {
-    color: var(--highlight);
-    font-size: 2rem;
-    font-weight: bold;
-}
 .more-line-height {
     line-height: 1.5;
-}
-#portfolio-sections ul {
-  line-height: 1.5;
 }
 .badge-center {
     display: block;
     margin: auto;
     max-width: 100%;
 }
-.sr-only, #skip-links:not(:focus-within) , aria-live {
+.sr-only, #skip-links:not(:focus-within) , #aria-live {
     position: absolute;
     left:  -10000px;
     top: auto;
