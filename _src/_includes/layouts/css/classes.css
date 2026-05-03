@@ -9,11 +9,6 @@
 .no-bullets {
     list-style-type: none;
 }
-.header-first-line {
-    color: var(--highlight);
-    font-size: 2rem;
-    font-weight: bold;
-}
 .more-line-height {
     line-height: 1.5;
 }

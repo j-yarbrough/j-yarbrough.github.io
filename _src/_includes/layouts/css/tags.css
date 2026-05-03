@@ -7,6 +7,9 @@ body {
 header, footer, .text-center {
     text-align: center;
 }
+header p:first-child {
+    font-size: 2rem;;
+}
 ol {
     list-style-type: decimal;
 }
