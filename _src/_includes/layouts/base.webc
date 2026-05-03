@@ -28,7 +28,7 @@
 <a href="#main">Skip to Main Content</a> 
 </div>
 <header>
-<p class="header-first-line"@text="site.siteName"></p>
+<p@text="site.siteName"></p>
 <p @text="site.tagline"></p>
 </header>
 <!---wrapper that creates side-by-side for desktop--->
