@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 <figgy-cap @src="/images/justin-mug.jpg" @alt="Mug shot of Justin Yarbrough, a white man with a shaved head and goatee wearing sunglasses.">Justin Yarbrough</figgy-cap>
 
-Justin Yarbrough is a blind digital accessibility coach, writer, and speaker living in the Austin, Texas area.
+Justin Yarbrough is a blind digital accessibility expert, writer, and speaker living in the Austin, Texas area.
 
 ## Experience
 
