@@ -1,3 +1,6 @@
+:host {
+    display: block;
+}
 :host dialog::backdrop {
     background-color: var(--background);
     opacity: 50%;
@@ -22,8 +25,8 @@
     margin: 0;
     flex-grow: 1    ;
 }
-.dialog-main-wrapper{
+:host .dialog-main-wrapper{
     padding: 4px 0;
     border: dashed var(--secondary);
-    border-width: 1px 0;;
+    border-width: 1px 0;
 }
