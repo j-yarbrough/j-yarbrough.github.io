@@ -4,7 +4,7 @@ window.addEventListener('load',function () {
     })
 })
 function modalActivate() {
-    var dialogContainer = document.getElementById(this.getAttribute('aria-controls'));;
+    var dialogContainer = document.getElementById(this.getAttribute('aria-controls'));
     switch (this.hasAttribute('aria-haspopup')) {
         case true:  dialogContainer.showModal();break;
         case false: dialogContainer.close(); break;
