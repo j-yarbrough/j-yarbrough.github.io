@@ -1,3 +1,15 @@
+window.addEventListener('load',function () {
+    document.querySelectorAll('.modal-btn').forEach((dialogButton) => {
+        dialogButton.addEventListener('click',modalActivate);
+    })
+})
+function modalActivate() {
+    var dialogContainer = document.getElementById(this.getAttribute('aria-controls'));
+    switch (this.hasAttribute('aria-haspopup')) {
+        case true:  dialogContainer.showModal();break;
+        case false: dialogContainer.close(); break;
+    }
+}
 window.addEventListener('load',function() {
     document.querySelectorAll('.acc-header [aria-expanded]').forEach((accButton) => {
         accButton.addEventListener('click',triggerAccordion);
@@ -5,10 +17,8 @@ window.addEventListener('load',function() {
 });
 
 function triggerAccordion()  {
-    switch (this.ariaExpanded == 'true') {
-        case true: this.ariaExpanded = 'false'; break;
-        case false: this.ariaExpanded = 'true'; break;
-    }
+    var setTo = this.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+    this.setAttribute('aria-expanded',setTo);
 }
 window.addEventListener('load',function () {
     document.querySelectorAll('tab-interface [data-pn]').forEach((arrowButton) => {

@@ -5,10 +5,8 @@ window.addEventListener('load',function() {
 });
 
 function triggerAccordion()  {
-    switch (this.ariaExpanded == 'true') {
-        case true: this.ariaExpanded = 'false'; break;
-        case false: this.ariaExpanded = 'true'; break;
-    }
+    var setTo = this.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+    this.setAttribute('aria-expanded',setTo);
 }
 function ariaLiveHandler (messageToAnnounce) {
     var ariaRegion = document.querySelector('#aria-live');
