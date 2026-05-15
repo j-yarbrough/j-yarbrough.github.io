@@ -25,7 +25,6 @@ function validateForm() {
 function validateField(valThisField) {
 var label=valThisField.closest('text-area, text-input').querySelector('label').textContent.replace('*','');
 var fieldValue = valThisField.value.trim();
-var isValid = true;
 var errorMessage = '';
 var emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
@@ -33,7 +32,7 @@ if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
 } else if (valThisField.getAttribute('inputmode') == 'email' && !emailRegEx.test(fieldValue) && fieldValue) {
     errorMessage = 'Enter a valid email address, such as name@example.com.';
 } 
-if (errorMessage.length) isValid = false;
+var isValid = errorMessage.length == 0 ? true : false;
 switch (isValid) {
     case true: valThisField.removeAttribute('aria-invalid'); break;
     case false: valThisField.setAttribute('aria-invalid','true'); break;
