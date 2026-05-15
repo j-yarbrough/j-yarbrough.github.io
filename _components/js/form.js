@@ -34,14 +34,10 @@ if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
     errorMessage = 'Enter a valid email address, such as name@example.com.';
 } 
 if (errorMessage.length) isValid = false;
-setField(valThisField,errorMessage);
+switch (isValid) {
+    case true: valThisField.removeAttribute('aria-invalid'); break;
+    case false: valThisField.setAttribute('aria-invalid','true'); break;
+}
+valThisField.closest('text-area, text-input').querySelector('.validation-feedback').textContent = errorMessage;
 return isValid;
-}
-
-function setField(field, errorMessage) {
-switch(errorMessage.length) {
-    case false: field.removeAttribute('aria-invalid'); break;
-    case true: field.setAttribute('aria-invalid','true');break;
-}
-field.closest('text-area, text-input').querySelector('.validation-feedback').textContent = errorMessage;
 }
