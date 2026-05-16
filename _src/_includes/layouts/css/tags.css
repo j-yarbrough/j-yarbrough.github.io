@@ -7,7 +7,7 @@ body {
 header, footer, .text-center {
     text-align: center;
 }
-header p:first-child {
+header :first-child {
     font-size: 2rem;
     color: var(--highlight);
 }
@@ -42,10 +42,10 @@ ol ol ol ol ol {
 #nav li {
     padding: 3px 0;
 }
-#nav li:first-child {
+#nav ul :first-child {
     padding-top: 0  ;
 }
-#nav li:last-child{
+#nav ul :last-child{
     padding-bottom: 0   ;
 }
 h1, h2, h3, h4, h5, h6 {
