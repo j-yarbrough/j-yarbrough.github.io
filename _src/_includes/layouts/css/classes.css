@@ -1,13 +1,7 @@
-.smaller {
-    font-size: smaller;
-}
 .img-center {
     margin-left: auto;
     margin-right: auto;
     display: block;
-}
-.no-bullets {
-    list-style-type: none;
 }
 .more-line-height {
     line-height: 1.5;
