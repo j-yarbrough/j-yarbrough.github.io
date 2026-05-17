@@ -69,7 +69,7 @@ h5 {
 h6 {
     font-size: 1rem;
 }
-footer {
+footer, .smaller {
     font-size: smaller;
     }
 button {
@@ -86,4 +86,25 @@ button {
 :focus-visible {
     outline: 6px double var(--highlight);
     box-shadow: 0 0 0 4px var(--background);
+}
+.img-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.more-line-height {
+    line-height: 1.5;
+}
+.badge-center {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+.sr-only, #skip-links:not(:focus-within) , #aria-live {
+    position: absolute;
+    left:  -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

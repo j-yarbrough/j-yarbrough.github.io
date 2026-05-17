@@ -2,12 +2,12 @@
   display: block;
 }
 :host [role="tablist"] {
-  margin: 0;
+  margin: 0 var(--rounded-corner) 0 0;
   padding: 0;
 }
 :host [role="tab"] {
   border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;;
+  border-bottom-right-radius: 0;
   cursor: pointer;
 }
 :host [role="tab"][aria-selected="true"] {
@@ -21,7 +21,8 @@
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
-  border-radius: 0 0 var(--rounded-corner)  var(--rounded-corner);
+  border-radius: 0 var(--rounded-corner) var(--rounded-corner) var(--rounded-corner);
+  margin: -1px 0 0 0;
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
