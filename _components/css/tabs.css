@@ -13,16 +13,13 @@
 :host [role="tab"][aria-selected="true"] {
   font-weight: bold;
 }
-  :host [role="tab"][aria-selected="false"] {
-  border-color: var(--secondary);
-}
 :host .panel-wrapper {
   box-sizing: border-box;
   border: var(--border-width) solid var(--highlight);
   padding: 6px;
   width: 100%;
   border-radius: 0 var(--rounded-corner) var(--rounded-corner) var(--rounded-corner);
-  margin: -1px 0 0 0;
+  margin: calc(var(--border-width) * -1) 0 0 0;
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
