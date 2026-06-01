@@ -34,4 +34,7 @@ flex: 1;
 #nav .acc-header {
     display: none;
 }
+#nav ul :first-child {
+    padding-top: 0;
+}
 }

@@ -42,12 +42,6 @@ ol ol ol ol ol {
 #nav li {
     padding: 3px 0;
 }
-#nav ul :first-child {
-    padding-top: 0  ;
-}
-#nav ul :last-child{
-    padding-bottom: 0   ;
-}
 h1, h2, h3, h4, h5, h6 {
     color: var(--highlight)
 }
