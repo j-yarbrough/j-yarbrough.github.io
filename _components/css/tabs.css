@@ -19,7 +19,7 @@
   padding: 6px;
   width: 100%;
   border-radius: 0 var(--rounded-corner) var(--rounded-corner) var(--rounded-corner);
-  margin: calc(var(--border-width) * -1) 0 0 0;
+  margin: var(--border-offset) 0 0 0;
 }
 :host [role="tabpanel"].is-hidden {
   display: none;
