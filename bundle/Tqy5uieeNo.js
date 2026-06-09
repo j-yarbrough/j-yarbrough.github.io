@@ -17,8 +17,7 @@ window.addEventListener('load',function() {
 });
 
 function triggerAccordion()  {
-    var setTo = this.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
-    this.setAttribute('aria-expanded',setTo);
+    this.ariaExpanded = this.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
 }
 function ariaLiveHandler (messageToAnnounce) {
     var ariaRegion = document.querySelector('#aria-live');
