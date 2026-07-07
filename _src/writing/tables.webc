@@ -1,0 +1,187 @@
+---
+title: Guide to building accessible tables
+layout: layouts/base.webc
+---
+<e-box @label="Note" @level="2">
+<p>This article is a work in progress. More examples and content will be added in the future.</p>
+</e-box>
+<template webc:type="11ty" 11ty:type="md">
+Throughout my accessibility career in higher education and finance I’ve dealt with more than my share of data tables and learned a lot about making them accessible along the way. Through this article, I hope to share a bit of what I’ve learned along the way to help create tables that are not only WCAG-compliant, but also easy for screen reader users to understand.
+Tables and screen readers
+Data tables are a great way to convey two-dimensional data to users. A sighted user can easily look at one and find the data points they need. However, with a screen reader, they can be quite challenging if they aren’t developed with accessibility in mind.
+
+The best way to explain how a screen reader user experiences a table is to imagine a large table or Excel spreadsheet where you can only see one cell at a time. You can see all the data points on the table, but you have to move up, down, left, or right to navigate through the table. With some practice and moving around, you can get the hang of it, but it takes a lot of mental energy and some level of counting cells to pull the right data you’re looking for.
+
+That sounds like a real pain, right? The good news is that, with the right techniques, you can build a table so it’s not as mentally taxing.
+
+## Table headers
+
+The easiest way to make a table easier to understand is to add header cells to your table. With table headers, screen reader users will hear the header for the column or row they’ve navigated to announced, a brief pause, and then the data for the cell they’ve entered. This helps screen reader users understand where they are in the table.
+</template> 
+
+<table>
+<caption>Enrollment in classes by year</caption>
+<tr>
+<td></td>
+<th scope="col">2023</th>
+<th scope="col">2024</th>
+<th scoipe="col">2025</th>
+</tr>
+<tr>
+<th scope="row">English</th>
+<td>150</td>
+<td>162</td>
+<td>157</td>
+</tr>
+<tr>
+<th scope="row">History</th>
+<td>162</td>
+<td>161</td>
+<td>170</td>
+</tr>
+<tr>
+<th scope="row">Math</th>
+<td>147</td>
+<td>152</td>
+<td>164</td>
+</tr>
+<tr>
+<th scope="row">Science</th>
+<td>155</td>
+<td>157</td>
+<td>162</td>
+</tr>
+</table>
+
+<template webc:type="11ty" 11ty:type="md">Take this sample table as an example. When
+ a screen reader user navigates up or down a column in this table, they would hear the class announced before the number of students . When navigating left and right, they would hear the year first. With this extra information announced, a screen reader user can easily orient themselves within the table and find the data they’re looking for.
+
+### Creating header cells
+Header cells should succinctly identify the data contained in the row or column they represent and are almost always on the top or left-most cell of the column or row. Generally, tables should have both row and column headers, but you can likely get away with not having them if there are only two cells to a row or column.
+
+To indicate a cell as a header cell in your HTML code, use the `<th>` element for the cell instead of the `<td>`. The default styling for header cells will bold and center the text in them, but this can be overridden using CSS to make them look however you want. In the examples on this page, you’ll notice that all header cells have a dark background and light text (or the reverse if you’re viewing the page in dark mode) and row headers have the text aligned to the right. This is all handled with CSS.
+
+In the example above, you’ll notice a blank cell at the start of the column and row with all the header cells. If your table is going to have a blank cell in that place, it needs to be marked up as a standard <td> cell instead of a <th> cell since it doesn’t contain anything.
+
+### The scope attribute
+
+Browsers and screen readers can typically tell if a header cell applies to a row or column for simple tables like the example above, but tables with more complex header structures, like those where multiple cells may apply to a row or column, will need the [scope attribute](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/scope).
+
+The scope attribute has multiple values, but we’ll dive into the two most basic here:
+
+- `col` indicates that the cell applies to the column it is in.
+- `row` indicates that the cell header applies to the row it is in“row” will 
+
+### The headers attribute
+
+For complex tables, a lot of documentation will recommend using the [headers attribute](https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableCellElement/headers) to provide table headers. I recommend avoiding this for the following reasons:
+
+- Development effort: Using the headers attribute requires developers to manually set header associations to each cell. This can be complex, time-consuming, and is prone to mistakes.
+- Screen reader support: Screen reader support for the headers attribute is limited, so all your work towards trying to make the table accessible may go unnoticed anyway.
+
+Instead of relying on the headers attribute, I would recommend simplifying the table so that it’s not needed. Examples of how to do this are below.
+
+## Complex tables
+
+Now we’ll take a look at a more complex table example. Complex tables can be more difficult to understand and my advice, as a general rule, is to try and simplify them where possible. This may consist of presenting the data in a different way, splitting a single table into multiple tables, or something else. This is one of those areas where out-of-the-box thinking can come in handy.
+
+Below we’ll take a look at an example of a complex table where spanned rows are used to split a table into sections and then consider a few examples of how to present the information differently.
+</template>
+
+<table>
+<caption>Professional sports teams in Texas</caption>
+<tr>
+<th scope="col">City</th>
+<th scope="col">Team name</th>
+</tr>
+<tr>
+<td colspan="2">MLB</td>
+</tr>
+<tr>
+<td>Arlington</td>
+<td>Texas Rangers</td>
+</tr>
+<tr>
+<td>Houston</td>
+<td>Astros</td>
+</tr>
+<tr>
+<td colspan="2">NBA</td>
+</tr>
+<tr>
+<td>Dallas</td>
+<td>Mavericks</td>
+</tr>
+<tr>
+<td>Houston</td>
+<td>Rockets</td>
+</tr>
+<tr>
+<td>San Antonio</td>
+<td>Spurs</td>
+</tr>
+<tr>
+<td colspan="2">NFL</td>
+</tr>
+<tr>
+<td>Dallas</td>
+<td>Cowboys</td>
+</tr>
+<tr>
+<td>Houston</td>
+<td>Texans</td>
+</tr>
+<tr>
+<td colspan="2">NHL</td>
+</tr>
+<tr>
+<td>Dallas</td>
+<td>Stars</td>
+</tr>
+</table>
+<template webc:type="11ty" 11ty:type="md">
+### Approach 1: Present data a different way
+
+Since this example presents the data as key-value pairs, it would be easy to present the information in another way, such as a list. Think about how you might structure the data, then check out how I chose to do it.
+</template>
+<modal-dialog @label="View the complex table converted to a list" @heading="Complex table converted to a list">
+<template webc:type="11ty" 11ty:type="md">
+## Professional sports teams in Texas
+
+### MLB
+
+- Arlington (Texas) Rangers
+- Houston Astros
+
+### NBA
+
+- Dallas Mavericks
+- Houston Rockets
+- San Antonio Spurs
+
+### NFL
+
+- Dallas Cowboys
+- Houston Texans
+
+### NHL
+
+- Dallas Stars
+</template>
+</modal-dialog>
+<template webc:type="11ty" 11ty:type="md">
+## Approach 2: Chunk the table into multiple tables
+
+Alternatively, you could have a separate table for each league. This approach would work great for situations where there are multiple data points for each row and a list like the one created in the first example wouldn't work well. There are a few things to be aware of if using this approach:
+
+- Each table will need its own header cells since header cells will not work across tables.
+- If you wanted to put in the effort with styling, it would be possible to build separate tables that would visually look like a single table. To do so, you would need the following:
+
+    - Create a table with just the header cells
+    -  Use a heading tag (such as a `<h2>`,not a header cell) for each league
+    - On the table row element containing the header cells for each league, apply a screen reader only class so the headers are visually hidden but still announced by screen readers. I recommend the technique for absolutely positioning content off-screen from the [Invisible content just for screen reader article from WebAIM.](https://webaim.org/techniques/css/invisiblecontent/).
+
+## Conclusion
+
+Tables can be a challenge to build with accessibility in mind, but with some foethought, planning, and sometimes a little creativity it's ppossible to build tables that screen reader users can take full advantage of. Hopefully this resource can give you a few idea for how to approach building a table accessibly.
+</template>
