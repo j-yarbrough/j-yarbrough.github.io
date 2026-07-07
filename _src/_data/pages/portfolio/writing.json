@@ -81,7 +81,12 @@
                 "title":"Alt Text and Social Media",
                 "address":"/writing/alt-text-and-social-media",
                 "desc":"Introduction to using alt text on different social media platforms."
+            },{
+                "title":"Guide to building accessible tables",
+                "address":"/writing/tables",
+                "desc":"Article providing advice and recommendations based on my experiences working with table accessibility."
             }
+        
         ]
     }
 ]
