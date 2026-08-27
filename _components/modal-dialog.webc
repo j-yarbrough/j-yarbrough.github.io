@@ -4,18 +4,17 @@ if (!label) {throw new Error('modal-dialog component is missing required prop la
 ``
 </script>
 <div class="modal-trigger-button-wrapper">
-<button :aria-controls="uid" class="modal-btn" aria-haspopup="dialog" @text="label"></button>
+<button :commandFor="uid" command="show-modal" class="modal-btn" aria-haspopup="dialog" @text="label"></button>
 </div>
 <dialog :id="uid" :aria-labelledby="uid + '-heading'">
 <div class="dialog-header-wrapper">
 <h1 tabindex="-1" autofocus :id="uid + '-heading'" @text="if (heading) heading; else label"></h1>
-<button aria-hidden="true" tabindex="-1" aria-label="Close" type="button" class="modal-btn" :aria-controls="uid">&times;</button>
+<button aria-hidden="true" tabindex="-1" aria-label="Close" type="button" class="modal-btn" :commandFor="uid" command="close" type="button">&times;</button>
 </div>
 <div class="dialog-main-wrapper">
 <slot></slot>
 </div>
 <div class="dialog-footer-wrapper">
-<button type="button" class="modal-btn" :aria-controls="uid">Close</button>
+<button type="button" class="modal-btn" :commandFor="uid" command="close" type="button">Close</button>
 </div>
 </dialog>
-<script src="js/modal.js"></script>
