@@ -11,9 +11,9 @@ if (!label) {throw new Error('modal-dialog component is missing required prop la
 <h1 tabindex="-1" autofocus :id="uid + '-heading'" @text="if (heading) heading; else label"></h1>
 <button aria-hidden="true" tabindex="-1" aria-label="Close" type="button" class="modal-btn" :commandFor="uid" command="close" type="button">&times;</button>
 </div>
-<div class="dialog-main-wrapper">
+<section aria-label="dialog scrollable" tabindex="0" class="dialog-main-wrapper">
 <slot></slot>
-</div>
+</section>
 <div class="dialog-footer-wrapper">
 <button type="button" class="modal-btn" :commandFor="uid" command="close" type="button">Close</button>
 </div>
