@@ -3,24 +3,29 @@
     opacity: 50%;
 }
 :host dialog {
+    box-sizing: border-box;
     border: var(--border-width) solid var(--highlight);
     background-color: var(--background);
     color: var(--text-color);
     border-radius: var(--rounded-corner);
-    padding: var(--rounded-corner);
+    padding: calc(var(--rounded-corner) / 2);
     margin: auto;
     height: fit-content;
     width: fit-content;
-    max-width: 50rem;
+    max-height: calc(100% - 40px);
+    max-width: calc(100% - 40px);
     box-shadow: 16px 16px 8px 0 var(--secondary);
 }
 :host .dialog-header-wrapper {
+    box-sizing: border-box;
     display: flex;
     align-items: start;
     border-bottom: var(--border-width) dashed var(--secondary);
 }
 :host .dialog-footer-wrapper {
+    box-sizing: border-box;
     border-top: var(--border-width) dashed var(--secondary);
+    padding-top: 4px;
 }
 :host h1 {
     font-size: 1.5rem;
@@ -41,5 +46,8 @@
     font-size: 1.1rem;
 }
 :host .dialog-main-wrapper{
+    box-sizing: border-box;
+    padding-bottom: 4px;
+    padding-top: 4px;
     overflow-y: auto;
 }
