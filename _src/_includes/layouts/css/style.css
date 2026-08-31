@@ -29,6 +29,9 @@ ol ol ol ol ol {
 :any-link {
     color: var(--highlight);
 }
+:visited{
+    color: var(--secondary);
+}
 #nav [aria-current="page"] {
     font-weight: bold;
 }

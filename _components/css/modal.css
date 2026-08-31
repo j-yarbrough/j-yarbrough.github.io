@@ -18,9 +18,8 @@
 }
 :host .dialog-header-wrapper {
     box-sizing: border-box;
-    display: flex;
-    align-items: start;
     border-bottom: var(--border-width) dashed var(--secondary);
+    padding-bottom: 4px;
 }
 :host .dialog-footer-wrapper {
     box-sizing: border-box;
@@ -31,7 +30,6 @@
     font-size: 1.5rem;
     padding: 0;
     margin: 0;
-    flex-grow: 1    ;
 }
 :host h2 {
     font-size: 1.4rem;
