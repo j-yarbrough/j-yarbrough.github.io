@@ -33,10 +33,10 @@ Here are a few examples from [We Rate Dogs](https://bsky.app/profile/weratedogs.
 
 <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lif5s6znwk2n" data-bluesky-cid="bafyreigrniemzipiqwk3apg5j2tzlhjx6e2oifavmxxpurei5ta4f5vsmm" data-bluesky-embed-color-mode="system"><p lang="en">This is Chewy. He is a skater boy. She said see you later boy. He was way too good for her. All of her friends, stuck pup their nose. They had a pawblem with his doggy clothes. 12/10<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lif5s6znwk2n?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lif5s6znwk2n?ref_src=embed">February 17, 2025 at 10:23 AM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
-<modal-dialog @label="Alt text for first example">
+<jy-acc @label="Alt text for first example">
 
 a little brown pup in a gray hoodie stands confidently on a skateboard with red and white wheels. he’s smiling wide, presumably because he just landed a sick kickflip.
-</modal-dialog>
+</jy-acc>
 
 </e-box>
 
@@ -44,11 +44,11 @@ a little brown pup in a gray hoodie stands confidently on a skateboard with red 
 
 <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lmx3xrks622e" data-bluesky-cid="bafyreietr7xvqo37ovs2qfyj4y3f4bgawcxichyxpmw7fp72xjxjqkbvwy" data-bluesky-embed-color-mode="system"><p lang="en">This dog got a little impatient waiting for his pup cup. Decided to make sure everything was going alright in there. 14/10<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmx3xrks622e?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmx3xrks622e?ref_src=embed">April 16, 2025 at 12:19 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
-<modal-dialog @label="Alt text for second example">
+<jy-acc @label="Alt text for second example">
 
 two photos side by side. in the left photo, a dog is leaning out the driver window of a red vehicle toward a drive-thru window. in the right photo the dog has entered the establishment through the window, only his hind end sticking out.
 
-</modal-dialog>
+</jy-acc>
 
 </e-box>
 
@@ -56,11 +56,11 @@ two photos side by side. in the left photo, a dog is leaning out the driver wind
 
 <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rlr4e4zioxivpndzr4mqw4r2/app.bsky.feed.post/3lmzrfnypos2w" data-bluesky-cid="bafyreichvznnaawspuwrhlsfh4qeglvhzbpe5og5hzwistuqj7ugievjhu" data-bluesky-embed-color-mode="system"><p lang="en">This is Finley. He has a very large bump on his noggin. It&#x27;s where he stores his infinite wisdom. 13/10 would pet to increase my own knowledge<br><br><a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmzrfnypos2w?ref_src=embed">[image or embed]</a></p>&mdash; WeRateDogs (<a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2?ref_src=embed">@weratedogs.com</a>) <a href="https://bsky.app/profile/did:plc:rlr4e4zioxivpndzr4mqw4r2/post/3lmzrfnypos2w?ref_src=embed">April 17, 2025 at 1:48 PM</a></blockquote><script webc:keep async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
 
-<modal-dialog @label="Alt text for third example">
+<jy-acc @label="Alt text for third example">
 
 a golden retriever pokes his head around a corner in a hallway and looks up at the camera with a stuffed duck toy in his mouth. he has a lump squarely in the middle of the top of his head.
 
-</modal-dialog>
+</jy-acc>
 
 </e-box>
 

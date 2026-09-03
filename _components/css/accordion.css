@@ -17,14 +17,17 @@
 }
 /*desktop, for always*/
 @media (min-width: 64rem) {
-:host[data-responsive="true"] [aria-expanded] {
+    :host .acc-responsive [aria-expanded] {
     visibility: hidden;
 }
-:host[data-responsive="true"] .acc-label-text {
+:host .acc-responsive .acc-indicator {
+    display: none;
+}
+:host .acc-responsive .acc-label-text {
     visibility: visible;
     color: var(--highlight);
 }
-:host[data-responsive="true"] .acc-panel {
+:host .acc-responsive + .acc-panel {
     display: block !important;
 }
 }

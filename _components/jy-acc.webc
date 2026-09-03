@@ -2,18 +2,14 @@
 <script webc:type="js">
 if (!label) {throw new Error('jy-acc component is missing required prop label');};
 var headingTag;
-var isResponsive = true;
+var isResponsive = ' acc-responsive';
 if (level == 1 || level == 2 || level ==3 || level == 4 || level ==5 || level == 6) {
     headingTag = 'h' + level;
 } else {
     headingTag = 'div';
-    isResponsive = false;
+    isResponsive = '';
 }
-``
-</script>
-<template webc:root data-responsive="isResponsive">
-<script webc:type="js">
-`<${headingTag} class="acc-header">
+`<${headingTag} class="acc-header${isResponsive}">
 <button aria-expanded="false">
 <span class="acc-indicator" aria-hidden="true"></span>
 <span class="acc-label-text">${label}</span>
