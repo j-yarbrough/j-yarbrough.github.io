@@ -2,12 +2,15 @@
 <script webc:type="js">
 if (!label) {throw new Error('jy-acc component is missing required prop label');};
 var headingTag;
+var isResponsive = ' acc-responsive';
 if (level == 1 || level == 2 || level ==3 || level == 4 || level ==5 || level == 6) {
     headingTag = 'h' + level;
+    if (responsive == 'false') {isResponsive = '';};
 } else {
     headingTag = 'div';
+    isResponsive = '';
 }
-`<${headingTag} class="acc-header">
+`<${headingTag} class="acc-header${isResponsive}">
 <button aria-expanded="false">
 <span class="acc-indicator" aria-hidden="true"></span>
 <span class="acc-label-text">${label}</span>
@@ -17,4 +20,5 @@ if (level == 1 || level == 2 || level ==3 || level == 4 || level ==5 || level ==
 <div class="acc-panel">
 <slot></slot>
 </div>
+</template>
 <script src="/js/accordion.js"></script>

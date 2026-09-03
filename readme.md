@@ -1,6 +1,6 @@
 # Readme
 
-Last updated 04/27/2026
+Last updated 09/03/2026
 
 ## Purpose
 
@@ -39,17 +39,20 @@ Attributes/properties marked as required will throw build errors if missing.
 
 ### Accordion
 
-Should be self-explanitory...
+Should be self-explanitory.
 
 - ``<jy-acc>``
 
+Note on responsiveness: By default, accordion functionality is removed on accordions with a valid value for heading level at desktop breakpoints. Ones without a valid level value or with the optional responsive prop set to false will render as collapsed with expanding functionality at all breakpoints.
+
 Required prop:
 
-- @label: Provides a label for the accordion 
+- @label: Provides a label for the accordion button.
 
-Optional prop:
+Optional props:
 
 - @level: Sets a heading level. Will render as a div if value is not set as 2-6.provided or value is invalid.
+- @responsive: If value is set to string of false it will cause the accordion to not render responsively, meaning it will be collapsed and have a button on desktop breakpoint. This only needs to be set if a valid level is applied and this functionality is desired as accordions without an appropriate level applied will always render this way
 
 ### Modal dialog
 
