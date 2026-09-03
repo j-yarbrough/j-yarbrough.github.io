@@ -4,11 +4,8 @@
 :host [aria-expanded] {
     font-size: inherit;
 }
-/*mobile and tablet*/
-@media (max-width: 64rem) {
-    :host .acc-indicator::before {
-        color: var(--highlight);
-    }
+:host .acc-indicator::before {
+    color: var(--highlight);    }
 :host [aria-expanded="false"] .acc-indicator::before {
     content: "\2192";
 }
@@ -18,14 +15,16 @@
 :host .acc-header:has(> [aria-expanded="false"]) + .acc-panel {
     display: none;
 }
-}
-/*desktop*/
+/*desktop, for always*/
 @media (min-width: 64rem) {
-:host [aria-expanded] {
+:host[data-responsive="true"] [aria-expanded] {
     visibility: hidden;
 }
-:host .acc-label-text {
+:host[data-responsive="true"] .acc-label-text {
     visibility: visible;
     color: var(--highlight);
+}
+:host[data-responsive="true"] .acc-panel {
+    display: block !important;
 }
 }
