@@ -17,7 +17,7 @@ Justin has worked in digital accessibility since 2017 in education, consulting, 
 
 ## Certifications
 
-Justin holds certifications from the International Association of Accessibility Professionals, Freedom Scientific, and NVAccess.  [Read more...](/certs/){aria-label="Read more about Justin's certifications}
+Justin holds certifications from the International Association of Accessibility Professionals, Freedom Scientific, and NVAccess.  [Read more...](/certs/){aria-label="Read more about Justin's certifications"}
 
 ## Portfolio
 
