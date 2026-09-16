@@ -1,7 +1,7 @@
 <link webc:scoped rel="stylesheet" href="/css/inputs.css">
 <div class="flex-wrapper">
 <label :for="uid"><span webc:nokeep @text="label"></span><span webc:if="required" aria-hidden="true">*</span></label>
-<input type="text" :id="uid" :inputmode="inputmode" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="`${uid}-adb`">
+<input type="text" :id="uid" :inputmode="inputmode" :name="name" :autocomplete="autocomplete" :aria-required="{if(required){true}}" :aria-describedby="`${uid}-adb`"  aria-invalid="false">
 </div>  
 <div class="validation-and-helper-container" :id="`${uid}-adb`">
 <div  class="validation-feedback"></div>
