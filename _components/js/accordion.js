@@ -5,5 +5,5 @@ window.addEventListener('load',function() {
 });
 
 function triggerAccordion()  {
-    this.ariaExpanded = this.getAttribute('aria-expanded') == 'true' ? 'false' : 'true';
+    this.ariaExpanded = this.ariaExpanded == 'true' ? 'false' : 'true';
 }
