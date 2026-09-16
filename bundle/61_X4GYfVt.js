@@ -22,17 +22,16 @@ function validateField(valThisField) {
 var label=valThisField.closest('text-area, text-input').querySelector('label').textContent.replace('*','');
 var fieldValue = valThisField.value.trim();
 var errorMessage = '';
+var isValid = true;
 var emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
     errorMessage = `${label} cannot be blank.`
+    isValid=false;
 } else if (valThisField.getAttribute('inputmode') == 'email' && !emailRegEx.test(fieldValue) && fieldValue) {
     errorMessage = 'Enter a valid email address, such as name@example.com.';
+    isValid = false;
 } 
-var isValid = errorMessage.length == 0 ? true : false;
-switch (isValid) {
-    case true: valThisField.removeAttribute('aria-invalid'); break;
-    case false: valThisField.setAttribute('aria-invalid','true'); break;
-}
+valThisField.ariaInvalid = isValid ? 'false' : 'true';
 valThisField.closest('text-area, text-input').querySelector('.validation-feedback').textContent = errorMessage;
 return isValid;
 }
