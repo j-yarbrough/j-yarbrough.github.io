@@ -1,9 +1,7 @@
 window.addEventListener('load',function() {
     document.querySelectorAll('.acc-header [aria-expanded]').forEach((accButton) => {
-        accButton.addEventListener('click',triggerAccordion);
+        accButton.addEventListener('click',function() {
+            this.ariaExpanded = this.ariaExpanded == 'true' ? 'false' : 'true';
+        });
     })
 });
-
-function triggerAccordion()  {
-    this.ariaExpanded = this.ariaExpanded == 'true' ? 'false' : 'true';
-}
