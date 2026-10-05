@@ -12,16 +12,16 @@
     margin: auto;
     height: fit-content;
     width: fit-content;
-    max-height: calc(100% - 40px);
-    max-width: calc(100% - 40px);
+    max-height: calc(100% - 48px);
+    max-width: calc(100% - 48px);
     box-shadow: 16px 16px 8px 0 var(--secondary);
 }
-:host .dialog-header-wrapper {
+:host .dialog-header {
     box-sizing: border-box;
     border-bottom: var(--border-width) dashed var(--secondary);
     padding-bottom: 4px;
 }
-:host .dialog-footer-wrapper {
+:host .dialog-footer {
     box-sizing: border-box;
     border-top: var(--border-width) dashed var(--secondary);
     padding-top: 4px;
@@ -43,7 +43,7 @@
 :host h5 {
     font-size: 1.1rem;
 }
-:host .dialog-main-wrapper{
+:host .dialog-main{
     box-sizing: border-box;
     padding-bottom: 4px;
     padding-top: 4px;
