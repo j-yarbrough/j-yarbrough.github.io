@@ -1,3 +1,4 @@
+<script src="/js/form.js">
 <script webc:type="js" webc:root>
 if (!name) {throw new Error('form wrapper component is missing required prop name');};
 if (!method) {throw new Error('form wrapper component is missing required prop method');};
@@ -9,4 +10,3 @@ if (!action) {throw new Error('form wrapper component is missing required prop a
 <slot></slot>
 <button type="submit">Submit</button>
 </form>
-<script src="/js/form.js">

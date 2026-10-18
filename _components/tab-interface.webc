@@ -1,8 +1,8 @@
 <link webc:scoped rel="stylesheet" href="/css/tabs.css" type="text/css">
+<script src="/js/tabs-automatic.js"></script>
 <div webc:root class="tabs">
 <div role="tablist" class="automatic">
 <slot name="tablist"></slot>
 </div>
 <slot></slot>
 </div>
-<script src="/js/tabs-automatic.js"></script>
