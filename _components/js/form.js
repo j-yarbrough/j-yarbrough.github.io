@@ -19,7 +19,8 @@ function validateForm() {
     } else if (runningOnLocal) alert('Form is valid and would have submitted.');
 }
 function validateField(valThisField) {
-var label=valThisField.closest('text-area, text-input').querySelector('label').textContent.replace('*','');
+    var fieldContainer = valThisField.closest('text-area, text-input');
+var label=fieldContainer.querySelector('label').textContent.replace('*','');
 var fieldValue = valThisField.value.trim();
 var errorMessage = '';
 var isValid = true;
@@ -32,6 +33,6 @@ if ((!fieldValue) && (valThisField.hasAttribute('aria-required'))){
     isValid = false;
 } 
 valThisField.ariaInvalid = isValid ? 'false' : 'true';
-valThisField.closest('text-area, text-input').querySelector('.validation-feedback').textContent = errorMessage;
+fieldContainer.querySelector('.validation-feedback').textContent = errorMessage;
 return isValid;
 }
