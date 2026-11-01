@@ -1,5 +1,15 @@
 [
     {
+        "publisher":"HTMHell",
+        "items":
+        [
+            {
+                "title":"Minimal javascript accordions",
+                "address":"https://www.htmhell.dev/adventcalendar/2026/9/",
+                "desc":"Article for the <a href=\"https://www.htmhell.dev/adventcalendar/2026/\">HTMHell 2026 Advent Calendar</a> explaining my approach to developing accordions for websites that are accessible, rely on a minimum amount of JavaScript, and lean heavily on CSS."
+            }
+        ]
+    },{
         "publisher":"Nature",
         "items":
         [
